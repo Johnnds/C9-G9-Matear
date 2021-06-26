@@ -20,6 +20,15 @@ No solo ofrecemos objetos sino también productos que conllevan historias, leyen
 
 5. https://www.adidas.com.ar/ Elegimos esta página por la estética.
 
+## Tipografia:
+
+* Sant Source Pro
+* Sant Serit
+## Colores:
+
+* Blanco
+* Negro
+
 ## Integrantes:
 
 * Marisol Contreras:
