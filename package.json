@@ -4,7 +4,8 @@
   "description": "MateAr nace de las ganas de querer acercarle a la gente insumos característicos de la cultura Argentina, con calidad y precio acorde. \r Es un e-commerce destinado a la venta y comecializaciòn de mates y accesorios varios, para todo público. \r No solo ofrecemos objetos sino también productos que conllevan historias, leyendas, buenos momentos y costumbres de nuestros pasado, presente y futuro.\r > ¡Te invitamos a #MateAr, un rato!",
   "main": "index.js",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "nodemon": "^2.0.12"
   },
   "devDependencies": {},
   "scripts": {
