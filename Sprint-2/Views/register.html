@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+</head>
+<body>
+    <header>
+
+    </header>
+
+    <main>
+        <h2>Registrate con</h2>
+        <form action="/register" method="POST">
+            <div class="google">
+                <button type="submit">Google</button>
+            </div>
+            <div class="facebook">
+                <button type="submit">Facebook</button>
+            </div>
+        </form>
+        <h2>O completa tus datos</h2>
+        <form action="/register" method="POST">
+            <div class="datos">
+                <div class="linea1">
+                    <label>Nombre</label>
+                    <input type="text" name="nombre">
+                    <label>Apellido</label>
+                    <input type="text" name="apellido">
+                </div>
+                <div class="linea2">
+                    <label>Genero</label>
+                    <select name="genero">
+                        <option>Seleccione</option>
+                        <option value="femenino">Femenino</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="binario">Binario</option>
+                    </select>
+                    <label>Fecha de nacimiento</label>
+                    <input type="date" name="nacimiento" max="2010-12-31">
+                </div>
+                <div class="linea3">
+                    <label>Email*</label>
+                    <input type="email" name="email">
+                    <label>Teléfono (opcional)</label>
+                    <input type="text" name="telefono">
+                </div>
+                <div class="linea4">
+                    <label>Contraseña*</label>
+                    <input type="password" name="password">
+                    <p>La contraseña debe tener como mínimo 6 caracteres</p>
+                </div>
+                <div class="repetirPass">
+                    <label>Repetir contraseña*</label>
+                    <input type="password" name="repitpass">
+                    <p>(*) Campos obligatorios</p>
+                </div>
+                <div class="crear">
+                    <button type="submit">CREAR CUENTA</button>
+                </div>
+            </div>
+        
+        </form>
+    </main>
+    
+</body>
+</html>
