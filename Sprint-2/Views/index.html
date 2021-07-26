@@ -11,42 +11,96 @@
 <body class="home">
     <header>
         <img src="matear.png" width="200px" alt="Logo personal">
-        <nav>
+        <nav class="menu-home">
             <ul>
-                <li><a href="register.html">Registrarse</a></a></li>
+                <li><a href="register.html">Crear cuenta</a></a></li>
                 <li><a href="login">Iniciar Session</a></li>
             </ul>
         </nav>
-        <input type="search" name="" id="" placeholder="Buscar productos" >
-        <i class="fas fa-search"></i>
-        <div class="burger-menu">
-            <i class="fas fa-bars"></i>
+        <div class="search">
+            <input type="search" name="" id="" placeholder="Buscar productos" >
+            <button type="submit"><i class="fas fa-search"></i></button>
         </div>
-        <a class="shopping" href="#">
-            <i class="fas fa-shopping-cart"></i>
-            <span class="cantidad">0</span>
-        </a>
+        <nav class="menu-desplegable menu-carrito">
+            <div class="burger-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <a class="shopping" href="#">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cantidad">0</span>
+            </a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Iniciar Session</a></li>
+                <li><a href="#">Registrarse</a></li>
+                <li><a href="#">Carrito de compras</a></li>
+                <li><a href="#">Detalles de Productos</a></li>
+            </ul>
+        </nav>
     </header>
-    <main>
+    <main class="main-home">
         <section>
-            <article>
-                <img src="slide-mate-home.jpg" width="400" alt="Slide de fotos de mates.">
+            <article class="cuerpo">
+                <h2>Adelantos</h2>
+                <img src="slide-mate-home.jpg"  alt="Slide de fotos de mates.">
             </article>
-            <article>
-                <img src="destacado-mate-home.jpg" width="400" alt="Productos destacados">
+            <article class="cuerpo">
+                <h2>Destacados</h2>
+                <img src="destacado-mate-home.jpg"  alt="Productos destacados">
             </article>
-            <article>
-                <img src="catalogo-mate-home.jpg" width="400" alt="Catalogo de productos">
+            <article class="cuerpo">
+                <h2>Catalogo</h2>
+                <img src="catalogo-mate-home.jpg"  alt="Catalogo de productos">
             </article>
         </section>
     </main>
-    <footer>
-        <h2>Metodos de Pagos</h2>
-        <input type="email" name="" id="">
-        <button type="submit" value="">Suscribirse</button>
-        <h2>Redes Sociales</h2>
-        <h2>Contacto</h2>
-        <h3>matear@matear.com</h3>
+    <footer class="home">
+        <section>
+            <Article>
+                <div class="icon-footer"><i class="fas fa-credit-card"></i></div>
+                <h4>Pagà con tarjeta o en efectivo</h4>
+                <p>En MateAR, podes pagar con tarjeta o efectivo. ¡Y siempre es seguro!</p>
+            </Article>
+        </section>
+        <section>
+            <article>
+                <div class="icon-footer"><i class="fas fa-shopping-basket"></i></div>
+                <h4>Servicio de Envìos.</h4>
+                <p>Envios a cualquier parte del pais.
+                </p>
+            </article>
+        </section>
+        <section>
+            <article>
+                <div class="icon-footer"><i class="fas fa-user-shield"></i></div>
+                <h4>Seguridad, ante todo.</h4>
+                <p>Compra segura y protegida.
+                </p>
+            </article>
+        </section>
+        <section>
+            <article>
+                <div class="suscripcion">
+                    <input type="search" name="" id="" placeholder="Escribe tu email" >
+                    <button type="submit">Suscribete</button>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <nav class="icon-footer-redes">
+                    <a href=""><i class="fab fa-twitter"></i></a>
+                    <a href=""><i class="fab fa-facebook-square"></i></a>
+                    <a href=""><i class="fab fa-spotify"></i></a>
+                    <a href=""><i class="fab fa-apple"></i></a>
+                </nav>
+            </article>
+        </section>
+        <section>
+            <article class="copyright"> 
+                <p>Copyright &copy;  2021 MateAR.</p>
+            </article>
+        </section>
     </footer>    
     
 </body>
