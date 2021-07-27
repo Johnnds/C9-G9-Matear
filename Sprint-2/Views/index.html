@@ -21,21 +21,22 @@
             <input type="search" name="" id="" placeholder="Buscar productos" >
             <button type="submit"><i class="fas fa-search"></i></button>
         </div>
-        <nav class="menu-desplegable menu-carrito">
+        <nav class="menu-desplegable">
             <div class="burger-menu">
-                <i class="fas fa-bars"></i>
+                <input type="checkbox" name="" id="menu">
+                <label for="menu" class="menu-toogle"><i class="fas fa-bars"></i></label>
+                <ul>
+                    <li class="current"><a href="#">Home</a></li>
+                    <li><a href="#">Iniciar Session</a></li>
+                    <li><a href="#">Crear cuenta</a></li>
+                    <li><a href="#">Carrito de compras</a></li>
+                    <li><a href="#">Detalles de Productos</a></li>
+                </ul>
             </div>
             <a class="shopping" href="#">
                 <i class="fas fa-shopping-cart"></i>
                 <span class="cantidad">0</span>
             </a>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Iniciar Session</a></li>
-                <li><a href="#">Registrarse</a></li>
-                <li><a href="#">Carrito de compras</a></li>
-                <li><a href="#">Detalles de Productos</a></li>
-            </ul>
         </nav>
     </header>
     <main class="main-home">

@@ -45,7 +45,7 @@ img{
     padding: 0px 10px;
 }
 
-.home header nav.menu-home ul li, .home header nav.menu-desplegable ul li{
+.home header nav.menu-home ul li, .home header nav.menu-desplegable ul li, .home header nav.menu-desplegable .shopping .cantidad{
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -87,16 +87,9 @@ img{
     margin-top: 0;
 }
 
-.home header nav.menu-desplegable .shopping, .home header nav.menu-desplegable .burger-menu, .home header nav.menu-desplegable ul li a{
+.home header nav.menu-desplegable .shopping, .home header nav.menu-desplegable .burger-menu, .home header nav.menu-desplegable .burger-menu ul li a{
     color: white;
 }
-
-.home header nav.menu-desplegable .burger-menu {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
 
 .home header nav.menu-desplegable ul li {
 
@@ -104,28 +97,30 @@ img{
     border: 1px solid #fff;
     text-align: center;
     padding: 20px;
-    position: relative;
+  
 }
 
-.home header nav.menu-desplegable ul{
+.home header nav.menu-desplegable .burger-menu ul{
+    display: none;
+    position: absolute;
+    margin-top: 20px;
+    width: 95vw;
+    height: 100vh;
+    left: 2.5%;
+    z-index: 1;
+    transition: all .5s ease;
+}
+
+.home header nav.menu-desplegable .burger-menu input {
+    display: none;
+}
+
+.home header nav.menu-desplegable .burger-menu input:checked ~ ul{
     display: block;
-    margin-top: 5px;
-    align-self:flex-end;
-    margin-bottom: 15px;
 }
 
-.home header nav.menu-desplegable div.burger-menu input:checked ~ ul{
-    display: block;
-}
-
-.home header nav.menu-desplegable ul li a {
-    display: inline-block;
-}
-
-.home header nav.menu-desplegable ul li:hover {
-    background-color: #fff;
-    color: #000;
-
+.home header nav.menu-desplegable div.burger-menu ul li:hover {
+    background-color:rgba(255, 255, 255, 0.8);
 }
 
 
