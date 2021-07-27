@@ -1,0 +1,182 @@
+.body-login{
+    background-color: black;
+}
+.main-login{
+    background-color: white;
+    
+}
+main .caja{
+    
+    width: 84%;
+    height:550px;
+    position: relative;
+    margin:auto
+}
+
+main h1{
+
+    display: flex;
+    justify-content: center;  
+}
+.mail{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3%;
+
+}
+
+.mail input{    
+    border: solid 1px black;
+    height: 20px;
+    font-size: 16px;
+}
+
+.password{
+    display: flex;
+    justify-content: center;
+}
+
+.password input{
+    border: solid 1px black;
+    width: 165px;
+    height:20px;
+    font-size: 1rem;
+}
+
+.password i{
+    outline: solid 1px black;
+    background-color: white;
+    
+}        
+.recordar{
+    padding-right: 20px;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1rem;
+}                        
+        
+.recordar label{
+    font-size: .9rem;
+
+}
+
+.datosIncorrectos p{
+    color: red;
+    font-size: 0.9rem;
+    text-align: center;    
+}
+
+.ingresar{
+    display: grid;
+    justify-content: center;
+    
+}
+.ingresar button{
+    color: white;
+    background-color: black;
+    height: 30px;
+
+}
+.ingresar p{
+    font-style: italic;
+    font-size: medium;
+    font-weight: 600;
+}
+
+.ingresarCon{
+    font-style: italic;
+    font-size: small;
+    font-weight: 600;
+    margin-left: 6%; 
+}
+
+.facebook{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+           
+.facebook button{
+    color: white;
+    background-color: blue;    
+    border-color: blue;
+    width: 171px;
+    height: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}      
+
+.fab, .far{
+    padding-right: 10px;
+}
+
+.google{
+    display: flex;
+    justify-content: center;
+}
+.google button{    
+    font-size: 1.1rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 171px;
+    height: 30px;
+    background-color: #ffffff
+
+}
+.google button img{
+    width: 25px;
+
+}
+.cuentaNueva{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.cuentaNueva p{
+    text-align: center;
+}
+.cuentaNueva button{
+    border-radius: 10%;
+    color: #ffffff;
+    background-color: #701770;
+    width: 150px;
+    height: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* Tablet*/
+
+@media (min-width: 425px) {
+    
+    .caja{
+        background-color: white;
+        width: 70%;
+        position: relative;
+    }
+
+    .ingresarCon{
+        font-style: italic;
+        font-size: small;
+        font-weight: 600;
+        margin-left: 6%; 
+    }
+
+}
+
+/* Desktop */
+
+@media (min-width: 900px) {
+    .caja{
+        background-color: white;
+        width: 70%;
+        position: relative;
+    }
+
+}

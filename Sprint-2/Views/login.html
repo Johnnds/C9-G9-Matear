@@ -5,44 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/4660c56b26.js" crossorigin="anonymous"></script>
+    <a href="https://icons8.com/icon/17949/google"></a>    
+    <link rel="stylesheet" href="/css/styles.css">
     <title>Login</title>
 </head>
-<body>
+<body class="body-login">
     <header>
 
     </header>
 
-    <main>
-        <h1>Bienvenido a MateAr</h1>
+    <main class="main-login">
+        <div class="caja">
+             <h1>Iniciar Sesión</h1>
         <div class="mail">
             <input type="email" name="email" placeholder="Email">            
         </div>
         <div class="password">
-            <input type="password" name="passwordUsuario" placeholder="Contraseña"><i class="far fa-eye-slash"></i>            
-        </div>
-            <p>¿Olvidaste tu contraseña?</p>
-        </div>
-        <div>        
+            <input type="password" name="passwordUsuario" placeholder="Contraseña">
+            <i class="far fa-eye-slash"></i>                          
+        </div>                
+        <div class="recordar">
+            <input type="checkbox" name="recordarContraseña">
+            <label>Recordar contraseña</label>
+        </div>                 
+        <div class= "datosIncorrectos">        
             <p>Los datos ingresados no son correctos</p>
         </div>
         <div class="ingresar">
             <button type="submit">INGRESAR</button>
+            <p>¿Olvidaste tu contraseña?</p>
         </div>
-        <div>
-            <p>O INGRESAR CON</p>
+        <div class="ingresarCon">
+            <p>O INGRESÁ CON</p>
         </div>
         <div class="facebook">
-            <button type="submit">Facebook</button>
+            <button type="submit"><i class="fab fa-facebook-square"></i>Facebook</button>
         </div>
         <div class="google">
-            <button type="submit">Google</button>
-        </div>
-        <div>
-            <p>¿No tienes Cuenta?</p>
+            <button type="submit"><img src="https://img.icons8.com/color/48/000000/google-logo.png"/>Google</button>
         </div>
         <div class="cuentaNueva">
+            <p>¿No tienes Cuenta?</p>
             <button type="submit">Crear cuenta nueva</button>
         </div>
+        </div>
+       
 
 
     </main>
