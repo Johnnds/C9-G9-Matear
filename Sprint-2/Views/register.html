@@ -6,23 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <a href="https://icons8.com/icon/17949/google"></a>
     <script src="https://kit.fontawesome.com/4660c56b26.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/styles.css">
     <title>Registro</title>
 </head>
-<body>
+<body class="body-register">
     <header>
-
+        <h1>HEADER</h1>
     </header>
 
-    <main>
-        <h2>Registrate con</h2>
-        <form action="/register" method="POST">
-            <div class="google">
-                <button type="submit"><img src="https://img.icons8.com/color/48/000000/google-logo.png"/>Google</button>
-            </div>
-            <div class="facebook">
-                <button type="submit"><i class="fab fa-facebook-square"></i>Facebook</button>
-            </div>
-        </form>
+    <main class="main-register">
+        <div class="registrate-con">
+            <h2>Registrate con</h2>        
+            <form class="redes" action="/register" method="POST">
+                <div class="google">
+                    <button type="submit"><img src="https://img.icons8.com/color/48/000000/google-logo.png"/>Google</button>
+                </div>
+                <div class="facebook">
+                 <button type="submit"><i class="fab fa-facebook-square"></i>Facebook</button>
+                </div>
+            </form>
+        </div>
+        
+        
         <h2>O completa tus datos</h2>
         <form action="/register" method="POST">
             <div class="datos">
@@ -52,11 +57,13 @@
                 <div class="linea4">
                     <label>Contraseña*</label>
                     <input type="password" name="password">
+                    <i class="far fa-eye-slash"></i>  
                     <p>La contraseña debe tener como mínimo 6 caracteres</p>
                 </div>
                 <div class="repetirPass">
                     <label>Repetir contraseña*</label>
                     <input type="password" name="repitpass">
+                    <i class="far fa-eye-slash"></i>  
                     <p>(*) Campos obligatorios</p>
                 </div>
                 <div class="crear">

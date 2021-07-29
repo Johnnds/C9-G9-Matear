@@ -1,0 +1,55 @@
+header{
+    color: white;
+}
+
+.body-register{
+    background-color: black;
+    font-family: var(--font-family);
+    margin: 40px 20px;
+}
+.main-register{
+    background-color: white;
+    position: relative;
+    margin: 1px 3%;
+    align-items: center;
+}
+
+main .registrate-con{
+    
+}
+main h2{
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;  
+}
+main .redes{    
+    display: flex;
+    justify-content: center;
+}
+
+main .redes .google{
+    margin-right: 10%;
+}
+main .redes .google button{
+    height: 30px;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    m
+}
+main .redes .google button img{
+    height: 30px;
+}
+main .redes .facebook button{
+    color: white;
+    background-color: #131385;    
+    border-color: #131385;
+    height: 30px;
+}
+
+
+/* Tablet*/
+
+@media (min-width: 768px){
+
+}
