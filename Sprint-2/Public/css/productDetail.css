@@ -1,0 +1,159 @@
+@import url();
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.body-pd{
+    width: 100%;
+    background-color:black;
+}
+
+.body-pd .main-pd{
+    display: flex;
+    align-items: center;
+    width: 90%;
+    margin: 20px;
+}
+
+.body-pd .menu{
+    display: flex;
+    flex-direction: column;
+}
+
+.body-pd .menu h1{
+    font-size: 30px;
+    color: white;
+}
+
+.body-pd .menu .producto img{
+    width: 410px;
+    height: 410px;
+    object-fit: contain;
+    border: 2px solid white;
+}
+
+.body-pd .menu .precio{
+    font-size: 25px;
+    position: relative;
+    top: -35px;
+    color: #ebebeb;
+}
+
+.body-pd .menu .mate{
+    font-size: 20px;
+    padding: 1px;
+}
+
+.body-pd .menu .off{
+    border: #ebebeb solid 1px;
+    margin: 10px;
+    border-right-width: 20%;
+    background-color: #ebebeb;
+}
+
+.body-pd .menu .box{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+    align-items: center;
+}
+
+.body-pd .menu .descuento{
+    font-size: 18px;
+    color:#7e7b7b;
+}
+
+.body-pd .menu .oferta{
+    font-size: 20px; 
+}
+
+.body-pd .menu .color{
+   font-size: 12px;
+   display: flex;
+   flex-wrap: wrap;
+}
+.body-pd .menu .detalle{
+  margin: 1px;
+}
+
+.body-pd .menu .detalle .info-product{
+    font-size: 1rem;
+    margin: 10px;
+    text-align: justify;
+    padding: 5px; 
+    color: white;
+}
+
+.body-pd .menu .detalle .cuidados{
+    font-size: 18px;
+    padding: 1px;
+    margin: 10px;
+    text-align: justify; 
+    color: #ebebeb;   
+}
+
+.body-pd .menu .detalle .lavado{
+    font-size: 1rem;
+    padding: 1px;
+    margin: 10px;
+    text-align: justify;
+    color: white;   
+}
+
+.body-pd .menu .detalle .eg{
+    font-size: 18px;
+    padding: 1px;
+    margin: 10px;
+    text-align: justify;
+    color: #ebebeb;    
+}
+
+.body-pd .menu .detalle .curación{
+    font-size: 1rem;
+    padding: 5px;
+    margin: 10px;
+    text-align: justify;
+    color: white;    
+}
+
+.body-pd .menu .detalle .bombilla{
+    font-size: 1rem;
+    padding: 5px;
+    margin: 10px;
+    text-align: justify;  
+    color: white;  
+}
+
+.body-pd .menu .botón{
+  padding: 10px;
+  font-size: 15px;
+  background-color: black;
+  border-radius: 6px;
+  border: white solid 2px;
+  width: 60%;
+  text-align: center;
+  position: relative;
+  left: 15%;
+}
+
+.body-pd .menu .botón a{
+    text-decoration: none;
+    color: white;
+}
+
+.body-pd .menu .comentario{
+    text-align: center;
+    padding: 20px;
+}
+
+.body-pd .menu .comentario textarea{
+    width: 50%;
+    height: 30px
+}
+
+.body-pd .menu .carrusel{
+    display: none;
+}
