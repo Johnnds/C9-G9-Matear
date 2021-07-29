@@ -1,20 +1,30 @@
+header{
+    color: white;
+}
+
 .body-login{
     background-color: black;
+    font-family: var(--font-family);
+    margin: 40px 20px;
 }
 .main-login{
     background-color: white;
-    
-}
-main .caja{
-    
-    width: 84%;
-    height:550px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     position: relative;
-    margin:auto
+    margin: 40px 13%;
+    align-items: center;
+}
+main .iniciar{
+    display: block;
+    flex-wrap: wrap;
+    justify-content: center;    
+    width: 100%;
 }
 
 main h1{
-
+    padding-top: 20px;
     display: flex;
     justify-content: center;  
 }
@@ -49,7 +59,7 @@ main h1{
     
 }        
 .recordar{
-    padding-right: 20px;
+    padding-right: 17%;
     display: flex;
     justify-content: flex-end;
     font-size: 1rem;
@@ -63,7 +73,9 @@ main h1{
 .datosIncorrectos p{
     color: red;
     font-size: 0.9rem;
-    text-align: center;    
+    text-align: center;
+    font-weight: 600;
+    margin-top: 10px;  
 }
 
 .ingresar{
@@ -81,14 +93,15 @@ main h1{
     font-style: italic;
     font-size: medium;
     font-weight: 600;
+    margin-bottom: 0
 }
 
-.ingresarCon{
+.ingresarCon p{
     font-style: italic;
     font-size: small;
     font-weight: 600;
-    margin-left: 6%; 
 }
+
 
 .facebook{
     display: flex;
@@ -98,8 +111,8 @@ main h1{
            
 .facebook button{
     color: white;
-    background-color: blue;    
-    border-color: blue;
+    background-color: #131385;    
+    border-color: #131385;
     width: 171px;
     height: 30px;
     font-size: 1rem;
@@ -140,43 +153,42 @@ main h1{
 
 .cuentaNueva p{
     text-align: center;
+    margin-bottom: 3px;
+    font: weight 600px;
 }
-.cuentaNueva button{
-    border-radius: 10%;
+.cuentaNueva button{    
     color: #ffffff;
-    background-color: #701770;
-    width: 150px;
+    background-color: #640f8b;
+    width: 171px;
     height: 30px;
     font-size: 1rem;
     font-weight: bold;
+    margin-bottom: 35px;
 }
 
 /* Tablet*/
 
-@media (min-width: 425px) {
+@media (min-width: 768px) {
     
-    .caja{
-        background-color: white;
-        width: 70%;
-        position: relative;
+    main .iniciar{           
+        width: 50%;
     }
-
-    .ingresarCon{
+    main aside{
+        margin-top: 58px;
+    }
+    .ingresar p{
         font-style: italic;
-        font-size: small;
+        font-size: medium;
         font-weight: 600;
-        margin-left: 6%; 
+        margin-bottom: 30px
+    }
+    .ingresarCon p{
+        font-style: italic;
+        font-size: initial;
+        font-weight: 600;
     }
 
+    
 }
 
-/* Desktop */
 
-@media (min-width: 900px) {
-    .caja{
-        background-color: white;
-        width: 70%;
-        position: relative;
-    }
-
-}
