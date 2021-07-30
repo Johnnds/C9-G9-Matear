@@ -1,0 +1,273 @@
+
+
+
+/* Header */
+
+header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    background-color:  rgb(15, 15, 15);
+    margin-bottom: 0;
+}
+
+header nav {
+    margin-top: 15px;
+    width: 100%;
+    display: flex;
+}
+
+header img:first-child{
+    width: 50%;
+}
+
+header nav ul{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+.logo-cuenta-search{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.logo-cuenta-search .cuenta-search ul li:first-child {
+    border-right: 1px solid #fff;
+    padding: 0px 10px;
+    
+}
+
+header nav ul li:last-child{
+    padding: 0px 10px;
+}
+
+header nav.menu-home ul li, .home header nav.menu-desplegable ul li, .home header nav.menu-desplegable .shopping .cantidad{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+header div.search{
+    margin: 20px 0;
+}
+
+header .logo-cuenta-search .cuenta-search div.search input {
+    border-radius: 6px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    height: 45px;
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #c4c4c4;
+}
+
+header .logo-cuenta-search .cuenta-search div.search button {
+    border-radius: 6px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    height: 45px;
+    padding: 10px 25px;
+    margin: 0;
+    border: 1px solid #c4c4c4;
+    background-color: #000;
+    color: #fff;
+}
+
+header nav.menu-desplegable{
+    width: 100%;
+    background-color: #090909;
+    /* color: white; */
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    font-size: 1em;
+    margin-top: 0;
+}
+
+header nav.menu-desplegable .shopping, .home header nav.menu-desplegable .burger-menu, .home header nav.menu-desplegable .burger-menu ul li a, header .logo-cuenta-search .cuenta-search a{
+    color: white;
+}
+
+header nav.menu-desplegable ul li {
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(20, 20, 20);
+}
+
+header nav.menu-desplegable ul {
+  background-color: #090909;
+}
+
+header nav.menu-desplegable .burger-menu ul{
+    display: none;
+    position: absolute;
+    margin-top: 20px;
+    width: 95vw;
+    height: 100vh;
+    left: 2.5%;
+    z-index: 1;
+    transition: all .5s ease;
+}
+
+header nav.menu-desplegable .burger-menu input {
+    display: none;
+}
+
+header nav.menu-desplegable .burger-menu input:checked ~ ul{
+    display: block;
+}
+
+header nav.menu-desplegable div.burger-menu ul li:hover {
+    font-size: 1.1em;
+}
+
+
+/*  Media Query  */
+
+@media(min-width: 360px) {
+  
+  .home header .logo-cuenta-search {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
+
+@media(min-width: 768px ) {
+
+  .home header img:first-child {
+    width: 20%;
+    align-self: center;
+  }
+
+  .home header .logo-cuenta-search {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+   .home header .cuenta-search {
+     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:auto ;
+  }
+  
+  .home header .search {
+    display: flex;
+    width: 70%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .home header nav.menu-desplegable{
+    width: 95%;
+    display: flex;
+    background-color: #090909;
+    flex-direction: row;
+    padding: 2px;
+    font-size: 1em;
+    margin-top: 0;
+    height: 50px;
+    justify-content:space-around;
+    align-items: center;
+}
+
+
+.home header nav.menu-desplegable .shopping, .home header nav.menu-desplegable .burger-menu, .home header nav.menu-desplegable .burger-menu ul li a{
+    color: white;
+}
+
+.home header nav.menu-desplegable ul li {
+
+    text-align: center;
+    padding: 5px;
+    margin-left: 10px;
+    font-size: 0.7em;
+}
+
+.home header nav.menu-desplegable ul {
+
+  background-color: #090909;
+}
+
+.home header nav.menu-desplegable .burger-menu ul{
+    display: flex;
+    margin-top: 2px;
+    width: 100%;
+    height: auto;
+    position: relative;
+    left: 0vw;
+}
+
+.home header nav.menu-desplegable .burger-menu input, .home header nav.menu-desplegable .burger-menu label {
+    display: none;
+
+}
+
+}
+
+@media(min-width: 1024px ) {
+
+  /*    Header    */
+
+  .home header img:first-child {
+    width: 15%;
+    margin-left: 3%;
+  }
+
+  .home header nav.menu-desplegable ul li{
+    padding-left: 0 10px;
+    font-size: 1em;
+  }
+
+  .home header .logo-cuenta-search {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+  }
+
+  .home header .cuenta-search {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin-left: 5%;
+    padding-left: 4%;
+  }
+
+  /*   Main   */
+
+  .card{
+      width: 32%;
+  }
+
+  .main-home section div.last {
+    display: block;
+  } 
+
+  /*   Footer    */
+
+  footer.home {
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+  }
+
+  footer.home section {
+    width: 33%;
+  }
+
+  footer.home section article div.suscripcion{
+    justify-content: center;
+  }
+
+}
