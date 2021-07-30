@@ -92,11 +92,8 @@ body.home{
 }
 
 .home header nav.menu-desplegable ul li {
-
-    /* background-color: #000; */
     text-align: center;
     padding: 20px;
-  
 }
 
 .home header nav.menu-desplegable .burger-menu ul{
@@ -131,24 +128,6 @@ body.home{
     margin-top: 10px;
     background-color: #000;
 }
-
-/* .main-home section article.cuerpo {
-    width: 100%;
-    background-image: url('catalogo-mate-home.jpg');
-    margin-top: 10px;
-    position: relative;
-    display: flex;
-    align-items: center;
-}
-
-.main-home section article.cuerpo h2{
-    position: absolute;
-    width: 100%;
-    font-size: 4em;
-    text-transform: uppercase;
-    background-color: rgba(255, 255, 255, 0.4);
-    text-align: center;
-} */
 
 .main-home section {
     width: 100%;
