@@ -1,12 +1,18 @@
+/*main*/
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+:root{
+    font-family: 'Indie Flower', cursive;
+}
 body main{
     background-color:black;
     font-family:var(--font-family);
     color:white;
 }
 main .carrito{
-    padding: 20px;
+    margin:0 auto;
+    padding: 10px;
     text-align: center;
-    margin:10px;
 }
 main .foto{
     width:100%;
@@ -65,78 +71,14 @@ main p{
     }
 main .pre{
     font-size: 20px;
+    padding-top: 3px;
+    padding-bottom: 3px;
 }
 /* Footer */
-
-footer.home{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 1px solid gray;
-    background-color: #fff;
-    padding: 10px;
-    margin-top: 5px;
-}
-
-footer.home section article {
-    text-align: center;
-    padding-top: 15px;
-    padding: 10px;
-}
-
-footer.home section article {
-    font-size: 1em;
-    color: #666;
-}
-
-footer.home section article div.icon-footer  {
-    font-size: 2em;
-    color: #1259c3;
-}
-
-footer.home section article div.icon-footer i {
-  margin-left: 5px;
-}
-
-footer.home section article div.suscripcion {
-    width: 100%;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    font-size: 1.5em;
-}
-
-footer.home section article div.suscripcion input {
-    border-radius: 6px;
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
-    height: 45px;
-    padding: 10px;
-    margin: 0px;
-    border: 1px solid #c4c4c4;
-}
-
-footer.home section article div.suscripcion button {
-    border-radius: 6px;
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
-    height: 45px;
-    padding: 10px 25px;
-    margin: 0px;
-    border: 1px solid #c4c4c4;
-    background-color: black;
-    color: white;
-}
-
-footer.home section article nav.icon-footer-redes a{
-    font-size: 2em;
-    color: #1259c3;
-    margin-right: 5px;
-}
-
 @media (min-width:768px){
+    /*header*/
+    
+    /*main*/
     main{
         flex-direction: row;
     }
@@ -182,31 +124,16 @@ footer.home section article nav.icon-footer-redes a{
         font-size: 25px;
     }
     /*  Footer  */
-  
-    footer.home {
-        justify-content: space-between;
-        flex-direction: row;
-        flex-wrap: wrap;
-      }
-    
-      footer.home section {
-        width: 50%;
-      }
-    
-      footer.home section article div.suscripcion{
-        justify-content: center;
-      }
-    
     }
   
 @media (min-width:1024px){
-
- /*   Footer    */
-  
- footer.home {
-    justify-content: space-between;
-    flex-direction: row-reverse;
-    flex-wrap: wrap;
-  }
-
+    /*    main   */
+    main .foto img{
+        border: solid 
+    } 
+    }
+    main .item{
+        text-align: center;
+        margin: 30px;
+    }
 }
