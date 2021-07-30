@@ -1,8 +1,17 @@
+/* Body */
+
+body.home{
+    width: 95vw;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:#000;
+}
+
 /* Main */
 
 .home-main {
     margin-top: 10px;
-    background-color: #000;
+    /* background-color: #000; */
 }
 
 .main-home section {
