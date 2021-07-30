@@ -9,91 +9,123 @@
     <script src="https://kit.fontawesome.com/4660c56b26.js" crossorigin="anonymous"></script>
     <title>Product Car</title>
 </head>
+    <body class="home">
+        <header>
+            <div class="logo-cuenta-search">
+                <img src="matear.png" alt="Logo personal">
+                <div class="cuenta-search">
+                    <nav class="menu-home">
+                        <ul>
+                            <li><a href="/register">Crear cuenta</a></a></li>
+                            <li><a href="/login">Iniciar Session</a></li>
+                        </ul>
+                    </nav>
+                    <div class="search">
+                        <input type="search" name="" id="" placeholder="Buscar productos"><button type="submit"><i
+                                class="fas fa-search"></i></button>
+                    </div>
+                </div>
+            </div>
+            <nav class="menu-desplegable">
+                <div class="burger-menu">
+                    <input type="checkbox" name="" id="menu">
+                    <label for="menu"><i class="fas fa-bars"></i></label>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/login">Iniciar Session</a></li>
+                        <li><a href="/register">Crear cuenta</a></li>
+                        <li><a href="/productcart">Carrito de compras</a></li>
+                        <li><a href="/productdetail">Detalles de Productos</a></li>
+                    </ul>
+                </div>
+                <a class="shopping" href="#">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cantidad">0</span>
+                </a>
+            </nav>
+        </header>
+        <main>
+            <div class="carrito">
+                <div class="opciones">
+                    <div class="foto">
+                        <img src="/images/mate1.jpg" alt="Mate de Cuero" title="Mate de cuero">
+                    </div>
+                    <div class="item">
+                        <div class="cupon">
+                            <h2>Cupon:</h2>
+                            <button type="button"> Aplicar cupon </button>
+                        </div>
+                        <div class="cantidad">
+                            <form action="/Cantidad" method="POST">
+                                <label>
+                                    <h2>Cantidad:</h2>
+                                </label>
+                                <select name="Cantidad">
+                                    <option value="uno">1</option>
+                                    <option value="Dos">2</option>
+                                    <option value="tres">3</option>
+                                    <option value="cuatro">4</option>
+                                    <option value="cinco">5</option>
+                                </select>
+                            </form>
+                        </div>
 
-<body>
-    <header>
+                        <div class="color">
+                            <form action="/color" method="POST">
+                                <label>
+                                    <h2>Color:</h2>
+                                </label>
+                                <select name="color">
+                                    <option value="#5b3d05">Marron</option>
+                                    <option value="#000000">Negro</option>
+                                    <option value="#10c39e">Verde</option>
+                                    <option value=" #3752aa ">Azul</option>
+                                </select>
+                            </form>
+                        </div>
 
-    </header>
-    <main>
-        <div class="carrito">
-            <div class="opciones">
-                <div class="foto">
-                    <img src="/images/mate1.jpg" alt="Mate de Cuero" title="Mate de cuero">
+                        <div class="Bombilla">
+                            <form action="/Bombilla" method="POST">
+                                <label>
+                                    <h2>Bombilla:</h2>
+                                </label>
+                                <select name="Bombilla">
+                                    <option value="si">Si</option>
+                                    <option value="no">No</option>
+                                </select>
+                            </form>
+                        </div>
+                    </div>
                 </div>
-                <div class="item">
-                <div class="cupon">
-                    <h2>Cupon:</h2>
-                    <button type="button"> Aplicar cupon </button>
-                </div>
-                <div class="cantidad">
-                    <form action="/Cantidad" method="POST">
-                        <label>
-                            <h2>Cantidad:</h2>
-                        </label>
-                        <select name="Cantidad">
-                            <option value="uno">1</option>
-                            <option value="Dos">2</option>
-                            <option value="tres">3</option>
-                            <option value="cuatro">4</option>
-                            <option value="cinco">5</option>
-                        </select>
-                    </form>
-                </div>
-            
-            <div class="color">
-                <form action="/color" method="POST">
-                    <label>
-                        <h2>Color:</h2>
-                    </label>
-                    <select name="color">
-                        <option value="#5b3d05">Marron</option>
-                        <option value="#000000">Negro</option>
-                        <option value="#10c39e">Verde</option>
-                        <option value=" #3752aa ">Azul</option>
-                    </select>
-                </form>
+            </div>
+            <div class="like"><i class="far fa-thumbs-up"></i>
+                <button type="button">Like</button>
             </div>
 
-            <div class="Bombilla">
-                <form action="/Bombilla" method="POST">
-                    <label>
-                        <h2>Bombilla:</h2>
-                    </label>
-                    <select name="Bombilla">
-                        <option value="si">Si</option>
-                        <option value="no">No</option>
-                    </select>
-                </form>
+
             </div>
-        </div>
-        </div>
-        </div>
-        <div class="like"><i class="far fa-thumbs-up"></i>
-            <button type="button">Like</button>
-        </div>
 
-
-        </div>
-
-        <div class="data">
-            <H2>Detalle del producto</H2>
-            <p>Mate de calabaza Imperial importada desde Uruguay. Es trabajado artesanalmente mediante un proceso de
-                recubrimiento
-                en piel para luego ser sellado con una virola de alpaca cincelada. Todos los materiales así como el
-                proceso de
-                producción son sumamente detallados. Ideal para hacerte de un producto que te va a durar toda la vida.
-            </p>
-            <div class="pre">
-                <h3>Precio:$750</h3>
+            <div class="data">
+                <H2>Detalle del producto</H2>
+                <p>Mate de calabaza Imperial importada desde Uruguay. Es trabajado artesanalmente mediante un proceso de
+                    recubrimiento
+                    en piel para luego ser sellado con una virola de alpaca cincelada. Todos los materiales así como el
+                    proceso de
+                    producción son sumamente detallados. Ideal para hacerte de un producto que te va a durar toda la
+                    vida.
+                </p>
+                <div class="pre">
+                    <h3>Precio:$750</h3>
+                </div>
             </div>
-        </div>
 
-    </main>
+        </main>
 
         <footer class="home">
             <section>
                 <Article>
-                    <div class="icon-footer"><i class="fas fa-credit-card"></i><i class="fab fa-cc-visa"></i><i class="fab fa-cc-mastercard"></i><i class="fab fa-cc-amex"></i></div>
+                    <div class="icon-footer"><i class="fas fa-credit-card"></i><i class="fab fa-cc-visa"></i><i
+                            class="fab fa-cc-mastercard"></i><i class="fab fa-cc-amex"></i></div>
                     <h4>Pagà con tarjeta o en efectivo</h4>
                     <p>En MateAR, podes pagar con tarjeta o efectivo. ¡Y siempre es seguro!</p>
                 </Article>
@@ -117,7 +149,7 @@
             <section>
                 <article>
                     <div class="suscripcion">
-                        <input type="search" name="" id="" placeholder="Escribe tu email" >
+                        <input type="search" name="" id="" placeholder="Escribe tu email">
                         <button type="submit">Suscribete</button>
                     </div>
                 </article>
@@ -133,11 +165,11 @@
                 </article>
             </section>
             <section>
-                <article class="copyright"> 
-                    <p>Copyright &copy;  2021 MateAR.</p>
+                <article class="copyright">
+                    <p>Copyright &copy; 2021 MateAR.</p>
                 </article>
             </section>
-        </footer>    
-</body>
+        </footer>
+    </body>
 
 </html>
