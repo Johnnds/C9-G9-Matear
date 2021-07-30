@@ -31,32 +31,34 @@
         <h2 class="completa">O completa tus datos</h2>
         <form action="/register" method="POST">
             <div class="datos">
-                <div class="linea1">
-                    <div class="nombre">
-                        <label>Nombre</label>
-                        <input type="text" name="nombre">
+                <div class="linea1-2">
+                    <div class="linea1">
+                        <div class="nombre">
+                            <label>Nombre</label>
+                            <input type="text" name="nombre">
+                        </div>
+                        <div class="apellido">
+                            <label>Apellido</label>
+                            <input type="text" name="apellido">
+                        </div>
                     </div>
-                    <div class="apellido">
-                        <label>Apellido</label>
-                        <input type="text" name="apellido">
+                    <div class="linea2">
+                        <div class="genero">
+                            <label>Genero</label>
+                            <select name="genero">
+                                <option>Seleccione</option>
+                                <option value="femenino">Femenino</option>
+                                <option value="masculino">Masculino</option>
+                                <option value="Otro">Otro</option>
+                            </select>
+                        </div>
+                        <div class="nacimiento">
+                            <label>Fecha de nacimiento</label>
+                            <input type="date" name="nacimiento" max="2010-12-31">
+                        </div>                    
                     </div>
-                    
                 </div>
-                <div class="linea2">
-                    <div class="genero">
-                        <label>Genero</label>
-                        <select name="genero">
-                            <option>Seleccione</option>
-                            <option value="femenino">Femenino</option>
-                            <option value="masculino">Masculino</option>
-                            <option value="Otro">Otro</option>
-                        </select>
-                    </div>
-                    <div class="nacimiento">
-                        <label>Fecha de nacimiento</label>
-                        <input type="date" name="nacimiento" max="2010-12-31">
-                    </div>                    
-                </div>
+                
                 <div class="linea3">
                     <div class="email">
                         <label>Email*</label>

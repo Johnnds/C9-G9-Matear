@@ -70,6 +70,11 @@ main form .datos{
     justify-content: space-around;
     font-size: 3.5vw;
 }
+.linea1-2{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
 .linea1{
     display: flex;
     justify-content: space-around;
@@ -317,5 +322,77 @@ main form .datos{
 }
 /* Desktop*/
 @media (min-width: 1024px) {
+ .datos .linea1-2{
+        
+        width: 85%;
+        font-size: 2.2vw;
+    }
+.linea1{
+    display: flex;
+    justify-content: space-between;
+    width: 49%;
+}
+
+.linea1 .nombre input{
+    width: 14vw;
+    padding: 0;
+}
+
+.linea1 .apellido{
+    display: flex;    
+    flex-direction: column;    
+}
+.linea1 .apellido input{
+    width: 14vw;
+}
+
+.linea2{   
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 45%;
     
+}
+.linea2 .genero{
+    display: flex;    
+    flex-direction: column;
+}
+  .linea2 .genero select{
+    width: 13vw;
+    height: 4.5vh;
+    font-size: 11px;
+}
+
+.linea2 .nacimiento{
+    display: flex;
+    flex-direction: column;         
+}
+.nacimiento label{
+    font-size: 1.7vw
+}
+.linea2 .nacimiento input{
+    width: 15vw;
+    height: 4.5vh;
+}
+.crear{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+
+
+}
+
+.crear button{
+    color: white;
+    background-color: black;
+    height: 6.5vh;
+    margin-bottom: 20px;
+    width: 30vw;
+    font-size: 3vw;
+    font-weight: 700;
+    border-color: aqua;
+
+    margin-right: 20px;
+}
+
 }
