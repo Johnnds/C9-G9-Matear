@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/productCart.css">
+    <script src="https://kit.fontawesome.com/4660c56b26.js" crossorigin="anonymous"></script>
+    <title>Product Car</title>
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <main>
+        <div class="carrito">
+            <div class="opciones">
+                <div class="foto">
+                    <img src="/images/mate1.jpg" alt="Mate de Cuero" title="Mate de cuero">
+                </div>
+                <div class="item">
+                <div class="cupon">
+                    <h2>Cupon:</h2>
+                    <button type="button"> Aplicar cupon </button>
+                </div>
+                <div class="cantidad">
+                    <form action="/Cantidad" method="POST">
+                        <label>
+                            <h2>Cantidad:</h2>
+                        </label>
+                        <select name="Cantidad">
+                            <option value="uno">1</option>
+                            <option value="Dos">2</option>
+                            <option value="tres">3</option>
+                            <option value="cuatro">4</option>
+                            <option value="cinco">5</option>
+                        </select>
+                    </form>
+                </div>
+            
+            <div class="color">
+                <form action="/color" method="POST">
+                    <label>
+                        <h2>Color:</h2>
+                    </label>
+                    <select name="color">
+                        <option value="#5b3d05">Marron</option>
+                        <option value="#000000">Negro</option>
+                        <option value="#10c39e">Verde</option>
+                        <option value=" #3752aa ">Azul</option>
+                    </select>
+                </form>
+            </div>
+
+            <div class="Bombilla">
+                <form action="/Bombilla" method="POST">
+                    <label>
+                        <h2>Bombilla:</h2>
+                    </label>
+                    <select name="Bombilla">
+                        <option value="si">Si</option>
+                        <option value="no">No</option>
+                    </select>
+                </form>
+            </div>
+        </div>
+        </div>
+        </div>
+        <div class="like"><i class="far fa-thumbs-up"></i>
+            <button type="button">Like</button>
+        </div>
+
+
+        </div>
+
+        <div class="data">
+            <H2>Detalle del producto</H2>
+            <p>Mate de calabaza Imperial importada desde Uruguay. Es trabajado artesanalmente mediante un proceso de
+                recubrimiento
+                en piel para luego ser sellado con una virola de alpaca cincelada. Todos los materiales así como el
+                proceso de
+                producción son sumamente detallados. Ideal para hacerte de un producto que te va a durar toda la vida.
+            </p>
+            <div class="pre">
+                <h3>Precio:$750</h3>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+
+</html>
