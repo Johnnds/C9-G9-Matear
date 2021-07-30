@@ -35,7 +35,7 @@ main h1{
 }
 
 .mail input{    
-    border: solid 1px black;
+    border: solid 1px #000000;
     height: 100%;
     width: 36vw;
     font-size: 5vw;
@@ -43,22 +43,26 @@ main h1{
 
 .password{
     display: flex;
+    
     justify-content: center;
+
 }
 
 .password input{
-    border: solid 1px black;
-    width: 32vw;
+    border: solid 1px #000000;
+    width: 30vw;
+    height: 100%;
     font-size: 5vw;
 }
 
 .password i{
-    outline: solid 1px black;
-    background-color: white;
+    outline: solid 1px #000000;
+    background-color: #ffffff;
+    width: 4vw;
+    font-size: 3.5vw;
     display: flex;
     align-items: center;
-    padding-left: 6px;
-    
+    padding: 0 8px;
 }        
 .recordar{
     padding-right: 17%;
@@ -68,40 +72,45 @@ main h1{
 }                        
         
 .recordar label{
-    font-size: .9rem;
-
+    font-size: 3vw;
 }
 
 .datosIncorrectos p{
-    color: red;
-    font-size: 0.9rem;
+    color: #ff0000;
+    font-size: 3vw;
     text-align: center;
     font-weight: 600;
     margin-top: 10px;  
 }
 
 .ingresar{
-    display: grid;
-    justify-content: center;
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
 }
-.ingresar button{
-    color: white;
-    background-color: black;
-    height: 30px;
 
+.ingresar button{
+    color: #ffffff;
+    background-color: #000000;
+    height: 100%;
+    width: 31vw;
+    font-size: 4vw;
+    font-weight: 600;
 }
+
 .ingresar p{
     font-style: italic;
-    font-size: medium;
+    font-size: 4vw;
     font-weight: 600;
-    margin-bottom: 0
+    margin-bottom: 0;
+    margin-top: 5px;
 }
 
 .ingresarCon p{
     font-style: italic;
-    font-size: small;
+    font-size: 3.5vw;
     font-weight: 600;
+    margin: 5px;
 }
 
 
@@ -111,16 +120,15 @@ main h1{
     margin-bottom: 15px;
 }
            
-.facebook button{
-    color: white;
-    background-color: #131385;    
+.facebook button{    
+    color: #ffffff;
+    background-color: #131385;
     border-color: #131385;
-    width: 171px;
-    height: 30px;
-    font-size: 1rem;
+    width: 31vw;
+    height: 100%;
+    font-size: 4vw;
     font-weight: bold;
-    display: flex;
-    justify-content: center;
+
 }      
 
 .fab, .far{
@@ -143,7 +151,7 @@ main h1{
 
 }
 .google button img{
-    width: 25px;
+    width: 5vw;
 
 }
 .cuentaNueva{
@@ -177,6 +185,7 @@ main h1{
     }
     main aside{
         margin-top: 58px;
+        width: 50%;
     }
     .ingresar p{
         font-style: italic;
@@ -189,6 +198,7 @@ main h1{
         font-size: initial;
         font-weight: 600;
     }
+
 
     
 }
