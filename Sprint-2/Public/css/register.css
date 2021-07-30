@@ -9,10 +9,7 @@ header{
 }
 .main-register{
     background-color: white;
-    position: relative;
-    margin: 1px 3%;
-    align-items: center;
-    width: 80%;
+    margin: 1px 10%;       
 }
 
 .registrate-con h2{
@@ -199,12 +196,13 @@ main form .datos{
     display: flex;
     justify-content: center;
     width: 100%;
+    margin: 20px 0 20px;
 }
 
 .crear button{
     color: white;
     background-color: black;
-    height: 6.5vh;
+    height: 100%;
     margin-bottom: 20px;
     width: 30vw;
     font-size: 3vw;
@@ -292,7 +290,7 @@ main form .datos{
     }
        
     .linea4 .pass input{
-        width: 24vw;
+        width: 22vw;
         height: 3.5vh;
     }
     .linea4 i{
@@ -301,12 +299,12 @@ main form .datos{
     }
     
     .linea4 p{
-        font-size: 1.4vw;
+        font-size: 1.2vw;
         margin-top: 7px;       
     }
     
    .linea4 .repetirPass input{
-        width: 24vw;
+        width: 22vw;
         height: 3.5vh;
     }
     
@@ -321,78 +319,86 @@ main form .datos{
 
 }
 /* Desktop*/
+
+
 @media (min-width: 1024px) {
- .datos .linea1-2{
-        
+    main .redes .google button{
+        width: 22vw;        
+        font-size: 3.5vw;
+        height: 100%;        
+    }
+    
+    main .redes .facebook button{
+        height: 100%;
+        width: 22vw;
+        font-size: 3.5vw;
+    }
+    
+    .datos .linea1-2{        
         width: 85%;
         font-size: 2.2vw;
     }
-.linea1{
-    display: flex;
-    justify-content: space-between;
-    width: 49%;
-}
 
-.linea1 .nombre input{
-    width: 14vw;
-    padding: 0;
-}
+    .linea1{
+        display: flex;
+        justify-content: space-between;
+        width: 49%;
+    }
 
-.linea1 .apellido{
-    display: flex;    
-    flex-direction: column;    
-}
-.linea1 .apellido input{
-    width: 14vw;
-}
+    .linea1 .nombre input{
+        width: 14vw;
+        padding: 0;
+    }
 
-.linea2{   
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    width: 45%;
-    
-}
-.linea2 .genero{
-    display: flex;    
-    flex-direction: column;
-}
-  .linea2 .genero select{
-    width: 13vw;
-    height: 4.5vh;
-    font-size: 11px;
-}
+    .linea1 .apellido{
+        display: flex;    
+        flex-direction: column;    
+    }
+    .linea1 .apellido input{
+        width: 14vw;
+    }
 
-.linea2 .nacimiento{
-    display: flex;
-    flex-direction: column;         
-}
-.nacimiento label{
-    font-size: 1.7vw
-}
-.linea2 .nacimiento input{
-    width: 15vw;
-    height: 4.5vh;
-}
-.crear{
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
+    .linea2{   
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        width: 45%;
+        
+    }
+    .linea2 .genero{
+        display: flex;    
+        flex-direction: column;
+    }
 
+    .linea2 .genero select{
+        width: 13vw;
+        height: 4.5vh;
+        font-size: 11px;
+    }
 
-}
+    .linea2 .nacimiento{
+        display: flex;
+        flex-direction: column;         
+    }
 
-.crear button{
-    color: white;
-    background-color: black;
-    height: 6.5vh;
-    margin-bottom: 20px;
-    width: 30vw;
-    font-size: 3vw;
-    font-weight: 700;
-    border-color: aqua;
+    .nacimiento label{
+        font-size: 1.7vw
+    }
 
-    margin-right: 20px;
-}
+    .linea2 .nacimiento input{
+        width: 15vw;
+        height: 4.5vh;
+    }
 
+    .crear{
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+    }
+
+    .crear button{       
+        margin-right: 7%;
+        width: 25vw;
+        font-size: 2.5vw;
+    }
 }
