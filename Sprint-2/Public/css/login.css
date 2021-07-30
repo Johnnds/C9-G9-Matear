@@ -13,7 +13,7 @@ header{
     flex-wrap: wrap;
     justify-content: space-around;
     position: relative;
-    margin: 40px 13%;
+    margin: 40px 10%;
     align-items: center;
 }
 main .iniciar{
@@ -113,7 +113,6 @@ main h1{
     margin: 5px;
 }
 
-
 .facebook{
     display: flex;
     justify-content: center;
@@ -140,38 +139,37 @@ main h1{
     justify-content: center;
 }
 .google button{    
-    font-size: 1.1rem;
+    font-size: 4vw;
     font-weight: bold;
     display: flex;
     align-items: center;
-    justify-content: center;
-    width: 171px;
-    height: 30px;
-    background-color: #ffffff
-
+    width: 31vw;
+    height: 100%;
+    background-color: #ffffff;
 }
 .google button img{
     width: 5vw;
+    margin-right: 10px;
 
 }
 .cuentaNueva{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    
+    align-items: center;    
 }
 
 .cuentaNueva p{
     text-align: center;
-    margin-bottom: 3px;
-    font: weight 600px;
+    margin-bottom: 3px;    
+    font-size: 4vw;
+    font-weight: 600;
 }
+
 .cuentaNueva button{    
     color: #ffffff;
     background-color: #640f8b;
-    width: 171px;
-    height: 30px;
-    font-size: 1rem;
+    width: 31vw;    
+    font-size: 3.5vw;
     font-weight: bold;
     margin-bottom: 35px;
 }
