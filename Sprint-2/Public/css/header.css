@@ -25,8 +25,8 @@ body.home{
     display: flex;
 }
 
-img{
-    width: 100%;
+.home header img:first-child{
+    width: 50%;
 }
 
 .home header nav.menu-home ul{
@@ -83,7 +83,7 @@ img{
     display: flex;
     justify-content: space-between;
     padding: 20px;
-    font-size: 1.5em;
+    font-size: 1em;
     margin-top: 0;
 }
 
@@ -93,8 +93,7 @@ img{
 
 .home header nav.menu-desplegable ul li {
 
-    background-color: #000;
-    border: 1px solid #fff;
+    /* background-color: #000; */
     text-align: center;
     padding: 20px;
   
@@ -103,6 +102,7 @@ img{
 .home header nav.menu-desplegable .burger-menu ul{
     display: none;
     position: absolute;
+    background-color: rgb(0, 0, 0);
     margin-top: 20px;
     width: 95vw;
     height: 100vh;
@@ -120,18 +120,19 @@ img{
 }
 
 .home header nav.menu-desplegable div.burger-menu ul li:hover {
-    background-color:rgba(255, 255, 255, 0.8);
+    background-color:rgba(200, 200, 200, 0.6);
+    font-size: 1.1em;
 }
 
 
 /* Main */
 
-.home-main {
-    margin-top: 0;
-    background-color: #fff;
+ .home-main {
+    margin-top: 10px;
+    background-color: #000;
 }
 
-.main-home section article.cuerpo {
+/* .main-home section article.cuerpo {
     width: 100%;
     background-image: url('catalogo-mate-home.jpg');
     margin-top: 10px;
@@ -147,7 +148,177 @@ img{
     text-transform: uppercase;
     background-color: rgba(255, 255, 255, 0.4);
     text-align: center;
+} */
+
+.main-home section {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 5px 0;
 }
+
+.main-home section h2, .main-home section p, .main-home section div .info-container h3, .main-home section div .info-container strong{
+    width: 100%;
+    color: #999;
+    font-family: monospace;
+    text-align: center;
+    font-size: 2em;
+  }
+
+.card{
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #000;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+
+  /* Estilo A */
+  .estilo-a{
+    font-family: sans-serif;
+  }
+  .estilo-a a{
+    text-decoration: none;
+    color: black;
+    border-radius: 20px;
+  }
+  .estilo-a a:hover{
+    text-decoration:overline;
+  }
+  .estilo-a .img-container{
+    overflow: hidden;
+    height: 400px;
+    position: relative;
+  }
+  .estilo-a .img-container img{
+    width: 100%;
+    position: absolute;
+    top: -25%;
+    transition: all 0.5s;
+  }
+  .estilo-a:hover .img-container img{
+    transform: scale(1.2);
+  }
+  
+  /* Estilo B */
+  .estilo-b{
+    font-family: sans-serif;
+    text-align: center;
+  }
+  .estilo-b .img-container{
+    overflow: hidden;
+    position: relative;
+  }
+  .estilo-b .img-container img{
+    width: 100%;
+  }
+  .estilo-b .img-container .price{
+    position: absolute;
+    top: 10px;
+    left: 0;
+    font-size: 20px;
+    background: white;
+    padding: 15px;
+  }
+  .estilo-b .img-container .favorite{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: white;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+  }
+  .estilo-b .img-container .favorite svg{
+    transform: translatey(14px);
+  }
+  .estilo-b .img-container .favorite:hover{
+    background: red;
+  }
+  .estilo-b .img-container .favorite:hover svg{
+    fill: white;
+  }
+  .estilo-b a{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin: 20px;
+  }
+  .estilo-b a:hover{
+    color: black;
+    background-color: transparent;
+    border: 1px solid black;
+  }
+
+.estilo-c{
+    font-family: sans-serif;
+
+  }
+  .estilo-c .img-container{
+    overflow: hidden;
+    height: 250px;
+    position: relative;
+    border-radius: 15px;
+  }
+  .estilo-c .img-container img{
+    width: 100%;
+    position: absolute;
+    top: -120%;
+    transition: all 0.5s;
+  }
+  .estilo-c:hover .img-container img{
+    transform: scale(1.2);
+  }
+  .estilo-c .img-container .promo{
+    position: absolute;
+    top: 10px;
+    left: 0;
+    font-size: 20px;
+    background: yellow;
+    padding: 15px;
+    color: black;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+  }
+  .estilo-c .info-container{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+  }
+  .estilo-c .info-container h3{
+    margin: 0;
+  }
+  .estilo-c .info-container h3,
+  .estilo-c .info-container strong,
+  .estilo-c .info-container span{
+    padding: 5px 15px;
+    width: 100%;
+  }
+  .estilo-c .add-cart{
+    margin-top: 2px;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: 25px;
+    margin: 10px;
+  }
+  .estilo-c .add-cart:hover{
+    color: black;
+    background-color: transparent;
+    border: 1px solid black;
+  }
 
 /* Footer */
 
@@ -216,5 +387,194 @@ footer.home section article nav.icon-footer-redes a{
 }
 
 
+/*  Media Query  */
+
+@media(min-width: 360px) {
+  
+  .home header .logo-cuenta-search {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card{
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+  }
 
 
+  
+}
+
+@media(min-width: 768px ) {
+
+  .home header img:first-child {
+    width: 20%;
+    align-self: center;
+  }
+
+  .home header .logo-cuenta-search {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+   .home header .cuenta-search {
+     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:auto ;
+  }
+  
+  .home header .search {
+    display: flex;
+    width: 70%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .home header nav.menu-desplegable{
+    width: 95%;
+    background-color: #000;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    padding: 2px;
+    font-size: 1em;
+    margin-top: 0;
+    height: 50px;
+    justify-content:space-around;
+    align-items: center;
+}
+
+
+.home header nav.menu-desplegable .shopping, .home header nav.menu-desplegable .burger-menu, .home header nav.menu-desplegable .burger-menu ul li a{
+    color: white;
+}
+
+.home header nav.menu-desplegable ul li {
+
+    background-color: #000;
+    text-align: center;
+    padding: 5px;
+    margin-left: 10px;
+    font-size: 0.7em;
+}
+
+.home header nav.menu-desplegable .burger-menu ul{
+    display: flex;
+    margin-top: 2px;
+    width: 100%;
+    height: auto;
+    position: relative;
+    left: 0vw;
+}
+
+.home header nav.menu-desplegable .burger-menu input, .home header nav.menu-desplegable .burger-menu label {
+    display: none;
+
+}
+
+/*  Main */
+
+  .card{
+      width: 45%;
+  }
+
+  .main-home section div.last {
+    display: none;
+  } 
+
+  .estilo-c .img-container img{
+    width: 100%;
+    position: absolute;
+    top: -70%;
+    transition: all 0.5s;
+  }
+
+
+  /*  Footer  */
+
+  footer.home {
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  footer.home section {
+    width: 50%;
+  }
+
+  footer.home section article div.suscripcion{
+    justify-content: center;
+  }
+
+}
+
+@media(min-width: 850px ){
+
+  .home header nav.menu-desplegable ul li{
+    font-size: 0.8em;
+  }
+
+}
+
+@media(min-width: 1024px ) {
+
+  /*    Header    */
+
+  .home header img:first-child {
+    width: 15%;
+    margin-left: 3%;
+  }
+
+  .home header nav.menu-desplegable ul li{
+    padding-left: 0 10px;
+    font-size: 1em;
+  }
+
+  .home header .logo-cuenta-search {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+  }
+
+  .home header .cuenta-search {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin-left: 5%;
+    padding-left: 4%;
+  }
+
+  /*   Main   */
+
+  .card{
+      width: 32%;
+  }
+
+  .main-home section div.last {
+    display: block;
+  } 
+
+  /*   Footer    */
+
+  footer.home {
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+  }
+
+  footer.home section {
+    width: 33%;
+  }
+
+  footer.home section article div.suscripcion{
+    justify-content: center;
+  }
+
+}
