@@ -1,6 +1,6 @@
 body main{
     background-color:black;
-    font-family:var(--fontFamily);
+    font-family:var(--font-family);
     color:white;
 }
 main .carrito{
