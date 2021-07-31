@@ -22,16 +22,23 @@ header img:first-child{
     width: 50%;
 }
 
-header nav.menu-home ul{
+header nav ul{
     width: 100%;
     display: flex;
     justify-content: center;
     margin: 10px;
 }
 
+.logo-cuenta-search{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .logo-cuenta-search .cuenta-search ul li:first-child {
     border-right: 1px solid #fff;
     padding: 0px 10px;
+    
 }
 
 header nav ul li:last-child{
