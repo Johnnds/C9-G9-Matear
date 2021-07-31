@@ -129,7 +129,7 @@ header nav.menu-desplegable div.burger-menu ul li:hover {
 
 @media(min-width: 360px) {
   
-  .home header .logo-cuenta-search {
+  header .logo-cuenta-search {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -140,19 +140,19 @@ header nav.menu-desplegable div.burger-menu ul li:hover {
 
 @media(min-width: 768px ) {
 
-  .home header img:first-child {
+  header img:first-child {
     width: 20%;
     align-self: center;
   }
 
-  .home header .logo-cuenta-search {
+  header .logo-cuenta-search {
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
   }
 
-   .home header .cuenta-search {
+   header .cuenta-search {
      width: 100%;
     display: flex;
     flex-direction: column;
@@ -161,14 +161,14 @@ header nav.menu-desplegable div.burger-menu ul li:hover {
     height:auto ;
   }
   
-  .home header .search {
+  header .search {
     display: flex;
     width: 70%;
     align-items: center;
     justify-content: center;
   }
 
-  .home header nav.menu-desplegable{
+  header nav.menu-desplegable{
     width: 95%;
     display: flex;
     background-color: #090909;
@@ -182,11 +182,11 @@ header nav.menu-desplegable div.burger-menu ul li:hover {
 }
 
 
-.home header nav.menu-desplegable .shopping, .home header nav.menu-desplegable .burger-menu, .home header nav.menu-desplegable .burger-menu ul li a{
+header nav.menu-desplegable .shopping, .home header nav.menu-desplegable .burger-menu, .home header nav.menu-desplegable .burger-menu ul li a{
     color: white;
 }
 
-.home header nav.menu-desplegable ul li {
+header nav.menu-desplegable ul li {
 
     text-align: center;
     padding: 5px;
@@ -194,12 +194,12 @@ header nav.menu-desplegable div.burger-menu ul li:hover {
     font-size: 0.7em;
 }
 
-.home header nav.menu-desplegable ul {
+header nav.menu-desplegable ul {
 
   background-color: #090909;
 }
 
-.home header nav.menu-desplegable .burger-menu ul{
+header nav.menu-desplegable .burger-menu ul{
     display: flex;
     margin-top: 2px;
     width: 100%;
@@ -208,7 +208,7 @@ header nav.menu-desplegable div.burger-menu ul li:hover {
     left: 0vw;
 }
 
-.home header nav.menu-desplegable .burger-menu input, .home header nav.menu-desplegable .burger-menu label {
+header .menu-desplegable .burger-menu input, header nav.menu-desplegable .burger-menu label {
     display: none;
 
 }
@@ -219,24 +219,24 @@ header nav.menu-desplegable div.burger-menu ul li:hover {
 
   /*    Header    */
 
-  .home header img:first-child {
+  header img:first-child {
     width: 15%;
     margin-left: 3%;
   }
 
-  .home header nav.menu-desplegable ul li{
+  header nav.menu-desplegable ul li{
     padding-left: 0 10px;
     font-size: 1em;
   }
 
-  .home header .logo-cuenta-search {
+  header .logo-cuenta-search {
     width: 100%;
     display: flex;
     align-items: flex-end;
     justify-content: space-around;
   }
 
-  .home header .cuenta-search {
+  header .cuenta-search {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
@@ -250,23 +250,23 @@ header nav.menu-desplegable div.burger-menu ul li:hover {
       width: 32%;
   }
 
-  .main-home section div.last {
+  .main section div.last {
     display: block;
   } 
 
   /*   Footer    */
 
-  footer.home {
+  footer {
     justify-content: space-between;
     flex-direction: row-reverse;
     flex-wrap: wrap;
   }
 
-  footer.home section {
+  footer section {
     width: 33%;
   }
 
-  footer.home section article div.suscripcion{
+  footer section article div.suscripcion{
     justify-content: center;
   }
 

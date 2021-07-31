@@ -3,3 +3,12 @@
 :root{
     --font-family: 'Indie Flower', sans-serif;
 }
+
+a{
+    text-decoration: none;
+    color: white
+}
+
+li{
+    list-style: none;
+}
