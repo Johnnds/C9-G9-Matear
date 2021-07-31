@@ -5,8 +5,6 @@ const port = 3030;
 
 app.use(express.static('Sprint-2/public'));
 
-app.use(express.static('Sprint-2/public/images'))
-
 app.get('/',(req,res) => res.sendFile(path.join(__dirname,'Sprint-2/views','index.html')));
 
 app.get('/productdetail',(req,res) => res.sendFile(path.join(__dirname,'Sprint-2/views','productdetail.html')));
