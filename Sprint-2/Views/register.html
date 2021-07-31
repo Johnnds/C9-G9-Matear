@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <a href="https://icons8.com/icon/17949/google"></a>
+    <script src="https://kit.fontawesome.com/4660c56b26.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Registro</title>
+</head>
+<body class="body-register">
+    <header>
+        <h1>HEADER</h1>
+    </header>
+
+    <main class="main-register">
+        <div class="registrate-con">
+            <h2>Registrate con</h2>        
+            <form class="redes" action="/register" method="POST">
+                <div class="google">
+                    <button type="submit"><img src="https://img.icons8.com/color/48/000000/google-logo.png"/>Google</button>
+                </div>
+                <div class="facebook">
+                 <button type="submit"><i class="fab fa-facebook-square"></i>Facebook</button>
+                </div>
+            </form>
+        </div>
+        
+        
+        <h2 class="completa">O completa tus datos</h2>
+        <form action="/register" method="POST">
+            <div class="datos">
+                <div class="linea1-2">
+                    <div class="linea1">
+                        <div class="nombre">
+                            <label>Nombre</label>
+                            <input type="text" name="nombre">
+                        </div>
+                        <div class="apellido">
+                            <label>Apellido</label>
+                            <input type="text" name="apellido">
+                        </div>
+                    </div>
+                    <div class="linea2">
+                        <div class="genero">
+                            <label>Genero</label>
+                            <select name="genero">
+                                <option>Seleccione</option>
+                                <option value="femenino">Femenino</option>
+                                <option value="masculino">Masculino</option>
+                                <option value="Otro">Otro</option>
+                            </select>
+                        </div>
+                        <div class="nacimiento">
+                            <label>Fecha de nacimiento</label>
+                            <input type="date" name="nacimiento" max="2010-12-31">
+                        </div>                    
+                    </div>
+                </div>
+                
+                <div class="linea3">
+                    <div class="email">
+                        <label>Email*</label>
+                        <input type="email" name="email">
+                    </div>
+                    <div class="telefono">
+                        <label>Teléfono (opcional)</label>
+                        <input type="text" name="telefono">
+                    </div>
+                    
+                </div>
+                <div class="linea4">
+                    <div class="password">
+                        <label>Contraseña*</label>
+                        <div class="pass">
+                            <input type="password" name="password">
+                            <i class="far fa-eye-slash"></i>  
+                        </div>
+                        
+                        <p>La contraseña debe tener como mínimo 6 caracteres</p>
+                    </div>
+                    <div class="repetirPass">
+                        <label>Repetir contraseña*</label>
+                        <div class="repeat">
+                            <input type="password" name="repitpass">
+                            <i class="far fa-eye-slash"></i>
+                        </div>
+                          
+                        <p>(*) Campos obligatorios</p>
+                    </div>
+                </div>
+                
+                <div class="crear">
+                    <button type="submit">CREAR CUENTA</button>
+                </div>
+            </div>
+        
+        </form>
+    </main>
+    
+</body>
+</html>

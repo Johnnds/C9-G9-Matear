@@ -11,24 +11,24 @@
     margin: 0;
 }
 
-.body-pd{
+.home{
     width: 100%;
     background-color:black;
 }
 
-.body-pd .main-pd{
+.home .main-pd{
     display: flex;
     align-items: center;
     width: 90%;
     margin: 20px;
 }
 
-.body-pd .menu{
+.home .menu{
     display: flex;
     flex-direction: column;
 }
 
-.body-pd .menu h1{
+.home .menu h1{
     font-size: 20px;
     color: white;
     width: 35%;
@@ -37,7 +37,7 @@
     background-color: #666;
 }
 
-.body-pd .menu .producto img{
+.home .menu .producto img{
     width: 100%;
     height: 420px;
     object-fit: contain;
@@ -45,7 +45,7 @@
     padding: 2px;
 }
 
-.body-pd .menu .precio{
+.home .menu .precio{
     font-size: 25px;
     position: relative;
     top: -35px;
@@ -53,14 +53,14 @@
     font-family: var(--font-family);
 }
 
-.body-pd .menu .mate{
+.home .menu .mate{
     font-size: 20px;
     padding: 1px;
     font-family: var(--font-family);
     color: white;
 }
 
-.body-pd .menu .off{
+.home .menu .off{
     border: #ebebeb solid 1px;
     margin: 10px;
     border-right-width: 20%;
@@ -68,25 +68,25 @@
     font-family: var(--font-family);
 }
 
-.body-pd .menu .box{
+.home .menu .box{
     display: flex;
     flex-wrap: wrap;
     padding: 5px;
     align-items: center;
 }
 
-.body-pd .menu .descuento{
+.home .menu .descuento{
     font-size: 18px;
     color:#7e7b7b;
     font-family: var(--font-family);
 }
 
-.body-pd .menu .oferta{
+.home .menu .oferta{
     font-size: 20px; 
     font-family: var(--font-family);
 }
 
-.body-pd .menu .color{
+.home .menu .color{
    font-size: 12px;
    display: flex;
    flex-wrap: wrap;
@@ -94,11 +94,11 @@
    margin: 1px;
 }
 
-.body-pd .menu .detalle{
+.home .menu .detalle{
   margin: 1px;
 }
 
-.body-pd .menu .detalle .info-product{
+.home .menu .detalle .info-product{
     font-size: 1rem;
     margin: 10px;
     text-align: justify;
@@ -107,7 +107,7 @@
     font-family: var(--font-family);
 }
 
-.body-pd .menu .detalle .cuidados{
+.home .menu .detalle .cuidados{
     font-size: 18px;
     padding: 1px;
     margin: 10px;
@@ -116,7 +116,7 @@
     font-family: var(--font-family);
 }
 
-.body-pd .menu .detalle .lavado{
+.home .menu .detalle .lavado{
     font-size: 1rem;
     padding: 1px;
     margin: 10px;
@@ -125,7 +125,7 @@
     font-family: var(--font-family);  
 }
 
-.body-pd .menu .detalle .eg{
+.home .menu .detalle .eg{
     font-size: 18px;
     padding: 1px;
     margin: 10px;
@@ -134,7 +134,7 @@
     font-family: var(--font-family);    
 }
 
-.body-pd .menu .detalle .curación{
+.home .menu .detalle .curación{
     font-size: 1rem;
     padding: 5px;
     margin: 10px;
@@ -143,7 +143,7 @@
     font-family: var(--font-family); 
 }
 
-.body-pd .menu .detalle .bombilla{
+.home .menu .detalle .bombilla{
     font-size: 1rem;
     padding: 5px;
     margin: 10px;
@@ -152,7 +152,7 @@
     font-family: var(--font-family);
 }
 
-.body-pd .menu .botón{
+.home .menu .botón{
   padding: 10px;
   font-size: 15px;
   background-color: rgb(110, 56, 17);
@@ -164,35 +164,35 @@
   left: 15%;
 }
 
-.body-pd .menu .botón a{
+.home .menu .botón a{
     text-decoration: none;
     color: white;
     font-family: var(--font-family);
 }
 
-.body-pd .menu .comentario{
+.home .menu .comentario{
     text-align: center;
     padding: 20px;
 }
 
-.body-pd .menu .comentario textarea{
+.home .menu .comentario textarea{
     width: 50%;
     height: 30px
 }
 
-.body-pd .menu .carrusel{
+.home .menu .carrusel{
     display: flex;
     flex-wrap: wrap;
     padding: 5px;
 }
 
-.body-pd .menu .similares h4{
+.home .menu .similares h4{
     font-size: 16px;
     color: white;
     font-family: var(--font-family);
 }
 
-.body-pd .menu .carrusel img{
+.home .menu .carrusel img{
     width: 100px;
     height: 100px;
     margin: 1px;
@@ -202,13 +202,13 @@
 
 /*Tablet*/
 @media(min-width:768px) {
-    .body-pd .menu .producto img{
+    .home .menu .producto img{
       width: 650px;
       height: 650px;
       margin: 2px;
     }
 
-    .body-pd .menu .carrusel img{
+    .home .menu .carrusel img{
         width: 150px;
         height: 150px;
         margin: 5px;
@@ -223,22 +223,22 @@
 /* Descktop*/
 @media(min-width:1024px){
 
-    .body-pd .menu h1{
+    .home .menu h1{
         width: 46%;
     }
 
 
-   .body-pd .menu .contenedor{
+   .home .menu .contenedor{
        display: flex;
        flex-wrap: wrap;
    }
 
-   .body-pd .menu .producto img{
+   .home .menu .producto img{
     width: 50%;
     height: auto;
 }
 
-.body-pd .menu .caja{
+.home .menu .caja{
     width: 50%;
     position: relative;
     left: 50%;
@@ -246,27 +246,27 @@
     padding: 5px;
 }
 
-.body-pd .menu .precio{
+.home .menu .precio{
     font-size: 35px;
 }
 
-.body-pd .menu .mate{
+.home .menu .mate{
     font-size: 30px;
 }
 
-.body-pd .menu .detalle .cuidados{
+.home .menu .detalle .cuidados{
     font-size: 20px;
 }
 
-.body-pd .menu .detalle .cuidados{
+.home .menu .detalle .cuidados{
     font-size: 20px;
 }
 
-.body-pd .menu .detalle .eg{
+.home .menu .detalle .eg{
     font-size: 20px;
 }
 
-.body-pd .menu .carrusel img{
+.home .menu .carrusel img{
     width: 280px;
     height: 280px;
     padding: 10px;
@@ -274,21 +274,20 @@
     text-align: center;
 }
 
-.body-pd .menu .carrusel :hover img{
-    width: 400px;
-    height: 400px;
+.home .menu .carrusel :hover img{
+    transform: scale(1.2);
 }
 
-.body-pd .menu .similares h4{
+.home .menu .similares h4{
     font-size: 30px;
 }
 
-.body-pd .menu .comentario textarea{
+.home .menu .comentario textarea{
     width: 50%;
     height: 50%;
 }
 
-.body-pd .menu .comentario button{
+.home .menu .comentario button{
     width: 50%;
     height: 30px;
     border-radius: 30px;
@@ -298,11 +297,10 @@
     border: 1px solid white;
 }
 
-.body-pd .menu .botón{
+.home .menu .botón{
     left: 20%;
   }
 
-  /*Intenté darle un colorcito a los botones cuando se posaba el cursor del mouse, pero no me los tomó */
 
 
 
