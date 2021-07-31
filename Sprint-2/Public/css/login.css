@@ -68,7 +68,6 @@ main h1{
     padding-right: 17%;
     display: flex;
     justify-content: flex-end;
-    font-size: 1rem;
 }                        
         
 .recordar label{
@@ -177,24 +176,97 @@ main h1{
 /* Tablet*/
 
 @media (min-width: 768px) {
+    .main-login{
+        background-color: white;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 40px 5%;
+        align-items: center;
+        width: 90%;
+    }
     
     main .iniciar{           
         width: 50%;
     }
+    main h1{             
+        font-size: 5.5vw;
+    }
+        
+    .mail input{    
+        
+        width: 25vw;
+        font-size: 3vw;
+    }
+            
+    .password input{        
+        width: 19vw;       
+        font-size: 3vw;
+    }
+        
+    .recordar label{
+        font-size: 2vw;
+    }
+    
+    .datosIncorrectos p{        
+        font-size: 2vw;       
+        margin-top: 5px;  
+    }
+    
+    .ingresar{
+        display: flex;
+        flex-direction: column;
+        align-items: center;    
+    }
+    
+    .ingresar button{
+        width: 25vw;
+        font-size: 3.5vw;
+        font-weight: 600;
+    }
+       
+    .ingresar p{        
+        font-size: 2vw;   
+        margin-bottom: 30px;     
+    }
+
+    /*Aside*/
+
     main aside{
-        margin-top: 58px;
-        width: 50%;
+       margin-top: 58px;
+       width: 40%;
     }
-    .ingresar p{
-        font-style: italic;
-        font-size: medium;
-        font-weight: 600;
-        margin-bottom: 30px
+
+    .ingresarCon p{        
+        font-size: 2.5vw; 
+        margin-top: 30px;       
     }
-    .ingresarCon p{
-        font-style: italic;
-        font-size: initial;
-        font-weight: 600;
+
+    .facebook button{           
+        width: 21vw;        
+        font-size: 2.5vw;       
+    }      
+        
+    .google button{    
+        font-size: 2.5vw;        
+        width: 21vw;        
+    }
+
+    .google button img{
+        width: 3vw;
+        margin: 1px  10px;
+    
+    }
+        
+    .cuentaNueva p{        
+        margin: 10px 0 0;    
+        font-size: 2.5vw;        
+    }
+    
+    .cuentaNueva button{    
+        width: 21vw;    
+        font-size: 2.1vw;
+        height: 8vh;        
     }
 
 
