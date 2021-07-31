@@ -237,30 +237,5 @@
     padding-left: 4%;
   }
 
-  /*   Main   */
-
-  .card{
-      width: 32%;
-  }
-
-  .main-home section div.last {
-    display: block;
-  } 
-
-  /*   Footer    */
-
-  footer.home {
-    justify-content: space-between;
-    flex-direction: row-reverse;
-    flex-wrap: wrap;
-  }
-
-  footer.home section {
-    width: 33%;
-  }
-
-  footer.home section article div.suscripcion{
-    justify-content: center;
-  }
 
 }
