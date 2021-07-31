@@ -152,7 +152,7 @@
     font-family: var(--font-family);
 }
 
-c{
+.body-pd .menu .botón{
   padding: 10px;
   font-size: 15px;
   background-color: rgb(110, 56, 17);
@@ -219,6 +219,8 @@ c{
     
 }
 
+
+/* Descktop*/
 @media(min-width:1024px){
 
     .body-pd .menu h1{
@@ -290,8 +292,18 @@ c{
     width: 50%;
     height: 30px;
     border-radius: 30px;
-    background-color: white;
+    background-color:  rgb(110, 56, 17);;
     text-align: center;
+    color: white;
+    border: 1px solid white;
 }
+
+.body-pd .menu .botón{
+    left: 20%;
+  }
+
+  /*Intenté darle un colorcito a los botones cuando se posaba el cursor del mouse, pero no me los tomó */
+
+
 
 }
