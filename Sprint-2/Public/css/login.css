@@ -1,20 +1,18 @@
-header{
-    color: white;
-}
 
 .body-login{
-    background-color: black;
+    background-color: #000000;
     font-family: var(--font-family);
     margin: 40px 20px;
 }
 .main-login{
-    background-color: white;
+    background-color: #ffffff;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     position: relative;
     margin: 40px 10%;
     align-items: center;
+    color: #000000;
 }
 main .iniciar{
     display: block;

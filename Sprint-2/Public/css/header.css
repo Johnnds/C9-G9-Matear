@@ -3,7 +3,7 @@
 
 /* Header */
 
-.body-loign  header {
+header {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -12,42 +12,49 @@
     margin-bottom: 0;
 }
 
-.body-loign header nav {
+header nav {
     margin-top: 15px;
     width: 100%;
     display: flex;
 }
 
-.body-loign header img:first-child{
+header img:first-child{
     width: 50%;
 }
 
-.body-loign header nav.menu-home ul{
+header nav ul{
     width: 100%;
     display: flex;
     justify-content: center;
     margin: 10px;
 }
 
-.body-loign header .logo-cuenta-search .cuenta-search ul li:first-child {
+.logo-cuenta-search{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.logo-cuenta-search .cuenta-search ul li:first-child {
     border-right: 1px solid #fff;
     padding: 0px 10px;
+    
 }
 
-.body-loign header nav ul li:last-child{
+header nav ul li:last-child{
     padding: 0px 10px;
 }
 
-.body-loign header nav.menu-home ul li, .home header nav.menu-desplegable ul li, .home header nav.menu-desplegable .shopping .cantidad{
+header nav.menu-home ul li, .home header nav.menu-desplegable ul li, .home header nav.menu-desplegable .shopping .cantidad{
     font-weight: bold;
     text-transform: uppercase;
 }
 
-.body-loign header div.search{
+header div.search{
     margin: 20px 0;
 }
 
-.body-loign header .logo-cuenta-search .cuenta-search div.search input {
+header .logo-cuenta-search .cuenta-search div.search input {
     border-radius: 6px;
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
@@ -57,7 +64,7 @@
     border: 1px solid #c4c4c4;
 }
 
-.body-loign header .logo-cuenta-search .cuenta-search div.search button {
+header .logo-cuenta-search .cuenta-search div.search button {
     border-radius: 6px;
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
@@ -69,7 +76,7 @@
     color: #fff;
 }
 
-.body-loign header nav.menu-desplegable{
+header nav.menu-desplegable{
     width: 100%;
     background-color: #090909;
     /* color: white; */
@@ -80,21 +87,21 @@
     margin-top: 0;
 }
 
-.body-loign header nav.menu-desplegable .shopping, .home header nav.menu-desplegable .burger-menu, .home header nav.menu-desplegable .burger-menu ul li a, header .logo-cuenta-search .cuenta-search a{
+header nav.menu-desplegable .shopping, .home header nav.menu-desplegable .burger-menu, .home header nav.menu-desplegable .burger-menu ul li a, header .logo-cuenta-search .cuenta-search a{
     color: white;
 }
 
-.body-loign header nav.menu-desplegable ul li {
+header nav.menu-desplegable ul li {
     text-align: center;
     padding: 20px;
     background-color: rgb(20, 20, 20);
 }
 
-.body-loign header nav.menu-desplegable ul {
+header nav.menu-desplegable ul {
   background-color: #090909;
 }
 
-.body-loign header nav.menu-desplegable .burger-menu ul{
+header nav.menu-desplegable .burger-menu ul{
     display: none;
     position: absolute;
     margin-top: 20px;
@@ -105,15 +112,15 @@
     transition: all .5s ease;
 }
 
-.body-loign header nav.menu-desplegable .burger-menu input {
+header nav.menu-desplegable .burger-menu input {
     display: none;
 }
 
-.body-loign header nav.menu-desplegable .burger-menu input:checked ~ ul{
+header nav.menu-desplegable .burger-menu input:checked ~ ul{
     display: block;
 }
 
-.body-loign header nav.menu-desplegable div.burger-menu ul li:hover {
+header nav.menu-desplegable div.burger-menu ul li:hover {
     font-size: 1.1em;
 }
 
@@ -122,7 +129,7 @@
 
 @media(min-width: 360px) {
   
-  .body-loign header .logo-cuenta-search {
+  header .logo-cuenta-search {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -133,19 +140,19 @@
 
 @media(min-width: 768px ) {
 
-  .body-loign header img:first-child {
+  header img:first-child {
     width: 20%;
     align-self: center;
   }
 
-  .body-loign header .logo-cuenta-search {
+  header .logo-cuenta-search {
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
   }
 
-  .body-loign header .cuenta-search {
+   header .cuenta-search {
      width: 100%;
     display: flex;
     flex-direction: column;
@@ -154,14 +161,14 @@
     height:auto ;
   }
   
-  .body-loign header .search {
+  header .search {
     display: flex;
     width: 70%;
     align-items: center;
     justify-content: center;
   }
 
-  .body-loign header nav.menu-desplegable{
+  header nav.menu-desplegable{
     width: 95%;
     display: flex;
     background-color: #090909;
@@ -175,11 +182,11 @@
 }
 
 
-.body-loign header nav.menu-desplegable .shopping, .home header nav.menu-desplegable .burger-menu, .home header nav.menu-desplegable .burger-menu ul li a{
+header nav.menu-desplegable .shopping, .home header nav.menu-desplegable .burger-menu, .home header nav.menu-desplegable .burger-menu ul li a{
     color: white;
 }
 
-.body-loign header nav.menu-desplegable ul li {
+header nav.menu-desplegable ul li {
 
     text-align: center;
     padding: 5px;
@@ -187,12 +194,12 @@
     font-size: 0.7em;
 }
 
-.body-loign header nav.menu-desplegable ul {
+header nav.menu-desplegable ul {
 
   background-color: #090909;
 }
 
-.body-loign header nav.menu-desplegable .burger-menu ul{
+header nav.menu-desplegable .burger-menu ul{
     display: flex;
     margin-top: 2px;
     width: 100%;
@@ -201,7 +208,7 @@
     left: 0vw;
 }
 
-.body-loign header nav.menu-desplegable .burger-menu input, .home header nav.menu-desplegable .burger-menu label {
+header .menu-desplegable .burger-menu input, header nav.menu-desplegable .burger-menu label {
     display: none;
 
 }
@@ -212,30 +219,28 @@
 
   /*    Header    */
 
-  .body-loign header img:first-child {
+  header img:first-child {
     width: 15%;
     margin-left: 3%;
   }
 
-  .body-loign header nav.menu-desplegable ul li{
+  header nav.menu-desplegable ul li{
     padding-left: 0 10px;
     font-size: 1em;
   }
 
-  .body-loign header .logo-cuenta-search {
+  header .logo-cuenta-search {
     width: 100%;
     display: flex;
     align-items: flex-end;
     justify-content: space-around;
   }
 
-  .body-loign header .cuenta-search {
+  header .cuenta-search {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
     margin-left: 5%;
     padding-left: 4%;
   }
-
-
 }
