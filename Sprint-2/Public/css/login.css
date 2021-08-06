@@ -2,7 +2,6 @@
 .body-login{
     background-color: #000000;
     font-family: var(--font-family);
-    margin: 40px 20px;
 }
 .main-login{
     background-color: #ffffff;
@@ -64,7 +63,7 @@ main h1{
 .recordar{
     padding-right: 17%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: 16px;
     align-items: center;
 }                        
         
@@ -173,7 +172,7 @@ main h1{
 
 /* Tablet*/
 
-@media (min-width: 768px) {
+@media (min-width: 425px) {
     .main-login{
         background-color: white;
         display: flex;
@@ -270,7 +269,7 @@ main h1{
 
 
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
     main h1{         
     font-size: 3.5vw;
     }
