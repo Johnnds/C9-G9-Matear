@@ -9,11 +9,12 @@
     box-sizing: border-box;
 }
 
-a {
+a{
     text-decoration: none;
-    color: black;
+    color: white
 }
 
-li {
+li{
     list-style: none;
 }
+
