@@ -1,138 +1,122 @@
-/*main*/
+/*.cart*/
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 
 :root{
     font-family: 'Indie Flower', cursive;
 }
-body main{
-    background-color:black;
-    font-family:var(--font-family);
-    color:white;
+.cart {
+   font-family:var(--font-family);
+  background-color: #43cbe0b8;
+    color: black;
+    padding: 10px;
+    background-size: 22px;
 }
-main .carrito{
-    margin:0 auto;
+.cart .foto img{
+    width:80%;
+    border: solid 1px white;
+}
+.cart .like{
+    text-align:right;
+    padding-right:10px;
+}
+.cart .like i{
+     color:#157ee5;
+}
+.cart .like button{
+    background-color:white;
+    color:#157ee5;
+}
+.cart .caja1{
+    margin-top:15px;
+    text-align:center;
+}
+.cart .caja2{
+    text-align:center;
+    padding:10px;
+}
+.cart .item{
+    display:block ruby;
+    padding:10px;
+    text-align:center;
+}
+.cart .caja3{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    height: 60%;
+}
+@media (min-width:481px){
+.cart .caja1 img{
+    width:80%;
+}
+.cart .caja1{
+    width: 50%;
+    text-align:center;
+}
+.cart .like{
+    text-align:left;
+    padding-left:150px;
+}
+.cart .opciones{
+    display: block
+}
+.cart .des{
+    display: flex;
+}
+.cart .item {
+    display: flex;
     padding: 10px;
     text-align: center;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
-main .foto{
-    width:100%;
-    height:auto;
-}
-main .foto img{
-    width: 200px;
+.cart .caja2{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    width: 50%;
     justify-content: center;
-    text-align: center;
-    padding: 15px;
+    align-items: normal;
 }
-main .like{
-    text-align: right;
-    padding-right:20px;
-   
+.cart .caja3{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 5px;
 }
-main .like i{
-    color:rgb(36, 33, 226);
-    background-color:  #637fdd ;
-    width: 5%;
-    height: 5%;
-    border: solid 2px  #637fdd;
 }
-main .opciones{
-    text-align:center;
-    
-}
-main .cupon{
-   text-align:center;
-   margin:5px;
-}
-main h2{
-    display:inline;
-}
-main .cantidad{
-    margin:5px;
-    text-align: center;
-    justify-content: space-around;
-}
-main .color{
-    margin:5px;
-    text-align: center;
-    justify-content: space-around;
-}
-main .bombilla{
-    margin:5px;
-    text-align: center;
-    justify-content: space-around;
-}
-main .data{
-    text-align: center;
-    margin: 10px;
-}
-main p{
-    font-size:18px;
+@media (min-width:900px){
+    .cart .like{
+        padding-left: 330px;
     }
-main .pre{
-    font-size: 20px;
-    padding-top: 3px;
-    padding-bottom: 3px;
-}
-/* Footer */
-@media (min-width:768px){
-    /*header*/
-    
-    /*main*/
-    main{
-        flex-direction: row;
-    }
-    
-      main .foto img{
-        width: 100%;
-    }
-    main .foto{
-        text-align: left;
-        margin: 10px;
-        width:40%;
-        justify-content: flex-start;
-    }
-    main .item{
-        width: 50%;
-        justify-content: space-around;
-        padding-top: 18%;
-        margin-left: 20px;
-    }
-    main .opciones{
+    .cart .opciones{
         display: flex;
-        width: 100%;
+        flex-wrap: wrap;
+        
     }
-    main .like{
-        font-size: 25px;
-        text-align: left;
-        padding-left: 40%;
+    .cart .des{
+        display: flex;
     }
-    main .opciones{
-      margin: 1px;
+    .cart .caja2{
+        width: 40%;
+        height: 90%;
+        padding-top: 70px;
     }
-    main .data{
-       text-align: center;
-        margin: 10px;
+    .cart .item{
+        width: 60%;
+        height: 40%;
+        display:flex;
+        align-items: center;
+    flex-direction: inherit;
+    justify-content: space-around;
     }
-    main p{
-        font-size: 20px;
-    }
-    main h2{
-        font-size: 30px;
-    }
-    main .pre{
-        font-size: 25px;
-    }
-    /*  Footer  */
-    }
-  
-@media (min-width:1024px){
-    /*    main   */
-    main .foto img{
-        border: solid 
-    } 
-    main .item{
+    .cart .caja3{
+        width: 40;
+        height: 60%;
         text-align: center;
-        margin: 30px;
+        display: flex;
+        justify-content: space-evenly
+    
     }
 }
