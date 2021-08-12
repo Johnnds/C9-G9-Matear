@@ -8,6 +8,7 @@ header{
     margin: 40px 20px;
 }
 .main-register{
+    width: 70%;
     background-color: white;
     margin: 1px 10%;  
     color:#000000     
@@ -229,6 +230,10 @@ main .redes .facebook i{
         font-size: 3vw;
     }
     
+    .linea1{
+        justify-content: space-evenly;
+    }
+
     .linea1 .nombre input{
         width: 22vw;
         height: 23px;
@@ -239,6 +244,9 @@ main .redes .facebook i{
         height: 23px;
     }
     
+    .linea2{
+        justify-content: space-evenly;
+    }
     .linea2 .genero select{
         width: 22vw;
         height: 23px;
@@ -252,7 +260,11 @@ main .redes .facebook i{
         width: 22vw;
         height: 23px;
     }
-      
+    
+    .linea3{
+        justify-content: space-evenly;
+    }
+
     .linea3 .email input{
         width: 22vw;
         height: 23px;
@@ -272,7 +284,7 @@ main .redes .facebook i{
         flex-direction: row;
         width: 100%;    
         align-items: baseline;
-        justify-content: space-around;
+        justify-content: space-evenly;
         text-align: center;
     }
        
