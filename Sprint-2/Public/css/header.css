@@ -304,32 +304,5 @@ header nav.menu-desplegable a.shopping {
   header .logo-cuenta-search .search {
     width: 100%;
   }
-
-  /*   Main   */
-
-  .card{
-      width: 32%;
-  }
-
-  .main section div.last {
-    display: block;
-  } 
-
-  /*   Footer    */
-
-  footer {
-    justify-content: space-between;
-    flex-direction: row-reverse;
-    flex-wrap: wrap;
-  }
-
-  footer section {
-    width: 33%;
-  }
-
-  footer section article div.suscripcion{
-    justify-content: center;
-  }
-
 }
 }
