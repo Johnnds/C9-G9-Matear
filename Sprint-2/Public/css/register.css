@@ -1,8 +1,7 @@
-header{
-    color: white;
-}
+
 
 .body-register{
+    padding-top: 130px;
     background-color: #43cbe0b8;
     font-family: var(--font-family);
     margin: 40px 20px;
