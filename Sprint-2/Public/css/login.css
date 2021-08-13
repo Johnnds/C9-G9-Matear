@@ -2,7 +2,6 @@
 .body-login{
     background-color: #43cbe0b8;
     font-family: var(--font-family);
-    margin: 40px 20px;
 }
 .main-login{
     background-color: #ffffff;
@@ -66,7 +65,7 @@ main h1{
 .recordar{
     padding-right: 17%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: 16px;
     align-items: center;
 }     
 
@@ -182,7 +181,11 @@ main h1{
 
 /* Tablet*/
 
+<<<<<<< HEAD
 @media (min-width: 481px) {
+=======
+@media (min-width: 425px) {
+>>>>>>> Register/Cintia
     .main-login{
         background-color: white;
         display: flex;
@@ -284,6 +287,7 @@ main h1{
 
 
 
+<<<<<<< HEAD
 @media (min-width: 900px) {
     .main-login{
         background-color: white;
@@ -293,6 +297,11 @@ main h1{
         margin: 40px 5%;
         align-items: center;
         width: 90%;
+=======
+@media (min-width: 768px) {
+    main h1{         
+    font-size: 3.5vw;
+>>>>>>> Register/Cintia
     }
     
     main .iniciar{           
