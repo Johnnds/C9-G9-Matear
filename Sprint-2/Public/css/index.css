@@ -1,10 +1,15 @@
 /* Body */
 
+body {
+  padding-top: 130px;
+}
+
 body.home{
 
     margin-left: auto;
     margin-right: auto;
-    background-color:#000;
+    background:  #43cbe0b8;
+    
 }
 
 /* Main */
