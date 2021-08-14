@@ -2,7 +2,6 @@
 
 
 /* Header */
-
 .home header {
     display: flex;
     flex-direction: column;
@@ -10,6 +9,7 @@
     align-items: center;
     background-color:  rgb(15, 15, 15);
     margin-bottom: 0;
+
 }
 
 .home header nav {
