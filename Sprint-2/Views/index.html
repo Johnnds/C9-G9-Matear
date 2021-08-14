@@ -8,47 +8,46 @@
     <script src="https://kit.fontawesome.com/c38f1a45d0.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/styles.css">
 </head>
-<body class="home">
-    <header>
-      <div class="logo-cuenta-search">
-          <img src="matear.png"  alt="Logo personal">
+<body>
+  <header>
+    <div class="logo-cuenta-search">
+      
+        <img src="/images/matear.jpg"  alt="Logo personal">
         <div class="cuenta-search">  
             <nav class="menu-home">
                 <ul>
-                    <li><a href="/register">Crear cuenta</a></a></li>
-                    <li><a href="/login">Iniciar Session</a></li>
+                    <li><a href="/register">Registrarse</a></a></li>
+                    <li><a href="/login">Iniciar Sección</a></li>
                 </ul>
             </nav>
-            <div class="search">
+          <div class="search">
                 <input type="search" name="" id="" placeholder="Buscar productos" ><button type="submit"><i class="fas fa-search"></i></button>
-              </div>
           </div>
         </div>
-        <nav class="menu-desplegable">
-            <div class="burger-menu">
-                <input type="checkbox" name="" id="menu">
-                <label for="menu"><i class="fas fa-bars"></i></label>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/login">Iniciar Session</a></li>
-                    <li><a href="/register">Crear cuenta</a></li>
-                    <li><a href="/productcart">Carrito de compras</a></li>
-                    <li><a href="/productdetail">Detalles de Productos</a></li>
-                </ul>
-            </div>
-            <a class="shopping" href="#">
-                <i class="fas fa-shopping-cart"></i>
-                <span class="cantidad">0</span>
-            </a>
-        </nav>
-    </header>
+    </div> 
+    <nav class="menu-desplegable">
+        <input type="checkbox" name="burger" id="menu">
+        <label class="burger" for="burger" ><i class="fas fa-bars"></i></label>
+        <a class="shopping" href="#">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cantidad">0</span>
+        </a>
+        <ul>
+            <li class="header-nav-ul-li-a"><a href="#">Home</a></li>
+            <li><a href="#">Quienes somos</a></li>
+            <li><a href="#">Productos</a></li>
+            <li><a href="#">Sucursales</a></li>
+            <li><a href="#">Contactos</a></li>
+        </ul>
+    </nav>
+</header>
     <main class="main-home">
         <section>
             <h2>Destacados</h2>
               <div class="card estilo-a">
                 <a href="#">
                   <div class="img-container">
-                    <img src="ceramico-galaxia.jpg" alt="producto 1">
+                    <img src="/images/ceramico-galaxia.jpg" alt="producto 1">
                   </div>
                   <p>Yerberas de cuero</p>
                 </a>
@@ -56,7 +55,7 @@
               <div class="card estilo-a">
                 <a href="#">
                   <div class="img-container">
-                    <img src="ceramico-galaxia.jpg" alt="producto 1">
+                    <img src="/images/ceramico-galaxia.jpg" alt="producto 1">
                   </div>
                   <p>Combo Matear</p>
                 </a>
@@ -64,7 +63,7 @@
               <div class="last card estilo-a">
                 <a href="#">
                   <div class="img-container">
-                    <img src="mate-ceramico.jpg" alt="producto 1">
+                    <img src="/images/mate-ceramico.jpg" alt="producto 1">
                   </div>
                   <p>Mate premiun</p>
                 </a>
@@ -74,7 +73,7 @@
             <h2>Adelantos</h2>
               <div class="card estilo-b">
                   <div class="img-container">
-                    <img src="mate-ceramico.jpg" alt="producto 1">
+                    <img src="/images/mate-ceramico.jpg" alt="producto 1">
                     <span class="price">$60</span>
                     <span class="favorite">
                       <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"/></svg>
@@ -85,7 +84,7 @@
               </div>
               <div class="card estilo-b">
                   <div class="img-container">
-                    <img src="ceramico-galaxia.jpg" alt="producto 1">
+                    <img src="/images/ceramico-galaxia.jpg" alt="producto 1">
                     <span class="price">$30</span>
                     <span class="favorite">
                       <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"/></svg>
@@ -96,7 +95,7 @@
               </div>
               <div class="last card estilo-b">
                   <div class="img-container">
-                    <img src="ceramico-galaxia.jpg" alt="producto 1">
+                    <img src="/images/ceramico-galaxia.jpg" alt="producto 1">
                     <span class="price">$120</span>
                     <span class="favorite">
                       <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"/></svg>
@@ -111,7 +110,7 @@
               <div class="card estilo-c">
                 <a href="#">
                   <div class="img-container">
-                    <img src="mate-ceramico.jpg" alt="producto 1">
+                    <img src="/images/mate-ceramico.jpg" alt="producto 1">
                     <span class="promo">15% de descuento</span>
                   </div>
                  </a>
@@ -125,7 +124,7 @@
               <div class="card estilo-c">
                 <a href="#">
                   <div class="img-container">
-                    <img src="mate-ceramico.jpg" alt="producto 1">
+                    <img src="/images/mate-ceramico.jpg" alt="producto 1">
                     <span class="promo">15% de descuento</span>
                   </div>
                   </a>
@@ -139,7 +138,7 @@
               <div class="last card estilo-c">
                 <a href="#">
                   <div class="img-container">
-                    <img src="mate-ceramico.jpg" alt="producto 1">
+                    <img src="/images/mate-ceramico.jpg" alt="producto 1">
                     <span class="promo">15% de descuento</span>
                   </div>
                   </a>
@@ -152,7 +151,7 @@
               </div>
           </section>
     </main>
-    <footer class="home">
+    <footer>
         <section>
             <Article>
                 <div class="icon-footer"><i class="fas fa-credit-card"></i><i class="fab fa-cc-visa"></i><i class="fab fa-cc-mastercard"></i><i class="fab fa-cc-amex"></i></div>

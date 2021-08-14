@@ -1,10 +1,11 @@
 /* Body */
 
 body.home{
-    width: 95vw;
+
     margin-left: auto;
     margin-right: auto;
-    background-color:#000;
+    background:  #43cbe0b8;
+    
 }
 
 /* Main */
@@ -19,6 +20,7 @@ body.home{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    align-items: center;
     padding: 5px 0;
 }
 

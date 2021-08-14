@@ -1,22 +1,21 @@
-<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 
 :root{
     --font-family: 'Indie Flower', sans-serif;
 }
-=======
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Indie Flower', sans-serif;
 }
 
-a {
+a{
     text-decoration: none;
-    color: black;
+    color: white
 }
 
-li {
+li{
     list-style: none;
 }
->>>>>>> Home/Lucio
+
