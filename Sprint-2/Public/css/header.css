@@ -1,0 +1,307 @@
+
+
+
+/* Header */
+
+header {
+    background-color:  rgba(15, 15, 15, .9);
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    height: auto;
+    padding-top: 10px;
+    z-index: 10;
+}
+
+header img {
+  display: block;
+  border-radius: 50%;
+  border: 1px solid #bbbfbe;
+  margin: 15px auto 30px;
+  width: 30%;
+  color: #fff;
+}
+
+header nav.menu-desplegable .burger {
+  display: block;
+  width: 35px;
+  background-color: gray;
+  color: white;
+  padding: 8px;
+  border-radius: 4px;
+  margin: 0 5px 20px;
+  text-align: center;
+}
+
+header nav.menu-desplegable ul{
+  display: none;
+  background: #333;
+  padding: 0;
+  margin: 9;
+}
+
+header nav.menu-desplegable {
+  position: relative;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+header nav.menu-desplegable input[type=checkbox]{
+  opacity: 0;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  left: 11px;
+  top: 10px;
+ 
+}
+header nav.menu-desplegable ul li {
+  width: 100%;
+  margin-bottom: 1px;
+  padding: 10px;
+  text-align: center;
+}
+
+header nav.menu-desplegable ul li a{
+    display: block;
+    color: white;
+    text-transform: uppercase;
+    padding: .5em 1em;
+}
+
+header nav.menu-desplegable ul li:hover, header a.shopping:hover, header .cuenta-search .menu-home ul li:hover {
+  background: tomato;
+  color: white;
+}
+
+header .cuenta-search .menu-home ul li:first-child {
+    border-right: 1px solid #fff;
+}
+
+header a.shopping {
+  position:absolute;
+  top: 10px;
+  right: 0;
+  font-size: 1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-right: 5px;
+}
+
+header nav.menu-desplegable ul li, header a.shopping .cantidad{
+    font-weight: bold;
+    text-transform: uppercase;
+} 
+
+header .cuenta-search {
+  display: flex;
+  flex-direction:  column;
+  justify-content: center;
+  align-items: center;
+}
+
+header .cuenta-search .menu-home ul {
+  display: flex;
+  flex-direction: row;
+  text-transform: uppercase;
+}
+
+header .cuenta-search .menu-home ul li {
+  font-weight: 500;
+  padding: .5em 1em;
+}
+
+header div.cuenta-search div.search{
+    margin: 20px 0;
+}
+
+header .cuenta-search div.search input {
+    border-radius: 6px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    height: 45px;
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #c4c4c4;
+}
+
+header .cuenta-search div.search button {
+    border-radius: 6px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    height: 45px;
+    padding: 10px 25px;
+    margin: 0;
+    border: 1px solid #c4c4c4;
+    background-color: #000;
+    color: #fff;
+}
+
+header .cuenta-search div.search button:hover {
+  background: tomato;
+  color: white;
+}
+
+header nav.menu-desplegable .burger-menu ul{
+    display: none;
+    position: absolute;
+    margin-top: 20px;
+    width: 95vw;
+    height: 100vh;
+    left: 2.5%;
+    z-index: 1;
+    transition: all .5s ease;
+}
+
+header nav.menu-desplegable input:checked ~ ul{
+    display: inline-block;
+    width: 100%;
+}
+
+
+/*  Media Query  */
+
+
+@media(min-width: 481px ) {
+
+    header img {
+    width: 20%;
+  }
+
+   header .cuenta-search {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  header .cuenta-search .menu-home {
+    width: 100%;
+    text-align: center;
+  }
+
+  header .cuenta-search .menu-home ul {
+    justify-content: center;
+    align-items: center;
+  }
+  
+  header .search {
+    display: flex;
+    width: 70%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  header nav.menu-desplegable{
+    width: 100%;
+    display: flex;
+    background-color: #090909;
+    flex-direction: row-reverse;
+    font-size: 1em;
+    margin-top: 0;
+    height: 50px;
+    align-items: flex-start;
+    justify-content: flex-end;
+    position: relative;
+}
+
+header nav.menu-desplegable ul li {
+
+    text-align: center;
+    width: 15%;
+    font-size: 0.73rem;
+  }
+
+  header nav.menu-desplegable ul li:last-child {
+      margin-right: 0;
+  }
+
+
+header nav.menu-desplegable ul{
+  width: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start ;
+    flex-wrap:wrap;
+    margin-top: 2px;
+    width: 95%;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+}
+
+header nav.menu-desplegable ul li {
+  text-align:center;
+  flex-grow: .5;
+}
+
+header nav.menu-desplegable label.burger {
+    display: none;
+
+}
+
+header nav.menu-desplegable a.shopping {
+  display: block;
+  font-size: .9em;
+  position: absolute;
+  top: 15px;
+  padding: 4px;
+}
+
+@media(min-width: 900px ) {
+
+  /*    Header    */
+
+  header img {
+    width: 10%;
+    margin-left: 5px;
+    padding: 0;
+    margin: 0;
+  }
+
+  header nav.menu-desplegable a.shopping {
+    display: block;
+    font-size: .9em;
+    position: absolute;
+    top: -50px;
+    right: 15px;
+    padding: 4px;
+  }
+
+
+  header .logo-cuenta-search {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  header .cuenta-search {
+    width: 66%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  header .logo-cuenta-search .cuenta-search nav.menu-home ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header .cuenta-search .menu-home ul li {
+    padding: .9em 1em;
+    font-size: .7em;
+  }
+
+  header .cuenta-search .menu-home ul li:first-child{
+    border-right: 0;
+}
+
+  header .logo-cuenta-search .search {
+    width: 100%;
+  }
+}
+}

@@ -5,11 +5,13 @@ const port = 3030;
 
 app.use(express.static('Sprint-2/public'));
 
+// app.use(express.static('Sprint-2/public/images'))
+
 app.get('/',(req,res) => res.sendFile(path.join(__dirname,'Sprint-2/views','index.html')));
 
-app.get('/productdetail',(req,res) => res.sendFile(path.join(__dirname,'Sprint-2/views','productDetail.html')));
+app.get('/productdetail',(req,res) => res.sendFile(path.join(__dirname,'Sprint-2/views','productdetail.html')));
 
-app.get('/productart',(req,res) => res.sendFile(path.join(__dirname,'Sprint-2/views','productCart.html')));
+app.get('/productcart',(req,res) => res.sendFile(path.join(__dirname,'Sprint-2/views','productcart.html')));
 
 app.get('/register',(req,res) => res.sendFile(path.join(__dirname, 'Sprint-2/views','register.html')));
 
