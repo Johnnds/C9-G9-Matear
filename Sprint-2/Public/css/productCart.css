@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*.cart*/
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 
@@ -8,6 +9,15 @@
    font-family:var(--font-family);
   background-color: #43cbe0b8;
     color: black;
+=======
+
+body main{
+    background-color:#43cbe0b8;
+    font-family:var(--font-family);
+}
+main .carrito{
+    margin:0 auto;
+>>>>>>> 4da234daef528eeb94396938dc4bc8725cfbe4f9
     padding: 10px;
     background-size: 22px;
 }
