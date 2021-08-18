@@ -19,10 +19,12 @@ app.set('view engine', 'ejs');
 // ************ Route System require and use() ************
 var mainRouter = require('./routes/main');
 var usersRouter = require('./routes/users');
+const productsRouter = require('./routes/products')
 
 
 app.use('/', mainRouter);
 app.use('/users', usersRouter);
+app.use('/products', productsRouter)
 
 
 // app.use(logger('dev'));
