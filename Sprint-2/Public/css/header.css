@@ -1,6 +1,4 @@
 
-
-
 /* Header */
 
 header {
@@ -17,7 +15,6 @@ header img {
   display: block;
   border-radius: 50%;
   border: 1px solid #bbbfbe;
-  margin: 15px auto 30px;
   width: 30%;
   color: #fff;
 }
