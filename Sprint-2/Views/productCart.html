@@ -47,74 +47,173 @@
     </header>
     <main>
         <div class="cart">
-            <div class="opciones">
-                <div class="des">
-                   <div class="caja1">
-                    <div class="foto">
-                        <img src="/images/mate1.jpg" alt="Mate de Cuero" title="Mate de cuero">
-                    </div>
-                     <div class="like">
+<div class="fila1">
+            <article>
+                <div class="container0">
+                    <img src="/images/mate1.jpg" alt="Mate de Cuero" title="Mate de cuero">
+                    <div class="like">
                         <button type="button"><i class="far fa-thumbs-up"></i>Like</button>
-                     </div>
-                </div>
-                     <div class="caja2">
-                     <div class="nombre">
-                     <p>Mate de Cuero Natural</p>
                     </div>
-                         <div class="pre">
-                         <p>Precio : $750</p>
+                    <div class="caja2">
+                        <h4>Mate de Cuero</h4>
+                        <h5>$300</h5>
+                        <div class="bombilla">
+                            <form action="bombilla" method="POST">
+                                <form ...>
+
+                                    <p>Opcion de Bombilla</p>
+                                    <p><input type="radio" name="bombilla" value="si"/> si </p>
+                                    <p><input type="radio" name="bombilla" value="no"/> no </p>
+        
+                                 </form>
                          </div>
-                <div class="con">
-                    <p>con Bombilla : $850</p>
-                </div> 
-            </div>
-            </div>
-                <div class="item">
-                    <div class="cupon">
-                        <p>Cupon:</p>
-                        <button type="button"> Aplicar cupon </button>
+                         <div class="promo">
+                            <input type="checkbox" name="promo" checked>
+                            <label for="promo-check">I have a promo code</label>
+                        </div>
+                        <div class="promo-code">
+                            <input type="text" name="promo-checkbox" placeholder="Enter your promo code here" checked>
+                            <button class="apply">Apply</button>
+                        </div>
+                        <div class="opc">
+                        <button class="btn-c">
+                            <i class="fas fa-lock"></i>
+                            <span>Guardar</span>
+                        </button>
+                        <div class="eli">
+                            <button type="reset"><i class="fas fa-trash-alt"></i>
+                            </button>
+                        </div>
+                        </div>
                     </div>
-                    <div class="cantidad">
-                        <form action="/Cantidad" method="POST">
-                            <label>
-                                <p>Cantidad:</p>
-                            </label>
-                            <select name="Cantidad">
-                                <option value="uno">1</option>
-                                <option value="Dos">2</option>
-                                <option value="tres">3</option>
-                                <option value="cuatro">4</option>
-                                <option value="cinco">5</option>
-                            </select>
-                        </form>
+            </article>
+            <article>
+                <div class="container1">
+                    <img src="/images/mate-ceramico.jpg" alt="mate-ceramico" title="mate-ceramico">
+                    <div class="like">
+                        <button type="button"><i class="far fa-thumbs-up"></i>Like</button>
                     </div>
-                    <div class="Bombilla">
-                        <form action="/Bombilla" method="POST">
-                            <label>
-                                <p>Bombilla:</p>
-                            </label>
-                            <select name="Bombilla">
-                                <option value="si">Si</option>
-                                <option value="no">No</option>
-                            </select>
-                        </form>
-                    </div>
-                    <input type="button" id="botonTotal" value="calcular total" />
-                    </div>
-                    
-                  <div class:="caja3">
-                    <button type="submit">comprar</button>
+                    <div class="caja2">
+                        <h4>Mate Ceramico</h4>
+                        <h5>$230</h5>
+                        <div class="bombilla">
+                            <form action="bombilla" method="POST">
+                                <form ...>
 
-                    <button type="reset">Vaciar</button>
-                  </div>
+                                    <p>Opcion de Bombilla</p>
+                                    <p><input type="radio" name="bombilla" value="si"/> si </p>
+                                    <p><input type="radio" name="bombilla" value="no"/> no </p>
+        
+                                 </form>
+                         </div>
+                         <div class="promo">
+                            <input type="checkbox" name="promo" checked>
+                            <label for="promo-check">I have a promo code</label>
+                        </div>
+                        <div class="promo-code">
+                            <input type="text" name="promo-checkbox" placeholder="Enter your promo code here" checked>
+                            <button class="apply">Apply</button>
+                        </div>
+                        
+                        <div class="opc">
+                            <button class="btn-c">
+                                <i class="fas fa-lock"></i>
+                                <span>Guardar</span>
+                            </button>
+                            <div class="eli">
+                                <button type="reset"><i class="fas fa-trash-alt"></i>
+                                </button>
+                            </div>
+                            </div>
+                        </div>
+            </article>
+        </div>
+        <div class="fila2">
+            <article>
+                <div class="container2">
+                    <img src="/images/destacado-mate-home.jpg" alt="mate-home" title="mate-home">
+                    <div class="like">
+                        <button type="button"><i class="far fa-thumbs-up"></i>Like</button>
+                    </div>
+                    <div class="caja2">
+                        <h4>Mate Home</h4>
+                        <h5>$200</h5>
+                        <div class="bombilla">
+                            <form action="bombilla" method="POST">
+                                <form ...>
 
-                
-            </div>
+                                    <p>Opcion de Bombilla</p>
+                                    <p><input type="radio" name="bombilla" value="si"/> si </p>
+                                    <p><input type="radio" name="bombilla" value="no"/> no </p>
+        
+                                 </form>
+                         </div>
+                         <div class="promo">
+                            <input type="checkbox" name="promo" checked>
+                            <label for="promo-check">I have a promo code</label>
+                        </div>
+                        <div class="promo-code">
+                            <input type="text" name="promo-checkbox" placeholder="Enter your promo code here" checked>
+                            <button class="apply">Apply</button>
+                        </div>
+                        <div class="opc">
+                            <button class="btn-c">
+                                <i class="fas fa-lock"></i>
+                                <span>Guardar</span>
+                            </button>
+                            <div class="eli">
+                                <button type="reset"><i class="fas fa-trash-alt"></i>
+                                </button>
+                            </div>
+                            </div>
+                        </div>
+            </article>
+            <article>
+                <div class="container3">
+                    <img src="/images/ceramico-galaxia.jpg" alt="mate-galaxia" title="mate-galaxia">
+                    <div class="like">
+                        <button type="button"><i class="far fa-thumbs-up"></i>Like</button>
+                    </div>
+                    <div class="caja2">
+                        <h4>Mate Galaxia</h4>
+                        <h5>$300</h5>
+                        <div class="bombilla">
+                            <form action="bombilla" method="POST">
+                                <form ...>
 
+                                    <p>Opcion de Bombilla</p>
+                                    <p><input type="radio" name="bombilla" value="si"/> si </p>
+                                    <p><input type="radio" name="bombilla" value="no"/> no </p>
+        
+                                 </form>
+                         </div>
+                         <div class="promo">
+                            <input type="checkbox" name="promo" checked>
+                            <label for="promo-check">I have a promo code</label>
+                        </div>
+                        <div class="promo-code">
+                            <input type="text" name="promo-checkbox" placeholder="Enter your promo code here" checked>
+                            <button class="apply">Apply</button>
+                        </div>
+                        <div class="opc">
+                            <button class="btn-c">
+                                <i class="fas fa-lock"></i>
+                                <span>Guardar</span>
+                            </button>
+                            <div class="eli">
+                                <button type="reset"><i class="fas fa-trash-alt"></i>
+                                </button>
+                            </div>
+                            </div>
+                        </div>
+            </article>
+        </div>
+        
+       <div class="comprar">
+            <button type="button">Comprar</button>
+        </div>
 
         </div>
-        </div>
-
     </main>
 
     <footer class="home">
