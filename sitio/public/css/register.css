@@ -7,16 +7,14 @@
 .main-register{
     width: 70%;
     background-color: white;
-    opacity: 0.8;
-    border-radius: 20px;
-    margin: 1px 15%;  
+    margin: 1px 10%;  
     color:#000000     
 }
 
 
 main .completa{
     font-size: 5vw;
-    margin-left: 4%;
+    margin-left: 2%;
 }
 
 main form{
