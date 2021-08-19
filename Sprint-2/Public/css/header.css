@@ -7,8 +7,8 @@ header {
     background-color:  rgba(15, 15, 15, .9);
     margin-bottom: 30px;
     overflow: hidden;
-    position: fixed;
-    top: 0;
+/*     position: fixed;
+ */    top: 0;
     height: auto;
     padding-top: 10px;
     z-index: 10;
