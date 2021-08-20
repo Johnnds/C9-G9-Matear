@@ -4,13 +4,8 @@
 header {
     background-color:  rgba(15, 15, 15, .9);
     overflow: hidden;
-<<<<<<< HEAD
-/*     position: fixed;
- */    top: 0;
-=======
     position: sticky;
     top: 0;
->>>>>>> 8130610fd8e8977e6f99c13f536ce9ca798f1539
     height: auto;
     padding-top: 10px;
     z-index: 10;

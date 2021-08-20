@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Include Head -->
+<%- include('partials/head', {title: 'Registro'}) %>
+
+<body>
+
+  <!-- Header -->
+	<%- include('partials/header') %>
+	<!-- /Header -->
+
+
+    <main class="main-register">       
+    
+        <h2 class="completa">Completa tus datos</h2>
+        <form action="/register" method="POST">
+            <div class="datos">
+                <div class="linea1-2">
+                    <div class="linea1">
+                        <div class="nombre">
+                            <label>Nombre</label>
+                            <input type="text" name="nombre">
+                        </div>
+                        <div class="apellido">
+                            <label>Apellido</label>
+                            <input type="text" name="apellido">
+                        </div>
+                    </div>
+                    <div class="linea2">
+                        <div class="genero">
+                            <label>Genero</label>
+                            <select name="genero">
+                                <option>Seleccione</option>
+                                <option value="femenino">Femenino</option>
+                                <option value="masculino">Masculino</option>
+                                <option value="Otro">Otro</option>
+                            </select>
+                        </div>
+                        <div class="nacimiento">
+                            <label>Fecha de nacimiento</label>
+                            <input type="date" name="nacimiento" max="2010-12-31">
+                        </div>                    
+                    </div>
+                </div>
+                
+                <div class="linea3">
+                    <div class="email">
+                        <label>Email*</label>
+                        <input type="email" name="email">
+                    </div>
+                    <div class="telefono">
+                        <label>Teléfono (opcional)</label>
+                        <input type="text" name="telefono">
+                    </div>
+                    
+                </div>
+                <div class="linea4">
+                    <div class="password">
+                        <label>Contraseña*</label>
+                        <div class="pass">
+                            <input type="password" name="password">
+                            <i class="far fa-eye-slash"></i>  
+                        </div>
+                        
+                        <p>La contraseña debe tener como mínimo 6 caracteres</p>
+                    </div>
+                    <div class="repetirPass">
+                        <label>Repetir contraseña*</label>
+                        <div class="repeat">
+                            <input type="password" name="repitpass">
+                            <i class="far fa-eye-slash"></i>
+                        </div>
+                          
+                        <label>(*) Campos obligatorios</label>
+                    </div>
+                </div>
+                
+                <div class="crear">
+                    <button type="submit">CREAR CUENTA</button>
+                </div>
+            </div>
+        
+        </form>
+        <div class="registrate-con">
+            <h2>O registrate con</h2>        
+            <form class="redes" action="/register" method="POST">
+                <div class="google">
+                    <button type="submit"><img src="https://img.icons8.com/color/48/000000/google-logo.png"/>Google</button>
+                </div>
+                <div class="facebook">
+                 <button type="submit"><i class="fab fa-facebook-square"></i>Facebook</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    
+
+    <!-- footer -->
+	<%- include('partials/footer') %>
+	<!-- /footer -->
+      
+</body>
+</html>

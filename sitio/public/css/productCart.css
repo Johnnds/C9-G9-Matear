@@ -1,10 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 
-body main{
-    background-color:#43cbe0b8;
-    font-family:var(--font-family);
+:root{
+    font-family: 'Indie Flower', cursive;
 }
-main .carrito{
-    margin:0 auto;
+.cart {
+   font-family:var(--font-family);
+  background-color: #43cbe0b8;
+    color: black;
     padding: 10px;
     background-size: 22px;
 }
