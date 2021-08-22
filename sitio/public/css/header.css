@@ -9,14 +9,17 @@ header {
     height: auto;
     padding-top: 10px;
     z-index: 10;
+    position: relative;
 }
 
 header img {
   display: block;
   border-radius: 50%;
   border: 1px solid #bbbfbe;
-  width: 30%;
+  width: 10%;
   color: #fff;
+  position: absolute;
+  right: 5px;
 }
 
 header nav.menu-desplegable .burger {
@@ -75,17 +78,21 @@ header .cuenta-search .menu-home ul li:first-child {
     border-right: 1px solid #fff;
 }
 
-header a.shopping {
-  position:absolute;
-  top: 10px;
-  right: 0;
+header nav.menu-desplegable ul li a.shopping {
   font-size: 1em;
   font-weight: bold;
   text-transform: uppercase;
   padding-right: 5px;
 }
 
-header nav.menu-desplegable ul li, header a.shopping .cantidad{
+header nav.menu-desplegable ul li i.fa-user-circle {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-right: 5px;
+}
+
+header nav.menu-desplegable ul li {
     font-weight: bold;
     text-transform: uppercase;
 } 
@@ -109,10 +116,10 @@ header .cuenta-search .menu-home ul li {
 }
 
 header div.cuenta-search div.search{
-    margin: 20px 0;
+    margin: 10px 0;
 }
 
-header .cuenta-search div.search input {
+header nav.menu-desplegable ul li div.search input {
     border-radius: 6px;
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
@@ -122,7 +129,7 @@ header .cuenta-search div.search input {
     border: 1px solid #c4c4c4;
 }
 
-header .cuenta-search div.search button {
+header nav.menu-desplegable ul li div.search button {
     border-radius: 6px;
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
@@ -134,7 +141,7 @@ header .cuenta-search div.search button {
     color: #fff;
 }
 
-header .cuenta-search div.search button:hover {
+header .cuenta-search div.search button:hover, header nav ul div.search button:hover  {
   background: tomato;
   color: white;
 }
@@ -161,7 +168,7 @@ header nav.menu-desplegable input:checked ~ ul{
 
 @media(min-width: 481px ) {
 
-    header img {
+   /*  header img {
     width: 20%;
   }
 
@@ -188,20 +195,14 @@ header nav.menu-desplegable input:checked ~ ul{
     width: 70%;
     align-items: center;
     justify-content: center;
-  }
+  }  */
 
   header nav.menu-desplegable{
-    width: 100%;
-    display: flex;
     background-color: #090909;
-    flex-direction: row-reverse;
     font-size: 1em;
     margin-top: 0;
     height: 50px;
-    align-items: flex-start;
-    justify-content: flex-end;
-    position: relative;
-}
+}/*
 
 header nav.menu-desplegable ul li {
 
@@ -244,7 +245,7 @@ header nav.menu-desplegable a.shopping {
   position: absolute;
   top: 15px;
   padding: 4px;
-}
+} */
 
 @media(min-width: 900px ) {
 
