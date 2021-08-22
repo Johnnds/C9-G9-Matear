@@ -1,0 +1,26 @@
+:root {
+    --primario-color: #1E1F1F;
+    --secundario-color: #191717;
+    --body-color: #E0E0E0;
+    --hover-color: #121111;
+    --verde-color: #8BC34A;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    padding-top: 60px;
+}
+
+header {
+    width: 100%;
+    background: var(--primario-color);
+    height: 80px;
+    z-index: 3000;
+    position: fixed;
+    top: 0;
+}
