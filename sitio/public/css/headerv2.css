@@ -79,3 +79,56 @@ a {
     font-size: 17px;
 }
 
+.form_search {
+    display: none;
+    margin-left: -15px;
+}
+
+.form_search {
+    display: flex;
+}
+
+.input_search {
+    border: none;
+    padding: 10px 20px 10px 0;
+    margin: 12px 0;
+    width: 200px;
+    background: transparent;
+    color: #fff;
+    outline-color: transparent;
+}
+
+.input_search::-moz-placeholder {
+    color: #fff;
+}
+
+.button_search {
+    border: none;
+    background: transparent;
+    color: #fff;
+    font-size: 17px;
+    cursor: pointer;
+    outline-color: transparent;
+    margin-bottom: 5px;
+}
+
+.movil {
+    display: none;
+}
+
+@media screen and (max-width: 1000px) {
+
+    body {
+        padding-top: 60px;
+    }
+
+
+    header .logo {
+        display: none;
+    }
+
+    .movil {
+        width: 100%;
+    }
+
+}
