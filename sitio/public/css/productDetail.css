@@ -1,22 +1,22 @@
 
-.body-pd{
+.main-pd{
     width: 100%;
     background-color:black;
 }
 
-.body-pd .main-pd{
+.main-pd .main-pd{
     display: flex;
     align-items: center;
     width: 90%;
     margin: 20px;
 }
 
-.body-pd .menu{
+.main-pd .menu{
     display: flex;
     flex-direction: column;
 }
 
-.body-pd .menu h1{
+.main-pd .menu h1{
     font-size: 20px;
     color: white;
     width: 35%;
@@ -25,7 +25,7 @@
     background-color: #666;
 }
 
-.body-pd .menu .producto img{
+.main-pd .menu .producto img{
     width: 100%;
     height: 420px;
     object-fit: contain;
@@ -33,7 +33,7 @@
     padding: 2px;
 }
 
-.body-pd .menu .precio{
+.main-pd .menu .precio{
     font-size: 25px;
     position: relative;
     top: -35px;
@@ -41,14 +41,14 @@
     font-family: var(--font-family);
 }
 
-.body-pd .menu .mate{
+.main-pd .menu .mate{
     font-size: 20px;
     padding: 1px;
     font-family: var(--font-family);
     color: white;
 }
 
-.body-pd .menu .off{
+.main-pd .menu .off{
     border: #ebebeb solid 1px;
     margin: 10px;
     border-right-width: 20%;
@@ -56,25 +56,25 @@
     font-family: var(--font-family);
 }
 
-.body-pd .menu .box{
+.main-pd .menu .box{
     display: flex;
     flex-wrap: wrap;
     padding: 5px;
     align-items: center;
 }
 
-.body-pd .menu .descuento{
+.main-pd .menu .descuento{
     font-size: 18px;
     color:#7e7b7b;
     font-family: var(--font-family);
 }
 
-.body-pd .menu .oferta{
+.main-pd .menu .oferta{
     font-size: 20px; 
     font-family: var(--font-family);
 }
 
-.body-pd .menu .color{
+.main-pd .menu .color{
    font-size: 12px;
    display: flex;
    flex-wrap: wrap;
@@ -82,11 +82,11 @@
    margin: 1px;
 }
 
-.body-pd .menu .detalle{
+.main-pd .menu .detalle{
   margin: 1px;
 }
 
-.body-pd .menu .detalle .info-product{
+.main-pd .menu .detalle .info-product{
     font-size: 1rem;
     margin: 10px;
     text-align: justify;
@@ -95,7 +95,7 @@
     font-family: var(--font-family);
 }
 
-.body-pd .menu .detalle .cuidados{
+.main-pd .menu .detalle .cuidados{
     font-size: 18px;
     padding: 1px;
     margin: 10px;
@@ -104,7 +104,7 @@
     font-family: var(--font-family);
 }
 
-.body-pd .menu .detalle .lavado{
+.main-pd .menu .detalle .lavado{
     font-size: 1rem;
     padding: 1px;
     margin: 10px;
@@ -113,7 +113,7 @@
     font-family: var(--font-family);  
 }
 
-.body-pd .menu .detalle .eg{
+.main-pd .menu .detalle .eg{
     font-size: 18px;
     padding: 1px;
     margin: 10px;
@@ -122,7 +122,7 @@
     font-family: var(--font-family);    
 }
 
-.body-pd .menu .detalle .curación{
+.main-pd .menu .detalle .curación{
     font-size: 1rem;
     padding: 5px;
     margin: 10px;
@@ -131,7 +131,7 @@
     font-family: var(--font-family); 
 }
 
-.body-pd .menu .detalle .bombilla{
+.main-pd .menu .detalle .bombilla{
     font-size: 1rem;
     padding: 5px;
     margin: 10px;
