@@ -1,80 +1,101 @@
 
-.body-pd{
+.home{
     width: 100%;
-    background-color:black;
+    background-color: #43cbe0b8;
+    padding: 15px;
+    margin: 15px;
 }
 
-.body-pd .main-pd{
+.home .main-pd{
     display: flex;
     align-items: center;
-    width: 90%;
-    margin: 20px;
+    margin: 10px;
+   
 }
 
-.body-pd .menu{
+.home .menu{
     display: flex;
     flex-direction: column;
 }
 
-.body-pd .menu h1{
-    font-size: 20px;
-    color: white;
-    width: 35%;
-    border: solid 1px white;
-    font-family: var(--font-family);
-    background-color: #666;
+.home .menu .producto{
+    width: 100%;
+    height: auto;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+
 }
 
-.body-pd .menu .producto img{
+.home .menu .producto img{
     width: 100%;
     height: 420px;
     object-fit: contain;
-    border: 2px solid white;
     padding: 2px;
 }
 
-.body-pd .menu .precio{
-    font-size: 25px;
-    position: relative;
-    top: -35px;
-    color: #ebebeb;
-    font-family: var(--font-family);
+.home .menu .price{
+   display: flex;
+   flex-wrap: wrap;
 }
 
-.body-pd .menu .mate{
-    font-size: 20px;
+.home .menu .precio{
+    font-size: 23px;
     padding: 1px;
-    font-family: var(--font-family);
+    width: 60px;
+    margin: 5px;
     color: white;
 }
 
-.body-pd .menu .off{
-    border: #ebebeb solid 1px;
-    margin: 10px;
-    border-right-width: 20%;
-    background-color: #ebebeb;
+.home .menu .mate{
+    font-size: 20px;
+    padding: 1px;
     font-family: var(--font-family);
+    margin: 5px;
 }
 
-.body-pd .menu .box{
+.home .menu .off{
+    border: #011c20b8 solid 1px;
+    margin: 10px;
+    border-right-width: 20%;
+    background-color:  #43cbe0b8;
+    font-family: var(--font-family);
+    border-radius: 8px;
+}
+
+.home .menu .box{
     display: flex;
     flex-wrap: wrap;
     padding: 5px;
     align-items: center;
+    position: relative;
 }
 
-.body-pd .menu .descuento{
+.home .menu .descuento{
     font-size: 18px;
-    color:#7e7b7b;
-    font-family: var(--font-family);
+    color: rgb(129, 53, 53);
+    position: relative;
 }
 
-.body-pd .menu .oferta{
-    font-size: 20px; 
+.home .menu .oferta{
+    font-size: 12px; 
     font-family: var(--font-family);
+    color: rgb(80, 16, 16);
+    padding: 15px;
+    border: solid 1px white;
+    background-color:  yellow;
+    border-radius: 10px;
+    height: 10px;
+    position: relative;
+    animation: oferta 2s infinite;
+    top: 30px;
 }
 
-.body-pd .menu .color{
+@keyframes oferta {
+    0%{ opacity: 90%;}
+    25%{ transform: translateY(5%); opacity: 100%;}
+    100%{ opacity: 90%;}
+}
+
+.home .menu .color{
    font-size: 12px;
    display: flex;
    flex-wrap: wrap;
@@ -82,204 +103,334 @@
    margin: 1px;
 }
 
-.body-pd .menu .detalle{
+.home .menu .color p{
+    font-size:1em;
+    color: white;
+    padding: 5px;
+}
+
+.home .menu .color [type="radio"]{
+    display: none;
+}
+
+.home .menu .color label{
+    padding: 5px 15px 5px 51px;
+    display: inline-block;
+    position: relative;
+    font-size: 1em;
+    cursor: pointer;
+    color: #ebebeb;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.home .menu .color label::before{
+    content: "";
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border: solid 1px #ebebeb;
+    border-radius: 50%;
+    position: absolute;
+    left: 17px;
+}
+
+.home .menu .color .negro label::before{
+    background-color: black;
+}
+
+.home .menu .color .cafe label::before{
+    background-color: rgb(80, 16, 16);
+}
+
+.home .menu .color .naranja label::before{
+    background-color: rgb(184, 74, 34);
+}
+
+.home .menu .color label:hover{
+    font-size: 14px;
+    padding: 5px 15px;
+    border-radius: 2px;
+}
+
+.home .menu .color .negro label:hover{
+    background-color: black;
+    border: white solid 1px;
+}
+
+.home .menu .color .cafe label:hover{
+    background-color: rgb(80, 16, 16);
+    border: white solid 1px;
+}
+
+.home .menu .color .naranja label:hover{
+    background-color: rgb(184, 74, 34);
+    border: solid 1px white;
+}
+
+.home .menu .color label:hover::before{
+    display: none
+}
+
+.home .menu .botón{
+    text-align: center;
+}
+
+.home .menu button{
+    
+    background-color: white;
+    font-size: 16px;
+    border: #011c20b8 solid 1px;
+    border-radius: 10px;
+}
+
+
+.home .menu .detalle{
   margin: 1px;
 }
 
-.body-pd .menu .detalle .info-product{
+.home .menu .detalle .info-product{
     font-size: 1rem;
     margin: 10px;
     text-align: justify;
     padding: 5px; 
-    color: white;
+    
     font-family: var(--font-family);
 }
 
-.body-pd .menu .detalle .cuidados{
+.home .menu .detalle .cuidados{
     font-size: 18px;
     padding: 1px;
     margin: 10px;
     text-align: justify; 
-    color: #ebebeb;   
+     
     font-family: var(--font-family);
 }
 
-.body-pd .menu .detalle .lavado{
+.home .menu .detalle .lavado{
     font-size: 1rem;
     padding: 1px;
     margin: 10px;
     text-align: justify;
-    color: white; 
+    
     font-family: var(--font-family);  
 }
 
-.body-pd .menu .detalle .eg{
+.home .menu .detalle .eg{
     font-size: 18px;
     padding: 1px;
     margin: 10px;
     text-align: justify;
-    color: #ebebeb;
+    
     font-family: var(--font-family);    
 }
 
-.body-pd .menu .detalle .curación{
+.home .menu .detalle .curación{
     font-size: 1rem;
     padding: 5px;
     margin: 10px;
     text-align: justify;
-    color: white;   
+     
     font-family: var(--font-family); 
 }
 
-.body-pd .menu .detalle .bombilla{
+.home .menu .detalle .bombilla{
     font-size: 1rem;
     padding: 5px;
     margin: 10px;
     text-align: justify;  
-    color: white;  
+      
     font-family: var(--font-family);
 }
 
-c{
-  padding: 10px;
-  font-size: 15px;
-  background-color: rgb(110, 56, 17);
-  border-radius: 6px;
-  border: white solid 2px;
-  width: 60%;
-  text-align: center;
-  position: relative;
-  left: 15%;
-}
-
-.body-pd .menu .botón a{
-    text-decoration: none;
-    color: white;
-    font-family: var(--font-family);
-}
-
-.body-pd .menu .comentario{
+.home .menu .comentario{
     text-align: center;
     padding: 20px;
 }
 
-.body-pd .menu .comentario textarea{
+.home .menu .comentario textarea{
     width: 50%;
-    height: 30px
+    height: 30px;
+    border:rgb(100, 100, 100) 2px solid;
+    border-radius: 25px;
+    position: relative;
 }
 
-.body-pd .menu .carrusel{
-    display: flex;
-    flex-wrap: wrap;
-    padding: 5px;
+.home .menu .comentario button{
+    background-color:  #03333bb8;
+    border: rgb(100, 100, 100) 1px solid;
+    color: white;
+    position: relative;
+    top: -8px;
+    left: -1%;
+    height: 18px;
 }
 
-.body-pd .menu .similares h4{
+.home .menu .similares h4{
     font-size: 16px;
     color: white;
     font-family: var(--font-family);
+    margin: 5px;
 }
 
-.body-pd .menu .carrusel img{
+.home .menu .carrusel{
+    display: flex;
+    padding: 15px;
+    align-items: center;
+    width: 25%;
+    margin: 10px;
+}
+
+.home .menu .carrusel img{
     width: 100px;
     height: 100px;
-    margin: 1px;
-    border: white 1px solid;
+    padding: 5px;
     align-items: center;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+.home .menu .cajón{
+    border: 1px solid #011c20b8;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.home .menu .cajón span{
+    color: #03333bb8;
+    padding: 1px;
+}
+
+.home .menu .cajón p{
+    font-size: 10px;
+    margin: 5px;
 }
 
 /*Tablet*/
-@media(min-width:768px) {
-    .body-pd .menu .producto img{
+@media(min-width:481px) {
+    .home .menu .producto img{
       width: 650px;
       height: 650px;
       margin: 2px;
     }
 
-    .body-pd .menu .carrusel img{
+    .home .menu .carrusel img{
         width: 150px;
         height: 150px;
         margin: 5px;
-        border: white 1px solid;
         text-align: center;
     }
+
+  
     
     
 }
 
-@media(min-width:1024px){
 
-    .body-pd .menu h1{
-        width: 46%;
+/* Descktop*/
+@media(min-width:900px){
+
+    .home .menu h3{
+        text-align: center;
+    }
+
+    .home .menu .producto{
+        box-shadow: none;
     }
 
 
-   .body-pd .menu .contenedor{
+   .home .menu .contenedor{
        display: flex;
        flex-wrap: wrap;
    }
 
-   .body-pd .menu .producto img{
-    width: 50%;
+   .home .menu .producto img{
+    width: 35%;
     height: auto;
+    border-radius: 10PX;
 }
 
-.body-pd .menu .caja{
+.home .menu .caja{
     width: 50%;
     position: relative;
-    left: 50%;
-    margin-top: -40%;
+    left: 40%;
+    margin-top: -30%;
     padding: 5px;
 }
 
-.body-pd .menu .precio{
+.home .menu button{
+    width: 30%;
+    font-size: 15px;
+    position: absolute;
+    bottom: 5%;
+    left: 50vw;
+    border: 2px solid #03333bb8;
+    
+}
+
+.home .menu .detalle{
+    position: relative;
+}
+
+.home .menu .precio{
     font-size: 35px;
 }
 
-.body-pd .menu .mate{
+.home .menu .mate{
     font-size: 30px;
 }
 
-.body-pd .menu .detalle .cuidados{
+
+.home .menu .detalle .cuidados{
     font-size: 20px;
 }
 
-.body-pd .menu .detalle .cuidados{
+.home .menu .detalle .eg{
     font-size: 20px;
 }
 
-.body-pd .menu .detalle .eg{
-    font-size: 20px;
-}
-
-.body-pd .menu .carrusel img{
+.home .menu .carrusel img{
     width: 280px;
     height: 280px;
     padding: 10px;
-    margin: 5px;
     text-align: center;
 }
 
-.body-pd .menu .carrusel :hover img{
-    width: 400px;
-    height: 400px;
+.home .menu .carrusel :hover img{
+    transform: scale(1.2);
+    transition: 1.5s;
 }
 
-.body-pd .menu .similares h4{
+.home .menu .similares h4{
     font-size: 30px;
 }
 
-.body-pd .menu .comentario textarea{
+.home .menu .comentario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.home .menu .comentario textarea{
     width: 50%;
     height: 50%;
 }
 
-.body-pd .menu .comentario button{
+.home .menu .comentario button{
+    position: relative;
+    left: 3PX;
     width: 50%;
     height: 30px;
     border-radius: 30px;
-    background-color: white;
+    background-color:  black;
+    color: white;
+    border: 1px solid (110, 56, 17);
     text-align: center;
 }
 
+
 }
+
+

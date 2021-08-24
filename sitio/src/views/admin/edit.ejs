@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+
+    <!-- Include Head -->
+<%- include('../partials/head', {title: 'edit'}) %>
+<body class="body-admin">
+
+  <!-- Header -->
+	<%- include('../partials/header') %>
+
+    <!--main-->
+   <div class="admin">
+   <main>
+    <nav>
+        <div class="form">
+            <h1>Editar Producto</h1>
+            <form action="/admin/__/edit?_method=PUT"  method="POST">
+                <label for="nombre"></label>
+                <input type="text" name="nombreProducto" placeholder="Nombre del Producto">
+                <br>
+                <label for="precio"></label>
+                <input type="text" placeholder="Precio" >
+                <br>
+                <label for="detalle"></label>
+                <input type="text" placeholder="Detalles del Producto" >
+                <br>
+                <label for="categoría"></label>
+                <select name="categoría">
+                    <option value="" selected hidden>Seleccione la categoría</option>
+                    <option value="calabaza">Calabaza</option>
+                    <option value="Vidrio">Vidrio</option>
+                    <option value="Céramico">Céramico</option>
+                </select>
+                <br>
+               <div class="file"></div>
+                <label for="file">Agregar imagen</label>
+                <input type="file">
+               </div>
+                <button>Enviar</button>
+            </form>
+        </div>
+    </nav>
+   </main>
+   </div>
+
+    <!-- footer -->
+	<%- include('../partials/footer') %>
+</body>
+</html>

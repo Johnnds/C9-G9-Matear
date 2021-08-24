@@ -9,22 +9,34 @@ const path = require('path');
 // ************ express() - (don't touch) ************
 const app = express();
 
+//**** method override */
+const methodOverride = require('method-override');
+
+
+//****Manejo de formulario */
+app.use(express.urlencoded({extended:false}));
+app.use(express.json());
+
+//**Configuración metodos PUT y DELETE */
+app.use(methodOverride('_method'));
+
 
 // ************ Template Engine - (don't touch) ************
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, '../public')));
 app.set('view engine', 'ejs');
 
-
 // ************ Route System require and use() ************
 var mainRouter = require('./routes/main');
 var usersRouter = require('./routes/users');
 const productsRouter = require('./routes/products')
+const adminRouter = require('./routes/admin')
 
 
 app.use('/', mainRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter)
+app.use('/admin', adminRouter)
 
 
 // app.use(logger('dev'));
