@@ -2,10 +2,10 @@
 <html lang="es">
 <!-- Include Head -->
 <%- include('partials/head', {title: 'Inicio'}) %>
-<body>
+<body expr:class='&quot;loading&quot; + data:blog.mobileClass'>
 
   <!-- Header -->
-	<%- include('partials/header') %>
+	<%- include('partials/headerv2') %>
 	<!-- /Header -->
 
     <main class="main-home">
@@ -118,6 +118,8 @@
               </div>
           </section>
     </main>
+    <script src="/js/funcionalidad.js" type="text/javascript"></script>
+  <script src="https://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
      
     <!-- footer -->
 	<%- include('partials/footer') %>
