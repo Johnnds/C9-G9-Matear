@@ -1,15 +1,17 @@
 
 /* Header */
 
-header {
+/* header {
     background-color:  rgba(15, 15, 15, .9);
     overflow: hidden;
     position: sticky;
     top: 0;
-    height: auto;
     padding-top: 10px;
-    z-index: 10;
-    position: relative;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+    text-decoration: none;
+    z-index: 1000 !important;
 }
 
 header img {
@@ -166,7 +168,7 @@ header nav.menu-desplegable input:checked ~ ul{
 /*  Media Query  */
 
 
-@media(min-width: 481px ) {
+/*@media(min-width: 481px ) {
 
 
   header {
