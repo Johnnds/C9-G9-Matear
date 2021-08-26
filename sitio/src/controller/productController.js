@@ -11,6 +11,11 @@ const controller = {
     },
     cart: (req, res) => {
         return res.render('productCart')
+    },
+    listProducts: (req, res) => {
+        return res.render('products', {
+            products
+        })
     }
 }
 
