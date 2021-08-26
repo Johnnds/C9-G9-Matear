@@ -1,7 +1,7 @@
 
 /* Header */
 
-/* header {
+ header {
     background-color:  rgba(15, 15, 15, .9);
     overflow: hidden;
     position: sticky;
@@ -168,7 +168,7 @@ header nav.menu-desplegable input:checked ~ ul{
 /*  Media Query  */
 
 
-/*@media(min-width: 481px ) {
+@media(min-width: 481px ) {
 
 
   header {
