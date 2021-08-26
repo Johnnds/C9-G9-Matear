@@ -69,14 +69,11 @@ header nav.menu-desplegable ul li a{
     padding: .5em 1em;
 }
 
-header nav.menu-desplegable ul li:hover, header a.shopping:hover, header .cuenta-search .menu-home ul li:hover {
-  background: tomato;
+header nav.menu-desplegable ul li:hover, header nav.menu-desplegable ul li form.search button:hover{
+  background-color: tomato;
   color: white;
 }
 
-header .cuenta-search .menu-home ul li:first-child {
-    border-right: 1px solid #fff;
-}
 
 header nav.menu-desplegable ul li a.shopping {
   font-size: 1em;
@@ -97,39 +94,22 @@ header nav.menu-desplegable ul li {
     text-transform: uppercase;
 } 
 
-header .cuenta-search {
-  display: flex;
-  flex-direction:  column;
-  justify-content: center;
-  align-items: center;
-}
 
-header .cuenta-search .menu-home ul {
-  display: flex;
-  flex-direction: row;
-  text-transform: uppercase;
-}
-
-header .cuenta-search .menu-home ul li {
-  font-weight: 500;
-  padding: .5em 1em;
-}
-
-header div.cuenta-search div.search{
+header div.cuenta-search form.search{
     margin: 10px 0;
 }
 
-header nav.menu-desplegable ul li div.search input {
+header nav.menu-desplegable ul li form.search input {
     border-radius: 6px;
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
-    height: 45px;
+    /* height: 45px; */
     width: 70%;
     padding: 10px;
     border: 1px solid #c4c4c4;
 }
 
-header nav.menu-desplegable ul li div.search button {
+header nav.menu-desplegable ul li form.search button {
     border-radius: 6px;
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
@@ -141,21 +121,6 @@ header nav.menu-desplegable ul li div.search button {
     color: #fff;
 }
 
-header .cuenta-search div.search button:hover, header nav ul div.search button:hover  {
-  background: tomato;
-  color: white;
-}
-
-header nav.menu-desplegable .burger-menu ul{
-    display: none;
-    position: absolute;
-    margin-top: 20px;
-    width: 95vw;
-    height: 100vh;
-    left: 2.5%;
-    z-index: 1;
-    transition: all .5s ease;
-}
 
 header nav.menu-desplegable input:checked ~ ul{
     display: inline-block;
@@ -185,43 +150,46 @@ header nav.menu-desplegable input:checked ~ ul{
     background-color: #090909;
     font-size: 1em;
     margin-top: 0;
-    height: auto;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
 }
 
-header nav.menu-desplegable ul li {
-
-    text-align: center;
-    width: auto;
-    font-size: 0.73rem;
-  }
-
-  header nav.menu-desplegable ul li:last-child {
+header nav.menu-desplegable ul li:last-child {
       margin-right: 0;
   }
 
 
 header nav.menu-desplegable ul{
-  width: auto;
+  width: 100%;
     display: flex;
     flex-direction: row;
-    align-items: flex-start ;
+    align-items: center;
+    justify-content: center;
     flex-wrap:wrap;
     margin-top: 2px;
     padding: 0;
     margin: 0;
+    z-index: 4000;
     background-color: transparent;
 }
 
 header nav.menu-desplegable ul li {
+  width: auto;
   text-align:center;
-  flex-grow: .2;
+  flex-grow: .1;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 0.73rem;
 }
 
 header nav.menu-desplegable ul li:first-child {
   margin-left: 4%;
+}
+
+header nav.menu-desplegable ul li:last-child {
+  align-self:flex-end;
 }
 
 header nav.menu-desplegable label.burger {
@@ -234,23 +202,28 @@ header nav.menu-desplegable a.shopping {
   z-index: 3000;
 } 
 
-header nav.menu-desplegable ul li div.search input {
+header nav.menu-desplegable ul li form.search input {
   display: none;
 }
 
-header nav.menu-desplegable ul li div.search button {
+header nav.menu-desplegable ul li form.search button {
   border-radius: 0;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   padding: 5px;
+  height: 0;
   margin: 0;
   border: none;
-  background-color: #000;
+  /* background-color: #000; */
   color: #fff;
 }
 
-header nav.menu-desplegable ul li div.search button i {
+header nav.menu-desplegable ul li form.search button i {
   font-size: .7;
 }
 
+header nav.menu-desplegable ul li a {
+  display: inline-block;
+}
+ 
 }
