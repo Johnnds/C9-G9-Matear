@@ -1,23 +1,36 @@
 
+<<<<<<< HEAD
 .home{
+=======
+.main-pd{
+>>>>>>> 418e0dda9d63a42868c7ad4eb1f0e43ccf4e7be9
     width: 100%;
     background-color: #43cbe0b8;
     padding: 15px;
     margin: 15px;
 }
 
+<<<<<<< HEAD
 .home .main-pd{
+=======
+.main-pd .main-pd{
+>>>>>>> 418e0dda9d63a42868c7ad4eb1f0e43ccf4e7be9
     display: flex;
     align-items: center;
     margin: 10px;
    
 }
 
+<<<<<<< HEAD
 .home .menu{
+=======
+.main-pd .menu{
+>>>>>>> 418e0dda9d63a42868c7ad4eb1f0e43ccf4e7be9
     display: flex;
     flex-direction: column;
 }
 
+<<<<<<< HEAD
 .home .menu .producto{
     width: 100%;
     height: auto;
@@ -26,12 +39,25 @@
 }
 
 .home .menu .producto img{
+=======
+.main-pd .menu h1{
+    font-size: 20px;
+    color: white;
+    width: 35%;
+    border: solid 1px white;
+    font-family: var(--font-family);
+    background-color: #666;
+}
+
+.main-pd .menu .producto img{
+>>>>>>> 418e0dda9d63a42868c7ad4eb1f0e43ccf4e7be9
     width: 100%;
     height: 420px;
     object-fit: contain;
     padding: 2px;
 }
 
+<<<<<<< HEAD
 .home .menu .price{
    display: flex;
    flex-wrap: wrap;
@@ -46,14 +72,30 @@
 }
 
 .home .menu .mate{
+=======
+.main-pd .menu .precio{
+    font-size: 25px;
+    position: relative;
+    top: -35px;
+    color: #ebebeb;
+    font-family: var(--font-family);
+}
+
+.main-pd .menu .mate{
+>>>>>>> 418e0dda9d63a42868c7ad4eb1f0e43ccf4e7be9
     font-size: 20px;
     padding: 1px;
     font-family: var(--font-family);
     margin: 5px;
 }
 
+<<<<<<< HEAD
 .home .menu .off{
     border: #011c20b8 solid 1px;
+=======
+.main-pd .menu .off{
+    border: #ebebeb solid 1px;
+>>>>>>> 418e0dda9d63a42868c7ad4eb1f0e43ccf4e7be9
     margin: 10px;
     border-right-width: 20%;
     background-color:  #43cbe0b8;
@@ -61,7 +103,11 @@
     border-radius: 8px;
 }
 
+<<<<<<< HEAD
 .home .menu .box{
+=======
+.main-pd .menu .box{
+>>>>>>> 418e0dda9d63a42868c7ad4eb1f0e43ccf4e7be9
     display: flex;
     flex-wrap: wrap;
     padding: 5px;
@@ -69,14 +115,23 @@
     position: relative;
 }
 
+<<<<<<< HEAD
 .home .menu .descuento{
+=======
+.main-pd .menu .descuento{
+>>>>>>> 418e0dda9d63a42868c7ad4eb1f0e43ccf4e7be9
     font-size: 18px;
     color: rgb(129, 53, 53);
     position: relative;
 }
 
+<<<<<<< HEAD
 .home .menu .oferta{
     font-size: 12px; 
+=======
+.main-pd .menu .oferta{
+    font-size: 20px; 
+>>>>>>> 418e0dda9d63a42868c7ad4eb1f0e43ccf4e7be9
     font-family: var(--font-family);
     color: rgb(80, 16, 16);
     padding: 15px;
@@ -95,7 +150,11 @@
     100%{ opacity: 90%;}
 }
 
+<<<<<<< HEAD
 .home .menu .color{
+=======
+.main-pd .menu .color{
+>>>>>>> 418e0dda9d63a42868c7ad4eb1f0e43ccf4e7be9
    font-size: 12px;
    display: flex;
    flex-wrap: wrap;
@@ -103,6 +162,7 @@
    margin: 1px;
 }
 
+<<<<<<< HEAD
 .home .menu .color p{
     font-size:1em;
     color: white;
@@ -191,6 +251,13 @@
 }
 
 .home .menu .detalle .info-product{
+=======
+.main-pd .menu .detalle{
+  margin: 1px;
+}
+
+.main-pd .menu .detalle .info-product{
+>>>>>>> 418e0dda9d63a42868c7ad4eb1f0e43ccf4e7be9
     font-size: 1rem;
     margin: 10px;
     text-align: justify;
@@ -199,7 +266,11 @@
     font-family: var(--font-family);
 }
 
+<<<<<<< HEAD
 .home .menu .detalle .cuidados{
+=======
+.main-pd .menu .detalle .cuidados{
+>>>>>>> 418e0dda9d63a42868c7ad4eb1f0e43ccf4e7be9
     font-size: 18px;
     padding: 1px;
     margin: 10px;
@@ -208,7 +279,11 @@
     font-family: var(--font-family);
 }
 
+<<<<<<< HEAD
 .home .menu .detalle .lavado{
+=======
+.main-pd .menu .detalle .lavado{
+>>>>>>> 418e0dda9d63a42868c7ad4eb1f0e43ccf4e7be9
     font-size: 1rem;
     padding: 1px;
     margin: 10px;
@@ -217,7 +292,11 @@
     font-family: var(--font-family);  
 }
 
+<<<<<<< HEAD
 .home .menu .detalle .eg{
+=======
+.main-pd .menu .detalle .eg{
+>>>>>>> 418e0dda9d63a42868c7ad4eb1f0e43ccf4e7be9
     font-size: 18px;
     padding: 1px;
     margin: 10px;
@@ -226,7 +305,11 @@
     font-family: var(--font-family);    
 }
 
+<<<<<<< HEAD
 .home .menu .detalle .curación{
+=======
+.main-pd .menu .detalle .curación{
+>>>>>>> 418e0dda9d63a42868c7ad4eb1f0e43ccf4e7be9
     font-size: 1rem;
     padding: 5px;
     margin: 10px;
@@ -235,7 +318,11 @@
     font-family: var(--font-family); 
 }
 
+<<<<<<< HEAD
 .home .menu .detalle .bombilla{
+=======
+.main-pd .menu .detalle .bombilla{
+>>>>>>> 418e0dda9d63a42868c7ad4eb1f0e43ccf4e7be9
     font-size: 1rem;
     padding: 5px;
     margin: 10px;

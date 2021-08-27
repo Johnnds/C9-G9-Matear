@@ -1,10 +1,12 @@
 
 const path = require('path')
 const fs = require('fs')
-let productos = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','productsDataBase.json'),'utf-8'));
+const productsFilePath = path.join(__dirname, '../data/productsDataBase.json')
+const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'))
+
+   
 
 module.exports ={
-
     index: (req, res) => {
         return res.render('index')
     },
@@ -21,6 +23,4 @@ module.exports ={
         return res.redirect('/')
        
     }
-
-
 }
