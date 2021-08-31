@@ -66,8 +66,20 @@
     justify-content: space-evenly;
     margin: 10px;
 }
-@media (min-width:481px){
+.cart .Whatsapp{
+    position:fixed;
+    right:25px;
+    bottom:30px;
+}
+.cart .Whatsapp i{
+    color:white;
+    background-color:green
+}
 
+@media (min-width:481px){
+.cart{
+    width:100%;
+}
 .cart .fila1{
     display: flex;
     flex-wrap: nowrap;
@@ -95,5 +107,9 @@
         align-content: space-around;
         justify-content: space-between;
         align-items: flex-start;
+    }
+    
+    .cart .Whatsapp i{
+        color:red;
     }
 }
