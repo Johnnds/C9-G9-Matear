@@ -176,8 +176,7 @@ header nav.menu-desplegable ul{
 
 header nav.menu-desplegable ul li {
   width: auto;
-  text-align:center;
-  flex-grow: .1;
+  flex: auto;
   margin: 0;
   padding: 0;
   text-align: center;
