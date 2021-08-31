@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "firstName": "marisol",
+        "lastName": "Contreras",
+        "email": "marisol-contreras-@hotmail.com",
+        "passsword":41681160,
+        "category": "admi",
+        "image":"MateRosa.jpeg"
+    },
+    {
+        "id":2,
+        "firstName": "Jonathan",
+        "lastName": "Sánchez",
+        "email": "jonnhds@gmail.com" ,
+        "passsword":41681660,
+        "category": "admi",
+        "image": "mijo.jpg"
+    },
+    {
+        "id":3,
+        "firstName": "Lucio",
+        "lastName": "Martinez",
+        "email": "luchoweb15@gamil.com",
+        "passsword":41681660,
+        "category": "admi",
+        "image":"mijo.jpg"
+    },
+    {
+        "id":4,
+        "firstName": "Eric",
+        "lastName": "Mena",
+        "email": "menaericdaniel@gmail.com",
+        "passsword":41681660,
+        "category": "user",
+        "image":"MateNegro.jpeg"
+    },
+    {
+        "id":5,
+        "firstName": "Cristian",
+        "lastName": "Elias",
+        "email": "cristiannicolas32@hotmail.com",
+        "passsword": 41681660,
+        "category": "user",
+        "image":"MateNegro.jpeg"
+    }
+]
