@@ -4,7 +4,7 @@
         "firstName": "marisol",
         "lastName": "Contreras",
         "email": "marisol-contreras-@hotmail.com",
-        "passsword":41681160,
+        "passsword":123456,
         "category": "admi",
         "image":"MateRosa.jpeg"
     },
@@ -13,7 +13,7 @@
         "firstName": "Jonathan",
         "lastName": "Sánchez",
         "email": "jonnhds@gmail.com" ,
-        "passsword":41681660,
+        "passsword": 123456,
         "category": "admi",
         "image": "mijo.jpg"
     },
@@ -22,7 +22,7 @@
         "firstName": "Lucio",
         "lastName": "Martinez",
         "email": "luchoweb15@gamil.com",
-        "passsword":41681660,
+        "passsword":123456,
         "category": "admi",
         "image":"mijo.jpg"
     },
@@ -31,7 +31,7 @@
         "firstName": "Eric",
         "lastName": "Mena",
         "email": "menaericdaniel@gmail.com",
-        "passsword":41681660,
+        "passsword":123456,
         "category": "user",
         "image":"MateNegro.jpeg"
     },
@@ -40,7 +40,7 @@
         "firstName": "Cristian",
         "lastName": "Elias",
         "email": "cristiannicolas32@hotmail.com",
-        "passsword": 41681660,
+        "passsword": 123456,
         "category": "user",
         "image":"MateNegro.jpeg"
     }
