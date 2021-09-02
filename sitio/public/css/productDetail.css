@@ -1,45 +1,23 @@
 
-<<<<<<< HEAD
-.home{
-=======
 .main-pd{
->>>>>>> 418e0dda9d63a42868c7ad4eb1f0e43ccf4e7be9
     width: 100%;
     background-color: #43cbe0b8;
     padding: 15px;
     margin: 15px;
 }
 
-<<<<<<< HEAD
-.home .main-pd{
-=======
 .main-pd .main-pd{
->>>>>>> 418e0dda9d63a42868c7ad4eb1f0e43ccf4e7be9
     display: flex;
     align-items: center;
     margin: 10px;
    
 }
 
-<<<<<<< HEAD
-.home .menu{
-=======
 .main-pd .menu{
->>>>>>> 418e0dda9d63a42868c7ad4eb1f0e43ccf4e7be9
     display: flex;
     flex-direction: column;
 }
 
-<<<<<<< HEAD
-.home .menu .producto{
-    width: 100%;
-    height: auto;
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
-
-}
-
-.home .menu .producto img{
-=======
 .main-pd .menu h1{
     font-size: 20px;
     color: white;
@@ -50,29 +28,12 @@
 }
 
 .main-pd .menu .producto img{
->>>>>>> 418e0dda9d63a42868c7ad4eb1f0e43ccf4e7be9
     width: 100%;
     height: 420px;
     object-fit: contain;
     padding: 2px;
 }
 
-<<<<<<< HEAD
-.home .menu .price{
-   display: flex;
-   flex-wrap: wrap;
-}
-
-.home .menu .precio{
-    font-size: 23px;
-    padding: 1px;
-    width: 60px;
-    margin: 5px;
-    color: white;
-}
-
-.home .menu .mate{
-=======
 .main-pd .menu .precio{
     font-size: 25px;
     position: relative;
@@ -82,20 +43,14 @@
 }
 
 .main-pd .menu .mate{
->>>>>>> 418e0dda9d63a42868c7ad4eb1f0e43ccf4e7be9
     font-size: 20px;
     padding: 1px;
     font-family: var(--font-family);
     margin: 5px;
 }
 
-<<<<<<< HEAD
-.home .menu .off{
-    border: #011c20b8 solid 1px;
-=======
 .main-pd .menu .off{
     border: #ebebeb solid 1px;
->>>>>>> 418e0dda9d63a42868c7ad4eb1f0e43ccf4e7be9
     margin: 10px;
     border-right-width: 20%;
     background-color:  #43cbe0b8;
@@ -103,11 +58,7 @@
     border-radius: 8px;
 }
 
-<<<<<<< HEAD
-.home .menu .box{
-=======
 .main-pd .menu .box{
->>>>>>> 418e0dda9d63a42868c7ad4eb1f0e43ccf4e7be9
     display: flex;
     flex-wrap: wrap;
     padding: 5px;
@@ -115,23 +66,14 @@
     position: relative;
 }
 
-<<<<<<< HEAD
-.home .menu .descuento{
-=======
 .main-pd .menu .descuento{
->>>>>>> 418e0dda9d63a42868c7ad4eb1f0e43ccf4e7be9
     font-size: 18px;
     color: rgb(129, 53, 53);
     position: relative;
 }
 
-<<<<<<< HEAD
-.home .menu .oferta{
-    font-size: 12px; 
-=======
 .main-pd .menu .oferta{
     font-size: 20px; 
->>>>>>> 418e0dda9d63a42868c7ad4eb1f0e43ccf4e7be9
     font-family: var(--font-family);
     color: rgb(80, 16, 16);
     padding: 15px;
@@ -150,11 +92,7 @@
     100%{ opacity: 90%;}
 }
 
-<<<<<<< HEAD
-.home .menu .color{
-=======
 .main-pd .menu .color{
->>>>>>> 418e0dda9d63a42868c7ad4eb1f0e43ccf4e7be9
    font-size: 12px;
    display: flex;
    flex-wrap: wrap;
@@ -162,102 +100,11 @@
    margin: 1px;
 }
 
-<<<<<<< HEAD
-.home .menu .color p{
-    font-size:1em;
-    color: white;
-    padding: 5px;
-}
-
-.home .menu .color [type="radio"]{
-    display: none;
-}
-
-.home .menu .color label{
-    padding: 5px 15px 5px 51px;
-    display: inline-block;
-    position: relative;
-    font-size: 1em;
-    cursor: pointer;
-    color: #ebebeb;
-    -webkit-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-}
-
-.home .menu .color label::before{
-    content: "";
-    width: 10px;
-    height: 10px;
-    display: inline-block;
-    border: solid 1px #ebebeb;
-    border-radius: 50%;
-    position: absolute;
-    left: 17px;
-}
-
-.home .menu .color .negro label::before{
-    background-color: black;
-}
-
-.home .menu .color .cafe label::before{
-    background-color: rgb(80, 16, 16);
-}
-
-.home .menu .color .naranja label::before{
-    background-color: rgb(184, 74, 34);
-}
-
-.home .menu .color label:hover{
-    font-size: 14px;
-    padding: 5px 15px;
-    border-radius: 2px;
-}
-
-.home .menu .color .negro label:hover{
-    background-color: black;
-    border: white solid 1px;
-}
-
-.home .menu .color .cafe label:hover{
-    background-color: rgb(80, 16, 16);
-    border: white solid 1px;
-}
-
-.home .menu .color .naranja label:hover{
-    background-color: rgb(184, 74, 34);
-    border: solid 1px white;
-}
-
-.home .menu .color label:hover::before{
-    display: none
-}
-
-.home .menu .botón{
-    text-align: center;
-}
-
-.home .menu button{
-    
-    background-color: white;
-    font-size: 16px;
-    border: #011c20b8 solid 1px;
-    border-radius: 10px;
-}
-
-
-.home .menu .detalle{
-  margin: 1px;
-}
-
-.home .menu .detalle .info-product{
-=======
 .main-pd .menu .detalle{
   margin: 1px;
 }
 
 .main-pd .menu .detalle .info-product{
->>>>>>> 418e0dda9d63a42868c7ad4eb1f0e43ccf4e7be9
     font-size: 1rem;
     margin: 10px;
     text-align: justify;
@@ -266,11 +113,7 @@
     font-family: var(--font-family);
 }
 
-<<<<<<< HEAD
-.home .menu .detalle .cuidados{
-=======
 .main-pd .menu .detalle .cuidados{
->>>>>>> 418e0dda9d63a42868c7ad4eb1f0e43ccf4e7be9
     font-size: 18px;
     padding: 1px;
     margin: 10px;
@@ -279,11 +122,7 @@
     font-family: var(--font-family);
 }
 
-<<<<<<< HEAD
-.home .menu .detalle .lavado{
-=======
 .main-pd .menu .detalle .lavado{
->>>>>>> 418e0dda9d63a42868c7ad4eb1f0e43ccf4e7be9
     font-size: 1rem;
     padding: 1px;
     margin: 10px;
@@ -292,11 +131,7 @@
     font-family: var(--font-family);  
 }
 
-<<<<<<< HEAD
-.home .menu .detalle .eg{
-=======
 .main-pd .menu .detalle .eg{
->>>>>>> 418e0dda9d63a42868c7ad4eb1f0e43ccf4e7be9
     font-size: 18px;
     padding: 1px;
     margin: 10px;
@@ -305,11 +140,7 @@
     font-family: var(--font-family);    
 }
 
-<<<<<<< HEAD
-.home .menu .detalle .curación{
-=======
 .main-pd .menu .detalle .curación{
->>>>>>> 418e0dda9d63a42868c7ad4eb1f0e43ccf4e7be9
     font-size: 1rem;
     padding: 5px;
     margin: 10px;
@@ -318,11 +149,7 @@
     font-family: var(--font-family); 
 }
 
-<<<<<<< HEAD
-.home .menu .detalle .bombilla{
-=======
 .main-pd .menu .detalle .bombilla{
->>>>>>> 418e0dda9d63a42868c7ad4eb1f0e43ccf4e7be9
     font-size: 1rem;
     padding: 5px;
     margin: 10px;
