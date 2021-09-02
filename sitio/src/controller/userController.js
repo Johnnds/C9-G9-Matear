@@ -1,3 +1,4 @@
+const {render} = require('ejs')
 const path = require('path')
 
 module.exports = {

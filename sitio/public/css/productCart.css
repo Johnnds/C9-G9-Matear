@@ -1,12 +1,6 @@
-/*.cart*/
-@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 
-:root{
-    font-family: 'Indie Flower', cursive;
-}
 .cart {
-   font-family:var(--font-family);
-  background-color: #43cbe0b8;
+    background-color: #43cbe0b8;
     color: black;
     padding: 10px;
     background-size: 22px;

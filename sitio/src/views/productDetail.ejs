@@ -1,46 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/styles.css">
-    <script src="https://kit.fontawesome.com/4660c56b26.js"></script>
-    <title>productDetail</title>
-</head>
-<body class="body-pd">
-    <header>
-        <div class="logo-cuenta-search">
-          
-            <a href="/"><img src="/images/matear.jpg"  alt="Logo personal"></a>
-            <div class="cuenta-search">  
-                <nav class="menu-home">
-                    <ul>
-                        <li><a href="/users/register">Registrarse</a></a></li>
-                        <li><a href="/users/login">Iniciar Sección</a></li>
-                    </ul>
-                </nav>
-              <div class="search">
-                    <input type="search" name="" id="" placeholder="Buscar productos" ><button type="submit"><i class="fas fa-search"></i></button>
-              </div>
-            </div>
-        </div> 
-        <nav class="menu-desplegable">
-            <input type="checkbox" name="burger" id="menu">
-            <label class="burger" for="burger" ><i class="fas fa-bars"></i></label>
-            <a class="shopping" href="/products/productCart">
-                <i class="fas fa-shopping-cart"></i>
-                <span class="cantidad">0</span>
-            </a>
-            <ul>
-                <li class="header-nav-ul-li-a"><a href="#">Home</a></li>
-                <li><a href="#">Quienes somos</a></li>
-                <li><a href="#">Productos</a></li>
-                <li><a href="#">Sucursales</a></li>
-                <li><a href="#">Contactos</a></li>
-            </ul>
-        </nav>
-    </header>
+
+<!-- Include Head -->
+<%- include('partials/head', {title: 'Detalle Producto'}) %>
+
+<body>
+
+  <!-- Header -->
+	<%- include('partials/header') %>
+	<!-- /Header -->
+
     <main class="main-pd">
         <article>
             <div class="menu">
@@ -92,53 +61,10 @@
             </div>
         </article>
     </main>
-    <footer class="home">
-        <section>
-            <Article>
-                <div class="icon-footer"><i class="fas fa-credit-card"></i><i class="fab fa-cc-visa"></i><i class="fab fa-cc-mastercard"></i><i class="fab fa-cc-amex"></i></div>
-                <h4>Pagà con tarjeta o en efectivo</h4>
-                <p>En MateAR, podes pagar con tarjeta o efectivo. ¡Y siempre es seguro!</p>
-            </Article>
-        </section>
-        <section>
-            <article>
-                <div class="icon-footer"><i class="fas fa-shopping-basket"></i></div>
-                <h4>Servicio de Envìos.</h4>
-                <p>Envios a cualquier parte del pais.
-                </p>
-            </article>
-        </section>
-        <section>
-            <article>
-                <div class="icon-footer"><i class="fas fa-user-shield"></i></div>
-                <h4>Seguridad, ante todo.</h4>
-                <p>Compra segura y protegida.
-                </p>
-            </article>
-        </section>
-        <section>
-            <article>
-                <div class="suscripcion">
-                    <input type="search" name="" id="" placeholder="Escribe tu email" >
-                    <button type="submit">Suscribete</button>
-                </div>
-            </article>
-        </section>
-        <section>
-            <article>
-                <nav class="icon-footer-redes">
-                    <a href=""><i class="fab fa-twitter"></i></a>
-                    <a href=""><i class="fab fa-facebook-square"></i></a>
-                    <a href=""><i class="fab fa-spotify"></i></a>
-                    <a href=""><i class="fab fa-apple"></i></a>
-                </nav>
-            </article>
-        </section>
-        <section>
-            <article class="copyright"> 
-                <p>Copyright &copy;  2021 MateAR.</p>
-            </article>
-        </section>
-    </footer>    
+
+    <!-- footer -->
+	<%- include('partials/footer') %>
+	<!-- /footer --> 
+    
 </body>
 </html>

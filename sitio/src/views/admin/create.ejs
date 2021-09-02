@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+
+    <!-- Include Head -->
+<%- include('../partials/head', {title: 'crear'}) %>
+<body class="body-admin">
+
+  <!-- Header -->
+	<%- include('../partials/header') %>
+
+    <!--main-->
+   <div class="admin">
+   <main>
+    <nav>
+        <div class="form">
+            <h1>Crear Producto</h1>
+            <form action="/admin/create"  method="POST"  enctype="multipart/form-data">
+                <label for="nombre"></label>
+                <input type="text" name="nombre" id="nombre" placeholder="Nombre del Producto">
+                <br>
+                <label for="precio"></label>
+                <input type="number" placeholder="Precio">
+                <br>
+                    <label for="descripcion"></label>
+                    <textarea name="descripcion" id="descripcion" cols="30" rows="5" placeholder="Descripción del producto"></textarea>
+                <br>
+                <label for="categoría"></label>
+                <select name="categoría" id="categoria">
+                    <option value="" selected hidden>Seleccione la categoría</option>
+                    <% categorias.forEach(categoria => { %>
+                     <option value="<%= categoria.nombre %>"><%= categoria.nombre %> </option>
+                    <% }) %>
+                </select>
+                <br>
+               <div class="file"></div>
+                <label for="img">Agregar imagen</label>
+                <input type="file" name="img" id="img">
+               </div>
+                <button>Enviar</button>
+            </form>
+        </div>
+    </nav>
+   </main>
+   </div>
+
+    <!-- footer -->
+	<%- include('../partials/footer') %>
+</body>
+</html>

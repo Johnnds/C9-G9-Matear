@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Include Head -->
+<%- include('partials/head', {title: 'Listado de Productos'}) %>
+<body>
+
+  <!-- Header -->
+	<%- include('partials/header') %>
+	<!-- /Header -->
+
+    <main class="main-home">
+        <section>
+            <h2>Listados de Productos:</h2>
+              
+            <% products.forEach(product => {  %>
+                
+                <div class="card estilo-c">
+                  <a href="#">
+                    <div class="img-container">
+                      <img src="/images/<%= product.img %>" alt="producto 1">
+                      <span class="promo">15% de descuento</span>
+                    </div>
+                   </a>
+                  <div class="info-container">
+                    <h3><%= product.nombre %></h3>
+                    <strong>$<%= product.precio %></strong>
+                    <span class="rating">★★★★☆</span>
+                    <a href="#" class="add-cart">Añadir al carrito</a>
+                  </div>
+                </div>
+  
+                <% }) %>
+
+          </section>
+    </main>
+     
+    <!-- footer -->
+	<%- include('partials/footer') %>
+	<!-- /footer -->
+    
+</body>
+</html>
