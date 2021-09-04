@@ -32,7 +32,11 @@
                      <% }) %>
                 </select>
                 <br>
-                <input type="reset" value="Borrar">
+                <div>
+                    <form action=/products/delete/<%= product.id %>?_method=DELETE" method="POST">
+                        <button class="btn btn-sm btn-danger" style="width: 35px;" type="submit"><i class="fas fa-trash-alt"></i></button>
+                    </form>
+                </div>
                 <button>Editar</button>
             </form>
         </div>

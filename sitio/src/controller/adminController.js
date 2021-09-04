@@ -60,6 +60,14 @@ const controller = {
             fs.writeFileSync(path.join(__dirname,'..','data','productsDataBase.json'),JSON.stringify(productos,null,2),'utf-8');
             return res.redirect('/')
            
+        },
+        /* controller de edit conmetodo delete*/
+        destroy : (req,res) => {
+            let productosModificados = productos.filter(producto => producto.id !== +req.params.id);
+    
+            fs.writeFileSync(path.join(__dirname,'..','data','productsDataBase.json'),JSON.stringify(productosModificados,null,2),'utf-8');
+            return res.redirect('/admin')
+    
         }
 }
 
