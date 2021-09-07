@@ -1,4 +1,5 @@
 const express = require('express')
+const { destroy } = require('../controller/adminController')
 const router = express.Router()
 const {cart, detail, listProducts} = require('../controller/productController')
 
@@ -6,5 +7,7 @@ const {cart, detail, listProducts} = require('../controller/productController')
 router.get('/detail/:id', detail)
 router.get('/productCart', cart )
 router.get('/list', listProducts)
+
+router.delete('/delete/:id',destroy);
 
 module.exports = router
