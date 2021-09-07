@@ -15,16 +15,16 @@ const controller = {
 
     //**controller de create con método POST */
     store: (req,res)=>{
-       const{nombre,precio,descripcion,categoria,img} =req.body;
+       const{name,price,description,category,image} =req.body;
         
       if (nombre.trim() != "" && precio != "") {
         let producto = {
             id: productos[productos.length - 1].id + 1,
-            nombre,
-            precio,
-            descripcion,
-            categoria,
-            img :  req.file ? req.file.filename : 'default-image.png'
+            name,
+            price,
+            description,
+            category,
+            image:  req.file ? req.file.filename : 'default-image.png'
         }
     
         productos.push(producto)
@@ -47,14 +47,14 @@ const controller = {
 
         //**controller de edit con método PUT */
         update : (req,res) =>{
-            const {nombre,precio,descripcion,categoria} = req.body;
+            const {name,price,description,category} = req.body;
 
             productos.forEach(producto => {
                 if(producto.id === +req.params.id){
-                    producto.nombre = nombre;
-                    producto.descripcion = descripcion;
-                    producto.precio = +precio;
-                    producto.categoria = categoria
+                    producto.name = name;
+                    producto.description = description;
+                    producto.price = +price;
+                    producto.category = category
                 }
             });
             fs.writeFileSync(path.join(__dirname,'..','data','productsDataBase.json'),JSON.stringify(productos,null,2),'utf-8');
@@ -66,7 +66,7 @@ const controller = {
             let productosModificados = productos.filter(producto => producto.id !== +req.params.id);
     
             fs.writeFileSync(path.join(__dirname,'..','data','productsDataBase.json'),JSON.stringify(productosModificados,null,2),'utf-8');
-            return res.redirect('/admin')
+            return res.redirect('/')
     
         }
 }

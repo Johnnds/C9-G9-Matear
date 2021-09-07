@@ -1,14 +1,14 @@
 [
     {
-        "nombre":"calabaza"
+        "name":"calabaza"
     },
     {
-        "nombre":"ceramico"
+        "name":"ceramico"
     },
     {
-        "nombre":"vidrio"
+        "name":"vidrio"
     },
     {
-        "nombre":"destacado"
+        "name":"destacado"
     }
 ]

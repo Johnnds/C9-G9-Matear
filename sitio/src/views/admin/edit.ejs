@@ -15,28 +15,24 @@
     <nav>
         <div class="form">
             <h1>Editar Producto</h1>
-            <form action="/ame/edit/<%= producto.id %>?_method=PUT" method="POST">
+            <form action="/admin/edit/<%= producto.id %>?_method=PUT" method="POST">
                 <label for="name"></label>
-                <input type="text" name="name" id="name" placeholder="Nombre del Producto" value="<%= producto.nombre %>">
+                <input type="text" name="name" id="name" placeholder="Nombre del Producto" value="<%= producto.name %>">
                 <br>
                 <label for="price"></label>
-                <input type="number" name="price" id="price" placeholder="Precio" value=<%= producto.precio %>>
+                <input type="number" name="price" id="price" placeholder="Precio" value=<%= producto.price %>>
                 <br>
                 <label for="description"></label>
-               <textarea name="description" id="description" cols="30" rows="5" placeholder="Descripción del producto"><%= producto.descripcion %></textarea>
+               <textarea name="description" id="description" cols="30" rows="5" placeholder="Descripción del producto"><%= producto.description %></textarea>
                 <br>
                 <label for="category"></label>
-                <select name="category" id="category">
-                    <% categorias.forEach(categoria => { %>
-                     <option value="<%= categoria.nombre %>" <%= producto.categoria.toLowerCase() === categoria.nombre.toLowerCase() ? 'selected' : null %> ><%= categoria.nombre %> </option>
-                     <% }) %>
+                 <select name="category" id="category">
+                    <% categorias.forEach(category => { %>
+                     <option value="<%= category.name %>" <%= producto.category.toLowerCase() === category.name.toLowerCase() ? 'selected' : null %> ><%= category.name %> </option>
+                    <% }) %>
                 </select>
                 <br>
-                <div>
-                    <form action=/products/delete/<%= product.id %>?_method=DELETE" method="POST">
-                        <button class="btn btn-sm btn-danger" style="width: 35px;" type="submit"><i class="fas fa-trash-alt"></i></button>
-                    </form>
-                </div>
+              
                 <button>Editar</button>
             </form>
         </div>
