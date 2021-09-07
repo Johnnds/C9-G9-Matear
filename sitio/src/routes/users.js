@@ -6,4 +6,5 @@ const {registro, login} = require('../controller/userController')
 router.get('/register', registro)
 router.get('/login', login)
 
+
 module.exports = router;
