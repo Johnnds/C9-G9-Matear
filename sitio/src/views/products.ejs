@@ -8,31 +8,41 @@
 	<%- include('partials/header') %>
 	<!-- /Header -->
 
-    <main class="main-home">
-        <section>
-            <h2>Listados de Productos:</h2>
-              
-            <% products.forEach(product => {  %>
-                
-                <div class="card estilo-c">
-                  <a href="#">
-                    <div class="img-container">
-                      <img src="/images/<%= product.img %>" alt="producto 1">
-                      <span class="promo">15% de descuento</span>
-                    </div>
-                   </a>
-                  <div class="info-container">
-                    <h3><%= product.nombre %></h3>
-                    <strong>$<%= product.precio %></strong>
-                    <span class="rating">★★★★☆</span>
-                    <a href="#" class="add-cart">Añadir al carrito</a>
-                  </div>
-                </div>
-  
-                <% }) %>
+  <%- include('search') %> 
 
-          </section>
-    </main>
+     <!--  dishes section starts  -->
+
+ <section class="dishes" class="dishes">
+
+  <h3 class="sub-heading">productos</h3>
+  <h1 class="heading">listado de productos</h1>
+
+  <div class="box-container">
+
+
+      <% products.forEach(product => { %> 
+
+          <div class="box">
+              <a href="#" class="fas fa-heart"></a>
+              <a href="#" class="fas fa-eye"></a>
+              <img src="images/<%= product.image %>" alt="">
+              <h3><%= product.name %> </h3>
+              <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+              </div>
+              <span>$<%= product.price %> </span>
+              <a href="#" class="btn">agregar <i class="fas fa-shopping-cart"></i> </a>
+          </div>
+
+      <% }) %> 
+
+  </div>
+
+</section>
      
     <!-- footer -->
 	<%- include('partials/footer') %>

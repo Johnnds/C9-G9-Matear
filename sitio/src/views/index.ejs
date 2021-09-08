@@ -10,13 +10,7 @@
 	<%- include('partials/header') %>
 	<!-- /Header -->
 
-    <!-- search form  -->
-
-<form action="" id="search-form">
-  <input type="search" placeholder="search here..." name="" id="search-box">
-  <label for="search-box" class="fas fa-search"></label>
-  <i class="fas fa-times" id="close"></i>
-</form>
+<%- include('search.ejs') %> 
 
 <!-- home section starts  -->
 
@@ -33,7 +27,7 @@
                   <span><%= product.name %> </span>
                   <h3><%= product.category %></h3>
                   <p><%= product.description %></p>
-                  <a href="#" class="btn">order now</a>
+                  <a href="#" class="btn">ver mas</a>
               </div>
               <div class="image">
                   <img src="images/<%= product.image %> " alt="">
@@ -56,8 +50,8 @@
 
  <section class="dishes" class="dishes">
 
-    <h3 class="sub-heading">our dishes</h3>
-    <h1 class="heading">ppular dishes</h1>
+    <h3 class="sub-heading">productos</h3>
+    <h1 class="heading">ultimos destacados</h1>
 
     <div class="box-container">
 
@@ -77,7 +71,7 @@
                     <i class="fas fa-star-half-alt"></i>
                 </div>
                 <span>$<%= product.price %> </span>
-                <a href="#" class="btn">carrito</a>
+                <a href="#" class="btn">agregar <i class="fas fa-shopping-cart"></i> </a>
             </div>
 
         <% }) %> 
