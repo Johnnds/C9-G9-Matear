@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <!-- Include Head -->
-<%- include('partials/head', {title: 'Listado de Productos'}) %>
+<%- include('partials/head', {title: 'Listado de Productos', css: 'css/productCart.css'}) %>
 <body>
 
   <!-- Header -->
@@ -10,32 +10,36 @@
 
   <%- include('partials/search') %> 
 
-     <!--  dishes section starts  -->
+     <!--  cart section starts  -->
 
  <section class="dishes" class="dishes">
 
   <h3 class="sub-heading">productos</h3>
-  <h1 class="heading">listado de productos</h1>
+  <h1 class="heading">Carrito de Compra</h1>
 
   <div class="box-container">
 
 
       <% products.forEach(product => { %> 
+
           <div class="box">
               <a href="#" class="fas fa-heart"></a>
               <a href="#" class="fas fa-eye"></a>
-              <img src="/images/<%= product.image %>" alt="">
+              <img src="images/<%= product.image %>" alt="">
               <h3><%= product.name %> </h3>
-              <div class="stars">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star-half-alt"></i>
-              </div>
+              <div class="input">
+                <span>bombilla</span>
+                <input type="radio" name="bombilla">si
+                <input type="radio" name="bombilla">no
+            </div>
+            <div class="input">
+                <span>codigo promoción</span>
+                <input type="text" name="promo">
+            </div>
               <span>$<%= product.price %> </span>
-              <a href="#" class="btn">agregar <i class="fas fa-shopping-cart"></i> </a>
+              <a href="#" class="btn">eliminar <i class="fas fa-shopping-cart"></i> </a>
           </div>
+
       <% }) %> 
 
   </div>

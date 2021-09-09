@@ -10,7 +10,9 @@ const controller = {
         return res.render('productDetail')
     },
     cart: (req, res) => {
-        return res.render('productCart')
+        return res.render('productCart', {
+            products
+        })
     },
     listProducts: (req, res) => {
         return res.render('products', {
