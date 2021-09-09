@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/productDetail.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
     <script src="https://kit.fontawesome.com/4660c56b26.js"></script>
     <title>productDetail</title>
 </head>
-<body class="body-pd">
+<body class="home">
     <header>
         <div class="logo-cuenta-search">
+          
             <img src="/images/matear.jpg"  alt="Logo personal">
             <div class="cuenta-search">  
                 <nav class="menu-home">
@@ -19,9 +22,9 @@
                         <li><a href="/login">Iniciar Sección</a></li>
                     </ul>
                 </nav>
-                <div class="search">
+              <div class="search">
                     <input type="search" name="" id="" placeholder="Buscar productos" ><button type="submit"><i class="fas fa-search"></i></button>
-                </div>
+              </div>
             </div>
         </div> 
         <nav class="menu-desplegable">
@@ -40,27 +43,33 @@
             </ul>
         </nav>
     </header>
-    <main class="main-pd">
+      <main class="main-pd">
         <article>
             <div class="menu">
-                <h1>Mate calabaza.</h1>
                  <div class="contenedor">
-                    <div class="producto"><img src="/images/83d662_f411014f30e54c75ad8e82a704988b16_mv2.jpg" alt=""></div>
-                    <div class="caja">
-                        <div class="precio"><h3>$750</h3></div>
-                    <div class="mate"><h3>Mate de calabaza artesanal</h3></div>
-                    <div class="off">
-                       <div class="box">
-                        <div class="descuento"><h4><del>$1000</del></h4></div>
+                    <div class="box">
                         <div class="oferta"><h4>OFERTA: 25% de descuento</h4></div>
                        </div>
-                    <div class="color">
-                        <label for="color">Elegir color</label>
-                       <div class="negro"><input type="radio" name="color" id="color" value="Negro"> Negro</div>
-                        <div class="cafe"><input type="radio" name="color" id="color" value="Cafe" >Café</div>
-                        <div class="naranja"><input type="radio" name="color" id="color" value="Naranja">Naranja</div>
+                    <div class="producto"><img src="/images/83d662_f411014f30e54c75ad8e82a704988b16_mv2.jpg" alt=""></div>
+                    <div class="caja">
+                      <div class="price">
+                        <div class="descuento"><h4><del>$1000</del></h4></div>
+                        <div class="precio"><h3>$750</h3></div>
+                      </div>
+                        <div class="mate"><h3>Mate de calabaza artesanal</h3></div>
+                        <div class="off">
+                        <div class="color">
+                           <p>Elegir color:</p>
+                            <input type="radio" name="color" id="color" value="Negro"> 
+                             <div class="negro"><label for="negro">Negro</label></div>
+                            <input type="radio" name="color" id="color" value="Cafe" >
+                            <div class="cafe"><label for="cafe">Cafa</label></div>
+                            <input type="radio" name="color" id="color" value="Naranja">
+                            <div class="naranja"><label for="naranja">Naranja</label></div>
+                        </div>
+                        </div>
                     </div>
-                    </div>
+                    <div class="botón"><button>Comprar</button></div>
                      <div class="detalle">
                         <div class="info-product">
                             <p>Mate de calabaza Imperial importada desde Uruguay. Es trabajado artesanalmente mediante un proceso de recubrimiento en piel para luego ser sellado con una virola de alpaca cincelada. Todos los materiales así como el proceso de producción son sumamente detallados. Ideal para hacerte de un producto que te va a durar toda la vida.</p>
@@ -71,16 +80,25 @@
                         <div class="curación"><p>Requiere ser curado antes de utilizar por primera vez.</p></div>
                         <div class="bombilla"><p>No incluye bombilla</p></div>
                      </div>
-                    </div>
-                </div>
-                <div class="botón">
-                   <a href="/productcart">Ir al carrito<i class="fas fa-shopping-cart"></i></a>
+                    
                 </div>
                 <div class="comentario">
                     <label for="comentario"></label>
                     <textarea name="comentario" id="comentario" cols="30" rows="10" placeholder="Dejá tu comentario"></textarea>
-                    <button type="enviar">Enviar</button>
+                    <button type="enviar"><i class="fas fa-chevron-right"></i></button>
                 </div>
+                <div class="cajón">
+                    <div class="coment1">
+                        <span class="rating">★★★★☆</span>
+                        <p>Exelente producto, de muy buen material.</p>
+                    </div>
+                    <div class="coment2">
+                        <span class="rating">★★★★☆</span>
+                        <p>Compré un "combo Matear" de termo, bombilla y mate. La verdad quedé maravillada por los productos, que son muy buenos y están a un precio muy accesible</p></div>
+                    <div class="coment3">
+                        <span class="rating">★★★★☆</span>
+                        <p>Compré ya varios mates, me encantan, el sabor se mantiene y la calidad es única</p></div>
+                  </div>
                 <div class="similares"><h4>Similares</h4></div>
                 <div class="carrusel">
                     <div><img src="/images/ceramico-galaxia.jpg" alt=""></div>
@@ -91,7 +109,7 @@
             </div>
         </article>
     </main>
-    <footer class="home">
+    <footer>
         <section>
             <Article>
                 <div class="icon-footer"><i class="fas fa-credit-card"></i><i class="fab fa-cc-visa"></i><i class="fab fa-cc-mastercard"></i><i class="fab fa-cc-amex"></i></div>
@@ -138,6 +156,6 @@
                 <p>Copyright &copy;  2021 MateAR.</p>
             </article>
         </section>
-    </footer>    
+    </footer>      
 </body>
 </html>

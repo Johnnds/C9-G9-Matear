@@ -17,8 +17,8 @@
                  <div class="contenedor">
                     <div class="producto"><img src="/images/83d662_f411014f30e54c75ad8e82a704988b16_mv2.jpg" alt=""></div>
                     <div class="caja">
-                        <div class="precio"><h3>$750</h3></div>
-                    <div class="mate"><h3>Mate de calabaza artesanal</h3></div>
+                        <div class="precio"><h3><%= product.precio %> </h3></div>
+                    <div class="mate"><h3><%= product.nombre %></h3></div>
                     <div class="off">
                        <div class="box">
                         <div class="descuento"><h4><del>$1000</del></h4></div>
@@ -33,7 +33,7 @@
                     </div>
                      <div class="detalle">
                         <div class="info-product">
-                            <p>Mate de calabaza Imperial importada desde Uruguay. Es trabajado artesanalmente mediante un proceso de recubrimiento en piel para luego ser sellado con una virola de alpaca cincelada. Todos los materiales así como el proceso de producción son sumamente detallados. Ideal para hacerte de un producto que te va a durar toda la vida.</p>
+                            <p><%= product.descripcion %> </p>
                         </div>
                         <div class="cuidados"><h4>Cuidados</h4></div>
                         <div class="lavado"> <p>Enjuagar con agua y secar después de utilizar para mantenerlo en buen estado.</p></div>

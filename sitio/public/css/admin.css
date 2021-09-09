@@ -1,0 +1,82 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.body-admin{
+    background-color: #43cbe0b8;
+}
+
+.body-admin .admin{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 1px;
+    margin: auto;
+}
+
+.body-admin .admin input{
+    background-color: #011c20b8;
+    border: 1px solid white;
+    color: white;
+}
+
+::placeholder{
+    color: white;
+}
+.body-admin .admin select{
+    background-color: #011c20b8;
+}
+
+.body-admin .admin option{
+    background-color: #011c20b8;
+    color: white;
+}
+
+.body-admin .admin button{
+    background-color: #011c20b8;
+    color: white;
+    border: white solid 1px;
+}
+
+/*Tablet*/
+@media(min-width:481px){
+    .body-admin .admin input{
+        font-size: 18px;
+    }
+}
+
+
+@media (min-width: 900px){
+
+    .body-admin .admin input{
+        font-size: 20px;
+    }
+
+    .body-admin .admin button{
+        width: 50%;
+        height: 50%;
+    }
+
+    .body-admin .admin button:hover{
+        background-color:  tomato;
+    } 
+
+    .body-admin .admin input:hover{
+        background-color:  tomato;
+    } 
+
+    .body-admin .admin option{
+        font-size: 20px;
+    }
+    
+    .body-admin .admin option:hover{
+        background-color: tomato;
+    }
+    
+}
+
+
+
+

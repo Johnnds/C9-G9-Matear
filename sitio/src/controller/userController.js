@@ -1,3 +1,4 @@
+const {render} = require('ejs')
 const path = require('path')
 
 module.exports = {
@@ -7,4 +8,5 @@ module.exports = {
     login: (req, res) => {
         return res.render('login')
     }
+    
 }
