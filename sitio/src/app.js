@@ -5,6 +5,7 @@
 // ************ Module Necesarios ************
 const express = require('express');
 const path = require('path');
+const session = require('express-session')
 
 // ************ express() - (don't touch) ************
 const app = express();
@@ -19,6 +20,12 @@ app.use(express.json());
 
 //**Configuración metodos PUT y DELETE */
 app.use(methodOverride('_method'));
+
+app.use(session({
+    secret : 'mi secreto',
+    saveUninitialized : true,
+    resave : false
+}))
 
 
 // ************ Template Engine - (don't touch) ************
