@@ -13,12 +13,12 @@
     <main class="main-pd">
         <article>
             <div class="menu">
-                <h1>Mate calabaza.</h1>
+                <h1><%= producto.name %> </h1>
                  <div class="contenedor">
-                    <div class="producto"><img src="/images/83d662_f411014f30e54c75ad8e82a704988b16_mv2.jpg" alt=""></div>
+                    <div class="producto"><img src="/images/<%= producto.image %>" alt=""></div>
                     <div class="caja">
-                        <div class="precio"><h3>$750</h3></div>
-                    <div class="mate"><h3>Mate de calabaza artesanal</h3></div>
+                        <div class="precio"><h3>$<%= producto.price %> </h3></div>
+                    <div class="mate"><h3><%= producto.name %> </h3></div>
                     <div class="off">
                        <div class="box">
                         <div class="descuento"><h4><del>$1000</del></h4></div>
@@ -33,14 +33,8 @@
                     </div>
                      <div class="detalle">
                         <div class="info-product">
-                            <p>Mate de calabaza Imperial importada desde Uruguay. Es trabajado artesanalmente mediante un proceso de recubrimiento en piel para luego ser sellado con una virola de alpaca cincelada. Todos los materiales así como el proceso de producción son sumamente detallados. Ideal para hacerte de un producto que te va a durar toda la vida.</p>
+                            <p><%= producto.description %> </p>
                         </div>
-                        <div class="cuidados"><h4>Cuidados</h4></div>
-                        <div class="lavado"> <p>Enjuagar con agua y secar después de utilizar para mantenerlo en buen estado.</p></div>
-                        <div class="eg"><h4>Especificaciones generales</h4></div>
-                        <div class="curación"><p>Requiere ser curado antes de utilizar por primera vez.</p></div>
-                        <div class="bombilla"><p>No incluye bombilla</p></div>
-                     </div>
                     </div>
                 </div>
                 <div class="botón">
