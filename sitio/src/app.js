@@ -15,8 +15,8 @@ const methodOverride = require('method-override');
 //**Session */
 const session = require('express-session');
 
-//**Middleware */
-let validateRegister = require('./middlewares/userValidator')
+//**validation */
+let validateRegister = require('./validation/userValidator')
 
 //****Manejo de formulario */
 app.use(express.urlencoded({extended:false}));
@@ -48,7 +48,7 @@ app.use('/users', usersRouter);
 app.use('/products', productsRouter)
 app.use('/admin', adminRouter)
 
-//**Middleware */
+//**validation */
 app.use(validateRegister);
 
 

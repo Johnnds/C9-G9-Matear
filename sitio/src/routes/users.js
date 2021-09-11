@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 const multer = require('multer');
 const {registro,processRegister,login} = require('../controller/userController');
-let validateRegister = require('../middlewares/userValidator');
+let validateRegister = require('../validation/userValidator');
 
 
 const storage = multer.diskStorage({
