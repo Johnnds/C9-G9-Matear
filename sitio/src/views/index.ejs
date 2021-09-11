@@ -3,6 +3,7 @@
   
 <!-- Include Head -->
 <%- include('partials/head', {title: 'Inicio'}) %>
+<link rel="stylesheet" href="/css/footer.css">
 
 <body>
 
@@ -74,16 +75,16 @@
 
     </div>
 
-</section>
-
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+      <!-- footer -->
+	<%- include('partials/footer') %>
+	<!-- /footer -->
+		
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     <!-- custom js file link  -->
     <script src="/js/script.js"></script>
      
-    <!-- footer -->
-	<%- include('partials/footer') %>
-	<!-- /footer -->
-    
-</body>
+		
+	</body>
+
 </html>

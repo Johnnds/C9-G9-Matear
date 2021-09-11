@@ -4,6 +4,8 @@
 
 <!-- Include Head -->
 <%- include('partials/head', {title: 'Carrito'}) %>
+<link rel="stylesheet" href="/css/productCart.css">
+<link rel="stylesheet" href="/css/footer.css">
 
 <body>
 
@@ -32,16 +34,121 @@
                         </div>
                     </div>
                     <span>$<%= product.price %> </span>
-                    <a href="#" class="btn btn_delete">eliminar</a>
+                    <a href="#" class="btn btn_delete">eliminar<i class="fa fa-times-circle fa-4"></i></i></a>
                 </div>
             <% }) %> 
 
-    </div>
+        </div>
+
+</section>
+
+<section class="container content-section">
+    <div id="wrap">
+        <div id="cart_layout_1">
+          <h1>resumen pedido</h1>
+
+          <% products.forEach(product => { %>
+
+            <div class="cart_info">
+              <div class="product">
+                <img src="/images/<%= product.image %> "/>
+              </div>
+              <div class="product_info">
+                <div class="center">
+                  <span><%= product.description %> </span>
+                </div>
+              </div>
+              <div class="details">
+                <div class="qty">
+                  <div class="center">
+                  <span>cant:</span><input type="number"></input>
+                </div>
+                </div>
+                <div class="price">
+                  <div class="center">
+                  <span>$<%= product.price %> </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          <% }) %> 
+
+          <div class="complete_cart">
+            <div class="updated">
+            <div class="shipping">
+              <h2>envio</h2>
+              <div class="state">
+                <select id="state">
+                       <option value = "1">santa fe</option>
+                       <option value = "2">bs as</option>
+                       <option value = "3">condoba</option>
+                       <option value = "4">mendoza</option>
+                     </select>
+              </div>
+              <div class="zip">
+                <input type="text"></input>
+              </div>
+              <div class="calc">
+                <a class="button" href="#">Calcular</a>
+              </div>
+            </div>
+            <div class="coupon">
+              <h2>codigo cupon</h2>
+              <input id="code"></input>
+            <a class="button update">actualizar</a>
+            </div>
+            </div>
+            <div class="checkout">
+              <div class="total">
+              <h2>total:</h2>
+              </div>
+              <span class="subtotal">
+                $24.99
+              </span>
+              <div class="bfb">
+                <a class="button" href="#">comprar</a>
+              </div>
+            </div>
+             <div class="updated mobile">
+            <div class="shipping">
+              <h2>envio</h2>
+              <div class="state">
+                <select id="state">
+                       <option value = "1">santa fe</option>
+                       <option value = "2">bs as</option>
+                       <option value = "3">cordoba</option>
+                       <option value = "4">mendoza</option>
+                     </select>
+              </div>
+              <div class="zip">
+                <input type="text"></input>
+              </div>
+              <div class="calc">
+                <a class="btn" href="#">Calcular</a>
+              </div>
+            </div>
+            <div class="coupon">
+              <h2>codigo descuento</h2>
+              <input id="code"></input>
+            <a class="button update">actualizar</a>
+            </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
 </section>
 
     <!-- footer -->
 	<%- include('partials/footer') %>
 	<!-- /footer -->
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <!-- custom js file link  -->
+  <script src="/js/script.js"></script>
+   
 
 </html>
