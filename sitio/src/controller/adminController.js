@@ -3,6 +3,7 @@ const path = require('path');
 const productos = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','productsDataBase.json'),'utf-8'));
 const categorias = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','categorias.json'),'utf-8'));
 
+
 const controller = {
 
     //**controller de create con método GET */
@@ -31,7 +32,7 @@ const controller = {
     fs.writeFileSync(path.join(__dirname,'..','data','productsDataBase.json'),JSON.stringify(productos,null,2),'utf-8');
     return res.redirect('/')
       }
-      return res.send("¡No se agregó ningún producto!")
+      return res.send('admin/create' + 'No se agregó producto');
         },
 
         //**controller de edit con método GET */
@@ -61,13 +62,20 @@ const controller = {
             return res.redirect('/')
            
         },
-        /* controller de edit conmetodo delete*/
+
+        /* controller de edit con metodo delete*/
         destroy : (req,res) => {
             let productosModificados = productos.filter(producto => producto.id !== +req.params.id);
     
             fs.writeFileSync(path.join(__dirname,'..','data','productsDataBase.json'),JSON.stringify(productosModificados,null,2),'utf-8');
             return res.redirect('/')
     
+        },
+
+        products : (req,res) =>{
+            return res.render('admin/products',{
+              productos,
+            })
         }
 }
 

@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const multer = require('multer');
 const path= require('path')
-const {create, edit, store,update} =  require('../controller/adminController');
+const {create, edit, store,update, destroy,products} =  require('../controller/adminController');
 
 
 const storage = multer.diskStorage({
@@ -28,6 +28,12 @@ router.post('/create',upload.single('img'), store);
 router.get('/edit/:id', edit);
 router.put('/edit/:id', update);
 
+/**Delete */
+router.delete('/delete/:id',destroy);
+
+//**Product */
+
+router.get('/products', products)
 
 
 

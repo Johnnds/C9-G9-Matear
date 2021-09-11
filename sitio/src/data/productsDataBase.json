@@ -1,16 +1,5 @@
 [
   {
-    "id": 1,
-    "name": "Mate  Camion",
-    "price": 1000,
-    "description": "Mate camion forrado de cuero natural",
-    "image": "mate-camionero.jpg",
-    "category": "calabaza",
-    "variety": "madera",
-    "colors": "marron",
-    "stock": 50
-  },
-  {
     "id": 2,
     "name": "Mate  ceramico",
     "price": 1300,
