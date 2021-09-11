@@ -1,47 +1,47 @@
 [
     {
         "id": 1,
-        "firstName": "marisol",
+        "name": "marisol",
         "lastName": "Contreras",
         "email": "marisol-contreras-@hotmail.com",
         "password":123456,
         "category": "admin",
-        "image":"MateRosa.jpeg"
+        "avatar":"MateRosa.jpeg"
     },
     {
         "id":2,
-        "firstName": "Jonathan",
+        "name": "Jonathan",
         "lastName": "Sánchez",
         "email": "jonnhds@gmail.com" ,
         "password": 123456,
-        "category": "admin",
-        "image": "mijo.jpg"
+        "rol": "admin",
+        "avatar": "mijo.jpg"
     },
     {
         "id":3,
-        "firstName": "Lucio",
+        "name": "Lucio",
         "lastName": "Martinez",
         "email": "luchoweb15@gamil.com",
-        "password":123456,
-        "category": "admin",
-        "image":"mijo.jpg"
+        "password":12345678,
+        "rol": "admin",
+        "avatar":"mijo.jpg"
     },
     {
         "id":4,
-        "firstName": "Eric",
+        "name": "Eric",
         "lastName": "Mena",
         "email": "menaericdaniel@gmail.com",
         "password":123456,
-        "category": "user",
-        "image":"MateNegro.jpeg"
+        "rol": "user",
+        "avatar":"MateNegro.jpeg"
     },
     {
         "id":5,
-        "firstName": "Cristian",
+        "name": "Cristian",
         "lastName": "Elias",
         "email": "cristiannicolas32@hotmail.com",
         "password": 123456,
-        "category": "user",
-        "image":"MateNegro.jpeg"
+        "rol": "user",
+        "avatar":"MateNegro.jpeg"
     }
 ]
