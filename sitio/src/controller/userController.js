@@ -20,13 +20,14 @@ module.exports = {
         // res.send(errors.mapped())
 
         if(errors.isEmpty()) {
-            let user = users.find(user => user.email === req.body.email.trim())
+            let usuario = usuarios.find(user => usuarios.email === req.body.email.trim())
 
             req.session.userLogin = {
-                id : user.id,
-                name : user.name,
-                lastName : user.lastName,
-                avater : user.avatar,
+                id : usuario.id,
+                name : usuario.firsName,
+                lastName : usuario.lastName,
+                gender : usuario.gender,
+                image : usuario.image,
                 rol : user.rol
             }
 
@@ -39,26 +40,19 @@ module.exports = {
         }
 
     },
-    profile: (req, res) => {
-
-    },
-    logout: (req, res) => {
-        req.session.destroy()
-    },
 
     processRegister: (req,res) =>{
             let errors = validationResult(req);
             if (errors.isEmpty()) {
-                let {firstName, lastName, email, password, birthDate, gender, phone } =req.body
+                let {firstName, lastName, email, password, gender } =req.body
             let usuario ={
                id: usuarios[usuarios.length -1] ? usuarios[usuarios.length -1] .id + 1 : 1,
                firstName : firstName,
                lastName : lastName,
                email: email.trim(),
                password: brcypt.hashSync(password, 10),
-               birthDate,
                gender,
-               phone,
+               rol: user,
                image: req.file ? req.file.filename : 'default-image.png'
             }
     
@@ -74,9 +68,11 @@ module.exports = {
            
     
     },
+    profile: (req, res) => {
 
-    login : (req, res) => {
-        return res.render('login')
     },
+    logout: (req, res) => {
+        req.session.destroy()
+    }
 
 }

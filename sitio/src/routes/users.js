@@ -1,14 +1,9 @@
 var express = require('express');
 var router = express.Router();
-<<<<<<< HEAD
-const {registro, login, processLogin, profile, logout} = require('../controller/userController')
+const {registro, processRegister ,login, processLogin, profile, logout} = require('../controller/userController')
 const loginValidator = require('../validations/loginValidator')
-
-=======
 const multer = require('multer');
-const {registro,processRegister,login} = require('../controller/userController');
 let validateRegister = require('../validation/userValidator');
->>>>>>> develop
 
 
 const storage = multer.diskStorage({
@@ -27,18 +22,15 @@ const upload = multer({
 
 /* register */
 router.get('/register', registro)
-<<<<<<< HEAD
-router.get('/login', login)
-router.post('/login', loginValidator,  processLogin)
-
-router.get('/profile', profile)
-router.get('/logout', logout)
-=======
 router.post('/register',upload.single('image'), validateRegister,processRegister);
 
 //**Login */
 router.get('/login',login)
->>>>>>> develop
+router.post('/login', loginValidator,  processLogin)
+
+
+router.get('/profile', profile)
+router.get('/logout', logout)
 
 
 module.exports = router;

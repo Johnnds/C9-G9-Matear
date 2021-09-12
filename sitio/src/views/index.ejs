@@ -3,7 +3,7 @@
   
 <!-- Include Head -->
 <%- include('partials/head', {title: 'Inicio'}) %>
-<link rel="stylesheet" href="/css/footer.css">
+<link rel="stylesheet" href="/css/header.css">
 
 <body>
 
@@ -27,7 +27,7 @@
                   <span><%= product.name %> </span>
                   <h3><%= product.category %></h3>
                   <p><%= product.description %></p>
-                  <a href="#" class="btn">ver mas</a>
+                  <a href="/products/detail/<%= product.id %> " class="btn">ver mas</a>
               </div>
               <div class="image">
                   <img src="images/<%= product.image %> " alt="">
