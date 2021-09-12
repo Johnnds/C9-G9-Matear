@@ -35,7 +35,7 @@
                     <td><%= producto.category %> </td>
                     <td class="d-flex justify-content-around">
                         <a class="btn btn-sm btn-success"
-                        href="/admin/edit"><i class="fas fa-edit"></i></a>
+                        href="/admin/edit/<%= producto.id %> "><i class="fas fa-edit"></i></a>
                     <div>
                         <form
                             action="/admin/delete/<%= producto.id %>?_method=DELETE"

@@ -1,4 +1,3 @@
-const {render} = require('ejs')
 const fs = require('fs')
 const path = require('path')
 const productos = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','productsDataBase.json'),'utf-8'));
@@ -6,9 +5,9 @@ const productos = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','pr
 
 const controller = {
     detail: (req, res) => {
-        const producto = productos.find(producto => producto.id === +req.params.id)
-        return res.render('productdetail', {
-           
+       let producto = productos.find(producto => producto.id === +req.params.id)
+       return res.render('productDetail',{
+           producto  
         })
     },
     cart: (req, res) => {
