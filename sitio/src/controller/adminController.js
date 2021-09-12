@@ -3,6 +3,7 @@ const path = require('path');
 const productos = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','productsDataBase.json'),'utf-8'));
 const categorias = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','categorias.json'),'utf-8'));
 
+
 const controller = {
 
     //**controller de create con método GET */
@@ -15,23 +16,23 @@ const controller = {
 
     //**controller de create con método POST */
     store: (req,res)=>{
-       const{nombre,precio,descripcion,categoria,img} =req.body;
+       const{name,price,description,category,image} =req.body;
         
       if (nombre.trim() != "" && precio != "") {
         let producto = {
             id: productos[productos.length - 1].id + 1,
-            nombre,
-            precio,
-            descripcion,
-            categoria,
-            img :  req.file ? req.file.filename : 'default-image.png'
+            name,
+            price,
+            description,
+            category,
+            image:  req.file ? req.file.filename : 'default-image.png'
         }
     
         productos.push(producto)
     fs.writeFileSync(path.join(__dirname,'..','data','productsDataBase.json'),JSON.stringify(productos,null,2),'utf-8');
     return res.redirect('/')
       }
-      return res.send("¡No se agregó ningún producto!")
+      return res.send('admin/create' + 'No se agregó producto');
         },
 
         //**controller de edit con método GET */
@@ -47,27 +48,34 @@ const controller = {
 
         //**controller de edit con método PUT */
         update : (req,res) =>{
-            const {nombre,precio,descripcion,categoria} = req.body;
+            const {name,price,description,category} = req.body;
 
             productos.forEach(producto => {
                 if(producto.id === +req.params.id){
-                    producto.nombre = nombre;
-                    producto.descripcion = descripcion;
-                    producto.precio = +precio;
-                    producto.categoria = categoria
+                    producto.name = name;
+                    producto.description = description;
+                    producto.price = +price;
+                    producto.category = category
                 }
             });
             fs.writeFileSync(path.join(__dirname,'..','data','productsDataBase.json'),JSON.stringify(productos,null,2),'utf-8');
             return res.redirect('/')
            
         },
-        /* controller de edit conmetodo delete*/
+
+        /* controller de edit con metodo delete*/
         destroy : (req,res) => {
             let productosModificados = productos.filter(producto => producto.id !== +req.params.id);
     
             fs.writeFileSync(path.join(__dirname,'..','data','productsDataBase.json'),JSON.stringify(productosModificados,null,2),'utf-8');
-            return res.redirect('/admin')
+            return res.redirect('/')
     
+        },
+
+        products : (req,res) =>{
+            return res.render('admin/products',{
+              productos,
+            })
         }
 }
 

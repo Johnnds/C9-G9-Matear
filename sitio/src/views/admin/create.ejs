@@ -16,17 +16,17 @@
         <div class="form">
             <h1>Crear Producto</h1>
             <form action="/admin/create"  method="POST"  enctype="multipart/form-data">
-                <label for="nombre"></label>
-                <input type="text" name="nombre" id="nombre" placeholder="Nombre del Producto">
+                <label for="name"></label>
+                <input type="text" name="name" id="name" placeholder="Nombre del Producto">
                 <br>
-                <label for="precio"></label>
+                <label for="price"></label>
                 <input type="number" placeholder="Precio">
                 <br>
-                    <label for="descripcion"></label>
-                    <textarea name="descripcion" id="descripcion" cols="30" rows="5" placeholder="Descripción del producto"></textarea>
+                    <label for="description"></label>
+                    <textarea name="description" id="description" cols="30" rows="5" placeholder="Descripción del producto"></textarea>
                 <br>
-                <label for="categoría"></label>
-                <select name="categoría" id="categoria">
+                <label for="category"></label>
+                <select name="category" id="category">
                     <option value="" selected hidden>Seleccione la categoría</option>
                     <% categorias.forEach(categoria => { %>
                      <option value="<%= categoria.nombre %>"><%= categoria.nombre %> </option>
@@ -34,8 +34,8 @@
                 </select>
                 <br>
                <div class="file"></div>
-                <label for="img">Agregar imagen</label>
-                <input type="file" name="img" id="img">
+                <label for="image">Agregar imagen</label>
+                <input type="file" name="image" id="image">
                </div>
                 <button>Enviar</button>
             </form>

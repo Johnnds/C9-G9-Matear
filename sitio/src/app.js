@@ -14,6 +14,11 @@ const app = express();
 //**** method override */
 const methodOverride = require('method-override');
 
+//**Session */
+const session = require('express-session');
+
+//**validation */
+let validateRegister = require('./validation/userValidator')
 
 //****Manejo de formulario */
 app.use(express.urlencoded({extended:false}));
@@ -45,6 +50,9 @@ app.use('/', mainRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter)
 app.use('/admin', adminRouter)
+
+//**validation */
+app.use(validateRegister);
 
 
 // app.use(logger('dev'));
