@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="/css/register.css">
-</head>
+
+<!-- Include Head -->
+<%- include('partials/head', {title: 'Registro'}) %>
+<link rel="stylesheet" href="/css/footer.css">
+<link rel="stylesheet" href="/css/register.css">
+
 <body>
+
+
+   <!-- Header -->
+	<%- include('partials/header') %>
+	<!-- /Header -->
 
   <main class="register">
 
-    <form  class="form" action="" method="POST">
+    <form  class="form" action="">
     
       <div class="social">
         <a href="#"><img src="http://www.androidpolice.com/wp-content/themes/ap2/ap_resize/ap_resize.php?src=http%3A%2F%2Fwww.androidpolice.com%2Fwp-content%2Fuploads%2F2015%2F10%2Fnexus2cee_Search-Thumb-150x150.png&w=150&h=150&zc=3"></a>
@@ -19,18 +23,77 @@
         <a href="#"><img src="/images/twitter-gets-a-new-logo-twitter.png"></a>
       </div>   
                                 
-      <input type="email" name="email" placeholder="Email" />
-      
-      <input type="password" name="Password" placeholder="Password" />
+                            <input type="text" name="firstName" id="firstName" value="<%= locals.old && old.firstName ? old.firstName : "" %>" placeholder="Nombre">
+                            <% if (locals.errors && errors.firstName) { %>
+                                <p style="color: red; font-size: 10px;"><%= errors.firstName.msg %></p>
+                          <% } %> 
+                        
+                        
+                            
+                            <input type="text" name="lastName" id="lastName"  value="<%= locals.old && old.lastName ? old.lasName : "" %>" placeholder="Apellido" >
+                            <% if (locals.errors && errors.lastName) { %>
+                                <p style="color: red; font-size: 10px;"><%= errors.lastName.msg %></p>
+                          <% } %> 
+                      
+                    
+                  
+                            <label>Genero:</label>
+                          <div class="select">  
+                            <select name="gender" id="gender">
+                                <% if (locals.errors && errors.gender) { %>
+                                    <p style="color: red; font-size: 10px;"><%= errors.gender.msg %></p>
+                              <% } %> 
+                                <option>Seleccione</option>
+                                <option value="femenino" <%= locals.old && locals.gender === 'femenino' ? 'select' : "" %> >Femenino</option>
+                                <option value="masculino" <%= locals.old && locals.gender === 'masculino' ? 'select' : "" %>>Masculino</option>
+                                <option value="otro" <%= locals.old && locals.gender === 'otro' ? 'select' : "" %>>Otro</option>
+                                <option value="otro" <%= locals.old && locals.gender === 'otro' ? 'select' : "" %>>Prefiero no decirlo</option>
+                            </select>
+                        </div>               
+                  
+                
+                
+                
+                    
+                        
+                        <input type="email" name="email"  value="<%= locals.old && old.email %> " placeholder="email">
+                        <% if (locals.errors && errors.email) { %>
+                            <p style="color: red; font-size: 10px;"><%= errors.email.msg %> </p>
+                      <% } %> 
+                 
+                
+                    
+                      
+                            <input type="password" name="password" placeholder="password">
+                            <!-- <i class="far fa-eye-slash"></i>   -->
+                        
+                        <% if (locals.errors && errors.password) { %>
+                            <p style="color: red;"><%= errors.password.msg %> </p>
+                      <% } %> 
+                    
+                    
+                        <label for="image">Imagen de perfíl:</label>
+                         <input type="file" name="image" id="image">
+                  
+                
     
-      <button type="submit">Ingresar</button>
+      <button type="submit">crear cuenta</button>
       
     
-      <a href="https://www.google.com/">Crear cuenta</a>
+      
     
     </form>
 
   </main>
+
+  <!-- footer -->
+	<%- include('partials/footer') %>
+	<!-- /footer -->
+		
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- custom js file link  -->
+    <script src="/js/script.js"></script>
 
 </body>
 </html>
