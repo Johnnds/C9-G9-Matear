@@ -1,501 +1,63 @@
 
-.body-register{
-    background-color: #43cbe0b8;
-    font-family: var(--font-family);
-}
-.main-register{
-    width: 70%;
-    background-color: white;
-    opacity: 0.8;
-    border-radius: 20px;
-    margin: 1px 15%;  
-    color:#000000     
+main.register .form .social {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
-
-main .completa{
-    font-size: 5vw;
-    margin-left: 4%;
+main.register .form .social a img {
+  display: block;
+  width: 80px;
+  margin: 30px auto;
+  box-shadow: 0 5px 10px -7px #333333;
+  border-radius: 50%;
 }
 
-main form{
-    display: block;
-}
-main form .datos{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    font-size: 3.5vw;
-}
-.linea1-2{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-.linea1{
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-}
-.linea1 .nombre{
-    display: flex;    
-    flex-direction: column;
-    
-}
-.linea1 .nombre input{
-    width: 25vw;
+main.register .form {
+  background-color: #ffffff;
+  width: 500px;
+  margin: 50px auto 10px auto;
+  padding: 30px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px -3px #333;
+  text-align: center;
 }
 
-.linea1 .apellido{
-    display: flex;    
-    flex-direction: column;    
-}
-.linea1 .apellido input{
-    width: 25vw;
-}
-
-.linea2{   
-    display: flex;
-    justify-content: space-around;
-    align-items: baseline;
-    width: 100%;
-    
-}
-.linea2 .genero{
-    display: flex;    
-    flex-direction: column;
-}
-  .linea2 .genero select{
-    width: 25vw;
-    height: 20px;
-    font-size: 11px;
+main.register .form input {
+  border-radius: 100px;
+  padding: 10px 15px;
+  width: 50%;
+  border: 1px solid #D9D9D9;
+  outline: none;
+  display: block;
+  margin: 20px auto 20px auto;
 }
 
-.linea2 .nacimiento{
-    display: flex;
-    flex-direction: column;         
-}
-.nacimiento label{
-    font-size: 2.7vw
-}
-.linea2 .nacimiento input{
-    width: 25vw;
-    height: 20px;
-    font-size: 9px;
-}
-
-.linea3{
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
+main.register .form button {
+  border-radius: 100px;
+  border: none;
+  background: #719BE6;
+  width: 50%;
+  padding: 10px;
+  color: #FFFFFF;
+  margin-top: 25px;
+  box-shadow: 0 2px 10px -3px #719BE6;
+  display: block;
+  margin: 55px auto 10px auto;
+  cursor: pointer;
 }
 
-.linea3 .email{
-    display: flex;
-    flex-direction: column;       
+main.register .form a {
+  text-align: center;
+  margin-top: 30px;
+  color: #719BE6;
+  text-decoration: none;
+  padding: 5px;
+  display: inline-block;
 }
 
-.linea3 .email input{
-    width: 25vw;
+main.register .form a:hover {
+  text-decoration: underline;
 }
 
-.linea3 .telefono{
-    display: flex;
-    flex-direction: column;
-    font-size: 3vw;       
-}
-.linea3 .telefono input{
-    width: 25vw;
-}
-
-.linea4{
-    display: flex;    
-    flex-direction: column;
-    width: 100%;    
-    text-align: center;
-}
-
-.linea4 .password{
-    display: flex;
-    flex-direction: column;
-    align-items: center;   
-}
-
-.linea4 .pass{
-    display: flex;
-    justify-content: center;    
-    align-items: center;
-}
-.linea4 .pass input{
-    width: 25vw;
-    height: 19px;
-}
-.linea4 i{
-    width: 20px;
-    height: 17px;
-    outline: solid 1px #000000;
-    background-color: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    font-size: 13px;
-}
-
-.linea4 p{
-    font-size: 2.5vw;
-    color: rgb(46, 53, 53);
-    margin: 2px;
-}
-
-.linea4 .repetirPass{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-.linea4 .repetirPass input{
-    width: 25vw;
-    height: 19px;
-}
-.linea4 .repeat{
-    display: flex;
-    justify-content: center;  
-    align-items: center;  
-}
-
-.crear{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-top: 10px;
-}
-
-.crear button{
-    color: white;
-    background-color: black;
-    height: 35px;
-    width: 30vw;
-    font-size: 3vw;
-    font-weight: 700;
-    border-color: aqua;
-}
-
-.registrate-con h2{
-    margin: 5px 0 2% 10px;
-    display: flex;
-    font-size: 4vw;
-    
-}
-
-main .redes{    
-    display: flex;
-    justify-content: space-evenly;
-}
-
-main .redes .google button{
-    width: 24vw;
-    display: flex;
-    justify-content: center;
-    background-color: #ffffff;
-    font-size: 4vw;
-    height: 5vh;
-    border-color: darkslategrey;
-}
-main .redes .google button img{
-    margin: 0;
-    width: 4vw;
-}
-main .redes .facebook button{
-    color: white;
-    background-color: #131385;    
-    border-color: #131385;
-    height: 5vh;
-    width: 24vw;
-    font-size: 3.7vw;
-}
-main .redes .facebook i{
-    padding-right: 3px;
-}
-
-/* Tablet*/
-
-@media (min-width: 481px){  
-               
-    main form .datos{
-        font-size: 2.5vw;
-    } 
-    main .completa{
-        font-size: 3vw;
-    }
-    
-    .linea1{
-        justify-content: space-evenly;
-    }
-
-    .linea1 .nombre input{
-        width: 22vw;
-        height: 23px;
-    }
-    
-    .linea1 .apellido input{
-        width: 22vw;
-        height: 23px;
-    }
-    
-    .linea2{
-        justify-content: space-evenly;
-    }
-    .linea2 .genero select{
-        width: 22vw;
-        height: 23px;
-        font-size: 11px;
-    }
-    
-    .nacimiento label{
-        font-size: 2.5vw
-    }
-    .linea2 .nacimiento input{
-        width: 22vw;
-        height: 23px;
-    }
-    
-    .linea3{
-        justify-content: space-evenly;
-    }
-
-    .linea3 .email input{
-        width: 22vw;
-        height: 23px;
-    }
-    
-    .linea3 .telefono{        
-        font-size: 2.3vw;          
-    }
-
-    .linea3 .telefono input{
-        width: 22vw;
-        height: 23px;
-    }
-    
-    .linea4{
-        display: flex;    
-        flex-direction: row;
-        width: 100%;    
-        align-items: baseline;
-        justify-content: space-evenly;
-        text-align: center;
-    }
-       
-    .linea4 .pass input{
-        width: 20vw;
-        height: 23px;
-    }
-
-    .linea4 .pass i{
-        height: 21px;
-    }
-    
-    .linea4 p{
-        font-size: 1.1vw;
-        margin-top: 7px;       
-    }
-    
-   .linea4 .repetirPass input{
-    width: 20vw;
-    height: 23px;
-    }
-
-    .linea4 .repetirPass i{
-        height: 21px;
-    }
-    
-    .crear{
-        margin: 10px 0 5px;
-    }
-    
-    .crear button{    
-        width: 25vw;
-        font-size: 2.7vw;        
-    }
-
-    .registrate-con h2{        
-        font-size: 2.5vw;        
-    }
-    
-    main .redes .google button{
-        width: 15vw; 
-        height: 25px;       
-        font-size: 2.3vw;    
-    }
-    main .redes .google button img{
-        width: 2.5vw;
-    }
-    
-    main .redes .facebook button{
-        width: 15vw;
-        height: 25px;
-        font-size: 2vw;
-    }
-
-}
-/* Desktop*/
-
-
-@media (min-width: 900px) {
-    .main-register{
-        margin: 10px 15%;
-    }
-    
-    main .completa{
-        margin-bottom: 3px;
-        margin-top: 10px;    
-        font-size: 2.5vw;    
-    }
-
-    .datos .linea1-2{        
-        width: 95%;
-        font-size: 2vw;
-    }
-
-    .linea1{
-        display: flex;
-        justify-content: space-between;
-        width: 49%;
-    }
-
-    .linea1 .nombre input{
-        width: 14vw;
-        height: 21px;
-    }
-
-    .linea1 .apellido{
-        display: flex;    
-        flex-direction: column;    
-    }
-    .linea1 .apellido input{
-        width: 14vw;
-        height: 21px;
-    }
-
-    .linea2{   
-        display: flex;
-        justify-content: space-between;
-        align-items: baseline;
-        width: 45%;
-        
-    }
-    .linea2 .genero{
-        display: flex;    
-        flex-direction: column;
-    }
-
-    .linea2 .genero select{
-        width: 14vw;
-        height: 21px;
-        font-size: 11px;
-    }
-
-    .linea2 .nacimiento{
-        display: flex;
-        flex-direction: column;         
-    }
-
-    .nacimiento label{
-        font-size: 1.6vw
-    }
-
-    .linea2 .nacimiento input{
-        width: 14vw;
-        height: 21px;
-    }
-
-    .linea3{
-        justify-content: space-evenly;
-    }
-    .linea3 .email label{
-        font-size:2vw;
-    }
-    .linea3 .email input{
-        width: 14vw;
-        height: 21px;
-    }
-    
-    .linea3 .telefono label{        
-        font-size: 2vw;          
-    }
-
-    .linea3 .telefono input{
-        width: 14vw;
-        height: 21px;
-    }
-    
-    .linea4{
-        justify-content: space-evenly;
-    }
-    .linea4 .password label{
-        font-size: 2vw;
-    }
-    .linea4 .pass input{
-        width: 17vw;
-        height: 21px;
-    }
-
-    .linea4 .pass i{
-        height: 19px;
-    }
-
-    .linea4 .pass p{
-        font-size: 1vw;
-    }
-
-    .linea4 .repetirPass{
-        margin-left: -30px;
-    }
-    
-    .linea4 .repetirPass label{
-        font-size: 1.3vw;              
-    }
-    
-   .linea4 .repetirPass input{
-        width: 17vw;
-        height: 21px;
-    }
-
-    .linea4 .repetirPass i{
-        height: 19px;
-    }
-    
-    .linea4 .repeat{
-        margin-bottom: 10px;
-    }
-    .crear{
-        display: flex;
-        justify-content: flex-end;
-        width: 100%;
-        margin-bottom: 0;
-    }
-
-    .crear button{       
-        margin-right: 9%;
-        width: 15vw;
-        font-size: 1.5vw;
-    }
-
-    .registrate-con h2{        
-        font-size: 2.3vw;  
-        margin-top: 0;      
-    }
-
-    main .redes .google button{
-        width: 12vw;        
-        font-size: 2vw;
-        height: 35px;        
-    }
-    
-    main .redes .facebook button{
-        height: 35px;
-        width: 12vw;
-        font-size: 2vw;
-    }
-    
-}
