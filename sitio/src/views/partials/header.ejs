@@ -10,7 +10,11 @@
     </nav>
 
     <div class="icons">
+        <% if (locals.userLogin) { %>
+            <a href="#" class="fas fa-users-cog"></a>
+        <% }else{ %>
         <a href="/users/login" class="fas fa-user"></a>
+        <% } %> 
         <i class="fas fa-bars" id="menu-bars"></i>
         <i class="fas fa-search" id="search-icon"></i>
         <a href="#" class="fas fa-heart"></a>
