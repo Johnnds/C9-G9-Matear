@@ -45,7 +45,7 @@ module.exports = {
     processRegister: (req,res) =>{
             const errors = validationResult(req);
             if (errors.isEmpty()) {
-                let {firstName, lastName, email, password, gender } =req.body
+                let {firstName, lastName, email, password, gender,image } =req.body
             
             const usuario ={
                id: usuarios[usuarios.length -1] ? usuarios[usuarios.length -1] .id + 1 : 1,
@@ -55,7 +55,7 @@ module.exports = {
                password: brcypt.hashSync(password, 10),
                gender,
                rol: 'user',
-               image: req.file ? req.file.filename : 'default-image.png'
+               image: req.file ? req.file.filename : "default-image.png"
             }
     
             usuarios.push(usuario);

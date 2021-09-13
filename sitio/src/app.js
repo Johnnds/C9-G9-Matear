@@ -18,7 +18,7 @@ const methodOverride = require('method-override');
 const session = require('express-session');
 
 //**validation */
-let validateRegister = require('./validation/userValidator')
+let validateRegister = require('./validations/userValidator')
 
 //****Manejo de formulario */
 app.use(express.urlencoded({extended:false}));

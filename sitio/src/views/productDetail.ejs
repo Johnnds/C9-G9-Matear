@@ -5,8 +5,7 @@
 <%- include('partials/head', {title: 'Detalle Producto'}) %>
 
 <body class="body-pd">
-
-  <!-- Header -->
+      <!-- Header -->
 	<%- include('partials/header') %>
 	<!-- /Header -->
 
@@ -21,7 +20,6 @@
                     <div class="mate"><h3><%= producto.name %></h3></div>
                     <div class="off">
                        <div class="box">
-                        <div class="descuento"><h4><del>$1000</del></h4></div>
                         <div class="oferta"><h4>OFERTA: 25% de descuento</h4></div>
                        </div>
                     <div class="color">
@@ -38,7 +36,7 @@
                     </div>
                 </div>
                 <div class="carrito">
-                   <a href="/productcart">Ir al carrito<i class="fas fa-shopping-cart"></i></a>
+                   <a href="/products/productcart"><button>Ir al carrito<i class="fas fa-shopping-cart"></i></button></a>
                 </div>
                 <div class="comentario">
                     <label for="comentario"></label>

@@ -1,38 +1,22 @@
 
-<<<<<<< HEAD
-.main-pd{
-=======
   .body-pd{
->>>>>>> develop
     width: 100%;
     background-color: #ebebeb;
 }
 
-<<<<<<< HEAD
-.main-pd .main-pd{
-=======
 .body-pd .main-pd{
->>>>>>> develop
     display: flex;
     align-items: center;
     width: 90%;
     margin: 20px;
 }
 
-<<<<<<< HEAD
-.main-pd .menu{
-=======
 .body-pd .menu{
->>>>>>> develop
     display: flex;
     flex-direction: column;
 }
 
-<<<<<<< HEAD
-.main-pd .menu h1{
-=======
 .body-pd .menu h1{
->>>>>>> develop
     font-size: 20px;
     width: 35%;
     border: solid 1px white;
@@ -40,11 +24,7 @@
     background-color: #666;
 }
 
-<<<<<<< HEAD
-.main-pd .menu .producto img{
-=======
 .body-pd .menu .producto img{
->>>>>>> develop
     width: 100%;
     height: 420px;
     object-fit: contain;
@@ -52,24 +32,6 @@
     padding: 2px;
 }
 
-<<<<<<< HEAD
-.main-pd .menu .precio{
-    font-size: 25px;
-    position: relative;
-    top: -35px;
-    color: #ebebeb;
-    font-family: var(--font-family);
-}
-
-.main-pd .menu .mate{
-    font-size: 20px;
-    padding: 1px;
-    font-family: var(--font-family);
-    margin: 5px;
-}
-
-.main-pd .menu .off{
-=======
 .body-pd .menu .precio{
     font-size: 25px;
     position: relative;
@@ -78,7 +40,6 @@
 }
 
 .body-pd .menu .off{
->>>>>>> develop
     border: #ebebeb solid 1px;
     margin: 10px;
     border-right-width: 20%;
@@ -86,47 +47,24 @@
     font-family: var(--font-family);
 }
 
-<<<<<<< HEAD
-.main-pd .menu .box{
-=======
 .body-pd .menu .box{
->>>>>>> develop
     display: flex;
     flex-wrap: wrap;
     padding: 5px;
     align-items: center;
 }
 
-<<<<<<< HEAD
-.main-pd .menu .descuento{
-=======
 .body-pd .menu .descuento{
->>>>>>> develop
     font-size: 18px;
-    color:#7e7b7b;
     font-family: var(--font-family);
 }
 
-<<<<<<< HEAD
-.main-pd .menu .oferta{
-=======
 .body-pd .menu .oferta{
->>>>>>> develop
     font-size: 20px; 
     font-family: var(--font-family);
 }
 
-<<<<<<< HEAD
-@keyframes oferta {
-    0%{ opacity: 90%;}
-    25%{ transform: translateY(5%); opacity: 100%;}
-    100%{ opacity: 90%;}
-}
-
-.main-pd .menu .color{
-=======
 .body-pd .menu .color{
->>>>>>> develop
    font-size: 12px;
    display: flex;
    flex-wrap: wrap;
@@ -134,19 +72,11 @@
    margin: 1px;
 }
 
-<<<<<<< HEAD
-.main-pd .menu .detalle{
-  margin: 1px;
-}
-
-.main-pd .menu .detalle .info-product{
-=======
 .body-pd .menu .detalle{
   margin: 1px;
 }
 
 .body-pd .menu .detalle .info-product{
->>>>>>> develop
     font-size: 1rem;
     margin: 10px;
     text-align: justify;
@@ -154,29 +84,7 @@
     font-family: var(--font-family);
 }
 
-<<<<<<< HEAD
-.main-pd .menu .detalle .cuidados{
-    font-size: 18px;
-    padding: 1px;
-    margin: 10px;
-    text-align: justify; 
-     
-    font-family: var(--font-family);
-}
-
-.main-pd .menu .detalle .lavado{
-    font-size: 1rem;
-    padding: 1px;
-    margin: 10px;
-    text-align: justify;
-    
-    font-family: var(--font-family);  
-}
-
-.main-pd .menu .detalle .eg{
-=======
 .body-pd .menu .detalle .eg{
->>>>>>> develop
     font-size: 18px;
     padding: 1px;
     margin: 10px;
@@ -184,30 +92,14 @@
     font-family: var(--font-family);    
 }
 
-<<<<<<< HEAD
-.main-pd .menu .detalle .curación{
-    font-size: 1rem;
-    padding: 5px;
-    margin: 10px;
-    text-align: justify;
-     
-    font-family: var(--font-family); 
-}
-
-.main-pd .menu .detalle .bombilla{
-    font-size: 1rem;
-    padding: 5px;
-    margin: 10px;
-    text-align: justify;  
-      
-=======
-.body-pd .menu .carrito{
+.body-pd .carrito button{
   padding: 10px;
   font-size: 15px;
-  background-color: rgb(110, 56, 17);
+  color: white;
+  background-color: var(--black);
   border-radius: 6px;
   border: white solid 2px;
-  width: 60%;
+  width: 50%;
   text-align: center;
   position: relative;
   left: 15%;
@@ -215,7 +107,6 @@
 
 .body-pd .menu .botón a{
     text-decoration: none;
->>>>>>> develop
     font-family: var(--font-family);
 }
 

@@ -1,17 +1,18 @@
 var express = require('express');
+const path = require('path')
 var router = express.Router();
 const {registro, processRegister ,login, processLogin, profile, logout} = require('../controller/userController')
 const loginValidator = require('../validations/loginValidator')
 const multer = require('multer');
-let validateRegister = require('../validation/userValidator');
+let validateRegister = require('../validations/userValidator');
 
 
 const storage = multer.diskStorage({
     destination: (req,file,callback) => {
-        callback(null,'./public/images/imageProfiles')
+        callback(null,'./public/images/imageProfile')
     },
     filename: (req,file,callback) => {
-        callback(null,'img-profile' + Date.now() + path.extname(file.originalname))
+        callback(null,'profile-' + Date.now() + path.extname(file.originalname))
     },
 });
 

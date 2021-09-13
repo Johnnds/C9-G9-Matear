@@ -63,5 +63,15 @@
     "gender": "masculino",
     "rol": "user",
     "image": "default-image.png"
+  },
+  {
+    "id": 8,
+    "firstName": "Jonathan",
+    "lastName": " Sánchez",
+    "email": "jonnhds@gmail.com",
+    "password": "$2a$10$gLAIlKtc7427jpeMNU9bwOb3wrLBsihP0Kekxk3l6YyG6h.geAftC",
+    "gender": "masculino",
+    "rol": "user",
+    "image": "profile-1631565718693.jpg"
   }
 ]
