@@ -6,6 +6,7 @@
 const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser')
+const localsUser = require('./middlewares/localsUser')
 
 // ************ express() - (don't touch) ************
 const app = express();
@@ -38,6 +39,8 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, '../public')));
 app.set('view engine', 'ejs');
 
+app.use(localsUser)
+
 // ************ Route System require and use() ************
 var mainRouter = require('./routes/main');
 var usersRouter = require('./routes/users');
@@ -50,8 +53,8 @@ app.use('/users', usersRouter);
 app.use('/products', productsRouter)
 app.use('/admin', adminRouter)
 
-//**validation */
-app.use(validateRegister);
+/* *validation 
+app.use(validateRegister);*/
 
 
 // app.use(logger('dev'));

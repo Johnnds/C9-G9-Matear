@@ -15,6 +15,7 @@ const controller = {
         })
     },
     listProducts: (req, res) => {
+        // res.send(req.session)
         return res.render('products', {
             products
         })
