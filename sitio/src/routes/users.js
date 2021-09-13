@@ -3,6 +3,7 @@ var router = express.Router();
 const {registro, processRegister ,login, processLogin, profile, logout} = require('../controller/userController')
 const loginValidator = require('../validations/loginValidator')
 const multer = require('multer');
+const path = require('path')
 let validateRegister = require('../validation/userValidator');
 
 
