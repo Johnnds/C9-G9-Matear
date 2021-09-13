@@ -12,6 +12,11 @@ const app = express();
 //**** method override */
 const methodOverride = require('method-override');
 
+//**Session */
+const session = require('express-session');
+
+//**validation */
+let validateRegister = require('./validation/userValidator')
 
 //****Manejo de formulario */
 app.use(express.urlencoded({extended:false}));
@@ -19,6 +24,11 @@ app.use(express.json());
 
 //**Configuración metodos PUT y DELETE */
 app.use(methodOverride('_method'));
+
+//**Configuración session */
+app.use(session({
+    secret: 'Mate@r'
+}));
 
 
 // ************ Template Engine - (don't touch) ************
@@ -37,6 +47,9 @@ app.use('/', mainRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter)
 app.use('/admin', adminRouter)
+
+//**validation */
+app.use(validateRegister);
 
 
 // app.use(logger('dev'));
