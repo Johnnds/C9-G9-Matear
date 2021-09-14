@@ -10,6 +10,7 @@
     </nav>
 
     <div class="icons">
+        <i class="fas fa-bars" id="menu-bars"></i>
         <% if (locals.userLogin) { %>
             <img class="image" src="/images/imageProfiles/<%= userLogin.image %> " alt=""/>
             <!-- <a href="#" class="fas fa-users-cog"></a> -->
@@ -18,7 +19,7 @@
         <% }else{ %>
         <a href="/users/login" class="fas fa-user"></a>
         <% } %> 
-        <i class="fas fa-bars" id="menu-bars"></i>
+       
         <i class="fas fa-search" id="search-icon"></i>
         <a href="/products/productCart" class="fas fa-shopping-cart"></a>
     </div>
