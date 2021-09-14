@@ -3,15 +3,15 @@
   align-items: center;
   flex-wrap: wrap;
   gap:2rem; 
-  padding-top: 5rem;
+  padding-top: 9rem;
 }
 
 .home .home-slider .slide .content{
-  flex:1 1 15rem;
+  flex:1 1 45rem;
 }
 
 .home .home-slider .slide .image{
-  flex:.5 .5 15rem;
+  flex:1 1 45rem;
 }
 
 .home .home-slider .slide .image img{
@@ -25,7 +25,7 @@
 
 .home .home-slider .slide .content h3{
   color:var(--black);
-  font-size: 4rem;
+  font-size: 7rem;
 }
 
 .home .home-slider .slide .content p{
@@ -41,7 +41,6 @@
 
 .swiper-pagination-bullet-active{
   background:var(--green);
-  bottom: 0;
 }
 
 .dishes .box-container{
