@@ -11,7 +11,8 @@
 
     <div class="icons">
         <% if (locals.userLogin) { %>
-            <a href="#" class="fas fa-users-cog"></a>
+            <img class="image" src="/images/imageProfiles/<%= userLogin.image %> " alt=""/>
+            <!-- <a href="#" class="fas fa-users-cog"></a> -->
             <a href="#" class="fas fa-heart"></a>
             <a href="/users/logout" class="fas fa-sign-out-alt"></a>
         <% }else{ %>

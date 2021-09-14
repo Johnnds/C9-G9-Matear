@@ -68,7 +68,7 @@ module.exports = {
                 rol: usuario.rol
             }
             
-            res.redirect('/')
+          return res.redirect('/')
                 
 
             }else{

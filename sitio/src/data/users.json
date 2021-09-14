@@ -1,65 +1,10 @@
 [
   {
-    "id": 1,
-    "name": "marisol",
-    "lastName": "Contreras",
-    "email": "marisol-contreras-@hotmail.com",
-    "password": 123456,
-    "category": "admin",
-    "avatar": "MateRosa.jpeg"
-  },
-  {
-    "id": 2,
-    "name": "Jonathan",
-    "lastName": "Sánchez",
-    "email": "jonnhds@gmail.com",
-    "password": 123456,
-    "rol": "admin",
-    "avatar": "mijo.jpg"
-  },
-  {
-    "id": 3,
-    "name": "Lucio",
-    "lastName": "Martinez",
-    "email": "luchoweb15@gamil.com",
-    "password": 12345678,
-    "rol": "admin",
-    "avatar": "mijo.jpg"
-  },
-  {
-    "id": 4,
-    "name": "Eric",
-    "lastName": "Mena",
-    "email": "menaericdaniel@gmail.com",
-    "password": 123456,
-    "rol": "user",
-    "avatar": "MateNegro.jpeg"
-  },
-  {
-    "id": 5,
-    "name": "Cristian",
-    "lastName": "Elias",
-    "email": "cristiannicolas32@hotmail.com",
-    "password": 123456,
-    "rol": "user",
-    "avatar": "MateNegro.jpeg"
-  },
-  {
-    "id": 6,
-    "firstName": "Lucio",
-    "lastName": "Martìnez",
-    "email": "luchoweb15@gmail.com",
-    "password": "$2a$10$olnysiRluzOvu.cwEj4OhO1ttP/l8dJhT9s8dMyuVqWOskjcjuPS6",
-    "gender": "masculino",
-    "rol": "user",
-    "image": "default-image.png"
-  },
-  {
-    "id": 7,
-    "firstName": "Lucio",
-    "lastName": "Martìnez",
-    "email": "luchoweb15@gmail.com",
-    "password": "$2a$10$MXqAB2rxgWew5k3uSEAum.SCQSm/J6u3M07BUq2eN2PXdNchhfuFK",
+    "id": 8,
+    "firstName": "lucio",
+    "lastName": "martinez",
+    "email": "lucio@hotmail.com",
+    "password": "$2a$10$Qq2emyuZylw3wKvXHV8tiO.cW1j4XM6tQwx0uTe2wt4Fj9l1tnnt.",
     "gender": "masculino",
     "rol": "user",
     "image": "default-image.png"

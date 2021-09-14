@@ -17,6 +17,7 @@
 
 .order form .inputBox .input{
     width:49%;
+    text-transform: none;
 }
 
 .order form .inputBox .input span{
