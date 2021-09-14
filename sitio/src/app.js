@@ -7,6 +7,7 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser')
 const localsUser = require('./middlewares/localsUser')
+const adminUserCheck = require('./middlewares/accessAdmin')
 
 // ************ express() - (don't touch) ************
 const app = express();
@@ -16,6 +17,9 @@ const methodOverride = require('method-override');
 
 //**Session */
 const session = require('express-session');
+
+/* envia los datos del usuario logueado al cliente */
+// app.use(localsUserCheck)
 
 //**validation */
 let validateRegister = require('./validation/userValidator')
@@ -51,7 +55,7 @@ const adminRouter = require('./routes/admin')
 app.use('/', mainRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter)
-app.use('/admin', adminRouter)
+app.use('/admin',adminUserCheck, adminRouter)
 
 /* *validation 
 app.use(validateRegister);*/
