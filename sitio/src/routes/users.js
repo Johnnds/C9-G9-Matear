@@ -5,7 +5,7 @@ const {registro, processRegister ,login, processLogin, profile, logout} = requir
 const loginValidator = require('../validations/loginValidator')
 const multer = require('multer');
 let validateRegister = require('../validations/userValidator');
-
+const accessUsers = require('../middlewares/accessUser')
 
 const storage = multer.diskStorage({
     destination: (req,file,callback) => {
