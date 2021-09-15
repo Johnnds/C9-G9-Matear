@@ -8,5 +8,15 @@
     "gender": "masculino",
     "rol": "users",
     "image": "img-profile1631552684988.png"
+  },
+  {
+    "id": 9,
+    "firstName": "Jonathan",
+    "lastName": " Sánchez",
+    "email": "jonnhds@gmail.com",
+    "password": "$2a$10$Xmxp.YqlbHAJ/PyJzBZVleNP716rctqtxB7srp/Zd7bH9CYES93VS",
+    "gender": "masculino",
+    "rol": "user",
+    "image": "profile-1631638487472.jpg"
   }
 ]

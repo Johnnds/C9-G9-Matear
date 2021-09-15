@@ -37,10 +37,10 @@
                   <p style="color: red; font-size: 10px;"><%= errors.gender.msg %></p>
             <% } %> 
           <option>Seleccione</option>
-          <option value="femenino" <%= locals.old && locals.gender === 'femenino' ? 'select' : "" %> >Femenino</option>
-          <option value="masculino" <%= locals.old && locals.gender === 'masculino' ? 'select' : "" %>>Masculino</option>
-          <option value="otro" <%= locals.old && locals.gender === 'otro' ? 'select' : "" %>>Otro</option>
-          <option value="otro" <%= locals.old && locals.gender === 'otro' ? 'select' : "" %>>Prefiero no decirlo</option>
+          <option value="femenino" <%= locals.old && locals.gender === 'femenino' ? 'selected' : "" %> >Femenino</option>
+          <option value="masculino" <%= locals.old && locals.gender === 'masculino' ? 'selected' : "" %>>Masculino</option>
+          <option value="otro" <%= locals.old && locals.gender === 'otro' ? 'selected' : "" %>>Otro</option>
+          <option value="otro" <%= locals.old && locals.gender === 'otro' ? 'selected' : "" %>>Prefiero no decirlo</option>
         </select>
       </div>               
         <input type="email" name="email"  value="<%= locals.old && old.email %> " placeholder="email">
