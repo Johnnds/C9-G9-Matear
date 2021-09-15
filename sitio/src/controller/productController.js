@@ -11,8 +11,9 @@ const controller = {
     },
     cart: (req, res) => {
         return res.render('productCart', {
-            products
-        })
+            products : products.filter(product => product.price <= 1200) 
+                
+            })
     },
     listProducts: (req, res) => {
         // res.send(req.session)
