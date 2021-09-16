@@ -16,36 +16,39 @@
         <article>
             <div class="menu">
                 <h1><%= product.name %></h1>
+                <div class="box">
+                    <div class="oferta"><h4>OFERTA: 25% de descuento</h4></div>
+                </div>
                  <div class="contenedor">
                     <div class="producto"><img src="/images/<%= product.image %>" alt=""></div>
                     <div class="caja">
                         <div class="precio"><h3>$<%= product.price %></h3></div>
-                    <div class="mate"><h3><%= product.name %></h3></div>
                     <div class="off">
-                       <div class="box">
-                        <div class="oferta"><h4>OFERTA: 25% de descuento</h4></div>
-                       </div>
-                    <div class="color">
-                        <label for="color">Elegir color</label>
-                       <div class="negro"><input type="radio" name="color" id="color" value="Negro"> Negro</div>
-                        <div class="cafe"><input type="radio" name="color" id="color" value="Cafe" >Café</div>
-                        <div class="naranja"><input type="radio" name="color" id="color" value="Naranja">Naranja</div>
+                        <div class="mate"><h3><%= product.name %></h3></div>
+                   <div class="box2">
+                        <div class="color">
+                       <select name="color" id="color">
+                           <option value="" selected hidden>Seleccione el color</option>
+                           <option value="negro">Negro</option>
+                           <option value="marron">Marron</option>
+                           <option value="azul">Azul</option>
+                           <option value="verde">Verde</option>
+                       </select>
                     </div>
-                    </div>
-                     <div class="detalle">
-                        <div class="info-product">
-                            <p><%= product.description %></p>
-                        </div>
+                    <div class="carrito">
+                        <a href="/products/productcart"><button>Añadir al carrito<i class="fas fa-shopping-cart"></i></button></a>
+                     </div>
+                   </div>
                     </div>
                 </div>
-                <div class="carrito">
-                   <a href="/products/productcart"><button>Ir al carrito<i class="fas fa-shopping-cart"></i></button></a>
-                </div>
-                <div class="comentario">
-                    <label for="comentario"></label>
-                    <textarea name="comentario" id="comentario" cols="30" rows="10" placeholder="Dejá tu comentario"></textarea>
-                    <button type="enviar">Enviar</button>
-                </div>
+                <div class="detalle">
+                    <p><%= product.description %></p>
+             </div>
+                <br>
+
+                <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v12.0" nonce="kxGOGrd3"></script>
+<div class="fb-comments" data-href="http://localhost:3000/products/detail" data-width="100%" data-numposts="5"></div>
 
             </div>
         </article>
