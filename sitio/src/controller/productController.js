@@ -5,8 +5,10 @@ const products = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','pro
 
 const controller = {
     detail: (req, res) => {
+       let product = products.find(producto => producto.id === +req.params.id)
         return res.render('productDetail', {
-            producto : products.find(producto => producto.id === +req.params.id)
+            product,
+            productsCategory : products.filter(categoryProduct => categoryProduct.category === product.category && categoryProduct.id != product.id)
         })
     },
     cart: (req, res) => {
