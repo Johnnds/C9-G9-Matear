@@ -3,101 +3,78 @@
 
 <!-- Include Head -->
 <%- include('partials/head', {title: 'Registro'}) %>
+<link rel="stylesheet" href="/css/footer.css">
+<link rel="stylesheet" href="/css/register.css">
 
 <body>
 
-  <!-- Header -->
+
+   <!-- Header -->
 	<%- include('partials/header') %>
 	<!-- /Header -->
 
+  <main class="register">
 
-    <main class="main-register">       
+    <form  class="form"  action="/users/register" method="POST" enctype="multipart/form-data">
     
-        <h2 class="completa">Completa tus datos</h2>
-        <form action="" method="POST">
-            <div class="datos">
-                <div class="linea1-2">
-                    <div class="linea1">
-                        <div class="nombre">
-                            <label>Nombre</label>
-                            <input type="text" name="firstName" id="firstName" value="<%= locals.old && old.firstName ? old.firstName : "" %>">
-                            <% if (locals.errors && errors.firstName) { %>
-                                <p style="color: red; font-size: 10px;"><%= errors.firstName.msg %></p>
-                          <% } %> 
-                        </div>
-                        <div class="apellido">
-                            <label>Apellido</label>
-                            <input type="text" name="lastName" id="lastName"  value="<%= locals.old && old.lastName ? old.lasName : "" %>">
-                            <% if (locals.errors && errors.lastName) { %>
-                                <p style="color: red; font-size: 10px;"><%= errors.lastName.msg %></p>
-                          <% } %> 
-                        </div>
-                    </div>
-                    <div class="linea2">
-                        <div class="genero">
-                            <label>Genero</label>
-                            <select name="gender" id="gender">
-                                <% if (locals.errors && errors.gender) { %>
-                                    <p style="color: red; font-size: 10px;"><%= errors.gender.msg %></p>
-                              <% } %> 
-                                <option>Seleccione</option>
-                                <option value="femenino" <%= locals.old && locals.gender === 'femenino' ? 'select' : "" %> >Femenino</option>
-                                <option value="masculino" <%= locals.old && locals.gender === 'masculino' ? 'select' : "" %>>Masculino</option>
-                                <option value="otro" <%= locals.old && locals.gender === 'otro' ? 'select' : "" %>>Otro</option>
-                            </select>
-                        </div>               
-                    </div>
-                </div>
-                
-                <div class="linea3">
-                    <div class="email">
-                        <label>Email*</label>
-                        <input type="email" name="email"  value="<%= locals.old && old.email %> ">
-                        <% if (locals.errors && errors.email) { %>
-                            <p style="color: red; font-size: 10px;"><%= errors.email.msg %> </p>
-                      <% } %> 
-                    </div>
-                </div>
-                <div class="linea4">
-                    <div class="password">
-                        <label>Contraseña*</label>
-                        <div class="pass">
-                            <input type="password" name="password">
-                            <i class="far fa-eye-slash"></i>  
-                        </div>
-                        <% if (locals.errors && errors.password) { %>
-                            <p style="color: red;"><%= errors.password.msg %> </p>
-                      <% } %> 
-                    </div>
-                    <div class="repetirPass">
-                        <label for="image">Colocar imagen de perfíl.</label>
-                         <input type="file" name="image" id="image">
-                    </div>
-                </div>
-                
-                <div class="crear">
-                    <button type="submit">CREAR CUENTA</button>
-                </div>
-            </div>
-        
-        </form>
-        <div class="registrate-con">
-            <h2>O registrate con</h2>        
-            <form class="redes" action="/register" method="POST">
-                <div class="google">
-                    <button type="submit"><img src="https://img.icons8.com/color/48/000000/google-logo.png"/>Google</button>
-                </div>
-                <div class="facebook">
-                 <button type="submit"><i class="fab fa-facebook-square"></i>Facebook</button>
-                </div>
-            </form>
-        </div>
-    </main>
-    
+      <h3>Registro de usuario:</h3>  
+                                
+      <input type="text" name="firstName" id="firstName" value="<%= locals.old && old.firstName ? old.firstName : "" %>" placeholder="Nombre">
+            <% if (locals.errors && errors.firstName) { %>
+                <p style="color: red; font-size: 10px;"><%=  errors.firstName.msg    %></p>
+            <% } %> 
+                        
+                            
+      <input type="text" name="lastName" id="lastName"  value="<%= locals.old && old.lastName ? old.lasName : "" %>" placeholder="Apellido" >
+              <% if (locals.errors && errors.lastName) { %>
+                  <p style="color: red; font-size: 10px;"><%= errors.lastName.msg %></p>
+              <% } %> 
+                 
+      <label>Genero:</label>
+      <div class="select">  
+        <select name="gender" id="gender">
+            <% if (locals.errors && errors.gender) { %>
+                  <p style="color: red; font-size: 10px;"><%= errors.gender.msg %></p>
+            <% } %> 
+          <option>Seleccione</option>
+          <option value="femenino" <%= locals.old && locals.gender === 'femenino' ? 'selected' : "" %> >Femenino</option>
+          <option value="masculino" <%= locals.old && locals.gender === 'masculino' ? 'selected' : "" %>>Masculino</option>
+          <option value="otro" <%= locals.old && locals.gender === 'otro' ? 'selected' : "" %>>Otro</option>
+          <option value="otro" <%= locals.old && locals.gender === 'otro' ? 'selected' : "" %>>Prefiero no decirlo</option>
+        </select>
+      </div>               
+        <input type="email" name="email"  value="<%= locals.old && old.email %> " placeholder="email">
+            <% if (locals.errors && errors.email) { %>
+                    <p style="color: red; font-size: 10px;"><%= errors.email.msg %> </p>
+            <% } %> 
+                     
+      <input type="password" name="password" placeholder="password">
+            <!-- <i class="far fa-eye-slash"></i>   -->
+                        
+            <% if (locals.errors && errors.password) { %>
+                  <p style="color: red;"><%= errors.password.msg %> </p>
+            <% } %> 
+                    
+      <label for="image">Imagen de perfíl:</label>
+      <input type="file" name="image" id="image">
+       
+      <button type="submit">crear cuenta</button>
+      
+    </form>
 
-    <!-- footer -->
+  </main>
+
+   <!-- whatsapp -->
+   <%- include('partials/whatsapp') %> 
+
+  <!-- footer -->
 	<%- include('partials/footer') %>
 	<!-- /footer -->
-      
+		
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- custom js file link  -->
+    <script src="/js/script.js"></script>
+
 </body>
 </html>

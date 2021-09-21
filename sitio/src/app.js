@@ -5,6 +5,9 @@
 // ************ Module Necesarios ************
 const express = require('express');
 const path = require('path');
+const cookieParser = require('cookie-parser')
+const localsUser = require('./middlewares/localsUser')
+const adminUserCheck = require('./middlewares/accessAdmin')
 
 // ************ express() - (don't touch) ************
 const app = express();
@@ -15,8 +18,11 @@ const methodOverride = require('method-override');
 //**Session */
 const session = require('express-session');
 
+/* envia los datos del usuario logueado al cliente */
+// app.use(localsUserCheck)
+
 //**validation */
-let validateRegister = require('./validation/userValidator')
+let validateRegister = require('./validations/userValidator')
 
 //****Manejo de formulario */
 app.use(express.urlencoded({extended:false}));
@@ -25,16 +31,19 @@ app.use(express.json());
 //**Configuración metodos PUT y DELETE */
 app.use(methodOverride('_method'));
 
-//**Configuración session */
 app.use(session({
-    secret: 'Mate@r'
-}));
+    secret : 'mi secreto',
+    saveUninitialized : true,
+    resave : false
+}))
 
 
 // ************ Template Engine - (don't touch) ************
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, '../public')));
 app.set('view engine', 'ejs');
+
+app.use(localsUser)
 
 // ************ Route System require and use() ************
 var mainRouter = require('./routes/main');
@@ -46,16 +55,16 @@ const adminRouter = require('./routes/admin')
 app.use('/', mainRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter)
-app.use('/admin', adminRouter)
+app.use('/admin',adminUserCheck, adminRouter)
 
-//**validation */
-app.use(validateRegister);
+/* *validation 
+app.use(validateRegister);*/
 
 
 // app.use(logger('dev'));
 // app.use(express.json());
 // app.use(express.urlencoded({ extended: false }));
-// app.use(cookieParser());
+app.use(cookieParser());
 
 
 // // catch 404 and forward to error handler

@@ -1,4 +1,3 @@
-
 .order form{
     max-width:90rem;
     border-radius: .5rem;
@@ -17,7 +16,6 @@
 
 .order form .inputBox .input{
     width:49%;
-    text-transform: none;
 }
 
 .order form .inputBox .input span{

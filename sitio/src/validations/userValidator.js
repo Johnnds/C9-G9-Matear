@@ -1,7 +1,7 @@
-const {body} = require('express-validator');
+const {check, body} = require('express-validator');
 
 let validateRegister = [
-    body('firstName').notEmpty().withMessage('Este campo es obligatorio.'),
+    check('firstName').notEmpty().withMessage('Este campo es obligatorio.'),
     body('lastName').notEmpty().withMessage('Este campo es obligatorio.'),
 
     body('email').isEmail().withMessage('Ingresar un email válido'),

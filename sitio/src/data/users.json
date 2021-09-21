@@ -1,56 +1,22 @@
 [
   {
-    "id": 1,
-    "firstName": "marisol",
-    "lastName": "Contreras",
-    "email": "marisol-contreras-@hotmail.com",
-    "passsword": 123456,
-    "category": "admi",
-    "image": "MateRosa.jpeg"
+    "id": 8,
+    "firstName": "lucio",
+    "lastName": "martinez",
+    "email": "lucio@hotmail.com",
+    "password": "$2a$10$Qq2emyuZylw3wKvXHV8tiO.cW1j4XM6tQwx0uTe2wt4Fj9l1tnnt.",
+    "gender": "masculino",
+    "rol": "admin",
+    "image": "img-profile1631552684988.png"
   },
   {
-    "id": 2,
+    "id": 9,
     "firstName": "Jonathan",
-    "lastName": "Sánchez",
-    "email": "jonnhds@gmail.com",
-    "passsword": 123456,
-    "category": "admi",
-    "image": "mijo.jpg"
-  },
-  {
-    "id": 3,
-    "firstName": "Lucio",
-    "lastName": "Martinez",
-    "email": "luchoweb15@gamil.com",
-    "passsword": 123456,
-    "category": "admi",
-    "image": "mijo.jpg"
-  },
-  {
-    "id": 4,
-    "firstName": "Eric",
-    "lastName": "Mena",
-    "email": "menaericdaniel@gmail.com",
-    "passsword": 123456,
-    "category": "user",
-    "image": "MateNegro.jpeg"
-  },
-  {
-    "id": 5,
-    "firstName": "Cristian",
-    "lastName": "Elias",
-    "email": "cristiannicolas32@hotmail.com",
-    "passsword": 123456,
-    "category": "user",
-    "image": "MateNegro.jpeg"
-  },
-  {
-    "id": 6,
-    "firstName": " Jonathan  ",
     "lastName": " Sánchez",
     "email": "jonnhds@gmail.com",
-    "password": "$2a$10$KXZeAeiny/ijnkPbQNwEG.2aKOYg3r3PXNOBMnox93Ztfs61W6nP2",
+    "password": "$2a$10$Xmxp.YqlbHAJ/PyJzBZVleNP716rctqtxB7srp/Zd7bH9CYES93VS",
     "gender": "masculino",
-    "image": "default-image.png"
+    "rol": "user",
+    "image": "profile-1631638487472.jpg"
   }
 ]

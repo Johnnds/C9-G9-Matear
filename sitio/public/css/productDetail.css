@@ -1,50 +1,67 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 
-  .body-pd{
+
+.body-pd  {
     width: 100%;
     background-color: #ebebeb;
+   
 }
 
 .body-pd .main-pd{
     display: flex;
     align-items: center;
-    width: 90%;
-    margin: 20px;
+    margin: 10px;
+   
 }
 
 .body-pd .menu{
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
-.body-pd .menu h1{
-    font-size: 20px;
-    width: 35%;
-    border: solid 1px white;
-    font-family: var(--font-family);
-    background-color: #666;
+.body-pd .menu .producto{
+    width: 100%;
+    height: auto;
 }
 
 .body-pd .menu .producto img{
     width: 100%;
     height: 420px;
     object-fit: contain;
-    border: 2px solid white;
     padding: 2px;
 }
 
+.body-pd .menu .price{
+   display: flex;
+   flex-wrap: wrap;
+}
+
 .body-pd .menu .precio{
-    font-size: 25px;
-    position: relative;
-    top: -35px;
-    color: #666
+    font-size: 23px;
+    padding: 1px;
+    width: 60px;
+    margin: 5px;
+    color: var(--green);
+}
+
+.body-pd .menu .mate{
+    font-size: 20px;
+    padding: 1px;
+    font-family: var(--font-family);
+    margin: 5px;
+    color: white;
 }
 
 .body-pd .menu .off{
-    border: #ebebeb solid 1px;
     margin: 10px;
     border-right-width: 20%;
-    background-color: #ebebeb;
+    background-color: var(--black);;
     font-family: var(--font-family);
+    border-radius: 8px;
 }
 
 .body-pd .menu .box{
@@ -52,29 +69,51 @@
     flex-wrap: wrap;
     padding: 5px;
     align-items: center;
+    position: relative;
 }
 
-.body-pd .menu .descuento{
-    font-size: 18px;
-    color:#7e7b7b;
-    font-family: var(--font-family);
+.body-pd .menu .box2{
+    display: flex;
+    flex-wrap: wrap;
+   justify-content: space-around;
 }
 
 .body-pd .menu .oferta{
-    font-size: 20px; 
+    font-size: 12px; 
     font-family: var(--font-family);
+    color: white;
+    padding: 15px;
+    border: solid 1px white;
+    background-color:  var(--green);
+    border-radius: 10px;
+    height: 10px;
+    position: relative;
+    animation: oferta 2s infinite;
+    bottom: -100px;
+}
+
+@keyframes oferta {
+    0%{ opacity: 90%;}
+    25%{ transform: translateY(5%); opacity: 100%;}
+    100%{ opacity: 90%;}
 }
 
 .body-pd .menu .color{
-   font-size: 12px;
-   display: flex;
-   flex-wrap: wrap;
-   font-family: var(--font-family);
-   margin: 1px;
+ font-size: 12px;
+ display: flex;
+ flex-wrap: wrap;
+ font-family: var(--font-family);
+ margin: 1px;
+}
+
+.body-pd .menu .color select{
+    font-size:1em;
+    border-radius: 10px;
 }
 
 .body-pd .menu .detalle{
   margin: 1px;
+  font-size: 1em;
 }
 
 .body-pd .menu .detalle .info-product{
@@ -82,136 +121,113 @@
     margin: 10px;
     text-align: justify;
     padding: 5px; 
+    
     font-family: var(--font-family);
 }
 
-.body-pd .menu .detalle .eg{
-    font-size: 18px;
-    padding: 1px;
-    margin: 10px;
-    text-align: justify;
-    font-family: var(--font-family);    
-}
-
-.body-pd .menu .carrito{
-  padding: 10px;
-  font-size: 15px;
-  background-color: rgb(110, 56, 17);
-  border-radius: 6px;
-  border: white solid 2px;
-  width: 60%;
-  text-align: center;
-  position: relative;
-  left: 15%;
-}
-
-.body-pd .menu .botón a{
-    text-decoration: none;
-    font-family: var(--font-family);
-}
-
-.body-pd .menu .comentario{
-    text-align: center;
-    padding: 20px;
-}
-
-.body-pd .menu .comentario textarea{
-    width: 50%;
-    height: 30px
+.body-pd .menu .carrito button{
+    border-radius: 10px;
+    border: var(--black) 2px solid;
 }
 
 /*Tablet*/
-@media(min-width:768px) {
-    .body-pd .menu .producto img{
+@media(min-width:481px) {
+    .home .menu .producto img{
       width: 650px;
       height: 650px;
       margin: 2px;
     }
 
-    .body-pd .menu .carrusel img{
+    .home .menu .carrusel img{
         width: 150px;
         height: 150px;
         margin: 5px;
-        border: white 1px solid;
         text-align: center;
     }
+
+  
     
     
-}
+  }
 
-@media(min-width:1024px){
 
-    .body-pd .menu h1{
-        width: 46%;
+/* Descktop*/
+@media(min-width:900px){
+
+    .body-pd .menu .oferta{
+        bottom: -30px;
+    }
+
+    .body-pd .menu .producto{
+        box-shadow: none;
     }
 
 
-   .body-pd .menu .contenedor{
-       display: flex;
-       flex-wrap: wrap;
-   }
+ .body-pd .menu .contenedor{
+     display: flex;
+     flex-wrap: wrap;
+ }
 
    .body-pd .menu .producto img{
-    width: 50%;
+    width: 35%;
     height: auto;
+    border-radius: 10PX;
 }
 
 .body-pd .menu .caja{
     width: 50%;
     position: relative;
-    left: 50%;
-    margin-top: -40%;
+    left: 40%;
+    margin-top: -30%;
     padding: 5px;
 }
 
+
+
+
+.body-pd .menu .detalle{
+    position: relative;
+    font-size: 30px;
+}
+
 .body-pd .menu .precio{
-    font-size: 35px;
+  font-size: 35px;
 }
 
 .body-pd .menu .mate{
-    font-size: 30px;
+  font-size: 30px;
 }
 
-.body-pd .menu .detalle .cuidados{
+.body-pd .menu .box2{
+    position: relative;
+    bottom: -50px;
+}
+
+.body-pd .menu .box2 select{
+    background-color: var(--black);
+    color: white;
     font-size: 20px;
 }
 
-.body-pd .menu .detalle .cuidados{
+.body-pd .menu .box2 select:hover{
+    background-color: var(--green);
+    border: 2px solid var(--black);
+}
+
+
+.body-pd .menu .box2 button{
+    background-color: var(--black);
+    color: white;
     font-size: 20px;
 }
 
-.body-pd .menu .detalle .eg{
-    font-size: 20px;
+.body-pd .menu .box2 button:hover{
+    background-color: var(--green)
 }
 
-.body-pd .menu .carrusel img{
-    width: 280px;
-    height: 280px;
-    padding: 10px;
-    margin: 5px;
-    text-align: center;
-}
 
-.body-pd .menu .carrusel :hover img{
-    width: 400px;
-    height: 400px;
-}
 
-.body-pd .menu .similares h4{
-    font-size: 30px;
-}
-
-.body-pd .menu .comentario textarea{
-    width: 50%;
-    height: 50%;
-}
-
-.body-pd .menu .comentario button{
-    width: 50%;
-    height: 30px;
-    border-radius: 30px;
-    background-color: white;
-    text-align: center;
-}
 
 }
+
+

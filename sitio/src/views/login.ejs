@@ -1,61 +1,53 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <!-- Include Head -->
 <%- include('partials/head', {title: 'Login'}) %>
+<link rel="stylesheet" href="/css/footer.css">
+<link rel="stylesheet" href="/css/register.css">
 
 <body>
 
-  <!-- Header -->
-	<%- include('partials/header') %>
-	<!-- /Header -->
+	 <!-- Header -->
+	 <%- include('partials/header') %>
+	 <!-- /Header -->
 
-    <main class="main-login">
-        <div class="iniciar">
-             <h1>Iniciar Sesión</h1>
-            <div class="mail">
-                <input type="email" name="email" placeholder="Email">            
-            </div>
-            <div class="password">
-                <input type="password" name="passwordUsuario" placeholder="Contraseña">
-                <i class="far fa-eye-slash"></i>                          
-            </div>                
-            <div class="recordar">
-                <input type="checkbox" name="recordarContraseña">
-                <label>Recordar contraseña</label>
-            </div>                 
-            <div class= "datosIncorrectos">        
-                <span>Los datos ingresados no son correctos</span>
-            </div>
-            <div class="ingresar">
-                <button type="submit">INGRESAR</button>
-                <p>¿Olvidaste tu contraseña?</p>
-            </div>
-        </div>
-       
+  <main class="register">
 
-        <aside>
-            <div class="ingresarCon">
-             <p>O Ingresá con</p>
-            </div>
-            <div class="facebook">
-                <button type="submit"><i class="fab fa-facebook-square"></i>Facebook</button>
-            </div>
-             <div class="google">
-                <button type="submit"><img src="https://img.icons8.com/color/48/000000/google-logo.png"/>Google</button>
-            </div>
-            <div class="cuentaNueva">
-                <p>¿No tienes Cuenta?</p>
-                <button type="submit">Crear cuenta nueva</button>
-            </div>
-        </aside>  
-
-
-    </main>
+    <form  class="form" action="" method="POST">
     
- <!-- footer -->
+      <div class="social">
+        <a href="#"><img src="http://www.androidpolice.com/wp-content/themes/ap2/ap_resize/ap_resize.php?src=http%3A%2F%2Fwww.androidpolice.com%2Fwp-content%2Fuploads%2F2015%2F10%2Fnexus2cee_Search-Thumb-150x150.png&w=150&h=150&zc=3"></a>
+        <a href="#"><img src="/images/facebook_16423.png"></a>
+        <a href="#"><img src="/images/twitter-gets-a-new-logo-twitter.png"></a>
+      </div>   
+                                
+      <input type="email" name="email" placeholder="Email" />
+      <span style="color: red; font-size: 10px;"><%= locals.errors && errors.email ?  errors.email.msg : null %> </span>
+      
+      <input type="password" name="Password" placeholder="Password" />
+      <span style="color: red; font-size: 10px;"><%= locals.errors && errors.email ? errors.email.msg : null %> </span>
+    
+      <button type="submit">Ingresar</button>
+      
+    
+      <a href="/users/register">Crear cuenta</a>
+    
+    </form>
+
+  </main>
+
+   <!-- whatsapp -->
+   <%- include('partials/whatsapp') %> 
+
+  <!-- footer -->
 	<%- include('partials/footer') %>
-	<!-- /footer -->   
-    
+	<!-- /footer -->
+		
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- custom js file link  -->
+    <script src="/js/script.js"></script>
+
 </body>
 </html>

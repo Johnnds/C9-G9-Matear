@@ -1,12 +1,23 @@
 @import url('./general.css');
-@import url('./login.css');
-@import url('./productCart.css');
-@import url('./productDetail.css');
-@import url('./register.css');
-@import url('./footer.css');
-@import url('./admin.css');
+
 @import url('./header.css');
+
+@import url('./search.css');
+
 @import url('./index.css');
 
+@import url('./about.css');
 
+@import url('./products.css');
 
+@import url('./coment.css');
+
+@import url('./productDetail.css');
+
+@import url('./form.css');
+
+@import url('./productCart.css');
+
+@import url('./footer.css');
+
+@import url('./whatsapp.css')

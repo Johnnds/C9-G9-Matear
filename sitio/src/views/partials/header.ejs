@@ -1,28 +1,28 @@
 <header>
-    <a href="/"><img src="/images/matear.jpg"  alt="Logo personal"></a>
-    <nav class="menu-desplegable">
-        <input type="checkbox" name="burger" id="menu">
-        <label class="burger" for="burger" ><i class="fas fa-bars"></i></label>
-        <ul>
-            <li class="header-nav-ul-li-a"><a href="#">Home</a></li>
-            <li><a href="#">Nosotros</a></li>
-            <li><a href="#">Productos</a></li>
-            <li><a href="#">Sucursales</a></li>
-            <li><a href="#">Contactos</a></li>
-            <li><a href="/users/login"><i class="far fa-user-circle"></i></a></li>
-            <li>
-                <a class="shopping" href="/products/productCart">
-                    <i class="fas fa-shopping-cart"></i>
-                    <span class="cantidad">0</span>
-                </a>
-            </li>
-            <li>
-                <form action="" method="" class="search">
-                    <input type="search" name="" id="" placeholder="Buscar productos" ><button type="submit"><i class="fas fa-search"></i></button>
-                </form>
-            </li>
-        </ul>
-        
-    </nav> 
+    <a href="/" class="logo">M<img src="/images/infusion-de-mate.svg" alt="">te@r</a>
 
-  </header>
+    <nav class="navbar">
+        <a id="home" href="/" class="active">home</a>
+        <a id="nosotros" href="#">Nosotros</a>
+        <a id="productos" href="/products/list">Productos</a>
+        <a id="sucursales" href="#">Sucursales</a>
+        <a id="contacto" href="#">Contacto</a>
+    </nav>
+
+    <div class="icons">
+        <i class="fas fa-bars" id="menu-bars"></i>
+        <% if (locals.userLogin) { %>
+            <img class="image" src="/images/imageProfiles/<%= userLogin.image %> " alt=""/>
+            <!-- <a href="#" class="fas fa-users-cog"></a> -->
+            <a href="#" class="fas fa-heart"></a>
+            <a href="/users/logout" class="fas fa-sign-out-alt"></a>
+        <% }else{ %>
+        <a href="/users/login" class="fas fa-user"></a>
+        <% } %> 
+       
+        <i class="fas fa-search" id="search-icon"></i>
+        <a href="/products/productCart" class="fas fa-shopping-cart"></a>
+    </div>
+</header>
+
+<!-- header section ends -->

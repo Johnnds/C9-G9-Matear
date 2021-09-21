@@ -3,7 +3,7 @@ const router = express.Router();
 const multer = require('multer');
 const path= require('path')
 const {create, edit, store,update, destroy,products} =  require('../controller/adminController');
-
+const accessAdmin = require('../middlewares/accessAdmin')
 
 const storage = multer.diskStorage({
     destination: (req,file,callback) => {
@@ -33,7 +33,7 @@ router.delete('/delete/:id',destroy);
 
 //**Product */
 
-router.get('/products', products)
+router.get('/products',products)
 
 
 
