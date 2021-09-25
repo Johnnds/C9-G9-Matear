@@ -24,5 +24,16 @@ module.exports ={
         }
         return res.redirect('/')
        
-    }
+    },
+    contacto: (req, res) => {
+        return res.render('contacto', {
+            contacto
+        })
+},
+    perfil: (req, res) => {
+    return res.render('perfil', {
+        perfil
+    })
 }
+
+};

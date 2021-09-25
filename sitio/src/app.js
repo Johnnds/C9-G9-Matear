@@ -50,12 +50,15 @@ var mainRouter = require('./routes/main');
 var usersRouter = require('./routes/users');
 const productsRouter = require('./routes/products')
 const adminRouter = require('./routes/admin')
+const contactoRouter = require('./routes/main');
+
+
 
 
 app.use('/', mainRouter);
 app.use('/users', usersRouter);
-app.use('/products', productsRouter)
-app.use('/admin',adminUserCheck, adminRouter)
+app.use('/products', productsRouter);
+app.use('/admin',adminUserCheck, adminRouter);
 
 /* *validation 
 app.use(validateRegister);*/

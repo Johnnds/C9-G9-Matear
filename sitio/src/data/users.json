@@ -18,5 +18,15 @@
     "gender": "masculino",
     "rol": "user",
     "image": "profile-1631638487472.jpg"
+  },
+  {
+    "id": 10,
+    "firstName": "marisol",
+    "lastName": "contreras",
+    "email": "marisol-contreras-@hotmail.com",
+    "password": "$2a$10$WW9snBbQjGBCLlatgBHVu.Wz9IGSRHv7KikIDvLz4JULxxG9wy4Vq",
+    "gender": "femenino",
+    "rol": "user",
+    "image": "default-image.png"
   }
 ]
