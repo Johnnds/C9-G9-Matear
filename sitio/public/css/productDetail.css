@@ -1,233 +1,281 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+
+
+
+body.productDetail{
+    line-height: 1.5;
+    font-size: 1.5rem;
 }
-
-
-.body-pd  {
+.card-wrapper{
+    max-width: 1100px;
+    margin: 50px auto;
+}
+img.imageDetail{
     width: 100%;
-    background-color: #ebebeb;
-   
+    display: block;
 }
-
-.body-pd .main-pd{
+.imge-display{
+    overflow: hidden;
+}
+.imge-showcase{
     display: flex;
-    align-items: center;
-    margin: 10px;
-   
-}
-
-.body-pd .menu{
-  display: flex;
-  flex-direction: column;
-}
-
-.body-pd .menu .producto{
     width: 100%;
-    height: auto;
-}
-
-.body-pd .menu .producto img{
-    width: 100%;
-    height: 420px;
-    object-fit: contain;
-    padding: 2px;
-}
-
-.body-pd .menu .price{
-   display: flex;
-   flex-wrap: wrap;
-}
-
-.body-pd .menu .precio{
-    font-size: 23px;
-    padding: 1px;
-    width: 60px;
-    margin: 5px;
-    color: var(--green);
-}
-
-.body-pd .menu .mate{
-    font-size: 20px;
-    padding: 1px;
-    font-family: var(--font-family);
-    margin: 5px;
-    color: white;
-}
-
-.body-pd .menu .off{
-    margin: 10px;
-    border-right-width: 20%;
-    background-color: var(--black);;
-    font-family: var(--font-family);
-    border-radius: 8px;
-}
-
-.body-pd .menu .box{
-    display: flex;
-    flex-wrap: wrap;
-    padding: 5px;
-    align-items: center;
+    transition: all 0.5s ease;
+    display: block;
     position: relative;
+    overflow: hidden;
+}
+.imge-showcase img{
+    min-width: 100%;
 }
 
-.body-pd .menu .box2{
-    display: flex;
-    flex-wrap: wrap;
-   justify-content: space-around;
-}
-
-.body-pd .menu .oferta{
-    font-size: 12px; 
-    font-family: var(--font-family);
-    color: white;
-    padding: 15px;
-    border: solid 1px white;
-    background-color:  var(--green);
-    border-radius: 10px;
-    height: 10px;
-    position: relative;
-    animation: oferta 2s infinite;
-    bottom: -100px;
-}
-
-@keyframes oferta {
-    0%{ opacity: 90%;}
-    25%{ transform: translateY(5%); opacity: 100%;}
-    100%{ opacity: 90%;}
-}
-
-.body-pd .menu .color{
- font-size: 12px;
- display: flex;
- flex-wrap: wrap;
- font-family: var(--font-family);
- margin: 1px;
-}
-
-.body-pd .menu .color select{
-    font-size:1em;
-    border-radius: 10px;
-}
-
-.body-pd .menu .detalle{
-  margin: 1px;
-  font-size: 1em;
-}
-
-.body-pd .menu .detalle .info-product{
-    font-size: 1rem;
-    margin: 10px;
-    text-align: justify;
-    padding: 5px; 
-    
-    font-family: var(--font-family);
-}
-
-.body-pd .menu .carrito button{
-    border-radius: 10px;
-    border: var(--black) 2px solid;
-}
-
-/*Tablet*/
-@media(min-width:481px) {
-    .home .menu .producto img{
-      width: 650px;
-      height: 650px;
-      margin: 2px;
-    }
-
-    .home .menu .carrusel img{
-        width: 150px;
-        height: 150px;
-        margin: 5px;
-        text-align: center;
-    }
-
-  
-    
-    
+.imge-showcase .oferta {
+    width: 150px;
+    height: 34px;
+    top: 20px;
+    right: -40px;
+    position: absolute;
+    display: block;
+    background: #FF0000;
+    color: #333;
+    font-family: arial;
+    font-size: var(--font-family);
+    color:white;
+    text-align: center;
+    line-height: 34px;
+    transform: rotate(45deg);
+    animation: oferta infinite 2s;
   }
 
+  @keyframes oferta {
+    0%{ opacity: 90%;}
+    25%{ transform: rotate(45deg); opacity: 100%;}
+    100%{ opacity: 90%;}
+}
+    
+.imge-select{
+    display: flex;
+    flex-direction: row;
+}
+.imge-item{
+    width: 25%;
+    margin: 0.3rem;
+}
+.imge-item:nth-child(1),
+.imge-item:nth-child(2),
+.imge-item:nth-child(3){
+    margin-right: 0;
+}
+.img-item:hover{
+    opacity: 0.8;
+}
+.producto-content, .producto-imgs{
+    padding: 2rem 1rem;
+    background:#fff;
+    border-radius: .5rem;
+    border:.1rem solid rgba(0,0,0,.2);
+    box-shadow: var(--box-shadow);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+.producto-title{
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    font-weight: 700;
+    position: relative;
+    color: #12263a;
+    margin: 1rem 0;
+}
+.producto-title::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 4px;
+    width: 80px;
+    background: #12263a;
+}
+.producto-link{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1.5rem;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    background: #256eff;
+    color: #fff;
+    padding: 0 0.3rem;
+    transition: all 0.5s ease;
+}
+.producto-link:hover{
+    opacity: 0.9;
+}
+.producto-rating{
+    color: #ffc107;
+}
 
-/* Descktop*/
-@media(min-width:900px){
+.producto-rating i {
+    font-size: 1.5;
+}
 
-    .body-pd .menu .oferta{
-        bottom: -30px;
+.producto-rating span{
+    font-weight: 600;
+    color: #252525;
+    font-size: 1.5rem;
+}
+.producto-price{
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.producto-price span{
+    font-weight: 400;
+}
+.last-price span{
+    color: #f64749;
+    text-decoration: line-through;
+}
+.new-price span{
+    color: #256eff;
+}
+.producto-detail h2.description{
+    text-transform: capitalize;
+    color: #12263a;
+    padding-bottom: 0.6rem;
+    font-size: 2rem;
+}
+.producto-detail p{
+    font-size: 1.5rem;
+    padding: 0.3rem;
+    opacity: 0.8;
+}
+.producto-detail ul{
+    margin: 1rem 0;
+    font-size: 1.5rem;
+}
+.producto-detail ul li{
+    margin: 0;
+    list-style: none;
+    background: url(/images/checked.png) left center no-repeat;
+    background-size: 18px;
+    padding-left: 1.7rem;
+    margin: 0.4rem;
+    font-weight: 600;
+    opacity: 0.9;
+}
+
+.producto-detail ul li:first-child {
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+}
+
+.producto-detail ul li .select {
+    margin-left: .4rem;
+}
+
+.producto-detail ul li span{
+    font-weight: 400;
+}
+.purchase-info{
+    margin: 1.5rem 0;
+}
+.purchase-info input,
+.purchase-info .btn{
+    border: 1.5px solid #ddd;
+    border-radius: 25px;
+    text-align: center;
+    padding: 0.45rem 0.8rem;
+    outline: 0;
+    margin-right: 0.2rem;
+    margin-bottom: 1rem;
+}
+.purchase-info input{
+    width: 60px;
+}
+.purchase-info .btn{
+    cursor: pointer;
+    color: #fff;
+}
+.purchase-info .btn:first-of-type{
+    background: #256eff;
+}
+.purchase-info .btn:last-of-type{
+    background: #f64749;
+}
+.purchase-info .btn:hover{
+    opacity: 0.9;
+}
+.social-links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-links p {
+    font-size: 1.5rem;
+}
+
+.social-links a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    color: #000;
+    border: 1px solid #000;
+    margin: 0 0.2rem;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: all 0.5s ease;
+}
+.social-links a:hover{
+    background: #000;
+    border-color: transparent;
+    color: #fff;
+}
+
+@media screen and (min-width: 992px){
+    .card{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1.5rem;
     }
-
-    .body-pd .menu .producto{
-        box-shadow: none;
+    .card-wrapper{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
-
-
- .body-pd .menu .contenedor{
-     display: flex;
-     flex-wrap: wrap;
- }
-
-   .body-pd .menu .producto img{
-    width: 35%;
-    height: auto;
-    border-radius: 10PX;
+    .producto-imgs{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .producto-content{
+        padding-top: 0;
+    }
 }
 
-.body-pd .menu .caja{
-    width: 50%;
+section.dishes {
+    margin-top: 30px;
+}
+
+.dishes .box-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+  
+  .dishes .box-container .box{
+    padding:2.5rem;
+    background:#fff;
+    border-radius: .5rem;
+    border:.1rem solid rgba(0,0,0,.2);
+    box-shadow: var(--box-shadow);
     position: relative;
-    left: 40%;
-    margin-top: -30%;
-    padding: 5px;
-}
-
-
-
-
-.body-pd .menu .detalle{
-    position: relative;
-    font-size: 30px;
-}
-
-.body-pd .menu .precio{
-  font-size: 35px;
-}
-
-.body-pd .menu .mate{
-  font-size: 30px;
-}
-
-.body-pd .menu .box2{
-    position: relative;
-    bottom: -50px;
-}
-
-.body-pd .menu .box2 select{
-    background-color: var(--black);
-    color: white;
-    font-size: 20px;
-}
-
-.body-pd .menu .box2 select:hover{
-    background-color: var(--green);
-    border: 2px solid var(--black);
-}
-
-
-.body-pd .menu .box2 button{
-    background-color: var(--black);
-    color: white;
-    font-size: 20px;
-}
-
-.body-pd .menu .box2 button:hover{
-    background-color: var(--green)
-}
-
-
-
-
-}
-
-
+    overflow: hidden;
+    text-align: center;
+  }
