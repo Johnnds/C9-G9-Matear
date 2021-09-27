@@ -45,12 +45,14 @@ app.set('view engine', 'ejs');
 
 app.use(localsUser)
 
+
 // ************ Route System require and use() ************
 var mainRouter = require('./routes/main');
 var usersRouter = require('./routes/users');
-const productsRouter = require('./routes/products')
-const adminRouter = require('./routes/admin')
-const contactoRouter = require('./routes/main');
+const productsRouter = require('./routes/products');
+const adminRouter = require('./routes/admin');
+const contactoRouter = require('./routes/admin');
+const perfilRouter = require('./routes/admin');
 
 
 
@@ -59,6 +61,8 @@ app.use('/', mainRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter);
 app.use('/admin',adminUserCheck, adminRouter);
+app.use('/contacto' ,contactoRouter);
+app.use('/perfil' ,perfilRouter);
 
 /* *validation 
 app.use(validateRegister);*/
