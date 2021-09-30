@@ -13,6 +13,11 @@ module.exports ={
         })
     },
 
+    contacto: (req, res) => {
+        return res.render('contacto')
+         
+},
+
     search: (req,res)=>{
         if(req.query.busqueda){
             let resultado = products.filter(product => product.name.toLowerCase().includes(req.query.busqueda.toLowerCase()))
@@ -25,15 +30,9 @@ module.exports ={
         return res.redirect('/products/list')
        
     },
-    contacto: (req, res) => {
-        return res.render('contacto', {
-            contacto
-        })
-},
+
     perfil: (req, res) => {
-    return res.render('perfil', {
-        perfil
-    })
+    return res.render('perfil')
 }
 
 };

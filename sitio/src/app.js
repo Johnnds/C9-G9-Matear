@@ -51,8 +51,8 @@ var mainRouter = require('./routes/main');
 var usersRouter = require('./routes/users');
 const productsRouter = require('./routes/products');
 const adminRouter = require('./routes/admin');
-const contactoRouter = require('./routes/admin');
-const perfilRouter = require('./routes/admin');
+const contactoRouter = require('./routes/main');
+const perfilRouter = require('./routes/main');
 
 
 
