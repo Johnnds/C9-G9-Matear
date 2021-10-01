@@ -19,8 +19,8 @@
 }
 
 .body-pd .menu{
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .body-pd .menu .producto{
@@ -99,11 +99,11 @@
 }
 
 .body-pd .menu .color{
-   font-size: 12px;
-   display: flex;
-   flex-wrap: wrap;
-   font-family: var(--font-family);
-   margin: 1px;
+ font-size: 12px;
+ display: flex;
+ flex-wrap: wrap;
+ font-family: var(--font-family);
+ margin: 1px;
 }
 
 .body-pd .menu .color select{
@@ -150,7 +150,7 @@
   
     
     
-}
+  }
 
 
 /* Descktop*/
@@ -165,10 +165,10 @@
     }
 
 
-   .body-pd .menu .contenedor{
-       display: flex;
-       flex-wrap: wrap;
-   }
+ .body-pd .menu .contenedor{
+     display: flex;
+     flex-wrap: wrap;
+ }
 
    .body-pd .menu .producto img{
     width: 35%;
@@ -193,11 +193,11 @@
 }
 
 .body-pd .menu .precio{
-    font-size: 35px;
+  font-size: 35px;
 }
 
 .body-pd .menu .mate{
-    font-size: 30px;
+  font-size: 30px;
 }
 
 .body-pd .menu .box2{

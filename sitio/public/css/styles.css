@@ -18,6 +18,7 @@
 
 @import url('./productCart.css');
 
+<<<<<<< HEAD
 @import url('./admin.css');
 
 @import url('./glider.css');
@@ -25,3 +26,8 @@
 @import url('./footer.css');
 
 @import url('./nosotros.css');
+=======
+@import url('./footer.css');
+
+@import url('./whatsapp.css')
+>>>>>>> 773b39a93208f0a90809fdfb11ecdea1410cc89e

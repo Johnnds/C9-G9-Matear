@@ -15,10 +15,10 @@ module.exports ={
 
     search : (req,res) => {
         if(req.query.busqueda){
-            let resultado = products.filter(producto => producto.name.toLowerCase().includes(req.query.busqueda.toLowerCase()))
-            return res.render('index',{
+            let resultado = products.filter(product => product.name.toLowerCase().includes(req.query.busqueda.toLowerCase()))
+            return res.render('products',{
                 title : "Resultado de la búsqueda",
-                productos : resultado,
+                products : resultado,
                 busqueda : req.query.busqueda
             })
         }

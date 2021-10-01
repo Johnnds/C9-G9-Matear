@@ -3,6 +3,7 @@
 
 <!-- Include Head -->
 <%- include('partials/head', {title: 'Detalle Producto'}) %>
+<link rel="stylesheet" href="/css/productDetail.css">
 
 <body class="body-pd">
       <!-- Header -->
@@ -14,16 +15,16 @@
     <main class="main-pd">
         <article>
             <div class="menu">
-                <h1><%= producto.name %></h1>
+                <h1><%= product.name %></h1>
                 <div class="box">
                     <div class="oferta"><h4>OFERTA: 25% de descuento</h4></div>
                 </div>
                  <div class="contenedor">
-                    <div class="producto"><img src="/images/<%= producto.image %>" alt=""></div>
+                    <div class="producto"><img src="/images/<%= product.image %>" alt=""></div>
                     <div class="caja">
-                        <div class="precio"><h3>$<%= producto.price %></h3></div>
+                        <div class="precio"><h3>$<%= product.price %></h3></div>
                     <div class="off">
-                        <div class="mate"><h3><%= producto.name %></h3></div>
+                        <div class="mate"><h3><%= product.name %></h3></div>
                    <div class="box2">
                         <div class="color">
                        <select name="color" id="color">
@@ -41,7 +42,7 @@
                     </div>
                 </div>
                 <div class="detalle">
-                    <p><%= producto.description %></p>
+                    <p><%= product.description %></p>
              </div>
             <br>
                 <div id="fb-root"></div>
@@ -51,6 +52,9 @@
             </div>
         </article>
     </main>
+
+     <!-- whatsapp -->
+     <%- include('partials/whatsapp') %> 
 
     <!-- footer -->
 	<%- include('partials/footer') %>
