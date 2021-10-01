@@ -15,12 +15,10 @@ module.exports = {
         return res.render('login')
     },
     processLogin: (req, res) => {
-
         let errors = validationResult(req)
 
-        // res.send(errors.mapped())
-
         if(errors.isEmpty()) {
+            let{recordame} = req.body
             let usuario = usuarios.find(usuario => usuario.email === req.body.email.trim())
     
             req.session.userLogin = {
@@ -32,9 +30,15 @@ module.exports = {
                 rol : usuario.rol
             }
 
-            res.redirect('/')
+            if (recordame) {
+                res.cookie('mateAr', req.session.userLogin, {
+                    maxAge: 10000 * 60 * 60 
+                })
+            }
+             
+            return res.redirect('/')
 
-        } else {
+        }else {
             return res.render('login', {
                 errors : errors.mapped()
             })
@@ -45,7 +49,7 @@ module.exports = {
     processRegister: (req,res) =>{
             const errors = validationResult(req);
             if (errors.isEmpty()) {
-                let {firstName, lastName, email, password, gender,image } =req.body
+                let {firstName, lastName, email, password, gender,image,} =req.body
             
             const usuario ={
                id: usuarios[usuarios.length -1] ? usuarios[usuarios.length -1] .id + 1 : 1,
@@ -88,6 +92,9 @@ module.exports = {
     },
     logout: (req, res) => {
         req.session.destroy();
+        if (req.cookies.mateAr) {
+            res.cookie('mateAr', '', { maxAge: -1 })
+        }
         return res.redirect('/')    }
 
 }

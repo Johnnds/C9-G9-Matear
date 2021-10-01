@@ -17,18 +17,26 @@
 
     <form  class="form"  action="/users/register" method="POST" enctype="multipart/form-data">
     
-      <h3>Registro de usuario:</h3>  
-                                
+      <h3>Registro de usuario:</h3>               
+      
+      <div class="social">
+        <a href="#"><img src="http://www.androidpolice.com/wp-content/themes/ap2/ap_resize/ap_resize.php?src=http%3A%2F%2Fwww.androidpolice.com%2Fwp-content%2Fuploads%2F2015%2F10%2Fnexus2cee_Search-Thumb-150x150.png&w=150&h=150&zc=3"></a>
+        <a href="#"><img src="/images/facebook_16423.png"></a>
+        <a href="#"><img src="/images/twitter-gets-a-new-logo-twitter.png"></a>
+      </div>   
+              
+
       <input type="text" name="firstName" id="firstName" value="<%= locals.old && old.firstName ? old.firstName : "" %>" placeholder="Nombre">
             <% if (locals.errors && errors.firstName) { %>
                 <p style="color: red; font-size: 10px;"><%=  errors.firstName.msg    %></p>
             <% } %> 
-                        
+            <br>            
                             
-      <input type="text" name="lastName" id="lastName"  value="<%= locals.old && old.lastName ? old.lasName : "" %>" placeholder="Apellido" >
+      <input type="text" name="lastName" id="lastName"  value="<%= locals.old && old.lastName ? old.lasName : "" %>" placeholder="Apellido">
               <% if (locals.errors && errors.lastName) { %>
                   <p style="color: red; font-size: 10px;"><%= errors.lastName.msg %></p>
               <% } %> 
+              <br>
                  
       <label>Genero:</label>
       <div class="select">  
@@ -42,12 +50,13 @@
           <option value="otro" <%= locals.old && locals.gender === 'otro' ? 'selected' : "" %>>Otro</option>
           <option value="otro" <%= locals.old && locals.gender === 'otro' ? 'selected' : "" %>>Prefiero no decirlo</option>
         </select>
-      </div>               
+      </div>     
+      <br>          
         <input type="email" name="email"  value="<%= locals.old && old.email %> " placeholder="email">
             <% if (locals.errors && errors.email) { %>
                     <p style="color: red; font-size: 10px;"><%= errors.email.msg %> </p>
             <% } %> 
-                     
+            <br>         
       <input type="password" name="password" placeholder="password">
             <!-- <i class="far fa-eye-slash"></i>   -->
                         

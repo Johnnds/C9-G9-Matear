@@ -13,9 +13,9 @@ module.exports ={
         })
     },
 
-    search: (req,res)=>{
+    search : (req,res) => {
         if(req.query.busqueda){
-            let resultado = productos.filter(producto => producto.name.toLowerCase().includes(req.query.busqueda.toLowerCase()))
+            let resultado = products.filter(producto => producto.name.toLowerCase().includes(req.query.busqueda.toLowerCase()))
             return res.render('index',{
                 title : "Resultado de la búsqueda",
                 productos : resultado,
@@ -23,6 +23,10 @@ module.exports ={
             })
         }
         return res.redirect('/')
-       
+    },
+
+    nosotros : (req,res) =>{
+        return res.render('nosotros')
     }
+
 }

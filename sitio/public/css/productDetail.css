@@ -130,6 +130,16 @@
     border: var(--black) 2px solid;
 }
 
+.body-pd .menu section article .similares{
+    display: flex;
+    flex-direction: row;
+    width: 100%
+}
+
+.body-pd .menu section article .similares img{
+    
+}
+
 /*Tablet*/
 @media(min-width:481px) {
     .home .menu .producto img{
@@ -137,14 +147,6 @@
       height: 650px;
       margin: 2px;
     }
-
-    .home .menu .carrusel img{
-        width: 150px;
-        height: 150px;
-        margin: 5px;
-        text-align: center;
-    }
-
   
     
     
