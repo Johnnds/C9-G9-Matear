@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+
+
+<!-- Include Head -->
+<%- include('partials/head', {title: 'Carrito'}) %>
+
+<body class="contact">
+
+  <!-- Header -->
+	<%- include('partials/header') %>
+	<!-- /Header -->
+
+<main class="contacto">
+	<div class="formulario">
+<form action="">
+	<h2>CONTACTO</h2>
+	<input type="text" name="Nombre" placeholder="Nombre">
+	<input type="text" name="Correo" placeholder="Correo">
+	<input type="text" name="Telefono" placeholder="Telefono">
+	<textarea  name="Mensaje" placeholder="Escriba aqui su mensaje"></textarea>
+	<input type="button" value="Enviar" id="boton">
+</form>
+</div>
+</main>
+
+<!-- footer -->
+<%- include('partials/footer') %>
+<!-- /footer -->
+</body>
+</html>
