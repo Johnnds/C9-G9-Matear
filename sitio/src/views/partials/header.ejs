@@ -13,11 +13,20 @@
         <i class="fas fa-bars" id="menu-bars"></i>
         <% if (locals.userLogin) { %>
             <img class="image" src="/images/imageProfile/<%= userLogin.image %> " alt=""/>
-            <!-- <a href="#" class="fas fa-users-cog"></a> -->
-            <a href="#" class="fas fa-heart"></a>
+           
+            <% if(userLogin.rol === 'admin') { %> 
+
+                <a href="/admin/products" class="fas fa-users-cog"></a>
+
+            <% } %> 
+           
             <a href="/users/logout" class="fas fa-sign-out-alt"></a>
-        <% }else{ %>
+            <a href="#" class="fas fa-heart"></a>
+            
+        <% } else { %>
+
         <a href="/users/login" class="fas fa-user"></a>
+
         <% } %> 
        
         <i class="fas fa-search" id="search-icon"></i>
