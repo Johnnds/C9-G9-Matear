@@ -31,8 +31,5 @@ module.exports ={
         return res.render('nosotros')
     },
 
-    perfil: (req, res) => {
-    return res.render('perfil')
-}
-
+ 
 };

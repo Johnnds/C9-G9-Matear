@@ -27,18 +27,18 @@
           </tr>
         </thead>
         <tbody>
-            <% productos.forEach((producto,index) => { %>
+            <% productos.forEach((product,index) => { %>
                 <tr>
                     <th scope="row"><%= index + 1 %> </th>
-                    <td><%= producto.name %> </td>
-                    <td><%= producto.price %> </td>
-                    <td><%= producto.category %> </td>
+                    <td><%= product.name %> </td>
+                    <td><%= product.price %> </td>
+                    <td><%= product.category %> </td>
                     <td class="d-flex justify-content-around">
                         <a class="btn btn-sm btn-success"
-                        href="/admin/edit/<%= producto.id %> "><i class="fas fa-edit"></i></a>
+                        href="/admin/edit/<%= product.id %> "><i class="fas fa-edit"></i></a>
                     <div>
                         <form
-                            action="/admin/delete/<%= producto.id %>?_method=DELETE"
+                            action="/admin/delete/<%= product.id %>?_method=DELETE"
                             method="POST">
                             <button class="btn btn-sm btn-danger"
                                 type='submit'><i class="fas fa-trash-alt"></i></button>

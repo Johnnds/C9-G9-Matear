@@ -28,5 +28,15 @@
     "gender": "femenino",
     "rol": "user",
     "image": "default-image.png"
+  },
+  {
+    "id": 11,
+    "firstName": "Pepe",
+    "lastName": "Luis",
+    "email": "correo@gmail.com",
+    "password": "$2a$10$3mAJ7n2hbD9bfyOLzO.acOXF.rbHYeCBe.dIFTjzWgsd6H49/MfLS",
+    "gender": "masculino",
+    "rol": "user",
+    "image": "profile-1633619055594.jpg"
   }
 ]

@@ -7,7 +7,7 @@ const accessAdmin = require('../middlewares/accessAdmin')
 
 const storage = multer.diskStorage({
     destination: (req,file,callback) => {
-        callback(null,'./public/images')
+        callback(null,'./public/images/productos')
     },
     filename: (req,file,callback) => {
         callback(null,'img-mate-' + Date.now() + path.extname(file.originalname))
@@ -22,7 +22,7 @@ const upload = multer({
 
 /* create */
 router.get('/create', create);
-router.post('/create',upload.single('img'), store);
+router.post('/create',upload.single('image'), store);
 
 /* edit*/ 
 router.get('/edit/:id', edit);

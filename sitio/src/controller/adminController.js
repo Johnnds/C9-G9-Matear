@@ -18,7 +18,7 @@ const controller = {
     store: (req,res)=>{
        const{name,price,description,category,image} =req.body;
         
-      if (nombre.trim() != "" && precio != "") {
+      if (name.trim() != "" && price != "") {
         let producto = {
             id: productos[productos.length - 1].id + 1,
             name,

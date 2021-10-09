@@ -7,6 +7,6 @@ router.get('/', index );
 router.get('/search', search);
 router.get('/nosotros', nosotros);
 router.get('/contacto', contacto);
-router.get('/perfil', perfil);
+
 
 module.exports = router;
