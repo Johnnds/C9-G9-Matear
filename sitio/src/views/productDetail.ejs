@@ -23,7 +23,7 @@
             <div class = "imge-display">
 
             <div class = "imge-showcase">
-                <span class="oferta"><%= product.discount %> </span>
+                <span class="oferta">Nuevo </span>
                 <img class="imageDetail" src = "/images/productos/<%= product.image %> " alt = "shoe image">
                 
               </div>
@@ -52,8 +52,6 @@
   
             <div class = "producto-price">
               <p class = "last-price">Precio: <span><%= product.price %> </span></p>
-              <p class = "new-price">Precio: <span>$249.00 (<%= product.discount %> %)</span></p>
-            </div>
   
             <div class = "producto-detail">
               <h2 class="description">Descripción: </h2>
@@ -73,8 +71,7 @@
                     </select>
                   </div>               
                 </li>
-                <li> Cantidad: <span><%= product.stock %> </span></li>
-                <li> Categoria: <span><%= product.category %> </span></li>
+                <li> Categoria: <span><%= product.cateory %> </span></li>
               </ul>
             </div>
   
@@ -111,17 +108,17 @@
     
         <div class="box-container">
 
-          <% for(let i = 0; i < 4; i++) { %>
+         <!--<% for(let i = 0; i < 4; i++) { %>
     
                 <div class="box">
     
-                    <img src="/images/productos/<%= productsCategory[i].image %>" alt="">
-                    <h3><%= productsCategory[i].name %> </h3>
-                    <span>$<%= productsCategory[i].price %> </span>
-                    <a href="/products/detail/<%= productsCategory[i].id %> " class="btn">ver mas <i class="fas fa-info-circle"></i> </a>
+                    <img src="/images/productos/<%= product.image %>" alt="">
+                    <h3><%= product.name %> </h3>
+                    <span>$<%= product.price %> </span>
+                    <a href="/products/detail/<%= product.id %> " class="btn">ver mas <i class="fas fa-info-circle"></i> </a>
                 </div>
 
-                <% } %> 
+                <% } %> --> 
       
         </div>
     
