@@ -5,37 +5,51 @@
 }
 
 .body-admin{
-    background-color: #43cbe0b8;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #ebebeb;
 }
 
 .body-admin .admin{
-    display: flex;
-    flex-direction: column;
     text-align: center;
-    padding: 1px;
-    margin: auto;
+    padding: 40px;
+  
+    
+}
+
+.body-admin .admin h1{
+    padding: 25px;
+   font-size: 20px;;
 }
 
 .body-admin .admin input{
-    background-color: #011c20b8;
-    border: 1px solid white;
-    color: white;
+    background-color: var(--black);
+    box-shadow: 0 5px 10px -7px #333333;
+    margin: 1px 0;
 }
 
 ::placeholder{
     color: white;
 }
+
+.body-admin .admin textarea{
+    border: 1px solid black;
+}
+
+
+.body-admin .admin textarea::placeholder{
+    color: black;
+}
+
 .body-admin .admin select{
-    background-color: #011c20b8;
+    margin: 1px 0;
+    background-color: var(--black);
+    color: white
 }
-
-.body-admin .admin option{
-    background-color: #011c20b8;
-    color: white;
-}
-
 .body-admin .admin button{
-    background-color: #011c20b8;
+    margin: 1px 0;
+    background-color: var(--black);
     color: white;
     border: white solid 1px;
 }
@@ -51,32 +65,40 @@
 @media (min-width: 900px){
 
     .body-admin .admin input{
-        font-size: 20px;
+        font-size: 25px;
     }
 
     .body-admin .admin button{
-        width: 50%;
-        height: 50%;
+        width: 40%;
+        height: 40%;
     }
 
     .body-admin .admin button:hover{
-        background-color:  tomato;
+        background-color:  var(--green);
     } 
 
     .body-admin .admin input:hover{
-        background-color:  tomato;
+        background-color:  var(--green);
     } 
 
     .body-admin .admin option{
-        font-size: 20px;
+        font-size: 25px;
     }
     
     .body-admin .admin option:hover{
-        background-color: tomato;
+        background-color: var(--green);
     }
-    
+
+    .body-admin .admin textarea{
+        font-size: 23px;
+    }
+
+    .body-admin .admin .file label{
+        font-size: 20px;
+    }
+
+    .body-admin .admin .file input{
+        font-size: 10px;
+    }
+
 }
-
-
-
-

@@ -1,18 +1,19 @@
-
 const path = require('path')
 const fs = require('fs')
-const productsFilePath = path.join(__dirname, '../data/productsDataBase.json')
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'))
 
+let db= require('../database/models')
    
 
 module.exports ={
     index: (req, res) => {
-        return res.render('index', {
-            products
+        db.Product.findAll()
+        .then( products =>{
+            return res.render('index', {
+                products
+        })
+       
         })
     },
-
     contacto: (req, res) => {
         return res.render('contacto')
          
@@ -27,12 +28,12 @@ module.exports ={
                 busqueda : req.query.busqueda
             })
         }
-        return res.redirect('/products/list')
-       
+        return res.redirect('/')
     },
 
-    perfil: (req, res) => {
-    return res.render('perfil')
-}
+    nosotros : (req,res) =>{
+        return res.render('nosotros')
+    },
 
+ 
 };

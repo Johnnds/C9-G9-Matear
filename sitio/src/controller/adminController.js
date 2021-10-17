@@ -1,81 +1,117 @@
 const fs = require('fs');
 const path = require('path');
-const productos = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','productsDataBase.json'),'utf-8'));
-const categorias = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','categorias.json'),'utf-8'));
+
+const  db = require('../database/models');
+
 
 
 const controller = {
 
     //**controller de create con método GET */
-    create: (req, res) => {
-        return res.render('admin/create',{
-            productos,
-            categorias,
+    create : (req,res) => {
+        db.Category.findAll({
+            order : [
+                ['name','ASC']
+            ]
         })
+            .then(categorias => res.render('admin/create',{
+                categorias,
+            }))
+            .catch(error => console.log(error))
     },
+    store : (req,res) => {
 
-    //**controller de create con método POST */
-    store: (req,res)=>{
-       const{name,price,description,category,image} =req.body;
         
-      if (nombre.trim() != "" && precio != "") {
-        let producto = {
-            id: productos[productos.length - 1].id + 1,
-            name,
-            price,
-            description,
-            category,
-            image:  req.file ? req.file.filename : 'default-image.png'
-        }
-    
-        productos.push(producto)
-    fs.writeFileSync(path.join(__dirname,'..','data','productsDataBase.json'),JSON.stringify(productos,null,2),'utf-8');
-    return res.redirect('/')
-      }
-      return res.send('admin/create' + 'No se agregó producto');
+
+            const {name,price,description,image,categoria} = req.body;
+       
+            db.Product.create(
+                {
+                    name : name.trim(),
+                    description : description.trim(),
+                    price : price,
+                    image: image,
+                    categoryId : categoria
+                }
+            )
+
+            .catch(error => console.log(error))      
+            
+            return res.redirect('/')
+               
+           
         },
 
         //**controller de edit con método GET */
 
         edit : (req,res) => {
-            let producto = productos.find(producto => producto.id === +req.params.id)
-        return res.render('admin/edit',{
-            productos,
-            producto,
-            categorias,
-        })
+            let categories = db.Category.findAll({
+                order : [
+                    ['name']
+                ]
+            })
+            let product = db.Product.findByPk(req.params.id, {
+                include : ['category']
+            })
+            Promise.all(([categories, product]))
+                .then(([categories, product]) => {
+                    return res.render('admin/edit',{
+                        categories,
+                        product,
+                    })
+                })
+                .catch(error => console.log(error))
+      
         },
 
         //**controller de edit con método PUT */
         update : (req,res) =>{
             const {name,price,description,category} = req.body;
 
-            productos.forEach(producto => {
-                if(producto.id === +req.params.id){
-                    producto.name = name;
-                    producto.description = description;
-                    producto.price = +price;
-                    producto.category = category
-                }
-            });
-            fs.writeFileSync(path.join(__dirname,'..','data','productsDataBase.json'),JSON.stringify(productos,null,2),'utf-8');
-            return res.redirect('/')
+               db.Product.update(
+                   {
+                       name: name.trim(),
+                       price: price.trim(),
+                       description: description.trim(),
+                       categoryId: category
+                   },
+                   {
+                       where:{
+                           id: req.params.id
+                       }
+                   }
+               )
+               .then(()=>{
+                return res.redirect('/')
+               })
+               .catch(error => console.log(error))
            
         },
 
         /* controller de edit con metodo delete*/
         destroy : (req,res) => {
-            let productosModificados = productos.filter(producto => producto.id !== +req.params.id);
-    
-            fs.writeFileSync(path.join(__dirname,'..','data','productsDataBase.json'),JSON.stringify(productosModificados,null,2),'utf-8');
+
+           db.Product.destroy(
+               {
+                   where : {
+                       id: req.params.id
+                   }
+               },
+           )
+           .then(() =>{
             return res.redirect('/')
+           })
     
         },
 
         products : (req,res) =>{
-            return res.render('admin/products',{
-              productos,
+            db.Product.findAll()
+            .then(products =>{
+                return res.render('admin/products',{
+                    products,
+                  })
             })
+          
         }
 }
 

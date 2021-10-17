@@ -30,7 +30,7 @@
                   <a href="/products/detail/<%= product.id %> " class="btn">ver mas</a>
               </div>
               <div class="image">
-                  <img src="images/<%= product.image %> " alt="">
+                  <img src="images/productos/<%= product.image %> " alt="">
               </div>
           </div>
           <% }) %> 
@@ -60,7 +60,7 @@
             <div class="box">
                 <a href="#" class="fas fa-heart"></a>
                 <a href="#" class="fas fa-eye"></a>
-                <a href="/products/detail/<%= product.id %> "><img src="images/<%= product.image %>" alt=""></a>
+                <a href="/products/detail/<%= product.id %> "><img src="images/productos/<%= product.image %>" alt=""></a>
                 <h3><%= product.name %> </h3>
                 <div class="stars">
                     <i class="fas fa-star"></i>
@@ -76,7 +76,7 @@
 
     </div>
 
-
+</section>
      <!-- whatsapp -->
     <%- include('partials/whatsapp') %> 
 

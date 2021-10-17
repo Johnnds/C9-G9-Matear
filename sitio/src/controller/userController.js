@@ -15,26 +15,30 @@ module.exports = {
         return res.render('login')
     },
     processLogin: (req, res) => {
-
         let errors = validationResult(req)
 
-        // res.send(errors.mapped())
-
         if(errors.isEmpty()) {
+            let{recordame} = req.body
             let usuario = usuarios.find(usuario => usuario.email === req.body.email.trim())
     
             req.session.userLogin = {
                 id : usuario.id,
-                firstName : usuario.firsName,
+                firstName : usuario.firstName,
                 lastName : usuario.lastName,
                 gender : usuario.gender,
+                email : usuario.email,
                 image : usuario.image,
                 rol : usuario.rol
             }
 
-            res.redirect('/')
+            if (recordame) {
+                res.cookie('mateAr', req.session.userLogin, {
+                    maxAge: 10000 * 60 * 60 
+                })
+            }
+            return res.redirect('perfil')
 
-        } else {
+        }else {
             return res.render('login', {
                 errors : errors.mapped()
             })
@@ -45,7 +49,7 @@ module.exports = {
     processRegister: (req,res) =>{
             const errors = validationResult(req);
             if (errors.isEmpty()) {
-                let {firstName, lastName, email, password, gender,image } =req.body
+                let {firstName, lastName, email, password, gender,image,} =req.body
             
             const usuario ={
                id: usuarios[usuarios.length -1] ? usuarios[usuarios.length -1] .id + 1 : 1,
@@ -83,11 +87,15 @@ module.exports = {
            
     
     },
-    profile: (req, res) => {
-
+    perfil: (req, res) => {
+        return res.render('perfil')
     },
+    
     logout: (req, res) => {
         req.session.destroy();
+        if (req.cookies.mateAr) {
+            res.cookie('mateAr', '', { maxAge: -1 })
+        }
         return res.redirect('/')    }
 
 }

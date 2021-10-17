@@ -26,6 +26,7 @@
 .home .home-slider .slide .content h3{
   color:var(--black);
   font-size: 7rem;
+  font-weight: 900 !important;
 }
 
 .home .home-slider .slide .content p{

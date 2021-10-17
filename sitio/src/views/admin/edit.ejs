@@ -15,22 +15,22 @@
     <nav>
         <div class="form">
             <h1>Editar Producto</h1>
-            <form action="/admin/edit/<%= producto.id %>?_method=PUT" method="POST">
+            <form action="/admin/edit/<%= product.id %>?_method=PUT" method="POST">
                 <label for="name"></label>
-                <input type="text" name="name" id="name" placeholder="Nombre del Producto" value="<%= producto.name %>">
+                <input type="text" name="name" id="name" placeholder="Nombre del Producto" value="<%= product.name %>">
                 <br>
                 <label for="price"></label>
-                <input type="number" name="price" id="price" placeholder="Precio" value=<%= producto.price %>>
+                <input type="number" name="price" id="price" placeholder="Precio" value=<%= product.price %>>
                 <br>
                 <label for="description"></label>
-               <textarea name="description" id="description" cols="30" rows="5" placeholder="Descripción del producto"><%= producto.description %></textarea>
+               <textarea name="description" id="description" cols="30" rows="5" placeholder="Descripción del producto"><%= product.description %></textarea>
                 <br>
                 <label for="category"></label>
                  <select name="category" id="category">
-                    <% categorias.forEach(category => { %>
-                     <option value="<%= category.name %>" <%= producto.category.toLowerCase() === category.name.toLowerCase() ? 'selected' : null %> ><%= category.name %> </option>
-                    <% }) %>
-                </select>
+                        <% categories.forEach(categoria => { %>
+                         <option value="<%= categoria.id %>" <%= product.categoryId === categoria.id ? 'selected' : null %> ><%= categoria.name %> </option>
+                        <% }) %>
+                    </select>
                 <br>
               
                 <button>Editar</button>

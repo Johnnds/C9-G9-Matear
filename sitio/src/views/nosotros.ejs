@@ -1,27 +1,32 @@
 <!DOCTYPE html>
 <html lang="es">
 
-
 <!-- Include Head -->
-<%- include('partials/head', {title: 'Carrito'}) %>
+<%- include('partials/head', {title: 'Nosotros'}) %>
 
 <body>
+    <%- include('partials/header') %> 
 
-  <!-- Header -->
-	<%- include('partials/header') %>
-	<!-- /Header -->
+    <main>
+     <div class="us">
+        <div class="baner">
+            <img src="/images/slide-1621546276229-6976362064-7db049b56e6e2117a47cf6c0ea28afde1621546288-1024-1024.jpeg" alt="" height="50%">
+        </div>
+        <section>
+            <h1><s>Quiénes somos</s></h1>
 
-<main>
-<h2>¿QUIÉNES SOMOS?</h2>
-<p>
-Matear empieza como un proyecto entre tres amigos emprendedores que buscan dar a conocer la tradición del mate
-Sudamericano en Argentina, así como otros productos innovadores para la región. Acompáñanos en esta travesía.</p>
+         <p>   MateAr nace de las ganas de querer acercarle a la gente insumos característicos de la cultura Argentina, priorizando la calidad y el precio. <br>
 
+            Nos enfocamos en los detalles y en la atención personalizada para poder brindar un servicio cálido y eficiente. En MateAr no solo ofrecemos objetos sino también productos que conllevan historias, leyendas, buenos momentos y costumbres de nuestros pasado,presente y futuro. <br>
 
-</main>
+            Es por eso que traemos una hermosa variedad de mates artesanales hechos con lo mejor, para compartir y disfrutar de los grandes momentos de la vida. <br>
+            
+            ¡Te invitamos a #MateAr!</p>
+        </section>
+     </div>
+    </main>
 
-<!-- footer -->
-<%- include('partials/footer') %>
-<!-- /footer -->
+     <!-- footer -->
+	<%- include('partials/footer') %>
 </body>
 </html>

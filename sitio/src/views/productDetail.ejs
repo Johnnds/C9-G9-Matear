@@ -2,51 +2,129 @@
 <html lang="es">
 
 <!-- Include Head -->
-<%- include('partials/head', {title: 'Detalle Producto'}) %>
+
+<%- include('partials/head', {title: 'Inicio'}) %>
 <link rel="stylesheet" href="/css/productDetail.css">
 
-<body class="body-pd">
-      <!-- Header -->
+
+<body class="productDetail">
+
+  <!-- Header -->
 	<%- include('partials/header') %>
 	<!-- /Header -->
 
-    <%- include('partials/search') %> 
+<%- include('partials/search') %> 
 
-    <main class="main-pd">
-        <article>
-            <div class="menu">
-                <h1><%= product.name %></h1>
+		
+      <div class = "card-wrapper">
+        <div class = "card">
+          <!-- card left -->
+          <div class = "producto-imgs">
+            <div class = "imge-display">
+
+            <div class = "imge-showcase">
+                <span class="oferta">Nuevo </span>
+                <img class="imageDetail" src = "/images/productos/<%= product.image %> " alt = "shoe image">
+                
+              </div>
+            </div>
+            <div class = "imge-select">
+              <div class = "imge-item">
+                <a href = "#" data-id = "1">
+                  <img class="imageDetail" src = "/images/productos/<%= product.image %> " alt = "shoe image">
+                </a>
+              </div>
+              
+            </div>
+          </div>
+          <!-- card right -->
+          <div class = "producto-content">
+            <h2 class = "producto-title"><%= product.name %> </h2>
+            <a href = "#" class = "/products/list">visita Mate@r store</a>
+            <div class = "producto-rating">
+              <i class = "fas fa-star"></i>
+              <i class = "fas fa-star"></i>
+              <i class = "fas fa-star"></i>
+              <i class = "fas fa-star"></i>
+              <i class = "fas fa-star-half-alt"></i>
+              <span>4.7(21)</span>
+            </div>
+  
+            <div class = "producto-price">
+              <p class = "last-price">Precio: <span><%= product.price %> </span></p>
+  
+            <div class = "producto-detail">
+              <h2 class="description">Descripción: </h2>
+              <p><%= product.description %> </p>
+              <ul>
+                <li> Color: 
+                  <div class="select">  
+                    <select name="gender" id="gender">
+                        <% if (locals.errors && errors.gender) { %>
+                              <p style="color: red; font-size: 10px;"><%= errors.gender.msg %></p>
+                        <% } %> 
+                      <option>Seleccione</option>
+                      <option value="femenino" <%= locals.old && locals.gender === 'red' ? 'selected' : "" %> >Rojo</option>
+                      <option value="masculino" <%= locals.old && locals.gender === 'blue' ? 'selected' : "" %>>Azul</option>
+                      <option value="otro" <%= locals.old && locals.gender === 'green' ? 'selected' : "" %>>Verde</option>
+                      <option value="otro" <%= locals.old && locals.gender === '' ? 'selected' : "" %>>Marrón</option>
+                    </select>
+                  </div>               
+                </li>
+                <li> Categoria: <span><%= product.cateory %> </span></li>
+              </ul>
+            </div>
+  
+            <div class = "purchase-info">
+              <input type = "number" min = "0" value = "1">
+              <button type = "button" class = "btn">
+                Añadir <i class = "fas fa-shopping-cart"></i>
+              </button>
+              <button type = "button" class = "btn">Comparar</button>
+            </div>
+  
+            <div class = "social-links">
+              <p>Visitanos: </p>
+              <a href = "#">
+                <i class = "fab fa-facebook-f"></i>
+              </a>
+              <a href = "#">
+                <i class = "fab fa-twitter"></i>
+              </a>
+              <a href = "#">
+                <i class = "fab fa-instagram"></i>
+              </a>
+              <a href = "#">
+                <i class = "fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="dishes" class="dishes">
+
+        <h3 class="sub-heading">productos</h3>
+        <h1 class="heading">relacionados</h1>
+    
+        <div class="box-container">
+
+         <!--<% for(let i = 0; i < 4; i++) { %>
+    
                 <div class="box">
-                    <div class="oferta"><h4>OFERTA: 25% de descuento</h4></div>
+    
+                    <img src="/images/productos/<%= product.image %>" alt="">
+                    <h3><%= product.name %> </h3>
+                    <span>$<%= product.price %> </span>
+                    <a href="/products/detail/<%= product.id %> " class="btn">ver mas <i class="fas fa-info-circle"></i> </a>
                 </div>
-                 <div class="contenedor">
-                    <div class="producto"><img src="/images/<%= product.image %>" alt=""></div>
-                    <div class="caja">
-                        <div class="precio"><h3>$<%= product.price %></h3></div>
-                    <div class="off">
-                        <div class="mate"><h3><%= product.name %></h3></div>
-                   <div class="box2">
-                        <div class="color">
-                       <select name="color" id="color">
-                           <option value="" selected hidden>Seleccione el color</option>
-                           <option value="negro">Negro</option>
-                           <option value="marron">Marron</option>
-                           <option value="azul">Azul</option>
-                           <option value="verde">Verde</option>
-                       </select>
-                    </div>
-                    <div class="carrito">
-                        <a href="/products/productcart"><button>Añadir al carrito<i class="fas fa-shopping-cart"></i></button></a>
-                     </div>
-                   </div>
-                    </div>
-                </div>
-                <div class="detalle">
-                    <p><%= product.description %></p>
-             </div>
-                <br>
 
-                <div id="fb-root"></div>
+                <% } %> --> 
+      
+        </div>
+    
+    </section>
+
+    <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v12.0" nonce="kxGOGrd3"></script>
 <div class="fb-comments" data-href="http://localhost:3000/products/detail" data-width="100%" data-numposts="5"></div>
 
@@ -61,10 +139,10 @@
 	<%- include('partials/footer') %>
 	<!-- /footer --> 
 
+   
+
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-    <!-- custom js file link  -->
-    <script src="/js/script.js"></script>
      
     
 </body>
