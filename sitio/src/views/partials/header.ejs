@@ -12,14 +12,9 @@
     <div class="icons">
         <i class="fas fa-bars" id="menu-bars"></i>
         <% if (locals.userLogin) { %>
-            <img class="image" src="/images/imageProfile/<%= userLogin.image %> " alt=""/>
-           
-            <% if(userLogin.rol === 'admin') { %> 
-
-                <a href="/admin/products" class="fas fa-users-cog"></a>
-
-            <% } %> 
-           
+           <a href="/users/perfil"><img class="image" src="/images/imageProfile/<%= userLogin.image %> " alt=""/></a>
+            <!-- <a href="#" class="fas fa-users-cog"></a> -->
+            <a href="#" class="fas fa-heart"></a>
             <a href="/users/logout" class="fas fa-sign-out-alt"></a>
             <a href="#" class="fas fa-heart"></a>
             

@@ -1,0 +1,56 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.perfil{
+    text-align: center;
+    background-color: var(--black);
+    width: 90%;
+    height: auto;
+    padding: 5px;
+    margin: auto;
+    border: solid 2px var(--green);
+    box-shadow: var(--box-shadow);
+    box-sizing: border-box;
+    margin-top: 20px;
+    border-radius: 7px;
+}
+
+.perfil h1{
+    font-size: 30px;
+    text-align: center;
+    color: white;
+    -webkit-text-stroke: 1px var(--black);
+}
+
+
+
+.perfil .prof img{
+    display: block;
+    margin: 0px auto;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+.perfil h4 {
+    font-size: 13px;
+    color: white;
+}
+
+
+.perfil .box-prof span{
+    font-size: 15px;
+    color:white;
+}
+
+.perfil .box-prof a{
+    color: white;
+    font-size: 12px;
+    
+}
+
+
+

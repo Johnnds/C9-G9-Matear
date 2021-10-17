@@ -3,7 +3,7 @@
 
 
 <!-- Include Head -->
-<%- include('partials/head', {title: 'Carrito'}) %>
+<%- include('partials/head', {title: 'Perfil'}) %>
 
 <body>
 
@@ -12,9 +12,36 @@
 	<!-- /Header -->
 
 <main class="perfil">
-	
+	<h1>perfil </h1>
+        
+           <section>
+            <div class="prof"><img src="/images/imageProfile/<%= userLogin.image %> " alt="img"></div>
+           </section>
+           <div class="box-prof">
+            <section>             
+                <h4>Nombre</h4>     
+                <span><%= userLogin.firstName %> <%= userLogin.lastName %></span>
+        </section>
+         <br>
 
-
+        <section>
+            <div>
+                <h4>Email</h4>
+                <span><%= userLogin.email %></span>
+            </div>
+        </section>
+        <br>
+        
+        <div class="adm-">
+        <section><% if (userLogin.rol === "admin") { %>
+            <a href="/admin/products">Editar Producto</a>
+            <a href="/admin/create">Agregar Producto</a>
+         
+        <% } %></section>
+        </div>
+    
+        <div class="close">
+            <a href="/users/logout">Cerrar Sesion</a> </div>
 </main>
 
 <!-- footer -->

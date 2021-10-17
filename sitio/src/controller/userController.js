@@ -23,9 +23,10 @@ module.exports = {
     
             req.session.userLogin = {
                 id : usuario.id,
-                firstName : usuario.firsName,
+                firstName : usuario.firstName,
                 lastName : usuario.lastName,
                 gender : usuario.gender,
+                email : usuario.email,
                 image : usuario.image,
                 rol : usuario.rol
             }
@@ -35,8 +36,7 @@ module.exports = {
                     maxAge: 10000 * 60 * 60 
                 })
             }
-             
-            return res.redirect('/')
+            return res.redirect('perfil')
 
         }else {
             return res.render('login', {
@@ -87,9 +87,10 @@ module.exports = {
            
     
     },
-    profile: (req, res) => {
-
+    perfil: (req, res) => {
+        return res.render('perfil')
     },
+    
     logout: (req, res) => {
         req.session.destroy();
         if (req.cookies.mateAr) {

@@ -1,27 +1,41 @@
 const fs = require('fs')
 const path = require('path')
-const products = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','productsDataBase.json'),'utf-8'));
+const db = require('../database/models')
 
 
 const controller = {
     detail: (req, res) => {
-       let product = products.find(producto => producto.id === +req.params.id)
-        return res.render('productDetail', {
-            product,
-            productsCategory : products.filter(categoryProduct => categoryProduct.category === product.category && categoryProduct.id != product.id)
+        db.Product.findByPk(req.params.id, {
+            include : ['category']
         })
+            .then(product => {
+                return res.render('productDetail',{
+                    product
+                })
+            })
+            .catch(error => console.log(error))
+        
     },
     cart: (req, res) => {
-        return res.render('productCart', {
-            products : products.filter(product => product.price <= 1200) 
-                
+        db.Product.findByPk(req.params.id, {
+            include : ['category']
+        })
+            .then(product => {
+                return res.render('productCart',{
+                    product
+                })
             })
+            .catch(error => console.log(error))
     },
     listProducts: (req, res) => {
-        // res.send(req.session)
-        return res.render('products', {
-            products
+        db.Product.findAll()
+        .then( products =>{
+            return res.render('productList', {
+                products
         })
+       
+        })
+        .catch(error => console.log(error))
     }
 }
 
