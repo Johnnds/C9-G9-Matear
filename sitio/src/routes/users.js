@@ -20,10 +20,12 @@ const upload = multer({
     storage
 })
 
+const registerValidator = require('../validations/registerValidator');
+
 
 /* register */
 router.get('/register', registro)
-router.post('/register',upload.single('image'), validateRegister,processRegister);
+router.post('/register',upload.single('image'),registerValidator,validateRegister,processRegister);
 
 //**Login */
 router.get('/login',login)
