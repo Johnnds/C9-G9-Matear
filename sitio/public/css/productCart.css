@@ -1,4 +1,4 @@
-dishes .box-container .box:hover .bombilla{
+.dishes .box-container .box:hover .bombilla{
     display: block;
 }
 
