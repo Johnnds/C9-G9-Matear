@@ -1,56 +1,133 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-.perfil{
-    text-align: center;
-    background-color: var(--black);
-    width: 90%;
-    height: auto;
-    padding: 5px;
-    margin: auto;
-    border: solid 2px var(--green);
-    box-shadow: var(--box-shadow);
-    box-sizing: border-box;
-    margin-top: 20px;
-    border-radius: 7px;
-}
-
-.perfil h1{
-    font-size: 30px;
-    text-align: center;
-    color: white;
-    -webkit-text-stroke: 1px var(--black);
-}
 
 
-
-.perfil .prof img{
-    display: block;
-    margin: 0px auto;
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-}
-
-.perfil h4 {
-    font-size: 13px;
-    color: white;
-}
-
-
-.perfil .box-prof span{
-    font-size: 15px;
-    color:white;
-}
-
-.perfil .box-prof a{
-    color: white;
-    font-size: 12px;
+/* ――― VARIABLES ―――――――――――――――*/
+:root {
+    --defaultBorderRadius: 5px;
+    --defaultPadding: 25px;
     
-}
+    --lightBlue: #1dcdfa;
+    --mediumBlue: #0270d8;
+    --blueGradient: linear-gradient(to right, $mediumBlue, $lightBlue);
+    
+    --darkGrey: #2c3039;
+    --mediumGrey: #393e4a;
+    --lightGrey: #788192;
+    
+    }
+    
+    #profile {
+        color: white;
+    }
+    
+    /* ――― USER-PROFILE ―――――――――――――――*/
+    
+    #profile #user {
+        margin: 50px auto 10px;
+        background: var(--darkGrey);
+        box-shadow: -1px 1px 3px 0px rgba(0,0,0,0.20);
+        border-radius: var(--defaultBorderRadius);
+        width: 420px;
+        height: auto;
+        text-align: center;
+        position: relative;
+    
+    }	
+        
+    #profile #user i.fa-gear {
+        position: absolute;
+        border-radius: var(--defaultBorderRadius);
+        top: 15px;
+        right: 15px;
+        font-size: 1.8em;
+        color: #1d2026;
+        transition: color 0.2s ease-in-out;
+    }
+            
+    #profile #user i.fa-gear:hover {
+        color: var(--mediumBlue);
+        cursor: pointer;
+    }
+    
+    #profile #user #avatar {
+        border-radius: 50%;
+        max-width: 120px;
+        border-radius: 50%;
+        background: var(--blueGradient);
+        padding: 0.16em;
+        margin-top: -50px;
+    }
+    
+    #profile #user #main {
+        padding: 10px var(--defaultPadding) var(--defaultPadding);
+    } 
+        
+    #profile #user #main h3 {
+            font-weight: normal;
+            font-size: 2.3em;
+            margin-bottom: 1px;
+        }
+    
+    #profile #user #main p {
+            color: var(--lightGrey);
+            font-size: 1.1em;
+        }
+    
+    
+    #profile #user #level {
+        margin-bottom: -15px;
+    }
+        
+    #profile #user #lavel p {
+            background: var(--mediumBlue);
+            padding: 5px 10px;
+            border-radius: var(--defaultBorderRadius);
+            font-size: 4.85em;
+    }
+    
+    
+    #profile #user #information {
+        padding: var(--defaultPadding);
+        background: var(--mediumGrey);
+        border-radius: 50% 50% 5px 5px / 5px 5px;
+    }
+    
+    #profile #user #information #stats {
+        display: flex;
+        justify-content: center;
+        margin-top: 5px;
+    }
+        
+    #profile #user #information #stats > div:not(:first-child) {
+            margin-left: 25px;
+        }
+        
+    #profile #user #information #stats h4 {
+            font-size: 1.9em;
+            font-weight: normal;
+        }
+        
+    #profile #user #information #stats p {
+            text-transform: var(--uppercase);
+            color: var(--lightBlue);
+            font-weight: 600;
+        }
+    
+    #profile #user #information #description {
+        color: var(--lightGrey);
+        margin: 25px 0;
+    }
+    
+    #profile #user #information #actions {
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    
+    
+    #profile #user #actions .actions .btn:hover{
+        color: white;
+        background-color: darkorange;
+    }
 
 
 

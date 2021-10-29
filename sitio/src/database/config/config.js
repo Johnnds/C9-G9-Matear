@@ -2,9 +2,9 @@ require('dotenv').config()
 
 module.exports ={
   development: {
-    username: process.env.DB_USERNAME,
-    password: process.env.DB_PASS,
-    database: 'Mate@r',
+    username: 'root',
+    password: 'L19862021o.',
+    database: 'Matear',
     host: "127.0.0.1",
     dialect: "mysql",
     port : 3306
