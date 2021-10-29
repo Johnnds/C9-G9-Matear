@@ -88,7 +88,7 @@ module.exports = {
     
     },
     perfil: (req, res) => {
-        return res.render('profile')
+        return res.render('perfil')
     },
     
     logout: (req, res) => {

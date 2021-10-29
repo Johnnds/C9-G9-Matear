@@ -2,8 +2,10 @@
 <html lang="es">
 
 
+
 <!-- Include Head -->
 <%- include('partials/head', {title: 'Perfil'}) %>
+<link rel="stylesheet" href="/css/profile.css">
 
 <body>
 
@@ -11,41 +13,78 @@
 	<%- include('partials/header') %>
 	<!-- /Header -->
 
-<main class="perfil">
-	<h1>perfil </h1>
-        
-           <section>
-            <div class="prof"><img src="/images/imageProfile/<%= userLogin.image %> " alt="img"></div>
-           </section>
-           <div class="box-prof">
-            <section>             
-                <h4>Nombre</h4>     
-                <span><%= userLogin.firstName %> <%= userLogin.lastName %></span>
-        </section>
-         <br>
 
-        <section>
-            <div>
-                <h4>Email</h4>
-                <span><%= userLogin.email %></span>
-            </div>
-        </section>
-        <br>
-        
-        <div class="adm-">
-        <section><% if (userLogin.rol === "admin") { %>
-            <a href="/admin/products">Editar Producto</a>
-            <a href="/admin/create">Agregar Producto</a>
-         
-        <% } %></section>
+    <section id="profile">
+
+            <div id="user">
+
+                <img id="avatar" src="/images/imageProfile/<%= userLogin.image %>">
+                
+                <i class="fa fa-gear"></i>
+                
+                <div id="main">
+                        <h3> <%= userLogin.firstName %> <%= userLogin.lastName %> </h3>
+                        <p> <%= userLogin.rol %> </p>
+                </div>
+                
+                <div id="level">
+                    <p> <%= userLogin.email %> </p>
+                </div>
+                
+                <div id="information">
+                    <div id="stats">
+                        <% if(userLogin.rol === "admin") { %>
+                            <div>
+                                <h4>3</h4>
+                                <p>Agregados</p>
+                            </div>
+                        <% }else{ %>
+                            <div>
+                                <h4>3</h4>
+                                <p>Añadidos</p>
+                            </div>
+                        <% } %>
+                        
+                        <div>
+                            <h4>25</h4>
+                            <p>Productos</p>
+                        </div>
+                        
+                        <div>
+                            <h4>5</h4>
+                            <p>categorias</p>
+                        </div>
+                    </div>
+                    
+                    <p id="description">
+                        Sección en contrución. La idea es que en esta parte aparescan una niñatura de los 3 ultimos productos añadidos al carrito en cado de ser user: y productos agregados o editados en caso de ser admin.
+                    </p>
+                    
+                    <div id="actions">
+                        <% if(userLogin.rol === "admin") { %>
+                            <a class="btn" href="/admin/products">Productos</a>
+                        <% }else{ %>
+                            <a href="/admin/products"> <i class="fas fa-shopping-cart"></i> Carrito</a>
+                        <% } %>
+                        <a class="btn" href="/users/logout"> <i class="fas fa-sign-out-alt"></i> session</a>
+                    </div>
+                </div>
         </div>
-    
-        <div class="close">
-            <a href="/users/logout">Cerrar Sesion</a> </div>
-</main>
+
+</section>
+
+<!-- whatsapp -->
+<%- include('partials/whatsapp') %> 
 
 <!-- footer -->
-<%- include('partials/footer') %>
-<!-- /footer -->
-</body>
+  <%- include('partials/footer') %>
+  <!-- /footer -->
+    
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <!-- custom js file link  -->
+  <script src="/js/script.js"></script>
+   
+
 </html>
