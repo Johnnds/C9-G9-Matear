@@ -19,17 +19,16 @@ module.exports = {
         if (errors.isEmpty()) {
             const { Name, lastName, email, password, gender, image, } = req.body
 
-            db.user.create({
-
+            db.User.create({
                 Name: Name.trim(),
                 lastName: lastName,
                 email,
                 password: brcypt.hashSync(password, 10),
                 gender,
-                rol: 'user',
+                rolId: 'user',
                 image: req.file ? req.file.filename : "default-image.png"
             })
-                .then(user => {
+                .then(User => {
                     req.session.userLogin = {
                         id: user.id,
                         Name: user.Name,
@@ -49,31 +48,35 @@ module.exports = {
 
 
     login: (req, res) => {
-        return res.render('login')
+        return res.render('login', {
+            title: 'login',
+        })
     },
     processLogin: (req, res) => {
         let errors = validationResult(req)
 
         if (errors.isEmpty()) {
-            let { email, recordame } = req.body
-            let usuario = usuarios.find(usuario => usuario.email === email)
-
-            req.session.userLogin = {
-                id: usuario.id,
-                Name: usuario.Name,
-                lastName: usuario.lastName,
-                gender: usuario.gender,
-                email: usuario.email,
-                image: usuario.image,
-                rol: usuario.rol
-            }
-
-            if (recordame) {
+            const {email, recordar} = req.body;
+            db.User.findOne({
+                where:{
+                    email
+                }
+            })
+            .then(User =>{
+                req.session.userLogin = {
+                    id : user.id,
+                    Name: user.Name,
+                    avatar: user.avatar, 
+                    rolId: user.rolId
+                }
+                  if (recordame) {
                 res.cookie('mateAr', req.session.userLogin, {
                     maxAge: 10000 * 60 * 60
                 })
             }
             return res.redirect('perfil')
+            })
+
 
         } else {
             return res.render('login', {
@@ -81,7 +84,6 @@ module.exports = {
                 errors: errors.mapped()
             })
         }
-
     },
 
     perfil: (req, res) => {
@@ -90,9 +92,7 @@ module.exports = {
 
     logout: (req, res) => {
         req.session.destroy();
-        if (req.cookies.mateAr) {
-            res.cookie('mateAr', '', { maxAge: -1 })
-        }
+        res.cookie('mateAr', '', { maxAge: -1 })
         return res.redirect('/')
     }
 

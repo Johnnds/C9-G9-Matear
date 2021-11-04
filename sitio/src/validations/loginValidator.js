@@ -10,20 +10,15 @@ module.exports = [
     
     .custom((value, {req}) => {
        
-        db.user.findOne({
+         return db.User.findOne({
             where: {
                 email :value,
         }
         })
-        .then(user =>{
-            if (user) {
-                if(bcryptjs.compareSync(req.body.password, user.password)){ 
-                return true
-            }
-        }else{
-            return false
-        }
-        })
-        .catch(error => console.log(error))
-    }).withMessage('credenciales invalidas')
+        .then(User =>{
+            if (!User || !bcrypt.compareSync(req.body.password, user.password)){
+                return Promise.reject()
+                }
+        }).catch( () => Promise.reject('Credenciales inválidas'))
+    })
 ]
