@@ -17,15 +17,14 @@ const controller = {
         
     },
     cart: (req, res) => {
-        db.Product.findByPk(req.params.id, {
-            include : ['category']
+        db.Product.findAll()
+        .then( products =>{
+            return res.render('productCart', {
+                products
         })
-            .then(product => {
-                return res.render('productCart',{
-                    product
-                })
-            })
-            .catch(error => console.log(error))
+       
+        })
+        .catch(error => console.log(error))
     },
     listProducts: (req, res) => {
         db.Product.findAll()

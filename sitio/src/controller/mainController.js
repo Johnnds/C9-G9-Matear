@@ -1,7 +1,8 @@
 const path = require('path')
 const fs = require('fs')
 
-let db= require('../database/models')
+let db= require('../database/models');
+const {Op} = require('sequelize');
    
 
 module.exports ={
@@ -18,17 +19,33 @@ module.exports ={
         return res.render('contacto')
          
 },
-
-    search: (req,res)=>{
-        if(req.query.busqueda){
-            let resultado = products.filter(product => product.name.toLowerCase().includes(req.query.busqueda.toLowerCase()))
-            return res.render('products',{
-                title : "Resultado de la búsqueda",
-                products : resultado,
-                busqueda : req.query.busqueda
-            })
-        }
-        return res.redirect('/')
+            search : (req,res) => {
+    db.Product.findAll({
+      include : ['category'],
+      where : {
+          [Op.or]  : [
+            {
+                name : {
+                    [Op.substring] : req.query.busqueda
+                }
+            },
+            {
+                description : {
+                    [Op.substring] : req.query.busqueda
+                }
+            }
+        ]
+    }
+})
+    .then(products => {
+        return res.render('ProductList',{
+            title : "Resultado de la búsqueda",
+            products,
+            busqueda : req.query.busqueda
+        })
+    })
+    
+    .catch(error => console.log(error)) 
     },
 
     nosotros : (req,res) =>{

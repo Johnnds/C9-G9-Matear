@@ -3,9 +3,6 @@ const path = require('path');
 const brcypt = require('bcryptjs');
 const { validationResult } = require('express-validator')
 const db = require('../database/models');
-const usuarios = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'users.json'), 'utf-8'));
-// const usuarios = require('../data/users.json')
-
 module.exports = {
     registro: (req, res) => {
         return res.render('register', {
@@ -17,11 +14,11 @@ module.exports = {
         let errors = validationResult(req);
 
         if (errors.isEmpty()) {
-            const { Name, lastName, email, password, gender, image, } = req.body
+            const { name, lastName, email, password, gender, image, } = req.body
 
-            db.user.create({
+            db.User.create({
 
-                Name: Name.trim(),
+                name: name.trim(),
                 lastName: lastName,
                 email,
                 password: brcypt.hashSync(password, 10),
