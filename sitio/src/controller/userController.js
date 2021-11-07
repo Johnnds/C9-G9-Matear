@@ -3,9 +3,6 @@ const path = require('path');
 const brcypt = require('bcryptjs');
 const { validationResult } = require('express-validator')
 const db = require('../database/models');
-const usuarios = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'users.json'), 'utf-8'));
-// const usuarios = require('../data/users.json')
-
 module.exports = {
     registro: (req, res) => {
         return res.render('register', {
@@ -17,26 +14,25 @@ module.exports = {
         let errors = validationResult(req);
 
         if (errors.isEmpty()) {
-            const { Name, lastName, email, password, gender, image, } = req.body
+            const { name, lastName, email, password, gender, avatar} = req.body
 
-            db.user.create({
-
-                Name: Name.trim(),
+            db.User.create({
+                name: name.trim(),
                 lastName: lastName,
                 email,
                 password: brcypt.hashSync(password, 10),
                 gender,
-                rol: 'user',
+                rolId: 2,
                 image: req.file ? req.file.filename : "default-image.png"
             })
                 .then(user => {
                     req.session.userLogin = {
                         id: user.id,
                         Name: user.Name,
-                        image: user.image,
+                        avatar: user.image,
                         rolId: user.rolId
                     }
-                    return res.redirect('/')
+                    return res.redirect('perfil')
                 })
                 .catch(error => console.log(error))
         } else {
@@ -49,31 +45,35 @@ module.exports = {
 
 
     login: (req, res) => {
-        return res.render('login')
+        return res.render('login', {
+            title: 'login',
+        })
     },
     processLogin: (req, res) => {
         let errors = validationResult(req)
 
         if (errors.isEmpty()) {
-            let { email, recordame } = req.body
-            let usuario = usuarios.find(usuario => usuario.email === email)
-
-            req.session.userLogin = {
-                id: usuario.id,
-                Name: usuario.Name,
-                lastName: usuario.lastName,
-                gender: usuario.gender,
-                email: usuario.email,
-                image: usuario.image,
-                rol: usuario.rol
-            }
-
-            if (recordame) {
+            const {email, recordame} = req.body;
+            db.User.findOne({
+                where:{
+                    email
+                }
+            })
+            .then(user =>{
+                req.session.userLogin = {
+                    id : user.id,
+                    name: user.name,
+                    avatar: user.avatar, 
+                    rolId: user.rolId
+                }
+                  if (recordame) {
                 res.cookie('mateAr', req.session.userLogin, {
                     maxAge: 10000 * 60 * 60
                 })
             }
             return res.redirect('perfil')
+            })
+
 
         } else {
             return res.render('login', {
@@ -81,7 +81,6 @@ module.exports = {
                 errors: errors.mapped()
             })
         }
-
     },
 
     perfil: (req, res) => {
@@ -90,9 +89,7 @@ module.exports = {
 
     logout: (req, res) => {
         req.session.destroy();
-        if (req.cookies.mateAr) {
-            res.cookie('mateAr', '', { maxAge: -1 })
-        }
+        res.cookie('mateAr', '', { maxAge: -1 })
         return res.redirect('/')
     }
 
