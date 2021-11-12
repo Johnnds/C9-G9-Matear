@@ -18,12 +18,12 @@
 
             <div id="user">
 
-                <img id="avatar" src="/images/imageProfile/<%= userLogin.image %>">
+                <img id="avatar" src="/images/imageProfile/<%= userLogin.avatar %>">
                 
                 <i class="fa fa-gear"></i>
                 
                 <div id="main">
-                        <h3> <%= userLogin.firstName %> <%= userLogin.lastName %> </h3>
+                        <h3> <%= userLogin.name %> <%= userLogin.lastName %> </h3>
                         <p> <%= userLogin.rol %> </p>
                 </div>
                 
@@ -33,7 +33,7 @@
                 
                 <div id="information">
                     <div id="stats">
-                        <% if(userLogin.rol === "admin") { %>
+                        <% if(userLogin.rolId === "admin") { %>
                             <div>
                                 <h4>3</h4>
                                 <p>Agregados</p>
@@ -61,7 +61,7 @@
                     </p>
                     
                     <div id="actions">
-                        <% if(userLogin.rol === "admin") { %>
+                        <% if(userLogin.rolId === "admin") { %>
                             <a class="btn" href="/admin/products">Productos</a>
                         <% }else{ %>
                             <a href="/products/list"> <i class="fas fa-shopping-cart"></i> Carrito</a>

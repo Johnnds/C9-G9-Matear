@@ -1,9 +1,8 @@
-const { check, body } = require('express-validator');
-const db = require('../database/models');
+const {body,check} = require('express-validator');
+const db = require('../database/models')
+
 
 module.exports = [
-
-
     body('email')
     .custom( value => {
        
@@ -18,5 +17,4 @@ module.exports = [
                 }
             })
     })
-
 ]

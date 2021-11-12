@@ -26,43 +26,27 @@
       </div>   
               
 
-      <input type="text" name="name" id="name" value="<%= locals.old && old.name ? old.name : "" %>" placeholder="Nombre">
-            <% if (locals.errors && errors.name) { %>
-                <p style="color: red; font-size: 10px;"><%=  errors.name.msg    %></p>
-            <% } %> 
+      <input type="text" name="name" id="name" value="" placeholder="Nombre">
             <br>            
                             
-      <input type="text" name="lastName" id="lastName"  value="<%= locals.old && old.lastName ? old.lasName : "" %>" placeholder="Apellido">
-              <% if (locals.errors && errors.lastName) { %>
-                  <p style="color: red; font-size: 10px;"><%= errors.lastName.msg %></p>
-              <% } %> 
+      <input type="text" name="lastName" id="lastName"  value="" placeholder="Apellido">
               <br>
                  
       <label>Genero:</label>
       <div class="select">  
         <select name="gender" id="gender">
-            <% if (locals.errors && errors.gender) { %>
-                  <p style="color: red; font-size: 10px;"><%= errors.gender.msg %></p>
-            <% } %> 
+
           <option>Seleccione</option>
-          <option value="femenino" <%= locals.old && locals.gender === 'femenino' ? 'selected' : "" %> >Femenino</option>
-          <option value="masculino" <%= locals.old && locals.gender === 'masculino' ? 'selected' : "" %>>Masculino</option>
-          <option value="otro" <%= locals.old && locals.gender === 'otro' ? 'selected' : "" %>>Otro</option>
-          <option value="otro" <%= locals.old && locals.gender === 'otro' ? 'selected' : "" %>>Prefiero no decirlo</option>
+          <option value="femenino">Femenino</option>
+          <option value="masculino">Masculino</option>
+          <option value="otro">Otro</option>
+          <option value="otro">Prefiero no decirlo</option>
         </select>
       </div>     
       <br>          
-        <input type="email" name="email"  value="<%= locals.old && old.email %> " placeholder="email">
-            <% if (locals.errors && errors.email) { %>
-                    <p style="color: red; font-size: 10px;"><%= errors.email.msg %> </p>
-            <% } %> 
+        <input type="email" name="email"  value="" placeholder="email">
             <br>         
       <input type="password" name="password" placeholder="password">
-            <!-- <i class="far fa-eye-slash"></i>   -->
-                        
-            <% if (locals.errors && errors.password) { %>
-                  <p style="color: red;"><%= errors.password.msg %> </p>
-            <% } %> 
                     
       <label for="avatar">Imagen de perfíl:</label>
       <input type="file" name="avatar" id="avatar">
