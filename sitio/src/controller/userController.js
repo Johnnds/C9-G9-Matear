@@ -7,13 +7,13 @@ const usuarios = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', '
 // const usuarios = require('../data/users.json')
 
 module.exports = {
-    registro: (req, res) => {
+     registro: (req, res) => {
         return res.render('register', {
             title: 'Registro',
         })
     },
-    processRegister: (req, res) => {
-
+      processRegister: (req, res) => {
+    
         let errors = validationResult(req);
 
         if (errors.isEmpty()) {
@@ -44,15 +44,15 @@ module.exports = {
                 errores: errors.mapped()
             })
         }
-    },
+        },
 
 
-    login: (req, res) => {
+         login: (req, res) => {
         return res.render('login', {
             title: 'login',
         })
     },
-    processLogin: (req, res) => {
+      processLogin: (req, res) => {
         let errors = validationResult(req)
 
         if (errors.isEmpty()) {
@@ -76,8 +76,7 @@ module.exports = {
             }
             return res.redirect('perfil')
             })
-
-
+           .catch(error => console.log(error))
         } else {
             return res.render('login', {
                 title: 'login',
@@ -86,11 +85,11 @@ module.exports = {
         }
     },
 
-    perfil: (req, res) => {
+     perfil: (req, res) => {
         return res.render('perfil')
     },
 
-    logout: (req, res) => {
+     logout: (req, res) => {
         req.session.destroy();
         res.cookie('mateAr', '', { maxAge: -1 })
         return res.redirect('/')
