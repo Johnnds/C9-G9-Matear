@@ -41,7 +41,7 @@ module.exports = [
             min: 6,
             max: 12
         }).withMessage('La contraseña debe tener 6 y 12 caracteres'),
-    body('password2')
+    body('password2git')
         .custom((value, { req }) => {
             if (value != req.body.password) {
                 return false
