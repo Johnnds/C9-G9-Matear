@@ -1,24 +1,23 @@
-const { body } = require('express-validator');
-const fs = require('fs');
+const {body} = require('express-validator');
 const path = require('path');
-const db = require('../database/models');
-const bcrypt = require('bcryptjs');
+const fs = require('fs');
+const db = require('../database/models')
+const bcryptjs = require('bcryptjs');
 
 
 module.exports = [
     body('email')
-    
-    .custom((value, {req}) => {
-       
-         return db.User.findOne({
-            where: {
-                email :value,
-        }
+    .custom((value,{req}) => {
+        
+        return db.User.findOne({
+            where : {
+                email : value,
+            }
         })
-        .then(User =>{
-            if (!User || !bcrypt.compareSync(req.body.password, user.password)){
-                return Promise.reject()
+            .then(user => {
+                if(!user || !bcryptjs.compareSync(req.body.password, user.password)){
+                    return Promise.reject()
                 }
-        }).catch( () => Promise.reject('Credenciales inválidas'))
+            }).catch( () => Promise.reject('Credenciales inválidas'))
     })
 ]

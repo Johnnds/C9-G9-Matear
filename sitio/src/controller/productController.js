@@ -1,18 +1,24 @@
-const fs = require('fs')
-const path = require('path')
-const db = require('../database/models')
-
+const fs = require('fs');
+const path = require('path');
+const db = require('../database/models');
+const Sequelize = require('sequelize');
 
 const controller = {
     detail: (req, res) => {
         db.Product.findByPk(req.params.id, {
             include : ['category']
         })
-            .then(product => {
-                return res.render('productDetail',{
-                    product
-                })
-            })
+        let aleatorio = db.Product.findAll({
+            order: [[Sequelize.literal("RAND()")]],
+            limit: 4,
+        });
+
+        Promise.all([product, aleatorio]).then(([product, aleatorio]) => {
+            res.render("productDetail", {
+                product: product,
+                aleatorio: aleatorio,
+            });
+        })
             .catch(error => console.log(error))
         
     },

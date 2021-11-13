@@ -28,7 +28,7 @@ CREATE TABLE `categories` (
   `createdAt` datetime NOT NULL,
   `updatedAt` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -37,7 +37,7 @@ CREATE TABLE `categories` (
 
 LOCK TABLES `categories` WRITE;
 /*!40000 ALTER TABLE `categories` DISABLE KEYS */;
-INSERT INTO `categories` VALUES (1,'calabaza','2021-10-09 20:25:32','2021-10-09 20:25:32'),(2,'madera','2021-10-09 20:25:32','2021-10-09 20:25:32'),(3,'cerámico','2021-10-09 20:25:32','2021-10-09 20:25:32'),(4,'térmico','2021-10-09 20:25:32','2021-10-09 20:25:32');
+INSERT INTO `categories` VALUES (1,'calabaza','2021-11-11 00:26:16','2021-11-11 00:26:16'),(2,'madera','2021-11-11 00:26:16','2021-11-11 00:26:16'),(3,'cerámico','2021-11-11 00:26:16','2021-11-11 00:26:16'),(4,'térmico','2021-11-11 00:26:16','2021-11-11 00:26:16');
 /*!40000 ALTER TABLE `categories` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -60,7 +60,7 @@ CREATE TABLE `products` (
   PRIMARY KEY (`id`),
   KEY `categoryId` (`categoryId`),
   CONSTRAINT `products_ibfk_1` FOREIGN KEY (`categoryId`) REFERENCES `categories` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -69,7 +69,7 @@ CREATE TABLE `products` (
 
 LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
-INSERT INTO `products` VALUES (1,'Mate Imperial.','Mate de calabaza Imperial importada desde Uruguay. Es trabajado artesanalmente mediante un proceso de recubrimiento en piel para luego ser sellado con una virola de alpaca cincelada.',750.00,'mate-imperial.png',1,'2021-10-09 20:25:33','2021-10-09 20:25:33'),(2,'Mate  cerámico','Mate cerámico ultra fino, permite conservar la temperatura por  más tiempo',1300.00,'mate-ceramico.png',3,'2021-10-09 20:25:33','2021-10-13 18:53:14'),(3,'Mate  torpedo','Mate torpedo forrado de cuero natural',1500.00,'mate-torpedo.png',1,'2021-10-09 20:25:33','2021-10-09 20:25:33'),(4,'Mate  galaxia','Mate camion forrado de cuero natural',1800.00,'mate-galaxia.png',3,'2021-10-09 20:25:33','2021-10-09 20:25:33'),(5,'Darck ','Mate  forrado de cuero natural',800.00,'mate-darck.png',1,'2021-10-09 20:25:33','2021-10-09 20:25:33'),(6,'Mate  fico','Mate fico ',1500.00,'mate-fico.png',2,'2021-10-09 20:25:33','2021-10-09 20:25:33'),(7,'Mate  home','Mates de forma de calabaza',1300.00,'mate-home.png',1,'2021-10-09 20:25:33','2021-10-09 20:25:33'),(8,'un re Mate','Mate camion forrado de cuero natural',2000.00,'mate-re.png',1,'2021-10-09 20:25:33','2021-10-09 20:25:33'),(9,'Black','Mate black ',2200.00,'mate-black.png',1,'2021-10-09 20:25:33','2021-10-09 20:25:33'),(10,'Mate  verde','Mate verde claro',2200.00,'mate-verde.png',4,'2021-10-09 20:25:33','2021-10-09 20:25:33'),(11,'Mate  flor','Mate ceramico con detalle de estampados de flores',800.00,'mate-flor.png',3,'2021-10-09 20:25:33','2021-10-09 20:25:33'),(12,'Mate  pastel','Mate  pastel con relieve',1500.00,'mate-pastel.png',4,'2021-10-09 20:25:33','2021-10-09 20:25:33'),(13,'Mate  Argentino','Mate artesanal ',2500.00,'mate-argentino.png',3,'2021-10-09 20:25:33','2021-10-09 20:25:33'),(14,'Mate  Arena','Mate metalico ',2800.00,'mate-arena.png',1,'2021-10-09 20:25:33','2021-10-09 20:25:33'),(15,'Mate  Algarrobo','Mate de algarrobo natural',1000.00,'mate-algarrobo.png',2,'2021-10-09 20:25:33','2021-10-09 20:25:33'),(16,'Mate  Tradicional','Mate estilo tradicional de campo',1300.00,'mate-tradicional.png',1,'2021-10-09 20:25:33','2021-10-09 20:25:33'),(17,'Mate  Pampa','Mate de calabaa forrado',1000.00,'mate-pampa.png',1,'2021-10-09 20:25:33','2021-10-09 20:25:33'),(18,'Mate  Mijo','Mate de madera de caldén natural',900.00,'mate-mijo.png',2,'2021-10-09 20:25:33','2021-10-09 20:25:33'),(19,'Mate  Nórdico','Mate de madera natural, con un stampado de flores',500.00,'mate-nordico.png',2,'2021-10-09 20:25:33','2021-10-09 20:25:33'),(20,'Mate  Frases','Mate de madera natural, con frases',1200.00,'mate-frases.png',2,'2021-10-09 20:25:33','2021-10-09 20:25:33'),(21,'Mate Taragüi','Mate forrado',1200.00,'mate-taraguy.png',1,'2021-10-09 20:25:33','2021-10-09 20:25:33'),(22,'Mate  primavera','Mate ceramico con detalle de estampados de flores',2500.00,'mate-primavera.png',3,'2021-10-09 20:25:33','2021-10-09 20:25:33'),(23,'Mate  pastel 2.0','Mate  pastel con relieve',1355.00,'mate-pastel2.0.png',4,'2021-10-09 20:25:33','2021-10-09 20:25:33'),(24,'Mate  Geométrico','Mate  geometrico con estampado de flores',1890.00,'mate-geometrico.png',2,'2021-10-09 20:25:33','2021-10-09 20:25:33'),(25,'Mate  Corazón','Mate con un corazon',2000.00,'mate-corazon.png',3,'2021-10-09 20:25:33','2021-10-09 20:25:33');
+INSERT INTO `products` VALUES (1,'Mate Imperial.','Mate de calabaza Imperial importada desde Uruguay. Es trabajado artesanalmente mediante un proceso de recubrimiento en piel para luego ser sellado con una virola de alpaca cincelada.',750.00,'mate-imperial.png',1,'2021-11-11 00:26:16','2021-11-11 00:26:16'),(2,'Mate  cerámico','Mate de ceramica ultra fino',1300.00,'mate-ceramico.png',3,'2021-11-11 00:26:16','2021-11-11 00:26:16'),(3,'Mate  torpedo','Mate torpedo forrado de cuero natural',1500.00,'mate-torpedo.png',1,'2021-11-11 00:26:16','2021-11-11 00:26:16'),(4,'Mate  galaxia','Mate camion forrado de cuero natural',1800.00,'mate-galaxia.png',3,'2021-11-11 00:26:16','2021-11-11 00:26:16'),(5,'Darck ','Mate  forrado de cuero natural',800.00,'mate-darck.png',1,'2021-11-11 00:26:16','2021-11-11 00:26:16'),(6,'Mate  fico','Mate fico ',1500.00,'mate-fico.png',2,'2021-11-11 00:26:16','2021-11-11 00:26:16'),(7,'Mate  home','Mates de forma de calabaza',1300.00,'mate-home.png',1,'2021-11-11 00:26:16','2021-11-11 00:26:16'),(8,'un re Mate','Mate camion forrado de cuero natural',2000.00,'mate-re.png',1,'2021-11-11 00:26:16','2021-11-11 00:26:16'),(9,'Black','Mate black ',2200.00,'mate-black.png',1,'2021-11-11 00:26:16','2021-11-11 00:26:16'),(10,'Mate  verde','Mate verde claro',2200.00,'mate-verde.png',4,'2021-11-11 00:26:16','2021-11-11 00:26:16'),(11,'Mate  flor','Mate ceramico con detalle de estampados de flores',800.00,'mate-flor.png',3,'2021-11-11 00:26:16','2021-11-11 00:26:16'),(12,'Mate  pastel','Mate  pastel con relieve',1500.00,'mate-pastel.png',4,'2021-11-11 00:26:16','2021-11-11 00:26:16'),(13,'Mate  Argentino','Mate artesanal ',2500.00,'mate-argentino.png',3,'2021-11-11 00:26:16','2021-11-11 00:26:16'),(14,'Mate  Arena','Mate metalico ',2800.00,'mate-arena.png',1,'2021-11-11 00:26:16','2021-11-11 00:26:16'),(15,'Mate  Algarrobo','Mate de algarrobo natural',1000.00,'mate-algarrobo.png',2,'2021-11-11 00:26:16','2021-11-11 00:26:16'),(16,'Mate  Tradicional','Mate estilo tradicional de campo',1300.00,'mate-tradicional.png',1,'2021-11-11 00:26:16','2021-11-11 00:26:16'),(17,'Mate  Pampa','Mate de calabaa forrado',1000.00,'mate-pampa.png',1,'2021-11-11 00:26:16','2021-11-11 00:26:16'),(18,'Mate  Mijo','Mate de madera de caldén natural',900.00,'mate-mijo.png',2,'2021-11-11 00:26:16','2021-11-11 00:26:16'),(19,'Mate  Nórdico','Mate de madera natural, con un stampado de flores',500.00,'mate-nordico.png',2,'2021-11-11 00:26:16','2021-11-11 00:26:16'),(20,'Mate  Frases','Mate de madera natural, con frases',1200.00,'mate-frases.png',2,'2021-11-11 00:26:16','2021-11-11 00:26:16'),(21,'Mate Taragüi','Mate forrado',1200.00,'mate-taraguy.png',1,'2021-11-11 00:26:16','2021-11-11 00:26:16'),(22,'Mate  primavera','Mate ceramico con detalle de estampados de flores',2500.00,'mate-primavera.png',3,'2021-11-11 00:26:16','2021-11-11 00:26:16'),(23,'Mate  pastel 2.0','Mate  pastel con relieve',1355.00,'mate-pastel2.0.png',4,'2021-11-11 00:26:16','2021-11-11 00:26:16'),(24,'Mate  Geométrico','Mate  geometrico con estampado de flores',1890.00,'mate-geometrico.png',2,'2021-11-11 00:26:16','2021-11-11 00:26:16'),(25,'Mate  Corazón','Mate con un corazon',2000.00,'mate-corazon.png',3,'2021-11-11 00:26:16','2021-11-11 00:26:16');
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -86,7 +86,7 @@ CREATE TABLE `rols` (
   `createdAt` datetime NOT NULL,
   `updatedAt` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -95,7 +95,7 @@ CREATE TABLE `rols` (
 
 LOCK TABLES `rols` WRITE;
 /*!40000 ALTER TABLE `rols` DISABLE KEYS */;
-INSERT INTO `rols` VALUES (1,'admin','2021-10-09 20:25:33','2021-10-09 20:25:33'),(2,'user','2021-10-09 20:25:33','2021-10-09 20:25:33');
+INSERT INTO `rols` VALUES (1,'admin','2021-11-11 00:26:16','2021-11-11 00:26:16'),(2,'user','2021-11-11 00:26:16','2021-11-11 00:26:16');
 /*!40000 ALTER TABLE `rols` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -143,7 +143,7 @@ CREATE TABLE `user_products` (
   KEY `productId` (`productId`),
   CONSTRAINT `user_products_ibfk_1` FOREIGN KEY (`userId`) REFERENCES `users` (`id`),
   CONSTRAINT `user_products_ibfk_2` FOREIGN KEY (`productId`) REFERENCES `products` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -164,7 +164,7 @@ DROP TABLE IF EXISTS `users`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `users` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `Name` varchar(255) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
   `lastName` varchar(255) DEFAULT NULL,
   `genre` varchar(255) DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL,
@@ -176,7 +176,7 @@ CREATE TABLE `users` (
   PRIMARY KEY (`id`),
   KEY `rolId` (`rolId`),
   CONSTRAINT `users_ibfk_1` FOREIGN KEY (`rolId`) REFERENCES `rols` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -185,7 +185,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'Jonathan','Sanchez','masculino','johnnds@gmail.com','$2a$10$jet86NuhdBKk7YV2MNyuOerLw8hyw0SSw4mCaoOKQsG/W/A98gEtW','default-av.png',1,'2021-10-09 20:25:33','2021-10-09 20:25:33'),(2,'Lucio','Martinez','masculino','lucio@gmail.com','$2a$10$M3yCCCJFnFqyLYsH4vzkeOTT1SQFz/.Ap2hW4fPntwJkiFGO7ENQu','default-av.png',1,'2021-10-09 20:25:33','2021-10-09 20:25:33'),(3,'Marisol','Contreras','femenino','marisol-contreras-@gmail.com','$2a$10$e.FjcF.CJSestxKuFoTZsO3MXhPaPdqlhuSaRXXHc/nFOuTRUCI1C','default-av.png',1,'2021-10-09 20:25:33','2021-10-09 20:25:33'),(4,'Erik','Mena','masculino','erik@gmail.com','$2a$10$/EJe.vUdYUkhhsuBjX42UeM6HtRgfzKdC0Ao12Tzbpuk1svB547Dy','default-av.png',1,'2021-10-09 20:25:34','2021-10-09 20:25:34'),(5,'Cristian','Elias','masculino','cristian@gmail.com','$2a$10$NjnD.kyOZkVaLCItrcp3quemc5psH2bpDbQUj7GA.zlcj7gL8XEQa','default-av.png',1,'2021-10-09 20:25:34','2021-10-09 20:25:34');
+INSERT INTO `users` VALUES (1,'Jonathan','Sanchez','masculino','johnnds@gmail.com','$2a$10$78eky6LK/VtBMqzPSC1L0Obeg/Knz.an/7p0bFcKXasOAN/ZkJEwS','default-av.png',1,'2021-11-11 00:26:17','2021-11-11 00:26:17'),(2,'Lucio','Martinez','masculino','lucio@gmail.com','$2a$10$4cJc/zGoqow4dP/F78.FWOnjoPguCyWbNy9dPf2heBy1arupltF.S','default-av.png',1,'2021-11-11 00:26:17','2021-11-11 00:26:17'),(3,'Marisol','Contreras','femenino','marisol-contreras-@gmail.com','$2a$10$k..Mirmf9RGasUKdKdLBmukx6vGRd8Rzjj.gXwxIrolnt0o3xwTBW','default-av.png',1,'2021-11-11 00:26:17','2021-11-11 00:26:17'),(4,'Erik','Mena','masculino','erik@gmail.com','$2a$10$iRynWvi9DqRFxSTZKiCgm.XEjMZawr8x8yjbQPv6dTDUHussFwPJu','default-av.png',1,'2021-11-11 00:26:17','2021-11-11 00:26:17'),(5,'Cristian','Elias','masculino','cristian@gmail.com','$2a$10$w7HXliBp6DNPkPtuKVEm1ejOfhxyaBqQDm6Yy8B974KjyazvQGW1i','default-av.png',1,'2021-11-11 00:26:18','2021-11-11 00:26:18'),(6,'cualquier nombre','Cualquier apellido',NULL,'cualquier@gmail.com','$2a$10$th2/2fUsC98N7WC8CAXFwu/s6zYTufC6hLVdSm7zUmJ6Nuqy2szzK','default.png',2,'2021-11-11 01:58:01','2021-11-11 01:58:01');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -198,4 +198,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-10-18 19:58:42
+-- Dump completed on 2021-11-12 20:26:52

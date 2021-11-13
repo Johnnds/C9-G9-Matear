@@ -1,10 +1,8 @@
-const fs = require('fs');
 const path = require('path');
-const brcypt = require('bcryptjs');
-const { validationResult } = require('express-validator')
+const fs = require('fs');
+const bcrypt = require('bcryptjs');
+const { validationResult } = require('express-validator');
 const db = require('../database/models');
-const usuarios = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'users.json'), 'utf-8'));
-// const usuarios = require('../data/users.json')
 
 module.exports = {
      registro: (req, res) => {
@@ -12,61 +10,58 @@ module.exports = {
             title: 'Registro',
         })
     },
-      processRegister: (req, res) => {
-    
-        let errors = validationResult(req);
+    processRegister : (req,res) => {
+     let errors = validationResult(req)
 
-        if (errors.isEmpty()) {
-            const { Name, lastName, email, password, gender, image, } = req.body
-
-            db.User.create({
-                Name: Name.trim(),
-                lastName: lastName,
-                email,
-                password: brcypt.hashSync(password, 10),
-                gender,
-                rolId: 'user',
-                image: req.file ? req.file.filename : "default-image.png"
-            })
-                .then(User => {
-                    req.session.userLogin = {
-                        id: user.id,
-                        Name: user.Name,
-                        image: user.image,
-                        rolId: user.rolId
-                    }
-                    return res.redirect('/')
-                })
-                .catch(error => console.log(error))
-        } else {
-            return res.render('register', {
-                title: 'registro',
-                errores: errors.mapped()
-            })
-        }
-        },
-
-
-         login: (req, res) => {
-        return res.render('login', {
-            title: 'login',
+     if (errors.isEmpty()) {
+         const {name, lastName, email,password} = req.body;
+         db.User.create({
+             name: name.trim(),
+             lastName: lastName.trim(),
+             email,
+             password: bcrypt.hashSync(password,10),
+             avatar: 'default-av.png',
+             rolId: 2
+         })
+         .then(user => {
+             req.session.userLogin = {
+                 id: user.id,
+                 name: user.name,
+                 lastName: user.lastName,
+                 email: user.email,
+                 avatar: user.avatar,
+                 rolId: user.rolId
+             }
+             return res.redirect('perfil')
+         })
+         .catch(error => console.log(error))
+     }else{
+         return res.render('register',{
+             errores: errors.mapped()
+         })
+     }
+    },
+    login : (req,res) => {
+        return res.render('login',{
+            title : 'Login',
         })
     },
-      processLogin: (req, res) => {
-        let errors = validationResult(req)
-
-        if (errors.isEmpty()) {
-            const {email, recordar} = req.body;
+    processLogin : (req,res) => {
+        let errors = validationResult(req);
+        if(errors.isEmpty()){
+            const {email,recordame} = req.body;
             db.User.findOne({
-                where:{
+                where : {
                     email
                 }
             })
-            .then(User =>{
+            .then(user =>{
                 req.session.userLogin = {
-                    id : user.id,
-                    Name: user.Name,
-                    avatar: user.avatar, 
+                    id: user.id,
+                    name: user.name,
+                    lastName: user.lastName,
+                    email: user.email,
+                    avatar: user.avatar,
                     rolId: user.rolId
                 }
                   if (recordame) {

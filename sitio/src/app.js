@@ -22,11 +22,9 @@ const methodOverride = require('method-override');
 //**Session */
 const session = require('express-session');
 
-/* envia los datos del usuario logueado al cliente */
-// app.use(localsUserCheck)
-
 //**validation */
-let validateRegister = require('./validations/userValidator')
+const loginValidator = require('./validations/loginValidator');
+const registerValidator = require('./validations/registerValidator');
 
 //****Manejo de formulario */
 app.use(express.urlencoded({extended:false}));
@@ -60,13 +58,14 @@ const adminRouter = require('./routes/admin');
 
 
 app.use('/', mainRouter);
-app.use('/users',usersRouter);
+app.use('/users',usersRouter,);
 app.use('/products', productsRouter)
 app.use('/admin', adminUserCheck,adminRouter)
 
 
 /*validation*/
-app.use(validateRegister);
+app.use(loginValidator);
+app.use(registerValidator);
 
 
 // app.use(logger('dev'));
