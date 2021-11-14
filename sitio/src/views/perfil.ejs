@@ -61,12 +61,14 @@
                     </p>
                     
                     <div id="actions">
+
                         <% if(userLogin.rol === "admin") { %>
                             <a class="btn" href="/admin/products">Productos</a>
+                            <a class="btn" href="/admin/create"></i> Crear</a>
                         <% }else{ %>
                             <a href="/products/list"> <i class="fas fa-shopping-cart"></i> Carrito</a>
                         <% } %>
-                        <a class="btn" href="/users/logout"> <i class="fas fa-sign-out-alt"></i> session</a>
+    
                     </div>
                 </div>
         </div>

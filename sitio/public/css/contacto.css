@@ -50,4 +50,35 @@
 .order form .btn {
     margin-top: 0;
 }
+
+.order form .caja {
+    margin:20px auto;	
+    border:1px solid #d9d9d9;
+    height:30px;
+    overflow: hidden;
+    position:relative;
+ }
+ .order form .caja select {
+    background: transparent;
+    border: none;
+    font-size: 14px;
+    height: 30px;
+    padding: 5px;
+    width: 100%;
+ }
+ .order form .caja select:focus{ outline: none;}
+ 
+ .order form .caja::after{
+     content:"\025be";
+     display:table-cell;
+     padding-top:7px;
+     text-align:center;
+     width:30px;
+     height:30px;
+     background-color:#d9d9d9;
+     position:absolute;
+     top:0;
+     right:0px;	
+     pointer-events: none;
+ }
     

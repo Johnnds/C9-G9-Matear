@@ -86,3 +86,23 @@
  right:0px;	
  pointer-events: none;
 }
+
+.order form .inputBox .image {
+    margin: 50px auto 10px;
+        background: var(--darkGrey);
+        box-shadow: -1px 1px 3px 0px rgba(0,0,0,0.20);
+        border-radius: var(--defaultBorderRadius);
+        width: 420px;
+        height: auto;
+        text-align: center;
+        position: relative;
+}
+
+.order form .inputBox .input #image {
+    border-radius: 50%;
+    max-width: 120px;
+    border-radius: 50%;
+    background: var(--blueGradient);
+    padding: 0.16em;
+    margin-top: -50px;
+}
