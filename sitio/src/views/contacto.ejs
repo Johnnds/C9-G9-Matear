@@ -11,18 +11,45 @@
 	<%- include('partials/header') %>
 	<!-- /Header -->
 
-<main class="contacto">
-	<div class="formulario">
-<form action="">
-	<h2>CONTACTO</h2>
-	<input type="text" name="Nombre" placeholder="Nombre">
-	<input type="text" name="Correo" placeholder="Correo">
-	<input type="text" name="Telefono" placeholder="Telefono">
-	<textarea  name="Mensaje" placeholder="Escriba aqui su mensaje"></textarea>
-	<input type="button" value="Enviar" id="boton">
-</form>
-</div>
-</main>
+  <!--  order section starts  -->
+
+  <section class="order" id="order">
+	<h1 class="heading">Contacto</h1>
+
+	<form action="">
+
+		<div class="inputBox">
+			<div class="input">
+				<span>Nombre</span>
+				<input type="text" placeholder="Ccoloca tu nombre">
+			</div>
+			<div class="input">
+				<span>Telefono</span>
+				<input type="number" placeholder="Coloca tu telefono">
+			</div>
+		</div>
+		<div class="inputBox">
+			<div class="input">
+				<span>Email</span>
+				<input type="email" placeholder="Coloca tu correo">
+			</div>
+			<div class="input">
+				<span>Fecha</span>
+				<input type="datetime-local">
+			</div>
+			<div class="input">
+				<span>Consulta</span>
+				<textarea type="" placeholder="Realiza tu consulta"></textarea>
+			</div>
+		</div>
+
+		<input type="submit" value="Enviar" class="btn">
+
+	</form>
+
+</section>
+
+<!--  order section ends  -->
 
 <!-- footer -->
 <%- include('partials/footer') %>

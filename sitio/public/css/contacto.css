@@ -1,70 +1,53 @@
- .contact{
-     font-family: 'Nunito', sans-serif;
-     background-image: url(../images/images.jpg);
-     margin: 0;
-     background-attachment: fixed;
-     }
-     main form{
-        width : 75%;
-        margin: auto;
-        background-color: rgba(0,0,0, 0.4);
-        padding: 10px 20px;
-        box-sizing: border-box;
-        margin-top: 20px;
-        border-radius: 7px;
-    }
-    
-    main h2{ 
-        color: #27ae60;
-        text-align: center;
-        margin: 0;
-        font-size: 30px;
-        margin-bottom: 10px;
-    }
-    
-    main {
-    width: 100%;
-    margin-bottom: 20px;
-    padding: 7px;
-    box-sizing: border-box;
-    font-size: 17px;
-    border: none;
-    }
-    main input{
-        width: 100%;
-        margin-bottom: 22px;
-        margin-top: 15px;
-        padding: 7px;
-        font-size: 17px;   
-        border-radius: 10px;
-    }
-    textarea{
-        min-height:100px;
-        max-height: 200px;
-        max-width: 100%;
-        width: 100%; 
-    }
-    #boton{
-        background: #071025;
-        color:#27ae60;
-        padding: 20px;
-       
-    }
-    #boton:hover{
-    cursor: pointer;
-    }
+.order form {
+    max-width: 90rem;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    border: .1rem solid rgba(0, 0, 0, .2);
+    background: #fff;
+    padding: 1.5rem;
+    margin: 0 auto;
+}
 
-    /* media queries  */
-    @media (max-width:768px){
-        form{
-            width: 150%;
-        }
-    }
-    
-    @media (max-width:991px){
-      form{
-          width:220%
-      }
-    }
-    
+.order form .inputBox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.order form .inputBox .input {
+    width: 49%;
+}
+
+.order form .inputBox .input span {
+    display: block;
+    padding: 5rem 0;
+    font-size: 1.5rem;
+    color: var(--light);
+}
+
+.order form .inputBox .input input,
+.order form .inputBox .input textarea {
+    background: #eee;
+    border-radius: .5rem;
+    padding: 1rem;
+    font-size: 1.6rem;
+    color: var(--black);
+    text-transform: none;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.order form .inputBox .input input:focus, 
+.order form .inputBox .input textarea:focus {
+    border: 1rem solid var(--green);
+}
+
+.order form .inputBox .input textarea {
+    height: auto;
+    resize: none;
+}
+
+.order form .btn {
+    margin-top: 0;
+}
     
