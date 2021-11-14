@@ -10,35 +10,38 @@
 	<%- include('../partials/header') %>
 
     <!--main-->
-   <div class="admin">
-   <main>
-    <nav>
-        <div class="form">
-            <h1>Editar Producto</h1>
-            <form action="/admin/edit/<%= product.id %>?_method=PUT" method="POST">
-                <label for="name"></label>
-                <input type="text" name="name" id="name" placeholder="Nombre del Producto" value="<%= product.name %>">
-                <br>
-                <label for="price"></label>
-                <input type="number" name="price" id="price" placeholder="Precio" value=<%= product.price %>>
-                <br>
-                <label for="description"></label>
-               <textarea name="description" id="description" cols="30" rows="5" placeholder="Descripción del producto"><%= product.description %></textarea>
-                <br>
-                <label for="category"></label>
-                 <select name="category" id="category">
+    <section class="order" id="order">
+        <h1 class="heading">Editar Producto</h1>
+    
+        <form action="/admin/edit/<%= product.id %>?_method=PUT" method="POST">
+    
+            <div class="inputBox">
+                <div class="input">
+                    <span>Nombre</span>
+                    <input type="text" placeholder="" value="<%= product.name %>">
+                </div>
+                <div class="input">
+                    <span>Precio</span>
+                    <input type="number" placeholder="" value="<%= product.price %>">
+                </div>
+            </div>
+            <div class="inputBox">
+                <div class="select">  
+                    <select name="category" id="category" class="seleccionar">
                         <% categories.forEach(categoria => { %>
                          <option value="<%= categoria.id %>" <%= product.categoryId === categoria.id ? 'selected' : null %> ><%= categoria.name %> </option>
                         <% }) %>
                     </select>
-                <br>
-              
-                <button>Editar</button>
-            </form>
-        </div>
-    </nav>
-   </main>
-   </div>
+                  </div>     
+                <div class="input">
+                    <span>Consulta</span>
+                    <textarea type="" placeholder=""><%= product.description %></textarea>
+                </div>
+            </div>
+    
+            <input type="submit" value="Editar" class="btn">
+    
+        </form>
 
     <!-- footer -->
 	<%- include('../partials/footer') %>
