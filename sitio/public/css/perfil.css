@@ -16,21 +16,23 @@
     }
     
     #profile {
-        color: white;
+        color: black;
     }
     
     /* ――― USER-PROFILE ―――――――――――――――*/
     
     #profile #user {
         margin: 50px auto 10px;
-        background: var(--darkGrey);
+        background: #fff;
         box-shadow: -1px 1px 3px 0px rgba(0,0,0,0.20);
-        border-radius: var(--defaultBorderRadius);
+        border: .1rem solid rgba(0,0,0,.2);
+        border-radius: .5rem;
         width: 420px;
         height: auto;
+        margin-bottom: .5%;
         text-align: center;
         position: relative;
-    
+        font-size: 1.2rem;
     }	
         
     #profile #user i.fa-gear {
@@ -87,7 +89,6 @@
     
     #profile #user #information {
         padding: var(--defaultPadding);
-        background: var(--mediumGrey);
         border-radius: 50% 50% 5px 5px / 5px 5px;
     }
     
@@ -113,7 +114,7 @@
         }
     
     #profile #user #information #description {
-        color: var(--lightGrey);
+        font-size: 1.2rem;
         margin: 25px 0;
     }
     
