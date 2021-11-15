@@ -95,6 +95,10 @@
         padding:2rem;
     }
 
+    .menu .box-container .box{ 
+        width: 48%;
+    }
+
 
 }
 
@@ -135,6 +139,10 @@
         font-size: 5rem;
     }
 
+    .menu .box-container .box{ 
+        width: 80%;
+    }
+
 }
 
 @media (max-width:450px){
@@ -150,6 +158,10 @@
 
     .order form .inputBox .input{
         width:100%;
+    }
+
+    .menu .box-container .box{ 
+        width: 98%;
     }
 
 }
