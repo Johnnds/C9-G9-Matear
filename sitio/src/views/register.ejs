@@ -15,8 +15,8 @@
 
   <main class="register">
 
-    <form  class="form"  action="/users/register" method="POST" enctype="multipart/form-data">
-    
+    <form  class="form"  action="/users/register" method="POST"  id="form-register" enctype="multipart/form-data">
+      <p class="text-danger text-center" id="error-empty"></p>
       <h3>Registro de usuario:</h3>               
       
       <div class="social">
@@ -25,28 +25,43 @@
         <a href="#"><img src="/images/twitter-gets-a-new-logo-twitter.png"></a>
       </div>   
               
-
-      <input type="text" name="name" id="name" value="" placeholder="Nombre">
+    <div class="box-form">
+      <label for="name">Nombre</label>
+     <input  class="form-control <%= locals.errores && errores.name ? 'is-invalid' : null %>" type="text" name="name" id="name" value="" placeholder="Nombre">
+     <p id="name-msg" class="text-danger p-2 mt-3 small "><%= locals.errores && errores.name ? errores.name.msg : null %> </p>
+      </div>
             <br>            
-                            
-      <input type="text" name="lastName" id="lastName"  value="" placeholder="Apellido">
+    <div class="box-form">      
+      <label for="lastName">Apellido</label>               
+      <input class="form-control <%= locals.errores && errores.lastName ? 'is-invalid' : null %>" type="text" name="lastName" id="lastName"  value="" placeholder="Apellido">
+      <p id="lastName-msg" class="text-danger p-1 mt-2 small "><%= locals.errores && errores.lastName ? errores.lastName.msg : null %> </p>
+      </div>
               <br>
-                 
-      <label>Genero:</label>
-      <div class="select">  
-        <select name="gender" id="gender">
+      <div class="box-form ">         
+      <label for="gender">Genero:</label>
+      <div class="select <%= locals.errores && errores.gender ? 'is-invalid' : null %>" name="gender" id="gender" type="checkout" >
+        <select name="gender"id="gender-msg" class="text-danger p-1 mt-2 small "><%= locals.errores && errores.gender ? errores.gender.msg : null %>>
 
-          <option>Seleccione</option>
+          <option>Seleccione una opciòn</option>
           <option value="femenino">Femenino</option>
           <option value="masculino">Masculino</option>
           <option value="otro">Otro</option>
           <option value="otro">Prefiero no decirlo</option>
         </select>
-      </div>     
-      <br>          
-        <input type="email" name="email"  value="" placeholder="email">
-            <br>         
-      <input type="password" name="password" placeholder="password">
+      </div>   
+      </div>  
+      <br> 
+      <div class="box-form">
+        <label for="email">Email</label>         
+        <input class="form-control <%= locals.errores && errores.email ? 'is-invalid' : null %>" type="email" name="email" id="email" value="" placeholder="email">
+        <p id="email-msg"  class="text-danger p-1 mt-2 small "><%= locals.errores && errores.email ? errores.email.msg : null %> </p>
+      </div>
+            <br> 
+      <div class="box-form"> 
+        <label for="password">Contraseña</label>       
+      <input class="form-control <%= locals.errores && errores.password ? 'is-invalid' : null %>" type="password" name="password" id="password" value="" placeholder="password">
+      <p id="password-msg"  class="text-danger p-1 mt-2 small "><%= locals.errores && errores.password ? errores.password.msg : null %> </p>
+      </div>
                     
       <label for="avatar">Imagen de perfíl:</label>
       <input type="file" name="avatar" id="avatar">
@@ -57,8 +72,14 @@
 
   </main>
 
+  /*validaciones*/
+<script src="/javascript/register.js"></script>
+
+
    <!-- whatsapp -->
    <%- include('partials/whatsapp') %> 
+
+   
 
   <!-- footer -->
 	<%- include('partials/footer') %>
@@ -68,7 +89,10 @@
 
     <!-- custom js file link  -->
     <script src="/js/script.js"></script>
+  
 
 </body>
 
 </html>
+
+!
