@@ -253,10 +253,13 @@ img.imageDetail{
     .producto-content{
         padding-top: 0;
     }
+    .dishes .box-container .box{
+        width: 24%;
+    }
 }
 
 section.dishes {
-    margin-top: 30px;
+    margin-top: 10px;
 }
 
 .dishes .box-container{
