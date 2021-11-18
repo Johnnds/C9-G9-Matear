@@ -11,8 +11,8 @@ window.addEventListener('load', () =>{
     $('name').addEventListener('focus', () => {
         if($('name').value.trim() === ""){
             $('name-error').innerHTML = "<span><i class='fas fa-info-circle'></i> Solo caracteres alfabéticos</span>"
-            $('name').classList.toggle('alert-danger')
         }
+    })
     $('name').addEventListener('bluer', () =>{
         $('name-msg').innerText = null 
         switch (true) {
@@ -21,19 +21,19 @@ window.addEventListener('load', () =>{
             $('name-error').classList.add('allert')
             $('name-error').classList.add('alert-danger')
             $('name').classList.add('is-invalid')  
-
+    
             break;
             case $('name').value.trim().length < 2 || $('name').value.trim().length > 15:
                  $('name-error').innerText = "Entre 2 y 15 caracteres"
                  $('name-error').classList.toggle('alert-danger')
                  $('name').classList.add('is-invalid')
-
+    
             break;
              case !regExLetter.test($('name').value.trim()):
              $('name-error').innerText = "Solo caracteres alfabeticos"
              $('name-error').classList.toggle('alert-danger')
              $('name').classList.add('is-invalid') 
-
+    
             break;
             default:
              $('name-error').classList.remove('alert-danger')
@@ -41,20 +41,21 @@ window.addEventListener('load', () =>{
              $('name').classList.add('is-valid') 
              $('name-error').innerText = null
               break;
-             }
-        }) 
-    
-         $('name').addEventListener('keydown', () => {
-         $('name-error').classList.remove('alert-danger')
-         $('name').classList.remove('is-invalid')  
-         $('name-error').innerText = null
-        })
-        $('lastName').addEventListener('focus', () => {
-            if($('lastName').value.trim() === ""){
-                $('lastName-error').innerHTML ="<span><i class='fas fa-info-circle'></i> Solo caracteres alfabéticos</span>"
-                $('lastName-error').classList.toggle('alert-danger')
             }
-        $('lastName').addEventListener('bluer', () => {
+        }) 
+        
+     $('name').addEventListener('keydown', () => {
+        $('name-error').classList.remove('alert-danger')
+        $('name').classList.remove('is-invalid')  
+        $('name-error').innerText = null
+       })
+       $('lastName').addEventListener('focus', () => {
+        if($('lastName').value.trim() === ""){
+            $('lastName-error').innerHTML ="<span><i class='fas fa-info-circle'></i> Solo caracteres alfabéticos</span>"
+            $('lastName-error').classList.toggle('alert-danger')
+        }
+    })
+    $('lastName').addEventListener('bluer', () => {
         $('lastName-msg').innerText = null 
         switch (true) {
             case !$('lastName').value.trim():
@@ -62,19 +63,18 @@ window.addEventListener('load', () =>{
             $('lastName-error').classList.add('allert')
             $('lastName-error').classList.add('alert-danger')
             $('lastName').classList.add('is-invalid')  
-
             break;
             case $('lastName').value.trim().length < 2 || $('name').value.trim().length > 15:
                  $('lastName-error').innerText = "Entre 4 y 15 caracteres"
                  $('lastName-error').classList.toggle('alert-danger')
                  $('lastName').classList.add('is-invalid')
-
+    
             break;
              case !regExLetter.test($('lastName').value.trim()):
              $('lastName-error').innerText = "Solo caracteres alfabeticos"
              $('lastName-error').classList.toggle('alert-danger')
              $('lastName').classList.add('is-invalid') 
-
+    
             break;
             default:
              $('lastName-error').classList.remove('alert-danger')
@@ -82,95 +82,86 @@ window.addEventListener('load', () =>{
              $('lastName').classList.add('is-valid') 
              $('lastName-error').innerText = null
               break;
+        }  
+    })
+
+    $('lastName').addEventListener('keydown', () => {
+        $('lastName-error').classList.remove('alert-danger')
+        $('lastName').classList.remove('is-invalid')  
+        $('lastName-error').innerText = null
+       })
+   
+       $('email').addEventListener('blur', async () => {
+
+        switch (true) {
+            case !regExEmail.test($('email').value):
+                $('email-error').innerText = "Tiene que ser un email válido"
+                $('email').classList.add('is-invalid')
+                break;
+            case await emailVerify($('email').value) :
+                $('email-error').innerText = "El email está registrado"
+                $('email').classList.add('is-invalid')
+                break;
+            default:
+                $('email-error').innerText = null
+                $('email').classList.remove('is-invalid')
+                $('email').classList.add('is-valid')
+                break;
              }
-        })
-         $('lastName').addEventListener('keydown', () => {
-         $('lastName-error').classList.remove('alert-danger')
-         $('lastName').classList.remove('is-invalid')  
-         $('lastName-error').innerText = null
-        })
-    
-        $('email').addEventListener('blur', async () => {
-
-            switch (true) {
-                case !regExEmail.test($('email').value):
-                    $('email-error').innerText = "Tiene que ser un email válido"
-                    $('email').classList.add('is-invalid')
-                    break;
-                case await emailVerify($('email').value) :
-                    $('email-error').innerText = "El email está registrado"
-                    $('email').classList.add('is-invalid')
-                    break;
-                default:
-                    $('email-error').innerText = null
-                    $('email').classList.remove('is-invalid')
-                    $('email').classList.add('is-valid')
-                    break;
-                 }
-        })
-        $('password').addEventListener('blur',() => {
-            if(!regExPass2.test($('password').value)){
-                $('password-error').innerText = "La contraseña debe tener una mayúscula, un número y entre 6 y 12 caracteres"
-                $('password').classList.add('is-invalid')
-            }else{
-                $('password-error').innerText = null
-                $('password').classList.remove('is-invalid')
-                $('password').classList.add('is-valid')
-            }
-        })
-        $('password').addEventListener('focus',()=> {
+    })
+    $('password').addEventListener('blur',() => {
+        if(!regExPass2.test($('password').value)){
+            $('password-error').innerText = "La contraseña debe tener una mayúscula, un número y entre 6 y 12 caracteres"
+            $('password').classList.add('is-invalid')
+        }else{
+            $('password-error').innerText = null
             $('password').classList.remove('is-invalid')
-        })
-        $('recordame').addEventListener('click', () => {
-            $('recordame').classList.toggle('is-valid');
-            $('recordame').classList.remove('is-invalid');
-            $('recordame-error').innerHTML = null
-    
-        })
+            $('password').classList.add('is-valid')
+        }
+    })
+    $('password').addEventListener('focus',()=> {
+        $('password').classList.remove('is-invalid')
+    })
+    $('recordame').addEventListener('click', () => {
+        $('recordame').classList.toggle('is-valid');
+        $('recordame').classList.remove('is-invalid');
+        $('recordame-error').innerHTML = null
 
-        $('form-register').addEventListener('submit', event => {
-            event.preventDefault();
-    
-            let elementsForm = $('form-register').elements;
-            //console.log(elementsForm);
-            let error = false;
-    
-            for (let i = 0; i < elementsForm.length - 2; i++) {
-                
-                if(!elementsForm[i].value){
-                    elementsForm[i].classList.add('is-invalid')
-                    $('error-empty').innerHTML = "Los campos señalados son obligatorios";
-                    error = true
-                }
-            }
-    
-            if(!$('recordame').checked) {
-                
-                $('recordame').classList.add('is-invalid')
-                $('recordame-error').innerText = "Debes aceptar los términos y condiciones";
+    })
+
+    $('form-register').addEventListener('submit', event => {
+        event.preventDefault();
+
+        let elementsForm = $('form-register').elements;
+        //console.log(elementsForm);
+        let error = false;
+
+        for (let i = 0; i < elementsForm.length - 2; i++) {
+            
+            if(!elementsForm[i].value){
+                elementsForm[i].classList.add('is-invalid')
+                $('error-empty').innerHTML = "Los campos señalados son obligatorios";
                 error = true
             }
-    
-            for (let i = 0; i < elementsForm.length - 2; i++) {
-                
-                if(elementsForm[i].classList.contains('is-invalid')){
-                    error = true
-                }
+        }
+        if(!$('recordame').checked) {
+            
+            $('recordame').classList.add('is-invalid')
+            $('recordame-error').innerText = "Debes aceptar los términos y condiciones";
+            error = true
+        }
+
+        for (let i = 0; i < elementsForm.length - 2; i++) {
+            
+            if(elementsForm[i].classList.contains('is-invalid')){
+                error = true
             }
-    
-           
-    
-            if(!error){
-                $('form-register').submit()
-            }
+        }
+
+        if(!error){
+            $('form-register').submit()
+        }
+         
         })
-    
-    
-
-
-
-
-
-
 
 }) 
