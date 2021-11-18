@@ -142,6 +142,7 @@ header .icons #menu-bars{
       margin:1rem;
       font-size: 2rem;
       background:#eee;
+      width: 100%;
   }
 
 }

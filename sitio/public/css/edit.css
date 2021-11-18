@@ -90,7 +90,6 @@
 .order form .inputBox .image {
     margin: 50px auto 10px;
     border-radius: var(--defaultBorderRadius);
-    width: 420px;
     height: auto;
     text-align: center;    
 }
@@ -164,18 +163,24 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
+        width: 100%;
     }
 
     .order form .inputBox {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        width: 100%;
     }
 
-    .order form .inputBox .input{
-        width:90%;
+    .order form .inputBox .input, .order form .width {
+        width: 70%;
     }
 
+    .order form .width { 
+        margin-top: 5px;
+     }
 
 }
 

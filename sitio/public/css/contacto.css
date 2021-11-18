@@ -142,14 +142,24 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
+        width: 100%;
     }
 
     .order form .inputBox {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        width: 100%;
     }
 
+    .order form .inputBox .input, .order form .width {
+        width: 70%;
+    }
+
+    .order form .width { 
+        margin-top: 5px;
+     }
 
 }
 
