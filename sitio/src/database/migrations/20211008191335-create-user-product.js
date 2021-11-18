@@ -10,27 +10,34 @@ module.exports = {
       },
       userId: {
         type: Sequelize.INTEGER,
-       references: {
-        model: {
-          tableName: 'Users'
-        },
-        key: 'id'
-       }
+        references : {
+          model : {
+            tableName : 'Users'
+          },
+          key : 'id'
+        }
       },
       productId: {
         type: Sequelize.INTEGER,
-        references:{
-          model: {
-            tableName: 'Products'
+        references : {
+          model : {
+            tableName : 'Products'
           },
-          key: 'id'
+          key : 'id'
         }
       },
-      quantity: {
-        type: Sequelize.INTEGER
+      orderId: {
+        type: Sequelize.INTEGER,
+        references : {
+          model : {
+            tableName : 'Orders'
+          },
+          key : 'id'
+        },
+        onDelete : 'cascade'
       },
-      total: {
-        type: Sequelize.DECIMAL(8,2)
+      quantity: {
+        type: Sequelize.INTEGER,
       },
       createdAt: {
         allowNull: false,
