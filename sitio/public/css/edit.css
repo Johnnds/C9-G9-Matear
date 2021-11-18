@@ -160,6 +160,23 @@
         font-size: 5rem;
     }
 
+    .order form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .order form .inputBox {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .order form .inputBox .input{
+        width:90%;
+    }
+
+
 }
 
 @media (max-width:450px){
