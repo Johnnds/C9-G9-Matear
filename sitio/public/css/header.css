@@ -97,15 +97,22 @@ header .icons #menu-bars{
   display: none;
 }
 
+/* media queries  */
+
 @media (max-width:991px){
 
   html{
       font-size: 55%;
   }
-  
+
   header{
       padding:1rem 2rem;
   }
+
+  section{
+      padding:2rem;
+  }
+
 
 }
 
@@ -135,8 +142,8 @@ header .icons #menu-bars{
       margin:1rem;
       font-size: 2rem;
       background:#eee;
-      width: 100%;
   }
+
 }
 
 @media (max-width:450px){

@@ -16,21 +16,23 @@
     }
     
     #profile {
-        color: white;
+        color: black;
     }
     
     /* ――― USER-PROFILE ―――――――――――――――*/
     
     #profile #user {
         margin: 50px auto 10px;
-        background: var(--darkGrey);
+        background: #fff;
         box-shadow: -1px 1px 3px 0px rgba(0,0,0,0.20);
-        border-radius: var(--defaultBorderRadius);
+        border: .1rem solid rgba(0,0,0,.2);
+        border-radius: .5rem;
         width: 420px;
         height: auto;
+        margin-bottom: .5%;
         text-align: center;
         position: relative;
-    
+        font-size: 1.2rem;
     }	
         
     #profile #user i.fa-gear {
@@ -87,7 +89,6 @@
     
     #profile #user #information {
         padding: var(--defaultPadding);
-        background: var(--mediumGrey);
         border-radius: 50% 50% 5px 5px / 5px 5px;
     }
     
@@ -113,7 +114,7 @@
         }
     
     #profile #user #information #description {
-        color: var(--lightGrey);
+        font-size: 1.2rem;
         margin: 25px 0;
     }
     
@@ -129,5 +130,78 @@
         background-color: darkorange;
     }
 
+/* media queries  */
 
+@media (max-width:991px){
+
+    html{
+        font-size: 55%;
+    }
+
+    header{
+        padding:1rem 2rem;
+    }
+
+    section{
+        padding:2rem;
+    }
+
+
+}
+
+@media (max-width:768px){
+
+    header .icons #menu-bars{
+        display: inline-block;
+    }
+
+    header .navbar{
+        position: absolute;
+        top:100%; left:0; right:0;
+        background:#fff;
+        border-top: .1rem solid rgba(0,0,0,.2);
+        border-bottom: .1rem solid rgba(0,0,0,.2);
+        padding:1rem;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    header .navbar a{
+        display: block;
+        padding:1.5rem;
+        margin:1rem;
+        font-size: 2rem;
+        background:#eee;
+    }
+
+    #search-form #search-box{
+        width:90%;
+        margin:0 1rem;
+    }
+
+    .home .home-slider .slide .content h3{
+        font-size: 5rem;
+    }
+
+}
+
+@media (max-width:450px){
+
+    html{
+        font-size: 50%;
+    }
+
+    .dishes .box-container .box img{
+        height:auto;
+        width: 100%;
+    }
+
+    .order form .inputBox .input{
+        width:100%;
+    }
+
+}
 
