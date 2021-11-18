@@ -5,7 +5,7 @@ const Sequelize = require('sequelize');
 
 const controller = {
     detail: (req, res) => {
-       let product=  db.Product.findByPk(req.params.id, {
+        let product = db.Product.findByPk(req.params.id, {
             include : ['category']
         })
         let aleatorio = db.Product.findAll({

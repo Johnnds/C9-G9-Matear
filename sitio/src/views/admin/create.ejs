@@ -11,42 +11,56 @@
 	<%- include('../partials/header') %>
 
     <!--main-->
-   <div class="admin">
-   <main>
-    <nav>
-        <div class="form">
-            <h1>Crear Producto</h1>
-            <form action="/admin/create"  method="POST"  enctype="multipart/form-data">
-                <label for="name"></label>
-                <input type="text" name="name" id="name" placeholder="Nombre del Producto">
-                <br>
-                <label for="price"></label>
-                <input type="number" name="price" placeholder="Precio">
-                <br>
-                    <label for="description"></label>
-                    <textarea name="description" id="description" cols="30" rows="5" placeholder="Descripción del producto"></textarea>
-                <br>
-                <label for="category"></label>
-                <select name="category" id="category">
-                    <option value="" selected hidden>Seleccione la categoría</option>
-                    <% categorias.forEach(categoria => { %>
-                     <option value="<%= categoria.name %>"><%= categoria.name %> </option>
-                    <% }) %>
-                </select>
-                <br>
-             <div class="archivo">
-                <div class="file"><label for="image">Agregar imagen</label>
-                    <input type="file" name="image" id="image"></div>   
-                   </div>
-             </div>
-                <button>Agregar</button>
-            </form>
-        </div>
-    </nav>
-   </main>
-   </div>
+    <section class="order" id="order">
+        <h3 class="sub-heading">Creación</h3>
+        <h1 class="heading"> Nuevo Producto</h1>
+    
+        <form action="/admin/edit/create" method="POST" enctype="multipart/form-data">
+    
+            <div class="inputBox">
+                <div class="input">
+                    <span>Nombre</span>
+                    <input type="text" placeholder="" value="">
+                </div>
+                <div class="input">
+                    <span>Precio</span>
+                    <input type="number" placeholder="" value="">
+                </div>
+            </div>
+            <div class="inputBox">
+                <div class="input">
+                    <span>Categoria</span>
+                    <div class="caja">
+                        <select name="category" id="category">
+                            <% categorias.forEach(categoria => { %>
+                                <option value="<%= categoria.name %>"><%= categoria.name %> </option>
+                            <% }) %>
+                        </select>
+                    </div>
+                  </div>
+                  <div class="input">
+                    <span>Agregar imagen</span>
+                    <input type="file" name="image" value="">   
+                </div>
+            </div>
+            <div class="inputBox">
+                <div class="input">
+                    <span>Descripción</span>
+                    <textarea type="" placeholder=""></textarea>
+                </div>
+            </div>
+    
+            <input type="submit" value="Editar" class="btn width">
+    
+        </form>
 
     <!-- footer -->
 	<%- include('../partials/footer') %>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- custom js file link  -->
+    <script src="/js/script.js"></script>
+
 </body>
 </html>

@@ -57,16 +57,17 @@
                     </div>
                     
                     <p id="description">
-                        Sección en contrución. La idea es que en esta parte aparescan una niñatura de los 3 ultimos productos añadidos al carrito en cado de ser user: y productos agregados o editados en caso de ser admin.
+                        Sección en contrución. La idea es que en esta parte aparescan una miniatura de los 3 ultimos productos añadidos al carrito en cado de ser user: y productos agregados o editados en caso de ser admin.
                     </p>
                     
                     <div id="actions">
                         <% if(userLogin.rolId === "admin") { %>
                             <a class="btn" href="/admin/products">Productos</a>
+                            <a class="btn" href="/admin/create"></i> Crear</a>
                         <% }else{ %>
                             <a href="/products/list"> <i class="fas fa-shopping-cart"></i> Carrito</a>
                         <% } %>
-                        <a class="btn" href="/users/logout"> <i class="fas fa-sign-out-alt"></i> session</a>
+    
                     </div>
                 </div>
         </div>

@@ -69,6 +69,11 @@ module.exports = {
                     maxAge: 10000 * 60 * 60
                 })
             }
+
+            //carrito/
+            req.session.cart = []
+            
+
             return res.redirect('perfil')
             })
            .catch(error => console.log(error))

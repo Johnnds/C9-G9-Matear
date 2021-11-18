@@ -10,6 +10,7 @@
 	<%- include('../partials/header') %>
 
     <!--main-->
+<<<<<<< HEAD
    <div class="admin">
    <main>
     <nav>
@@ -51,8 +52,61 @@
     </nav>
    </main>
    </div>
+=======
+    <section class="order" id="order">
+        <h3 class="sub-heading">Edición</h3>
+        <h1 class="heading">Editar Producto</h1>
+    
+        <form action="/admin/edit/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+    
+            <div class="inputBox">
+                <div class="input">
+                    <span>Nombre</span>
+                    <input type="text" placeholder="" value="<%= product.name %>">
+                </div>
+                <div class="input">
+                    <span>Precio</span>
+                    <input type="number" placeholder="" value="<%= product.price %>">
+                </div>
+            </div>
+            <div class="inputBox">
+                <div class="image">
+                    <img id="image" src="/images/productos/<%= product.image %>">
+                </div>
+                  <div class="input">
+                    <span>Imagen</span>
+                    <input type="file" name="image" value="">   
+                </div>
+            </div>
+            <div class="inputBox">
+                <div class="input">
+                    <span>Categoria</span>
+                    <div class="caja">
+                        <select name="category" id="category" class="seleccionar">
+                            <% categories.forEach(categoria => { %>
+                            <option value="<%= categoria.id %>" <%= product.categoryId === categoria.id ? 'selected' : null %> ><%= categoria.name %> </option>
+                            <% }) %>
+                        </select>
+                    </div>
+                </div>
+                <div class="input">
+                    <span>Descripción</span>
+                    <textarea type="" placeholder=""><%= product.description %></textarea>
+                </div>
+            </div>
+    
+            <input type="submit" value="Editar" class="btn btn">
+    
+        </form>
+>>>>>>> d2f4eca072211aa6017d358aaf11883f2acfc4ca
 
     <!-- footer -->
 	<%- include('../partials/footer') %>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <!-- custom js file link  -->
+  <script src="/js/script.js"></script>
+
 </body>
 </html>

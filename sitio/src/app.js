@@ -57,10 +57,12 @@ const adminRouter = require('./routes/admin');
 
 
 
+
 app.use('/', mainRouter);
 app.use('/users',usersRouter,);
 app.use('/products', productsRouter)
 app.use('/admin', adminUserCheck,adminRouter)
+
 
 
 /*validation*/

@@ -10,11 +10,12 @@
 
 .order form .inputBox {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
-.order form .inputBox .input {
+.order form .inputBox .input, .order form .inputBox .select {
     width: 49%;
 }
 
@@ -25,7 +26,8 @@
     color: var(--light);
 }
 
-.order form .inputBox .input input,
+.order form .inputBox .input input, .order form .inputBox .select select
+
 .order form .inputBox .input textarea {
     background: #eee;
     border-radius: .5rem;
@@ -50,38 +52,57 @@
 .order form .btn {
     margin-top: 0;
 }
-
-.order form .caja {
-    margin:20px auto;	
-    border:1px solid #d9d9d9;
-    height:30px;
-    overflow: hidden;
-    position:relative;
- }
- .order form .caja select {
-    background: transparent;
-    border: none;
-    font-size: 14px;
-    height: 30px;
-    padding: 5px;
-    width: 100%;
- }
- .order form .caja select:focus{ outline: none;}
- 
- .order form .caja::after{
-     content:"\025be";
-     display:table-cell;
-     padding-top:7px;
-     text-align:center;
-     width:30px;
-     height:30px;
-     background-color:#d9d9d9;
-     position:absolute;
-     top:0;
-     right:0px;	
-     pointer-events: none;
- }
     
+
+
+.order form .inputBox .form .select {
+  margin:20px auto 40px auto;	
+  border:1px solid #d9d9d9;
+  height:30px;
+  overflow: hidden;
+  width: 230px;
+  position:relative;
+}
+.order form .inputBox .select .seleccionar {
+  background: transparent;
+  border: none;
+  font-size: 14px;
+  height: 30px;
+  padding: 5px;
+  width: 250px;
+  background: #a6aab1;
+}
+.order form .inputBox .select .seleccionar:focus{ outline: none;}
+.order form .inputBox .select::after{
+ content:"\025be";
+ display:table-cell;
+ padding-top:7px;
+ text-align:center;
+ width:30px;
+ height:30px;
+ background-color:#d9d9d9;
+ position:absolute;
+ top:0;
+ right:0px;	
+ pointer-events: none;
+}
+
+.order form .inputBox .image {
+    margin: 50px auto 10px;
+    border-radius: var(--defaultBorderRadius);
+    height: auto;
+    text-align: center;    
+}
+
+.order form .inputBox .image #image {
+    border-radius: 50%;
+    max-width: 120px;
+    border-radius: 50%;
+    background: var(--blueGradient);
+    padding: 0.16em;
+    margin-top: -50px;
+}
+
 /* media queries  */
 
 @media (max-width:991px){
@@ -174,5 +195,8 @@
         width: 100%;
     }
 
-  
+    .order form .inputBox .input{
+        width:100%;
+    }
+
 }

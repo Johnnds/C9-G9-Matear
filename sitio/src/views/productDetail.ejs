@@ -71,7 +71,7 @@
                     </select>
                   </div>               
                 </li>
-                <li> Categoria: <span><%= product.cateory %> </span></li>
+                <li> Categoria: <span><%= product.categoryId %> </span></li>
               </ul>
             </div>
   
@@ -107,20 +107,17 @@
         <h1 class="heading">relacionados</h1>
     
         <div class="box-container">
-          <% aleatorio.forEach(products => { %>
-            <div class="box">
-    
-              <img src="/images/productos/<%= products.image %>" alt="">
-              <h3><%= products.name %> </h3>
-              <span>$<%= products.price %> </span>
-              <a href="/products/detail/<%= products.id %> " class="btn">ver mas <i class="fas fa-info-circle"></i> </a>
-          </div>
-          <% }) %>
-         <!--<% for(let i = 0; i < 4; i++) { %>
-    
-           
 
-                <% } %> --> 
+         <% for(let i = 0; i < 4; i++) { %>
+    
+                <div class="box">
+    
+                    <img src="/images/productos/<%= product.image %>" alt="">
+                    <h3><%= product.name %> </h3>
+                    <span>$<%= product.price %> </span>
+                    <a href="/products/detail/<%= product.id %> " class="btn">ver mas <i class="fas fa-info-circle"></i> </a>
+                </div>
+                <% } %> 
       
         </div>
     
@@ -133,6 +130,9 @@
             </div>
         </article>
     </main>
+            
+        
+ 
 
      <!-- whatsapp -->
      <%- include('partials/whatsapp') %> 
@@ -143,7 +143,10 @@
 
    
 
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <!-- custom js file link  -->
+  <script src="/js/script.js"></script>
 
      
     
