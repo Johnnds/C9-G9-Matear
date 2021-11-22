@@ -33,21 +33,21 @@ header .navbar a{
   padding:.5rem 1.5rem;
   color:#fff;
 }
-.cart{
+header .icons .cart{
 position: relative;
 bottom: 15px;
 right: 10px;
 }
- .cart .btn-cart{
+header .icons .cart .btn-cart{
   border: 0;
   background: none;
   margin-right: 15px;
   position: relative;
  }
-  .cart .btn-cart i {
+ header .icons .cart .btn-cart i {
     font-size:20px
   }
-  .cart .btn-cart span {
+header .icons .cart .btn-cart span {
     font-size: 16px;
     position: absolute;
     top: 4px;

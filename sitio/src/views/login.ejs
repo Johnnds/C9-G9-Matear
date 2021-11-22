@@ -29,8 +29,13 @@
       <span style="color: red; font-size: 10px;"><%= locals.errors && errors.email ? errors.email.msg : null %> </span>
 
     
-      <input type="checkbox" name="recordame" id="recordame" placeholder="Recordame">Recordame
-    
+       
+      <div class="box-form">
+        <label class="form-check-label" for="recordame">Recordame</label>
+        <input class="form-control <%= locals.recordame && errores.recordame ? 'is-invalid' : null %> " 
+         type="checkbox" name="recordame" id="recordame" id="recordame" placeholder="Recordame">  
+         <small id="recordame-error" class="text-danger small"><%= locals.recordame && errores.recordame ? errores.recordame.msg : null %> </small>
+    </div>
       <button type="submit">Ingresar</button>
       
     

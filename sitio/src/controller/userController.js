@@ -5,7 +5,7 @@ const { validationResult } = require('express-validator');
 const db = require('../database/models');
 
 module.exports = {
-    registro: (req, res) => {
+     registro: (req, res) => {
         return res.render('register', {
             title: 'Registro',
         })
@@ -76,8 +76,7 @@ module.exports = {
 
             return res.redirect('perfil')
             })
-
-
+           .catch(error => console.log(error))
         } else {
             return res.render('login', {
                 title: 'login',
@@ -86,11 +85,11 @@ module.exports = {
         }
     },
 
-    perfil: (req, res) => {
+     perfil: (req, res) => {
         return res.render('perfil')
     },
 
-    logout: (req, res) => {
+     logout: (req, res) => {
         req.session.destroy();
         res.cookie('mateAr', '', { maxAge: -1 })
         return res.redirect('/')
