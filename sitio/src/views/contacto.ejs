@@ -14,34 +14,39 @@
   <!--  order section starts  -->
 
   <section class="order" id="order">
-	<h1 class="heading">Contacto</h1>
+	<h1 class="heading">Formulario de Contacto</h1>
 
-	<form action="">
+	<form action="enviar.php" method="POST">
 
 		<div class="inputBox">
 			<div class="input">
 				<span>Nombre</span>
-				<input type="text" placeholder="Coloca tu nombre">
+				<input  class="form-control <%= locals.errores && errores.name ? 'is-invalid' : null %>" type="text" id="name" name="name" placeholder="Coloca tu nombre"required>
+				<p id="name-msg" class="text-danger p-1 mt-2 small "><%= locals.errores && errores.name ? errores.name.msg : null %> </p>
 			</div>
 			<div class="input">
 				<span>Telefono</span>
-				<input type="number" placeholder="Coloca tu telefono">
+				<input   class="form-control <%= locals.errores && errores.telephone ? 'is-invalid' : null %>" type="number" id="telephone" name="telephone" placeholder="Coloca tu telefono"required>
+				<p id="telephone-msg" class="text-danger p-1 mt-2 small "><%= locals.errores && errores.telephone ? errores.telephone.msg : null %> </p>
 			</div>
 		</div>
 		<div class="inputBox">
 			<div class="input">
 				<span>Email</span>
-				<input type="email" placeholder="Coloca tu correo">
+				<input  class="form-control <%= locals.errores && errores.email ? 'is-invalid' : null %>" type="email" id="email"  name="email" placeholder="Coloca tu correo"required>
+				<p id="email-msg" class="text-danger p-1 mt-2 small "><%= locals.errores && errores.email ? errores.email.msg : null %> </p>
 			</div>
-			<div class="input">
+			<div class="input"required>
 				<span>Fecha</span>
-				<input type="datetime-local">
+				<input   class="form-control <%= locals.errores && errores.datetime ? 'is-invalid' : null %>" type="datetime-local"id="datetime" name="datetime">
+				<p id="datetime-msg" class="text-danger p-1 mt-2 small "><%= locals.errores && errores.datetime ? errores.datetime.msg : null %> </p>
 			</div>
 		</div>
 		<div class="inputBox">
 			<div class="input">
 				<span>Consulta</span>
-				<textarea type="" placeholder="Realiza tu consulta"></textarea>
+				<textarea   class="form-control <%= locals.errores && errores.query ? 'is-invalid' : null %>" type="" name="query" id="query" placeholder="Realiza tu consulta"required></textarea>
+				<p id="query-msg" class="text-danger p-1 mt-2 small "><%= locals.errores && errores.query ? errores.query.msg : null %> </p>
 			</div>
 		</div>
 
@@ -62,5 +67,6 @@
     <!-- custom js file link  -->
     <script src="/javascript/script.js"></script>
 
+	<script src="/js/contacto.js"></script>
 </body>
 </html>

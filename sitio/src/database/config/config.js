@@ -1,7 +1,9 @@
+require('dotenv').config()
 module.exports ={
+
   development: {
     username: 'root',
-    password: 'L19862022o.',
+    password: process.env.DB_PASS,
     database: 'Matear',
     host: "127.0.0.1",
     dialect: "mysql",

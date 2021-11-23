@@ -60,8 +60,9 @@ header .navbar a:hover{
 }
 
 header .icons {
-  display: flex;
   flex-direction: row;
+  /* flex-direction: revert; */
+  /*display: ;*/
 }
 
 header .icons i,
