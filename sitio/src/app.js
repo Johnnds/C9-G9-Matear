@@ -61,7 +61,8 @@ const adminRouter = require('./routes/admin');
 app.use('/', mainRouter);
 app.use('/users',usersRouter,);
 app.use('/products', productsRouter)
-app.use('/admin', adminUserCheck,adminRouter)
+app.use('/admin', adminUserCheck,adminRouter);
+app.use('/cart', require('./routes/cart'))
 
 
 
