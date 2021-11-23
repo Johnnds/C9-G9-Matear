@@ -3,7 +3,7 @@ const $ = id => document.getElementById(id)
 let regExLetter = /^[A-Z]+$/i;
 let regExEmail =  /^(([^<>()\[\]\.,;:\s@\”]+(\.[^<>()\[\]\.,;:\s@\”]:+)*)|(\”.+\”))@(([^<>()[\]\.,;:\s@\”]+\.)+[^<>()[\]\.,;:\s@\”]{2,})$/;
 let regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,12}$/; //mayuscula, numero y 6 a 12 caracteres
-let regExPass2 = /^(?=.*\d)(?=.*[\u0021-\u002b\u003c-\u0040])(?=.*[A-Z])(?=.*[a-z])\S{8,16}$/; //mayuscula, numero, especial y 8 a 16 caracteres
+
 
 window.addEventListener('load', () =>{
     console.log('register.js success')
@@ -13,7 +13,7 @@ window.addEventListener('load', () =>{
             $('name-error').innerHTML = "<span><i class='fas fa-info-circle'></i> Solo caracteres alfabéticos</span>"
         }
     })
-    $('name').addEventListener('bluer', () =>{
+    $('name').addEventListener('blur', () =>{
         $('name-msg').innerText = null 
         switch (true) {
             case !$('name').value.trim():
@@ -44,18 +44,19 @@ window.addEventListener('load', () =>{
             }
         }) 
         
-     $('name').addEventListener('keydown', () => {
+     $('name').addEventListener('keypress', () => {
         $('name-error').classList.remove('alert-danger')
         $('name').classList.remove('is-invalid')  
         $('name-error').innerText = null
        })
+       //apellido
        $('lastName').addEventListener('focus', () => {
         if($('lastName').value.trim() === ""){
             $('lastName-error').innerHTML ="<span><i class='fas fa-info-circle'></i> Solo caracteres alfabéticos</span>"
             $('lastName-error').classList.toggle('alert-danger')
         }
     })
-    $('lastName').addEventListener('bluer', () => {
+    $('lastName').addEventListener('blur', () => {
         $('lastName-msg').innerText = null 
         switch (true) {
             case !$('lastName').value.trim():
@@ -85,12 +86,12 @@ window.addEventListener('load', () =>{
         }  
     })
 
-    $('lastName').addEventListener('keydown', () => {
+    $('lastName').addEventListener('keypress', () => {
         $('lastName-error').classList.remove('alert-danger')
         $('lastName').classList.remove('is-invalid')  
         $('lastName-error').innerText = null
        })
-   
+   //email
        $('email').addEventListener('blur', async () => {
 
         switch (true) {
@@ -109,6 +110,7 @@ window.addEventListener('load', () =>{
                 break;
              }
     })
+    //password
     $('password').addEventListener('blur',() => {
         if(!regExPass2.test($('password').value)){
             $('password-error').innerText = "La contraseña debe tener una mayúscula, un número y entre 6 y 12 caracteres"

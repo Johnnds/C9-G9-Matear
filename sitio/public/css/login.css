@@ -69,7 +69,9 @@
         padding:2rem;
     }
 
-
+.form{
+    width:90%;
+}
 }
 
 @media (max-width:768px){
@@ -124,6 +126,9 @@
 
     .order form .inputBox .input{
         width:100%;
+    }
+    .form{
+        width:90%;
     }
 
 }
