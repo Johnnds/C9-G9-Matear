@@ -1,3 +1,4 @@
+const $ = id => document.getElementById(id);
 let spanCantidad = $('span-cantidad')
 let changuito = $('changuito')
 let spanTotal = $('total')
@@ -43,7 +44,7 @@ const cargarTabla = carrito => {
     carrito.forEach(producto => {
         let item = `
             <td class="col-2">
-            <img class="w-100" src="/images/${producto.imagen}" id="imgProduct"> 
+            <img class="w-100" src="/images/producto${producto.imagen}" id="imgProduct"> 
             </td>
             <td class="text-center col-3 align-middle">
             <a class="text-danger h5" onClick="removeItem(event,${producto.id})"><i class="fas fa-minus-square"></i></a>
