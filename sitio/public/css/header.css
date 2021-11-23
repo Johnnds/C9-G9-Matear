@@ -27,51 +27,12 @@ header .logo img {
   width: 30px;
 }
 
-header .navbar a,header .icons .cart {
+header .navbar a{
   font-size: 1.7rem;
   border-radius: .5rem;
   padding:.5rem 1.5rem;
   color:#fff;
 }
-header .icons .cart{
-position: relative;
-bottom: 15px;
-right: 10px;
-}
-header .icons .cart .btn-cart{
-  border: 0;
-  background: none;
-  margin-right: 15px;
-  position: relative;
- }
- header .icons .cart .btn-cart i {
-    font-size:20px
-  }
-header .icons .cart .btn-cart span {
-    font-size: 16px;
-    position: absolute;
-    top: 4px;
-    right: -4px;
-  }
-
-
-header .icons .cart .btn-cart{
-  border: 0;
-  background: none;
-  margin-right: 15px;
-  position: relative;
- }
-
-header .icons .cart .btn-cart i {
-    font-size:20px
-  }
-
-header .icons .cart .btn-cart span {
-    font-size: 16px;
-    position: absolute;
-    top: 4px;
-    right: -4px;
-  }
 
 header .navbar a.active,
 header .navbar a:hover{
@@ -85,8 +46,7 @@ header .icons {
 }
 
 header .icons i,
-header .icons a
-{
+header .icons a{
   cursor: pointer;
   margin-left: .5rem;
   height:4.5rem;
@@ -97,11 +57,6 @@ header .icons a
   color:var(--black);
   border-radius: 50%;
   background: #eee;
-}
-
-.nav-link {
-  padding: .1rem;
-  background: var(--black);
 }
 
 header .icons .image{
