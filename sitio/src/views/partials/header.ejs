@@ -2,42 +2,34 @@
     <a href="/" class="logo">M<img src="/images/infusion-de-mate.svg" alt="">te@r</a>
 
     <nav class="navbar">
-        <a id="/home" href="/" class="active">home</a>
-        <a id="/nosotros" href="/nosotros">Nosotros</a>
-        <a id="/products/list" href="/products/list">Productos</a>
-        <a id="/contacto" href="/contacto">Contacto</a>
+        <a id="home" href="/" class="active">home</a>
+        <a id="nosotros" href="/nosotros">Nosotros</a>
+        <a id="productos" href="/products/list">Productos</a>
+        <a id="sucursales" href="#">Sucursales</a>
+        <a id="contacto" href="../contacto">Contacto</a>
     </nav>
 
     <div class="icons">
         <i class="fas fa-bars" id="menu-bars"></i>
         <% if (locals.userLogin) { %>
-           <a href="/users/perfil"><img class="image" src="/images/imageProfile/<%= userLogin.avatar %> " alt=""/></a>
+           <a href="/users/perfil"><img class="image" src="/images/imageProfile/<%= userLogin.image %> " alt=""/></a>
             <!-- <a href="#" class="fas fa-users-cog"></a> -->
+            <a href="#" class="fas fa-heart"></a>
             <a href="/users/logout" class="fas fa-sign-out-alt"></a>
             <a href="#" class="fas fa-heart"></a>
             
-            
         <% } else { %>
-
         <a href="/users/login" class="fas fa-user"></a>
-
         <% } %> 
        
         <i class="fas fa-search" id="search-icon"></i>
-<<<<<<< HEAD
-
-        <a ref="/products/productCart" class="fas fa-shopping-cart"></a>
-=======
-      <div class="cart">
-        <li class="nav-item">
+     
           <button type="button" class="nav-link btn-cart" data-bs-toggle="modal" data-bs-target="#modal-carrito">
             <i class="fas fa-shopping-cart"></i>
             <span id="span-cantidad" class="badge rounded-pill bg-warning"></span>
           </button>
-        </li>
-      </div>
         
->>>>>>> d2f4eca072211aa6017d358aaf11883f2acfc4ca
+        
     </div>
 </header>
 

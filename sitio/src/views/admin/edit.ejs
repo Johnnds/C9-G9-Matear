@@ -10,49 +10,6 @@
 	<%- include('../partials/header') %>
 
     <!--main-->
-<<<<<<< HEAD
-   <div class="admin">
-   <main>
-    <nav>
-        <div class="form">
-            <h1>Editar Producto</h1>
-            <form action="/admin/edit/<%= product.id %>?_method=PUT" method="POST">
-                <div class="box-form">
-                <label for="name"></label>
-                <input type="text" name="name" id="name" placeholder="Nombre del Producto" value="<%= product.name %>">
-                <span class="text-danger small"><%= locals.errores && errores.name ? errores.name.msg : null %></span>
-                </div>            
-                <br>
-                <div class="box-form">
-                <label for="price"></label>
-                <input type="number" name="price" id="price" placeholder="Precio" value=<%= product.price %>>
-                <span class="text-danger small"><%= locals.price && errores.price ? errores.price.msg : null %></span>
-                </div>
-                <br>
-                <div class="box-form">
-                <label for="description"></label>
-               <textarea name="description" id="description" cols="30" rows="5" placeholder="Descripción del producto"><%= product.description %></textarea>
-               <span class="text-danger small"><%= locals.description && errores.description ? errores.description.msg : null %></span>
-               </div>
-               <br>
-               <div class="box-form">
-                <label for="category"></label>
-                 <select name="category" id="category">
-                        <% categories.forEach(categoria => { %>
-                         <option value="<%= categoria.id %>" <%= product.categoryId === categoria.id ? 'selected' : null %> ><%= categoria.name %> </option>
-                        <% }) %>
-                    </select>
-                    <span class="text-danger small"><%= locals.category && errores.category ? errores.category.msg : null %></span>
-                 </div>   
-                <br>
-              
-                <button>Editar</button>
-            </form>
-        </div>
-    </nav>
-   </main>
-   </div>
-=======
     <section class="order" id="order">
         <h3 class="sub-heading">Edición</h3>
         <h1 class="heading">Editar Producto</h1>
@@ -98,7 +55,6 @@
             <input type="submit" value="Editar" class="btn btn">
     
         </form>
->>>>>>> d2f4eca072211aa6017d358aaf11883f2acfc4ca
 
     <!-- footer -->
 	<%- include('../partials/footer') %>
@@ -106,7 +62,7 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
   <!-- custom js file link  -->
-  <script src="/js/script.js"></script>
+  <script src="/javascript/script.js"></script>
 
 </body>
 </html>
