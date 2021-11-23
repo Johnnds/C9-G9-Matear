@@ -61,8 +61,12 @@ header .navbar a:hover{
 
 header .icons {
   flex-direction: row;
-  /* flex-direction: revert; */
-  /*display: ;*/
+  display: inline-flex;
+  width: 28%;
+  flex-wrap: nowrap;
+  align-content: flex-start;
+  justify-content: space-evenly;
+  align-items: stretch;
 }
 
 header .icons i,
@@ -117,7 +121,15 @@ header .icons #menu-bars{
   section{
       padding:2rem;
   }
-
+  header .icons {
+    flex-direction: row;
+    display: inline-flex;
+    width: 30%;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+    justify-content: space-evenly;
+    align-items: stretch;
+}
 
 }
 
@@ -149,7 +161,15 @@ header .icons #menu-bars{
       background:#eee;
       width: 100%;
   }
-
+  header .icons {
+    flex-direction: row;
+    display: inline-flex;
+    width: 50%;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    justify-content: space-evenly;
+    align-items: stretch;
+}
 }
 
 @media (max-width:450px){
@@ -157,5 +177,13 @@ header .icons #menu-bars{
   html{
       font-size: 50%;
   }
-
+  header .icons {
+    flex-direction: row;
+    display: inline-flex;
+    width: 45%;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+    justify-content: space-evenly;
+    align-items: stretch;
+}
 }
