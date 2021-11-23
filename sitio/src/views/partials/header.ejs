@@ -2,10 +2,11 @@
     <a href="/" class="logo">M<img src="/images/infusion-de-mate.svg" alt="">te@r</a>
 
     <nav class="navbar">
-        <a id="/home" href="/" class="active">home</a>
-        <a id="/nosotros" href="/nosotros">Nosotros</a>
-        <a id="/products/list" href="/products/list">Productos</a>
-        <a id="/contacto" href="/contacto">Contacto</a>
+        <a id="home" href="/" class="active">home</a>
+        <a id="nosotros" href="/nosotros">Nosotros</a>
+        <a id="productos" href="/products/list">Productos</a>
+        <a id="sucursales" href="#">Sucursales</a>
+        <a id="contacto" href="../contacto">Contacto</a>
     </nav>
 
     <div class="icons">
@@ -13,19 +14,74 @@
         <% if (locals.userLogin) { %>
            <a href="/users/perfil"><img class="image" src="/images/imageProfile/<%= userLogin.image %> " alt=""/></a>
             <!-- <a href="#" class="fas fa-users-cog"></a> -->
+            <a href="#" class="fas fa-heart"></a>
             <a href="/users/logout" class="fas fa-sign-out-alt"></a>
             <a href="#" class="fas fa-heart"></a>
             
         <% } else { %>
-
         <a href="/users/login" class="fas fa-user"></a>
-
         <% } %> 
        
         <i class="fas fa-search" id="search-icon"></i>
-
-        <a href="/products/productCart" class="fas fa-shopping-cart"></a>
+     
+          <button type="button" class="nav-link btn-cart" data-bs-toggle="modal" data-bs-target="#modal-carrito">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="span-cantidad" class="badge rounded-pill bg-warning"></span>
+          </button>
+        
+        
     </div>
 </header>
 
 <!-- header section ends -->
+
+
+<aside>
+  <!-- Modal -->
+  <div class="modal fade" id="modal-carrito" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" id="miCarrito">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Carrito</h5>
+        </div>
+        <div class="modal-body" id="lista-carrito">
+          <div class="table-responsive">
+            <table class="table">
+              <thead id="cart-head">
+                <tr>
+                  <th colspan="3">Producto</th>
+                  <th scope="col">Precio</th>
+                  <th scope="col">SubTotal</th>
+                </tr>
+              </thead>
+              <tfoot id="cart-footer">
+                <tr>
+                  <th colspan="4"  class="text-end" id="totaltitle">TOTAL:</th>
+                  <th >
+                    <h5 id="total"></h5>
+                  </th>
+                </tr>
+              </tfoot>
+                <tbody id="changuito">
+                  <span id="cart-empty" class="text-danger">El carrito no tiene productos agregados</span>
+                </tbody>
+               
+              </table>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-sm btn-danger" id="btn-cart-empty">Vaciar carrito</button>
+          <button type="button" class="btn btn-sm btn-success" data-bs-dismiss="modal">Seguir comprando</button>
+          <a href="/compra" class="btn btn-sm btn-primary" id="btn-next-buy"> Finalizar compra</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</aside>
+
+<script>
+document.getElementById('form-search-header').addEventListener('submit', e => {
+  e.preventDefault()
+  document.getElementById('search-header').value !== '' && document.getElementById('form-search-header').submit()
+})
+</script>
